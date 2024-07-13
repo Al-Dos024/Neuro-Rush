@@ -1,3 +1,4 @@
+import 'package:adhd/features/onborading/presentation/views/onborading_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(),
+      home: OnBoradingView(),
     );
   }
 }
