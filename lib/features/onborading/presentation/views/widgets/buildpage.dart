@@ -24,7 +24,7 @@ Widget buildPage({
             title,
             style: const TextStyle(
                 color: kPrimerycolor,
-                fontSize: 32,
+                fontSize: 24,
                 fontWeight: FontWeight.bold),
           ),
           const SizedBox(
@@ -35,7 +35,7 @@ Widget buildPage({
             child: Text(
               subtitle,
               textAlign: TextAlign.center,
-              style: const TextStyle(color: Colors.black, fontSize: 18),
+              style: const TextStyle(color: Colors.black, fontSize: 16),
             ),
           )
         ],
