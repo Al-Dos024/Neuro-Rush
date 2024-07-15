@@ -1,4 +1,4 @@
-import 'package:adhd/features/authorization/presentation/signin/screens/signin_view.dart';
+import 'package:adhd/features/authorization/presentation/sign_in/screens/sign_in_view.dart';
 import 'package:adhd/features/onborading/presentation/views/onborading_view.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: OnBoradingView(), //SigninView() (^-^)
+      home: SigninView(),// OnBoradingView() (^O^)
     );
   }
 }
