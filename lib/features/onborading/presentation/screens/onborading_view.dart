@@ -1,4 +1,5 @@
 import 'package:adhd/constants.dart';
+import 'package:adhd/features/authorization/presentation/sign_in/screens/sign_in_view.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -27,15 +28,20 @@ class _OnBoradingState extends State<OnBoradingView> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         actions: [
-          TextButton(
-              onPressed: () {},
-              child: const Padding(
-                padding: EdgeInsets.only(right: 30, top: 15),
-                child: Text(
+          Padding(
+            padding: const EdgeInsets.only(right: 30.0, top: 20),
+            child: TextButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const SigninView()));
+                },
+                child: const Text(
                   "Skip",
                   style: TextStyle(color: Colors.black, fontSize: 16),
-                ),
-              )),
+                )),
+          ),
         ],
       ),
       body: Container(
@@ -48,19 +54,19 @@ class _OnBoradingState extends State<OnBoradingView> {
             children: [
               buildPage(
                   color: Colors.white,
-                  urlImage: 'assets/World health day.png',
+                  urlImage: 'assets/img/World health day.png',
                   title: "About Our Application",
                   subtitle:
                       "It is an application designed to empower individuals and families affected by ADHD, as it combines three main functions: first, diagnosing ADHD. Second, resources on ADHD Topics such as symptoms, types, management strategies, and coping mechanisms can help users better understand themselves and their experiences."),
               buildPage(
                   color: Colors.white,
-                  urlImage: 'assets/Online Doctor.png',
+                  urlImage: 'assets/img/Online Doctor.png',
                   title: "What does the app do?",
                   subtitle:
                       "Third, behavioral therapy tools: The app provides access to evidence-based exercises and techniques to help users manage symptoms, develop life skills, and stimulate and promote positive behaviors"),
               buildPage(
                   color: Colors.white,
-                  urlImage: 'assets/Doctor.png',
+                  urlImage: 'assets/img/Doctor.png',
                   title: "Do we start?",
                   subtitle: " "),
             ]),
@@ -90,9 +96,15 @@ class _OnBoradingState extends State<OnBoradingView> {
                     style: TextButton.styleFrom(
                       backgroundColor: kPrimerycolor,
                     ),
-                    onPressed: () => controller.nextPage(
-                        duration: const Duration(milliseconds: 500),
-                        curve: Curves.easeInOut),
+                    onPressed: () {
+                      controller.nextPage(
+                          duration: const Duration(milliseconds: 500),
+                          curve: Curves.easeInOut);
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SigninView()));
+                    },
                     child: const Text(
                       "Let’s Start!",
                       style: TextStyle(fontSize: 18, color: Colors.white),

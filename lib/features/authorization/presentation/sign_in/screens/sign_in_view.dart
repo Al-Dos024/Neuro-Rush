@@ -23,7 +23,9 @@ class SigninView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: 35,),
+            SizedBox(
+              height: 35,
+            ),
             Text(
               "Let’s sign you in.",
               style: GoogleFonts.inter(
@@ -100,7 +102,7 @@ class SigninView extends StatelessWidget {
                 ),
                 MyTextButton(
                   onPressed: () {
-                    Navigator.pushReplacement(
+                    Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) => const SignUpView(),

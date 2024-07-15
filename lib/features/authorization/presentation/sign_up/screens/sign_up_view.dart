@@ -96,7 +96,9 @@ class SignUpView extends StatelessWidget {
                   ),
                 ),
                 MyTextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                   child: Text(
                     " Login now",
                     style: GoogleFonts.inter(
