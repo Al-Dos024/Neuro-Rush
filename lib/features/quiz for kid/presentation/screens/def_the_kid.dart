@@ -1,5 +1,4 @@
 import 'package:adhd/constants.dart';
-import 'package:adhd/features/onborading/presentation/screens/widgets/custombutton.dart';
 import 'package:flutter/material.dart';
 
 import 'kid.dart';
@@ -131,6 +130,7 @@ class _DefineTheKidState extends State<DefineTheKid> {
           ),
 
           ////////////////////////////////////////////////////////////
+
           const SizedBox(
             height: 28,
           ),
@@ -238,6 +238,7 @@ class _DefineTheKidState extends State<DefineTheKid> {
           const SizedBox(
             height: 40,
           ),
+
           Align(
             alignment: Alignment.topRight,
             child: TextButton.icon(

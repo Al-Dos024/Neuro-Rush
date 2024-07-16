@@ -1,4 +1,5 @@
 // ignore_for_file: avoid_print
+import 'package:adhd/constants.dart';
 import 'package:adhd/features/quiz%20for%20kid/data/Dataset/female/female12-14.dart';
 import 'package:adhd/features/quiz%20for%20kid/data/Dataset/female/female15-17.dart';
 import 'package:adhd/features/quiz%20for%20kid/data/Dataset/female/female3-5.dart';
@@ -36,17 +37,53 @@ class _QuizForKidsState extends State<QuizForKids> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 80,
+        backgroundColor: kBluecolor_1,
+        title: const Text(
+          "Quiz for Kid",
+          style: TextStyle(color: Colors.white),
+        ),
+        centerTitle: true,
+        actions: [
+          Stack(
+            children: <Widget>[
+              Container(
+                width: 80,
+                height: 80,
+                padding: EdgeInsets.all(15.0),
+                alignment: Alignment.center,
+                child: Text(
+                  "/",
+                  style: TextStyle(fontSize: 30),
+                ),
+              ),
+              Container(
+                width: 80,
+                height: 80,
+                padding: EdgeInsets.all(15.0),
+                alignment: Alignment.topLeft,
+                child: Text(
+                  '${currentQuestionIndex + 1}',
+                ),
+              ),
+              Container(
+                width: 80,
+                height: 80,
+                padding: EdgeInsets.all(15.0),
+                alignment: Alignment.bottomRight,
+                child: Text(
+                  questionList.length.toString(),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
       body: Container(
         margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 32),
         child:
             Column(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
-          const Text(
-            "Phase Two",
-            style: TextStyle(
-              color: Color(0xff828282),
-              fontSize: 24,
-            ),
-          ),
           _questionWidget(),
           _answerList(),
           _nextButton(),
