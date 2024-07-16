@@ -49,15 +49,11 @@ class _QuizForKidsState extends State<QuizForKids> {
           Stack(
             children: <Widget>[
               Container(
-                width: 80,
-                height: 80,
-                padding: EdgeInsets.all(15.0),
-                alignment: Alignment.center,
-                child: Text(
-                  "/",
-                  style: TextStyle(fontSize: 30),
-                ),
-              ),
+                  width: 80,
+                  height: 80,
+                  padding: EdgeInsets.all(15.0),
+                  alignment: Alignment.center,
+                  child: Image.asset('assets/icons/slash.png')),
               Container(
                 width: 80,
                 height: 80,
