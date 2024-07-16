@@ -17,15 +17,44 @@ class _DefineTheKidState extends State<DefineTheKid> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: const Text("info about the kid"),
-        centerTitle: true,
-      ),
-      body: Column(children: [
-        Padding(
-          padding: const EdgeInsets.all(15),
-          child: Row(
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          const Align(
+            alignment: Alignment.bottomLeft,
+            child: Text(
+              'Please fill the information ',
+              style: TextStyle(
+                fontSize: 24,
+                color: kBluecolor_1,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          const Align(
+            alignment: Alignment.bottomLeft,
+            child: Text(
+              'this will help us increase the accuracy of the result',
+              style: TextStyle(fontSize: 14, color: kGraycolor_1),
+            ),
+          ),
+          const SizedBox(
+            height: 35,
+          ),
+          const Align(
+            alignment: Alignment.bottomLeft,
+            child: Text(
+              'Choose your kid gender :',
+              style: TextStyle(
+                  fontSize: 18,
+                  color: kPrimerycolor,
+                  fontWeight: FontWeight.w500),
+            ),
+          ),
+          const SizedBox(
+            height: 25,
+          ),
+          Row(
             children: [
               Expanded(
                 child: GestureDetector(
@@ -45,16 +74,16 @@ class _DefineTheKidState extends State<DefineTheKid> {
                     child: const Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Image(
-                          image: AssetImage("assets/icons/male.png"),
+                        Text(
+                          'Boy',
+                          style: TextStyle(
+                              fontSize: 25, fontWeight: FontWeight.bold),
                         ),
                         SizedBox(
                           height: 10,
                         ),
-                        Text(
-                          'Male',
-                          style: TextStyle(
-                              fontSize: 25, fontWeight: FontWeight.bold),
+                        Image(
+                          image: AssetImage("assets/icons/male.png"),
                         )
                       ],
                     ),
@@ -82,17 +111,17 @@ class _DefineTheKidState extends State<DefineTheKid> {
                     child: const Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Image(
-                          image: AssetImage("assets/icons/female.png"),
+                        Text(
+                          'Girl',
+                          style: TextStyle(
+                              fontSize: 25, fontWeight: FontWeight.bold),
                         ),
                         SizedBox(
                           height: 10,
                         ),
-                        Text(
-                          'Female',
-                          style: TextStyle(
-                              fontSize: 25, fontWeight: FontWeight.bold),
-                        )
+                        Image(
+                          image: AssetImage("assets/icons/female.png"),
+                        ),
                       ],
                     ),
                   ),
@@ -100,101 +129,143 @@ class _DefineTheKidState extends State<DefineTheKid> {
               ),
             ],
           ),
-        ),
 
-        ////////////////////////////////////////////////////////////
-        Expanded(
-          child: Padding(
-            padding: const EdgeInsets.all(15),
-            child: Row(
-              children: [
-                const SizedBox(
-                  width: 15,
-                ),
-                Expanded(
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(25),
-                      color: const Color.fromARGB(255, 249, 252, 255),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        const Text(
-                          'Age',
-                          style: TextStyle(
-                              fontSize: 40, fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          '$age',
-                          style: const TextStyle(
-                              fontSize: 40, fontWeight: FontWeight.bold),
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            FloatingActionButton(
-                              heroTag: "btn1",
-                              backgroundColor: kPrimerycolor,
-                              onPressed: () {
-                                setState(() {
-                                  if (age < 17) {
-                                    age++;
-                                  }
-                                });
-                              },
-                              mini: true,
-                              child: const Icon(
-                                Icons.add,
-                                color: Colors.white,
-                              ),
-                            ),
-                            FloatingActionButton(
-                              heroTag: "btn2",
-                              backgroundColor: kPrimerycolor,
-                              onPressed: () {
-                                setState(() {
-                                  if (age > 3) {
-                                    age--;
-                                  }
-                                });
-                              },
-                              mini: true,
-                              child: const Icon(
-                                Icons.remove,
-                                color: Colors.white,
-                              ),
-                            )
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-              ],
+          ////////////////////////////////////////////////////////////
+          const SizedBox(
+            height: 28,
+          ),
+          const Align(
+            alignment: Alignment.bottomLeft,
+            child: Text(
+              'Choose your kid age:',
+              style: TextStyle(
+                  fontSize: 18,
+                  color: kPrimerycolor,
+                  fontWeight: FontWeight.w500),
             ),
           ),
-        ),
-        Padding(
-          padding:
-              const EdgeInsets.only(bottom: 20.0, left: 12, right: 12, top: 12),
-          child: CustomButton(
-            text: 'Go to Phase Two',
-            onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => QuizForKids(
-                            isMale: isMale,
-                            age: age,
-                          )));
-            },
+          const SizedBox(
+            height: 25,
           ),
-        ),
-      ]),
+          Row(
+            children: [
+              const SizedBox(
+                width: 15,
+              ),
+              Expanded(
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    color: const Color.fromARGB(255, 249, 252, 255),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Spacer(),
+                          FloatingActionButton(
+                            shape: const CircleBorder(),
+                            heroTag: "btn1",
+                            backgroundColor: kGraycolor_2,
+                            onPressed: () {
+                              setState(() {
+                                if (age < 17) {
+                                  age++;
+                                }
+                              });
+                            },
+                            mini: true,
+                            child: const Icon(
+                              Icons.add,
+                            ),
+                          ),
+                          const Spacer(),
+                          Container(
+                            width: 90,
+                            height: 90,
+                            decoration: BoxDecoration(
+                              color: kPrimerycolor.withOpacity(0.5),
+                              shape: BoxShape.circle,
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(10),
+                              child: Container(
+                                  decoration: const BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: kBluecolor_2,
+                                  ),
+                                  child: Center(
+                                    child: Text(
+                                      '$age',
+                                      style: const TextStyle(
+                                          fontSize: 32, color: Colors.white),
+                                    ),
+                                  ) // inner content
+                                  ),
+                            ),
+                          ),
+                          const Spacer(),
+                          FloatingActionButton(
+                            shape: const CircleBorder(),
+                            heroTag: "btn2",
+                            backgroundColor: kGraycolor_2,
+                            onPressed: () {
+                              setState(() {
+                                if (age > 3) {
+                                  age--;
+                                }
+                              });
+                            },
+                            mini: true,
+                            child: const Icon(
+                              Icons.remove,
+                            ),
+                          ),
+                          const Spacer(),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 40,
+          ),
+          Align(
+            alignment: Alignment.topRight,
+            child: TextButton.icon(
+              style: TextButton.styleFrom(
+                backgroundColor: kBluecolor_1,
+              ),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => QuizForKids(
+                              isMale: isMale,
+                              age: age,
+                            )));
+              },
+              label: const Text(
+                "Go to quiz phase",
+                style: TextStyle(fontSize: 18, color: Colors.white),
+              ),
+              iconAlignment: IconAlignment.end,
+              icon: const Icon(
+                Icons.arrow_forward,
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ]),
+      ),
     );
   }
 }
