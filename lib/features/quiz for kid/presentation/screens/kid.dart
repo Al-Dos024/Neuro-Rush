@@ -51,13 +51,13 @@ class _QuizForKidsState extends State<QuizForKids> {
               Container(
                   width: 80,
                   height: 80,
-                  padding: EdgeInsets.all(15.0),
+                  padding: const EdgeInsets.all(15.0),
                   alignment: Alignment.center,
                   child: Image.asset('assets/icons/slash.png')),
               Container(
                 width: 80,
                 height: 80,
-                padding: EdgeInsets.all(15.0),
+                padding: const EdgeInsets.all(15.0),
                 alignment: Alignment.topLeft,
                 child: Text(
                   '${currentQuestionIndex + 1}',
@@ -66,7 +66,7 @@ class _QuizForKidsState extends State<QuizForKids> {
               Container(
                 width: 80,
                 height: 80,
-                padding: EdgeInsets.all(15.0),
+                padding: const EdgeInsets.all(15.0),
                 alignment: Alignment.bottomRight,
                 child: Text(
                   questionList.length.toString(),
