@@ -1,8 +1,10 @@
 import 'package:adhd/constants.dart';
+import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/Icon_with_lable_button.dart';
+import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/details_text_14.dart';
+import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/subtitle_18.dart';
+import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/title_gender_22.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import 'kid.dart';
 
 class DefineTheKid extends StatefulWidget {
   const DefineTheKid({super.key});
@@ -23,44 +25,10 @@ class _DefineTheKidState extends State<DefineTheKid> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Align(
-              alignment: Alignment.bottomLeft,
-              child: Text(
-                'Please fill the information ',
-                style: GoogleFonts.kodchasan(
-                  fontSize: 22,
-                  color: kBluecolor_1,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            Align(
-              alignment: Alignment.bottomLeft,
-              child: Text(
-                'this will help us increase the accuracy of the result',
-                style: GoogleFonts.kodchasan(
-                  fontSize: 14,
-                  color: kGraycolor_1,
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Align(
-              alignment: Alignment.bottomLeft,
-              child: Text(
-                'Choose your kid gender :',
-                style: GoogleFonts.kodchasan(
-                  fontSize: 16,
-                  color: kPrimerycolor,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
+            const TitleGender22(text: 'Please fill the information '),
+            const DetailsText14(
+                text: 'this will help us increase the accuracy of the result'),
+            const Subtitle18(text: 'Choose your kid gender :'),
             Row(
               children: [
                 Expanded(
@@ -162,27 +130,10 @@ class _DefineTheKidState extends State<DefineTheKid> {
 
             ////////////////////////////////////////////////////////////
 
-            const SizedBox(
-              height: 28,
-            ),
-            Align(
-              alignment: Alignment.bottomLeft,
-              child: Text(
-                'Choose your kid age:',
-                style: GoogleFonts.kodchasan(
-                    fontSize: 18,
-                    color: kPrimerycolor,
-                    fontWeight: FontWeight.w500),
-              ),
-            ),
-            const SizedBox(
-              height: 25,
-            ),
+            const Subtitle18(text: 'Choose your kid age:'),
+
             Row(
               children: [
-                const SizedBox(
-                  width: 15,
-                ),
                 Expanded(
                   child: Container(
                     decoration: BoxDecoration(
@@ -192,9 +143,6 @@ class _DefineTheKidState extends State<DefineTheKid> {
                       crossAxisAlignment: CrossAxisAlignment.end,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const SizedBox(
-                          height: 10,
-                        ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -226,18 +174,18 @@ class _DefineTheKidState extends State<DefineTheKid> {
                               child: Padding(
                                 padding: const EdgeInsets.all(10),
                                 child: Container(
-                                    decoration: const BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      color: kBluecolor_2,
+                                  decoration: const BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: kBluecolor_2,
+                                  ),
+                                  child: Center(
+                                    child: Text(
+                                      '$age',
+                                      style: GoogleFonts.kodchasan(
+                                          fontSize: 32, color: Colors.white),
                                     ),
-                                    child: Center(
-                                      child: Text(
-                                        '$age',
-                                        style: GoogleFonts.kodchasan(
-                                            fontSize: 32, color: Colors.white),
-                                      ),
-                                    ) // inner content
-                                    ),
+                                  ),
+                                ),
                               ),
                             ),
                             const Spacer(),
@@ -269,54 +217,12 @@ class _DefineTheKidState extends State<DefineTheKid> {
             const SizedBox(
               height: 40,
             ),
-            Align(
-              alignment: Alignment.topRight,
-              child: IconWithLableButton(
-                age: age,
-                isMale: isMale,
-              ),
+            IconWithLableButton(
+              age: age,
+              isMale: isMale,
             ),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class IconWithLableButton extends StatelessWidget {
-  const IconWithLableButton(
-      {super.key, required this.isMale, required this.age});
-  final bool isMale;
-  final int age;
-  @override
-  Widget build(BuildContext context) {
-    return TextButton.icon(
-      style: TextButton.styleFrom(
-        backgroundColor: kBluecolor_1,
-      ),
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => QuizForKids(
-              isMale: isMale,
-              age: age,
-            ),
-          ),
-        );
-      },
-      label: Text(
-        "Go to quiz phase",
-        style: GoogleFonts.kodchasan(
-          fontSize: 12,
-          color: Colors.white,
-        ),
-      ),
-      iconAlignment: IconAlignment.end,
-      icon: const Icon(
-        Icons.arrow_forward,
-        color: Colors.white,
-        size: 14,
       ),
     );
   }

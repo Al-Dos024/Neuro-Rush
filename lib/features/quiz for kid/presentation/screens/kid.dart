@@ -38,6 +38,17 @@ class _QuizForKidsState extends State<QuizForKids> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(
+              context,
+            );
+          },
+          icon: const Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+        ),
         toolbarHeight: 80,
         backgroundColor: kBluecolor_1,
         title: const Text(
@@ -51,7 +62,6 @@ class _QuizForKidsState extends State<QuizForKids> {
               Container(
                   width: 80,
                   height: 80,
-                  padding: const EdgeInsets.all(15.0),
                   alignment: Alignment.center,
                   child: Image.asset('assets/icons/slash.png')),
               Container(
@@ -61,6 +71,10 @@ class _QuizForKidsState extends State<QuizForKids> {
                 alignment: Alignment.topLeft,
                 child: Text(
                   '${currentQuestionIndex + 1}',
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                  ),
                 ),
               ),
               Container(
@@ -68,9 +82,11 @@ class _QuizForKidsState extends State<QuizForKids> {
                 height: 80,
                 padding: const EdgeInsets.all(15.0),
                 alignment: Alignment.bottomRight,
-                child: Text(
-                  questionList.length.toString(),
-                ),
+                child: Text(questionList.length.toString(),
+                    style: const TextStyle(
+                      color: Colors.white54,
+                      fontSize: 16,
+                    )),
               ),
             ],
           ),
@@ -78,8 +94,7 @@ class _QuizForKidsState extends State<QuizForKids> {
       ),
       body: Container(
         margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 32),
-        child:
-            Column(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           _questionWidget(),
           _answerList(),
           _nextButton(),
@@ -93,21 +108,12 @@ class _QuizForKidsState extends State<QuizForKids> {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text(
-          "Question ${currentQuestionIndex + 1}/${questionList.length.toString()}",
-          style: const TextStyle(
-            color: Colors.black,
-            fontSize: 20,
-            fontWeight: FontWeight.w600,
-          ),
-        ),
-        const SizedBox(height: 20),
         Container(
           alignment: Alignment.center,
           width: double.infinity,
           padding: const EdgeInsets.all(32),
           decoration: BoxDecoration(
-            color: const Color.fromARGB(255, 234, 234, 234),
+            color: const Color(0xffD8E3E7),
             borderRadius: BorderRadius.circular(16),
           ),
           child: Center(
@@ -127,13 +133,19 @@ class _QuizForKidsState extends State<QuizForKids> {
   }
 
   _answerList() {
-    return Column(
-      children: questionList[currentQuestionIndex]
-          .answersList
-          .map(
-            (e) => _answerButton(e),
-          )
-          .toList(),
+    return Expanded(
+      child: GridView.count(
+        childAspectRatio: (1 / .44),
+        crossAxisCount: 2,
+        mainAxisSpacing: 15,
+        crossAxisSpacing: 15,
+        children: questionList[currentQuestionIndex]
+            .answersList
+            .map(
+              (e) => _answerButton(e),
+            )
+            .toList(),
+      ),
     );
   }
 

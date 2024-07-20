@@ -8,10 +8,10 @@ List<Question> questionsForChild() {
   list.add(Question(
     "مستاء وغاضب",
     [
-      Answer("غير صحيح  أبدا ، نادرا ", 0),
-      Answer("درجة قليلة ، أحيانا ", 1),
-      Answer("صحيح إلى حد ما ، غالبا", 2),
-      Answer("صحيح بدرجة كبيرة  ، دائما", 3),
+      Answer("نادرا", 0),
+      Answer("أحيانا", 1),
+      Answer("غالبا", 2),
+      Answer("دائما", 3),
     ],
   ));
 
