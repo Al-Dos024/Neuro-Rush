@@ -16,6 +16,7 @@ import 'package:adhd/features/quiz%20for%20kid/data/model/question_model.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/passed_color.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/show_snackbar.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class QuizForKids extends StatefulWidget {
   const QuizForKids({super.key, required this.age, required this.isMale});
@@ -51,9 +52,10 @@ class _QuizForKidsState extends State<QuizForKids> {
         ),
         toolbarHeight: 80,
         backgroundColor: kBluecolor_1,
-        title: const Text(
+        title: Text(
           "Quiz for Kid",
-          style: TextStyle(color: Colors.white),
+          style: GoogleFonts.kodchasan(
+              fontSize: 20, color: Colors.white, fontWeight: FontWeight.w600),
         ),
         centerTitle: true,
         actions: [
@@ -67,33 +69,35 @@ class _QuizForKidsState extends State<QuizForKids> {
               Container(
                 width: 80,
                 height: 80,
-                padding: const EdgeInsets.all(15.0),
                 alignment: Alignment.topLeft,
+                padding: const EdgeInsets.all(10),
                 child: Text(
                   '${currentQuestionIndex + 1}',
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
-                  ),
+                  style: GoogleFonts.kodchasan(
+                      fontSize: 22,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600),
                 ),
               ),
               Container(
                 width: 80,
                 height: 80,
-                padding: const EdgeInsets.all(15.0),
                 alignment: Alignment.bottomRight,
-                child: Text(questionList.length.toString(),
-                    style: const TextStyle(
-                      color: Colors.white54,
+                padding: const EdgeInsets.all(15),
+                child: Text(
+                  questionList.length.toString(),
+                  style: GoogleFonts.kodchasan(
                       fontSize: 16,
-                    )),
+                      color: Colors.white54,
+                      fontWeight: FontWeight.w600),
+                ),
               ),
             ],
           ),
         ],
       ),
       body: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 32),
+        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           _questionWidget(),
           _answerList(),
@@ -113,8 +117,8 @@ class _QuizForKidsState extends State<QuizForKids> {
           width: double.infinity,
           padding: const EdgeInsets.all(32),
           decoration: BoxDecoration(
-            color: const Color(0xffD8E3E7),
-            borderRadius: BorderRadius.circular(16),
+            color: kQuizphase,
+            borderRadius: BorderRadius.circular(15),
           ),
           child: Center(
             child: Text(
@@ -127,6 +131,14 @@ class _QuizForKidsState extends State<QuizForKids> {
               ),
             ),
           ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 25.0, bottom: 15),
+          child: Text(
+            " Answer :",
+            style: GoogleFonts.kodchasan(
+                fontSize: 14, color: Colors.black, fontWeight: FontWeight.w600),
+          ),
         )
       ],
     );
@@ -134,17 +146,20 @@ class _QuizForKidsState extends State<QuizForKids> {
 
   _answerList() {
     return Expanded(
-      child: GridView.count(
-        childAspectRatio: (1 / .44),
-        crossAxisCount: 2,
-        mainAxisSpacing: 15,
-        crossAxisSpacing: 15,
-        children: questionList[currentQuestionIndex]
-            .answersList
-            .map(
-              (e) => _answerButton(e),
-            )
-            .toList(),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+        child: GridView.count(
+          childAspectRatio: (1 / .35),
+          crossAxisCount: 2,
+          mainAxisSpacing: 15,
+          crossAxisSpacing: 15,
+          children: questionList[currentQuestionIndex]
+              .answersList
+              .map(
+                (e) => _answerButton(e),
+              )
+              .toList(),
+        ),
       ),
     );
   }
@@ -181,42 +196,120 @@ class _QuizForKidsState extends State<QuizForKids> {
       isLastQuestion = true;
     }
 
-    return SizedBox(
-      width: MediaQuery.of(context).size.width * 0.5,
-      height: 48,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          foregroundColor: Colors.white,
-          backgroundColor: const Color(0xff6A74D5),
-          shape: const StadiumBorder(),
+    return Row(
+      children: [
+        Align(
+          alignment: Alignment.topLeft,
+          child: TextButton.icon(
+              // style: TextButton.styleFrom(
+              //   backgroundColor: kBluecolor_1,
+              // ),
+              label: Text(
+                "Back",
+                style: GoogleFonts.kodchasan(
+                    fontSize: 16,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold),
+              ),
+              iconAlignment: IconAlignment.start,
+              icon: Container(
+                decoration: BoxDecoration(
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Colors.grey,
+                      blurRadius: 5,
+                      offset: Offset(0, 0),
+                    ),
+                  ],
+                  borderRadius: BorderRadius.circular(25),
+                ),
+                child: const CircleAvatar(
+                  backgroundColor: kQuizphase,
+                  child: Icon(
+                    fill: BorderSide.strokeAlignCenter,
+                    Icons.arrow_back,
+                    color: Colors.black,
+                    size: 27,
+                  ),
+                ),
+              ),
+              onPressed: () {
+                if (currentQuestionIndex == 0) {
+                  showSnackBar(context, "You can't get back anymore");
+                } else {
+                  setState(() {
+                    _isPressedOn = false;
+                    selectedAnswer = null;
+                    currentQuestionIndex--;
+                  });
+                }
+              }),
         ),
-        onPressed: () {
-          if (_isPressedOn == false) {
-            showSnackBar(context, "You must select an answer");
-          } else {
-            for (int j = 0; j < nestedList.length; j++) {
-              for (int i = 0; i < nestedList[j].length; i++) {
-                if (currentQuestionIndex + 1 == nestedList[j][i]) {
-                  listNumP2[j] += _ph2ansList[currentQuestionIndex];
+        const Spacer(),
+        Align(
+          alignment: Alignment.topRight,
+          child: TextButton.icon(
+            // style: TextButton.styleFrom(
+            //   backgroundColor: kBluecolor_1,
+            // ),
+            label: Text(
+              "Next",
+              style: GoogleFonts.kodchasan(
+                  fontSize: 16,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold),
+            ),
+            iconAlignment: IconAlignment.end,
+            icon: Container(
+              decoration: BoxDecoration(
+                boxShadow: const [
+                  BoxShadow(
+                    color: Colors.grey,
+                    blurRadius: 5,
+                    offset: Offset(0, 0),
+                  ),
+                ],
+                borderRadius: BorderRadius.circular(25),
+              ),
+              child: const CircleAvatar(
+                backgroundColor: kQuizphase,
+                child: Icon(
+                  fill: BorderSide.strokeAlignCenter,
+                  Icons.arrow_forward,
+                  color: Colors.black,
+                  size: 27,
+                ),
+              ),
+            ),
+            onPressed: () {
+              if (_isPressedOn == false) {
+                showSnackBar(context, "You must select an answer");
+              } else {
+                for (int j = 0; j < nestedList.length; j++) {
+                  for (int i = 0; i < nestedList[j].length; i++) {
+                    if (currentQuestionIndex + 1 == nestedList[j][i]) {
+                      listNumP2[j] += _ph2ansList[currentQuestionIndex];
+                    }
+                  }
+                }
+                if (isLastQuestion) {
+                  //display score
+
+                  showDialog(
+                      context: context, builder: (_) => _showScoreDialog());
+                } else {
+                  //next question
+                  setState(() {
+                    _isPressedOn = false;
+                    selectedAnswer = null;
+                    currentQuestionIndex++;
+                  });
                 }
               }
-            }
-            if (isLastQuestion) {
-              //display score
-
-              showDialog(context: context, builder: (_) => _showScoreDialog());
-            } else {
-              //next question
-              setState(() {
-                _isPressedOn = false;
-                selectedAnswer = null;
-                currentQuestionIndex++;
-              });
-            }
-          }
-        },
-        child: Text(isLastQuestion ? "Submit" : "Next"),
-      ),
+            },
+          ),
+        ),
+      ],
     );
   }
 

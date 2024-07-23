@@ -15,13 +15,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-              appBarTheme: const AppBarTheme(
-            color: Colors.amber,
-          )),
-      home: const MainView() //DefineTheKid(),
-    );
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+            appBarTheme: const AppBarTheme(
+          color: Colors.amber,
+        )),
+        home: const DefineTheKid() //MainView() ,
+        );
   }
 }
