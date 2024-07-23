@@ -97,7 +97,7 @@ class _QuizForKidsState extends State<QuizForKids> {
         ],
       ),
       body: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+        margin: const EdgeInsets.only(right: 20, left: 20, top: 30, bottom: 50),
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           _questionWidget(),
           _answerList(),
