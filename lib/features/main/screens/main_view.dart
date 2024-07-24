@@ -35,14 +35,14 @@ class MainViewContent extends StatelessWidget {
           subtitle: "What is",
           title: "ADHD?",
         ),
-         CustomCardMainView(
+        CustomCardMainView(
           color: kWhatAdhdcolor,
           imgCard: "assets/img/more_adhd.png",
           imgIcon: "assets/icons/video.png",
           subtitle: "What is",
           title: "ADHD?",
         ),
-         CustomCardMainView(
+        CustomCardMainView(
           color: kWhatAdhdcolor,
           imgCard: "assets/img/more_adhd.png",
           imgIcon: "assets/icons/video.png",
@@ -81,7 +81,7 @@ class CustomCardMainView extends StatelessWidget {
         height: 230,
         child: Row(
           children: [
-           Image(
+            Image(
               image: AssetImage(imgCard),
               height: 180,
             ),

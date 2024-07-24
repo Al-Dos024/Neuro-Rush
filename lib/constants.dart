@@ -10,7 +10,7 @@ const Color kBluecolor_1 = Color(0xff126E82);
 const Color kBluecolor_2 = Color(0xff45ABB8);
 const Color kFemalecolor = Color(0xffF85B90);
 const Color kMalecolor = Color(0xff000BCC);
-const Color kKindtestcolor = Color (0xff5A4FCE);
+const Color kKindtestcolor = Color(0xff5A4FCE);
 const Color kAdulttestcolor = Color(0xff8669CF);
+const Color kQuizphase = Color(0xffD8E3E7);
 const Color kWhatAdhdcolor = Color(0xff126E82);
-
