@@ -120,16 +120,37 @@ class _QuizForKidsState extends State<QuizForKids> {
             color: kQuizphase,
             borderRadius: BorderRadius.circular(15),
           ),
-          child: Center(
-            child: Text(
-              questionList[currentQuestionIndex].questionText,
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                color: Colors.black,
-                fontSize: 18,
-                fontWeight: FontWeight.w600,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                height: 40,
+                width: 40,
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                  color: kBluecolor_3,
+                ),
+                alignment: Alignment.center,
+                child: Text(
+                  '${currentQuestionIndex + 1}',
+                  style: GoogleFonts.kodchasan(
+                      fontSize: 22,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600),
+                ),
               ),
-            ),
+              Expanded(
+                child: Text(
+                  questionList[currentQuestionIndex].questionText,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    color: Colors.black,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
         Padding(

@@ -29,21 +29,21 @@ class MainViewContent extends StatelessWidget {
     return const Column(
       children: [
         CustomCardMainView(
-          color: kWhatAdhdcolor,
+          color: kBluecolor_1,
           imgCard: "assets/img/more_adhd.png",
           imgIcon: "assets/icons/video.png",
           subtitle: "What is",
           title: "ADHD?",
         ),
         CustomCardMainView(
-          color: kWhatAdhdcolor,
+          color: kBluecolor_1,
           imgCard: "assets/img/more_adhd.png",
           imgIcon: "assets/icons/video.png",
           subtitle: "What is",
           title: "ADHD?",
         ),
         CustomCardMainView(
-          color: kWhatAdhdcolor,
+          color: kBluecolor_1,
           imgCard: "assets/img/more_adhd.png",
           imgIcon: "assets/icons/video.png",
           subtitle: "What is",

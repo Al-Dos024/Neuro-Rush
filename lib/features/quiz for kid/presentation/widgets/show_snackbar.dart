@@ -14,7 +14,7 @@ void showSnackBar(BuildContext context, String message) {
           gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
-              colors: [kWhatAdhdcolor, kBluecolor_2]),
+              colors: [kBluecolor_1, kBluecolor_2]),
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10.0),
