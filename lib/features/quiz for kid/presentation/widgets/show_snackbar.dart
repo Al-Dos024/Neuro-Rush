@@ -1,6 +1,5 @@
 import 'package:adhd/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 void showSnackBar(BuildContext context, String message) {
   ScaffoldMessenger.of(context).showSnackBar(
@@ -22,23 +21,11 @@ void showSnackBar(BuildContext context, String message) {
             children: [
               Align(
                 alignment: Alignment.topLeft,
-                child: Text(
-                  "Opps!",
-                  style: GoogleFonts.kodchasan(
-                      fontSize: 18,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold),
-                ),
+                child: Text("Opps!", style: CustomTextStyle.kodch18WB),
               ),
               Align(
                 alignment: Alignment.topLeft,
-                child: Text(
-                  message,
-                  style: GoogleFonts.kodchasan(
-                      fontSize: 13,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w600),
-                ),
+                child: Text(message, style: CustomTextStyle.kodch14WM),
               ),
             ],
           ),

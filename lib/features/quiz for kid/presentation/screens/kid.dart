@@ -13,10 +13,13 @@ import 'package:adhd/features/quiz%20for%20kid/data/Dataset/male/male9-11.dart';
 import 'package:adhd/features/quiz%20for%20kid/data/model/kid_question.dart';
 import 'package:adhd/features/quiz%20for%20kid/data/model/nested_list.dart';
 import 'package:adhd/features/quiz%20for%20kid/data/model/question_model.dart';
+import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/Next_button.dart';
+import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/back_button.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/passed_color.dart';
+import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/question_widget.dart';
+import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/score_board.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/show_snackbar.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class QuizForKids extends StatefulWidget {
   const QuizForKids({super.key, required this.age, required this.isMale});
@@ -32,7 +35,7 @@ class _QuizForKidsState extends State<QuizForKids> {
   int currentQuestionIndex = 0;
   int score = 0;
   bool _isPressedOn = false;
-  final List<int> _ph2ansList = List.filled(80, 0);
+  final List<int> kidsList = List.filled(80, 0);
   Answer? selectedAnswer;
 
   @override
@@ -52,116 +55,24 @@ class _QuizForKidsState extends State<QuizForKids> {
         ),
         toolbarHeight: 80,
         backgroundColor: kBluecolor_1,
-        title: Text(
-          "Quiz for Kid",
-          style: GoogleFonts.kodchasan(
-              fontSize: 20, color: Colors.white, fontWeight: FontWeight.w600),
-        ),
+        title: Text("Quiz for Kid", style: CustomTextStyle.kodch20WM),
         centerTitle: true,
         actions: [
-          Stack(
-            children: <Widget>[
-              Container(
-                  width: 80,
-                  height: 80,
-                  alignment: Alignment.center,
-                  child: Image.asset('assets/icons/slash.png')),
-              Container(
-                width: 80,
-                height: 80,
-                alignment: Alignment.topLeft,
-                padding: const EdgeInsets.all(10),
-                child: Text(
-                  '${currentQuestionIndex + 1}',
-                  style: GoogleFonts.kodchasan(
-                      fontSize: 22,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w600),
-                ),
-              ),
-              Container(
-                width: 80,
-                height: 80,
-                alignment: Alignment.bottomRight,
-                padding: const EdgeInsets.all(15),
-                child: Text(
-                  questionList.length.toString(),
-                  style: GoogleFonts.kodchasan(
-                      fontSize: 16,
-                      color: Colors.white54,
-                      fontWeight: FontWeight.w600),
-                ),
-              ),
-            ],
-          ),
+          ScoreBoard(
+              currentQuestionIndex: currentQuestionIndex,
+              questionList: questionList)
         ],
       ),
       body: Container(
         margin: const EdgeInsets.only(right: 20, left: 20, top: 30, bottom: 50),
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          _questionWidget(),
+          QuestionWidget(
+              currentQuestionIndex: currentQuestionIndex,
+              questionList: questionList),
           _answerList(),
           _nextButton(),
         ]),
       ),
-    );
-  }
-
-  _questionWidget() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Container(
-          alignment: Alignment.center,
-          width: double.infinity,
-          padding: const EdgeInsets.all(32),
-          decoration: BoxDecoration(
-            color: kQuizphase,
-            borderRadius: BorderRadius.circular(15),
-          ),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                height: 40,
-                width: 40,
-                decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
-                  color: kBluecolor_3,
-                ),
-                alignment: Alignment.center,
-                child: Text(
-                  '${currentQuestionIndex + 1}',
-                  style: GoogleFonts.kodchasan(
-                      fontSize: 22,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w600),
-                ),
-              ),
-              Expanded(
-                child: Text(
-                  questionList[currentQuestionIndex].questionText,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(top: 25.0, bottom: 15),
-          child: Text(
-            " Answer :",
-            style: GoogleFonts.kodchasan(
-                fontSize: 14, color: Colors.black, fontWeight: FontWeight.w600),
-          ),
-        )
-      ],
     );
   }
 
@@ -177,7 +88,7 @@ class _QuizForKidsState extends State<QuizForKids> {
           children: questionList[currentQuestionIndex]
               .answersList
               .map(
-                (e) => _answerButton(e),
+                (e) => answerButton(e),
               )
               .toList(),
         ),
@@ -185,7 +96,7 @@ class _QuizForKidsState extends State<QuizForKids> {
     );
   }
 
-  Widget _answerButton(Answer answer) {
+  Widget answerButton(Answer answer) {
     bool isSelected = answer == selectedAnswer;
 
     return Container(
@@ -203,7 +114,7 @@ class _QuizForKidsState extends State<QuizForKids> {
           _isPressedOn = true;
           setState(() {
             selectedAnswer = answer;
-            _ph2ansList[currentQuestionIndex] = answer.isCorrect;
+            kidsList[currentQuestionIndex] = answer.isCorrect;
           });
         },
         child: Text(answer.answerText),
@@ -216,125 +127,51 @@ class _QuizForKidsState extends State<QuizForKids> {
     if (currentQuestionIndex == questionList.length - 1) {
       isLastQuestion = true;
     }
-
     return Row(
       children: [
-        Align(
-          alignment: Alignment.topLeft,
-          child: TextButton.icon(
-              // style: TextButton.styleFrom(
-              //   backgroundColor: kBluecolor_1,
-              // ),
-              label: Text(
-                "Back",
-                style: GoogleFonts.kodchasan(
-                    fontSize: 16,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold),
-              ),
-              iconAlignment: IconAlignment.start,
-              icon: Container(
-                decoration: BoxDecoration(
-                  boxShadow: const [
-                    BoxShadow(
-                      color: Colors.grey,
-                      blurRadius: 5,
-                      offset: Offset(0, 0),
-                    ),
-                  ],
-                  borderRadius: BorderRadius.circular(25),
-                ),
-                child: const CircleAvatar(
-                  backgroundColor: kQuizphase,
-                  child: Icon(
-                    fill: BorderSide.strokeAlignCenter,
-                    Icons.arrow_back,
-                    color: Colors.black,
-                    size: 27,
-                  ),
-                ),
-              ),
-              onPressed: () {
-                if (currentQuestionIndex == 0) {
-                  showSnackBar(context, "You can't get back anymore");
-                } else {
-                  setState(() {
-                    _isPressedOn = false;
-                    selectedAnswer = null;
-                    currentQuestionIndex--;
-                  });
-                }
-              }),
+        GetBackButton(
+          onPressed: () {
+            if (currentQuestionIndex == 0) {
+              showSnackBar(context, "You can't get back anymore");
+            } else {
+              setState(() {
+                _isPressedOn = false;
+                selectedAnswer = null;
+                currentQuestionIndex--;
+              });
+            }
+          },
         ),
         const Spacer(),
-        Align(
-          alignment: Alignment.topRight,
-          child: TextButton.icon(
-            // style: TextButton.styleFrom(
-            //   backgroundColor: kBluecolor_1,
-            // ),
-            label: Text(
-              "Next",
-              style: GoogleFonts.kodchasan(
-                  fontSize: 16,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold),
-            ),
-            iconAlignment: IconAlignment.end,
-            icon: Container(
-              decoration: BoxDecoration(
-                boxShadow: const [
-                  BoxShadow(
-                    color: Colors.grey,
-                    blurRadius: 5,
-                    offset: Offset(0, 0),
-                  ),
-                ],
-                borderRadius: BorderRadius.circular(25),
-              ),
-              child: const CircleAvatar(
-                backgroundColor: kQuizphase,
-                child: Icon(
-                  fill: BorderSide.strokeAlignCenter,
-                  Icons.arrow_forward,
-                  color: Colors.black,
-                  size: 27,
-                ),
-              ),
-            ),
-            onPressed: () {
-              if (_isPressedOn == false) {
-                showSnackBar(context, "You must select an answer");
-              } else {
-                for (int j = 0; j < nestedList.length; j++) {
-                  for (int i = 0; i < nestedList[j].length; i++) {
-                    if (currentQuestionIndex + 1 == nestedList[j][i]) {
-                      listNumP2[j] += _ph2ansList[currentQuestionIndex];
-                    }
+        GetNextButton(
+          onPressed: () {
+            if (_isPressedOn == false) {
+              showSnackBar(context, "You must select an answer");
+            } else {
+              for (int j = 0; j < nestedList.length; j++) {
+                for (int i = 0; i < nestedList[j].length; i++) {
+                  if (currentQuestionIndex + 1 == nestedList[j][i]) {
+                    listNumP2[j] += kidsList[currentQuestionIndex];
                   }
                 }
-                if (isLastQuestion) {
-                  //display score
-
-                  showDialog(
-                      context: context, builder: (_) => _showScoreDialog());
-                } else {
-                  //next question
-                  setState(() {
-                    _isPressedOn = false;
-                    selectedAnswer = null;
-                    currentQuestionIndex++;
-                  });
-                }
               }
-            },
-          ),
-        ),
+              if (isLastQuestion) {
+                showDialog(context: context, builder: (_) => showScoreDialog());
+              } else {
+                setState(() {
+                  _isPressedOn = false;
+                  selectedAnswer = null;
+                  currentQuestionIndex++;
+                });
+              }
+            }
+          },
+        )
       ],
     );
   }
 
-  _showScoreDialog() {
+  showScoreDialog() {
     bool isPassed = false;
 
     // String title = isPassed ? "Passed " : "Failed";
@@ -407,25 +244,6 @@ class _QuizForKidsState extends State<QuizForKids> {
           Center(
             child: Column(
               children: [
-                Row(
-                  children: [
-                    scoreF >= 60
-                        ? TextButton(
-                            onPressed: () {}, child: const Text("A advice"))
-                        : const TextButton(
-                            onPressed: null, child: Text("A advice")),
-                    scoreF >= 60
-                        ? TextButton(
-                            onPressed: () {}, child: const Text("B advice"))
-                        : const TextButton(
-                            onPressed: null, child: Text("B advice")),
-                    scoreF >= 60
-                        ? TextButton(
-                            onPressed: () {}, child: const Text("F advice"))
-                        : const TextButton(
-                            onPressed: null, child: Text("F advice")),
-                  ],
-                ),
                 TextButton(
                     onPressed: () {
                       setState(() {
@@ -436,15 +254,6 @@ class _QuizForKidsState extends State<QuizForKids> {
                       });
                     },
                     child: const Text("Return to phases")),
-                TextButton(
-                    onPressed: () {},
-                    child: const Text("What the letter mean?")),
-                const TextButton(
-                    onPressed: null,
-                    child: Text("Go To phase 3? (soon, stay turned)")),
-                const SizedBox(
-                  height: 10,
-                ),
               ],
             ),
           )
