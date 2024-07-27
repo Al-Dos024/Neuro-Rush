@@ -65,13 +65,16 @@ class _QuizForKidsState extends State<QuizForKids> {
       ),
       body: Container(
         margin: const EdgeInsets.only(right: 20, left: 20, top: 30, bottom: 50),
-        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          QuestionWidget(
-              currentQuestionIndex: currentQuestionIndex,
-              questionList: questionList),
-          _answerList(),
-          _nextButton(),
-        ]),
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              QuestionWidget(
+                  currentQuestionIndex: currentQuestionIndex,
+                  questionList: questionList),
+              _answerList(),
+              _nextButton(),
+            ]),
       ),
     );
   }
@@ -202,7 +205,7 @@ class _QuizForKidsState extends State<QuizForKids> {
         (widget.age >= 9 && widget.age <= 11)) {
       all9_11FunctionF();
       print('in 9 to 11 , female');
-      print(listNumP2.toString());
+      // print(listNumP2.toString());
     } else if (widget.isMale == false &&
         (widget.age >= 12 && widget.age <= 14)) {
       all12_14FunctionF();

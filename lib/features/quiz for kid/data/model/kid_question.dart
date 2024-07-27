@@ -5,800 +5,1282 @@ import 'question_model.dart';
 List<Question> questionsForChild() {
   List<Question> list = [];
 
-  list.add(Question(
-    "Angry and depressed",
-    [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
-    ],
-  ));
-
+  list.add(
+    Question(
+      "Angry and depressed",
+      [
+        Answer("Rarely", 0),
+        Answer("Sometimes", 1),
+        Answer("Often", 2),
+        Answer("Always", 3),
+      ],
+      [
+        ("Mistakes as a result of negligence."),
+        ("Work Slowly to avoid mistakes."),
+        ("Do not read the instructions carefully. "),
+        ("Suffer from difficulty working in a detailed way."),
+      ],
+    ),
+  );
   list.add(Question(
     "يعاني من صعوبة في أداء الواجب أو إنهاءه  لازم تكوني واقفه علي دماغه كده",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " يريد الحركة أو يتصرف كأنه مدفوع بموتور دائما مش بيستحمل يقعد مكانه",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     "خجول",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     "كل شئ يجب أن يكون دقيق ومضبوط لازم كل حاجه تبقا مترتبه جمبه",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     "ليس لديه أصدقاء معندهوش صحاب خالص",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
   list.add(Question(
     "عاني من أمراض المعده ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
   list.add(Question(
     " بيتخانق كتير ويتشاجر",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
   list.add(Question(
     " يتجنب واجب المدرسة ، يظهر مقاومة أو لديه صعوبة في عمل شئ يحتاج إلى تركيز ذهني ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " يعاني من صعوبة في التركيز فترة طويلة في الأعمال أو اللعب",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " بيقاوح و خلاص زي مثلا ليه انا اللي اعمل ليه ليه يجادل مع الكبار ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     "يفشل في إنهاء مهماته / واجباته ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " صعب السيطرة عليه في الأسواق التجارية أو أثناء شراء احتياجات المنزل",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     "يخاف من الناس الناس الجديده عموما ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " مرات عديدة  يتأكد من الأشياء مرارا و تكرارالو حط القلم فالشنطه تلاقيه كل شويه بيروح يتاكد انو فالنشطه مثلا لو حاطط فلوس مثلا فالدرج كل شويه يشوفها و يتاكد هي موجوده ولا لا,",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     "يخسر أصحابه بسرعة ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     "عنده أوجاع وآلام ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     "ا يهدأ و كثير النشاط والحركة غير مستقر ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     "يعاني من مشاكل في التركيز في الفصل حد ف المدرسه مدرس او مدرسه اشتكولك انو مش بيركز",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " عصبي لا يستمع لما يقال  ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     "يفقد اعصابه",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     "  يحتاج إلى إشراف دائم لينتهي من واجباته هيخلص الواجب لوحده ولا لازم حد مشرف عليه علشان يخلص ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     "يجري أو يتسلق كثيرا في موقف لا يصح فيه هذا التصرف زي مثلا وقت الاكل بياكل و يقوم يعمل حاجه حتي وقت الاكل مش عارف يقعد هل هو بقا بيقعد كل فتره الاكل ولا بيقوم زي كده فالنص",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " يخاف من المواقف الجديدة لو روحتو مكان جديد و ناس جديده مثلا ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " يهتم بالنظافة إلى حد كبير ومزعج لو وقع مياه مثلا اقل شي ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     "لا يعرف كيف يعمل صداقات  مش بيعرف يصاحب حد",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " يعاني من أوجاع وآلام أو ألم بالمعدة قبل الذهاب للمدرسة ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     "سهل الاستثارة ومندفع ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     "لا يتبع التعليمات ويفشل في إنهاء واجباته أو مسئولياته في العمل أو الدراسة  لا يكون بسبب فشله في فهم التعليمات أو  علشان هو مش قادر يعمل حاجه معبنه مش فاهم الكلام سلوك معارض ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     "يعاني من صعوبة في تنظيم الواجبات والنشاطات جواه طاقه كبيره ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " متهيج  ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " كثير الحركة أو قلق   ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " يخاف من البقاء بمفرده  ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " لابد من عمل الأشياء بنفس الطريقة كل مرة  روتيني ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     "  لا يدعوه أحد من أصدقاءه لزيارته بمنزله ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " يعاني من الصداع  ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " يفشل في إنهاء الأشياء التي بدأها  لو بيلعب مثلا هيكمل اللعبه للاخر ولا هيسبهاو يزهق",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " قليل التركيز وسهل أن يتشتت تركيزه  لو سمع اغاني بره الاوضه مثلا بيسيب الواجب و يطلع",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " يتكلم كثيرا  بيتكلم كتير مش بيفصل",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " يعاند أو يرفض بقوة أن يلتزم بطلبات الكبار   لو قولتله غير هدومك التزم مثلا ب شي بيفرض ب عزم و قوه مش هعمل",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " يفشل أن يعطي انتباهه للتفاصيل ويرتكب أخطاء بإهمال في المدرسة أو العمل أو أي نشاط آخر   ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " يعاني من صعوبة في الانتظار في الطابور أو انتظار دوره في اللعب أو المواقف الجماعية   ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " يعاني من مخاوف كثيرة   ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
   list.add(Question(
     "  ديه طقوس لابد أن يؤديها عندو طقوس معينه هو بيعملها قبل او بعد النوم او الاكل او كده ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " تشتت تركيزه ومدى انتباهه يعتبر مشكلة  ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " يشتكي أنه مريض بالرغم من أنه لا يوجد به شئ   ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     "  مزاجه حاد وينفجر بعصبية طول النهار مضايق و متنرفز و مش طايق نفسه",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     "  يتشتت تركيزه أثناء إعطائه تعليمات لعمل شئ لو طلبتي منه انه يعمل حاجات كتير ف نفس الوقت يعني 1 و 2 و 3 و 4 ميقدرش يعملهم خالص لو بعتيه يجيب حاجه بيجي ب حاجه تانيه خالص",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     "  يقاطع أو يتدخل في أحاديث الآخرين أو ألعابهم طفلين قاعدين مع بعض بيتدخل ما بينهم و بيفشكل الدنيا لو قعدتو بتتكلمو بيدخل ما بينكو ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " كثير النسيان في نشاطه اليومي لو في حاجه قولتلهالو يعملها بيرجع ناسيها ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " الmath الحسابات يستطيع فهم الرياضيات لا ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     "  في وقت الأكل كثير الجري بين كل ملعقة والأخرى ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     "  يخاف من الظلام والحيوانات والحشرات  ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " يضع لنفسه أهداف عالية و مقتنع انو يق يقدر يعملها ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " يقرك ويتملل بيده وقدميه ويفرك في الكرسي اي حركه مقدرش يقعد كده ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " مدى تركيزه قليل  ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " يتضايق بسهولة مع الآخرين وسريع الغضب  حمقي ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " خطه سئ   ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " يعاني من صعوبة في اللعب أو الانشغال في أي نشاط مسلي بهدوء  بيعمل دوشه و خلاص- ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " خجول ومنطوي  ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " يلوم الآخرين على أخطائه أو سوء تصرفه  بيقول دايما انت السبب اللي خلاني اعمل كده",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " كثير الململة والفرك   ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " فوضوي غير منظم بالمدرسة والبيت  ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     "يتضايق إذا نظم أحدهم أشيائه ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " يتعلق بالوالدين أو أحد الكبار  ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " يزعج الأطفال الآخرين بيحب يضايق الاطفال اللي حوليه ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " يتعمد عمل أشياء تضايق الآخرين لة بيعلب فالكهربا و انت زعقتيلو يبص بقرف و يكمل",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " طلباته لابد أن تجاب في الحال / سهل الإحباط ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " لا يركز في شئ إلا لو كان مهتم زي الموبيل مثلا",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " حقود – كياد – انتقامي لو حد ضربه من صحابه هيفضل من نحيته جزء الانتقام ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " يفقد أشيائه اللازمة لتأدية واجباته ونشاطه  أقلام ، كتب ، أدوات ، وجبات مدرسية ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " يشعر بأنه أقل من الآخرين كل شويه يسال هو انا كويس انا شاطر انا احسن من الشخص الفلاني بشكل دايم ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " يبدو متعباأو بطئ طوال الوقت طول النهار عامل نفسه تعبان ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " لا يستطيع الهجاء  لا يحفظ الأحرف في الإملاء ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " يبكي بسهولة وبكثرة علي اقل حاجه ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " يترك كرسيه في الفصل أو مواقف أخرى لابد فيها من الجلوس لو فالطياره او الفصل بيقوم ف مواقف صعبه ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     "يتغير مزاجه بسرعو تغييرا كبيرا ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " يحبط بسهولة بعد محاولة إنجاز أي شئ يكون لسه بيجرب فا ميعرفش يقوم سايبها و يقول انا مش هعرف ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " سهل أن يتشتت تركيزه بأي مؤثرات خارجية بيكتب الواجب فا يسمع اغنيه يقوم و يتشتت ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
 
   list.add(Question(
     " ينزلق في الإجابة بسرعة قبل انتهاء السؤال لسه بقول و بتكلم بلاقيه بيجاوب بسرعه ",
     [
-      Answer("نادرا", 0),
-      Answer("أحيانا", 1),
-      Answer("غالبا", 2),
-      Answer("دائما", 3),
+      Answer("Rarely", 0),
+      Answer("Sometimes", 1),
+      Answer("Often", 2),
+      Answer("Always", 3),
+    ],
+    [
+      ("Mistakes as a result of negligence."),
+      ("Work Slowly to avoid mistakes."),
+      ("Do not read the instructions carefully. "),
+      ("Suffer from difficulty working in a detailed way."),
     ],
   ));
+
   return list;
 }

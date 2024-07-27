@@ -1,8 +1,9 @@
 class Question {
   final String questionText;
   final List<Answer> answersList;
+  final List<String> examplesList;
 
-  Question(this.questionText, this.answersList);
+  Question(this.questionText, this.answersList, this.examplesList);
 }
 
 class Answer {

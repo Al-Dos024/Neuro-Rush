@@ -27,21 +27,60 @@ class QuestionWidget extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                height: 35,
-                width: 35,
-                decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
-                  color: kBluecolor_3,
-                ),
-                alignment: Alignment.center,
-                child: Text('${currentQuestionIndex + 1}',
-                    style: CustomTextStyle.kodch18WM),
-              ),
+              // Container(
+              //   height: 35,
+              //   width: 35,
+              //   decoration: const BoxDecoration(
+              //     borderRadius: BorderRadius.all(Radius.circular(10)),
+              //     color: kBluecolor_3,
+              //   ),
+              //   alignment: Alignment.center,
+              //   child: Text('${currentQuestionIndex + 1}',
+              //       style: CustomTextStyle.kodch18WM),
+              // ),
               Expanded(
-                child: Text(questionList[currentQuestionIndex].questionText,
-                    textAlign: TextAlign.center,
-                    style: CustomTextStyle.kodch18BM),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(questionList[currentQuestionIndex].questionText,
+                        textAlign: TextAlign.center,
+                        style: CustomTextStyle.kodch18BM),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 5.0),
+                      child: Align(
+                        alignment: Alignment.topLeft,
+                        child: Text("Examples during adulthood:",
+                            textAlign: TextAlign.start,
+                            style: CustomTextStyle.kodch12BlM),
+                      ),
+                    ),
+                    Column(
+                      children: questionList[currentQuestionIndex]
+                          .examplesList
+                          .map(
+                            (e) => Row(
+                              children: [
+                                const Text(
+                                  "•",
+                                  style: TextStyle(fontSize: 18),
+                                ),
+                                const SizedBox(
+                                  width: 5,
+                                ),
+                                Flexible(
+                                  child: Text(
+                                    e,
+                                    style: CustomTextStyle.kodch12BM,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          )
+                          .toList(),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),

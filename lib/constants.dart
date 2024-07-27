@@ -42,4 +42,10 @@ class CustomTextStyle {
 
   static TextStyle kodch14WM = GoogleFonts.kodchasan(
       fontSize: 14, color: Colors.white, fontWeight: FontWeight.w600);
+
+  static TextStyle kodch12BlM = GoogleFonts.kodchasan(
+      fontSize: 12, color: kBluecolor_1, fontWeight: FontWeight.bold);
+
+  static TextStyle kodch12BM = GoogleFonts.kodchasan(
+      fontSize: 12, color: Colors.black, fontWeight: FontWeight.w600);
 }
