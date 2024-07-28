@@ -63,7 +63,7 @@ class QuestionWidget extends StatelessWidget {
                               children: [
                                 const Text(
                                   "•",
-                                  style: TextStyle(fontSize: 18),
+                                  style: TextStyle(fontSize: 24),
                                 ),
                                 const SizedBox(
                                   width: 5,
