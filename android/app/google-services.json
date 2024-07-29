@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "416281920348",
+    "firebase_url": "https://isefproject-f92d3-default-rtdb.firebaseio.com",
+    "project_id": "isefproject-f92d3",
+    "storage_bucket": "isefproject-f92d3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:416281920348:android:4693b090ca633540f6b799",
+        "android_client_info": {
+          "package_name": "com.example.adhd"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzEQd6GDPcCArCMbA6odcV3YPnv73cygc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:416281920348:android:960a38b6fca868c1f6b799",
+        "android_client_info": {
+          "package_name": "com.example.isef_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzEQd6GDPcCArCMbA6odcV3YPnv73cygc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
