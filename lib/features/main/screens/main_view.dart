@@ -32,24 +32,30 @@ class MainViewContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(
-        horizontal: 15,
-        vertical: 10
-      ),
-      child: Column(
-        children: [
-          CustomCardMainView1(),
-          SizedBox(
-            height: 8,
-          ),
-          CustomCardMainView2(),
-          SizedBox(
-            height: 8,
-          ),
-          CustomCardMainView3()
-        ],
-      ),
+    return const Column(
+      children: [
+        CustomCardMainView(
+          color: kWhatAdhdcolor,
+          imgCard: "assets/img/more_adhd.png",
+          imgIcon: "assets/icons/video.png",
+          subtitle: "What is",
+          title: "ADHD?",
+        ),
+        CustomCardMainView(
+          color: kWhatAdhdcolor,
+          imgCard: "assets/img/more_adhd.png",
+          imgIcon: "assets/icons/video.png",
+          subtitle: "What is",
+          title: "ADHD?",
+        ),
+        CustomCardMainView(
+          color: kWhatAdhdcolor,
+          imgCard: "assets/img/more_adhd.png",
+          imgIcon: "assets/icons/video.png",
+          subtitle: "What is",
+          title: "ADHD?",
+        ),
+      ],
     );
   }
 }
