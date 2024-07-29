@@ -34,27 +34,27 @@ class MainViewContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        CustomCardMainView(
-          color: kWhatAdhdcolor,
-          imgCard: "assets/img/more_adhd.png",
-          imgIcon: "assets/icons/video.png",
-          subtitle: "What is",
-          title: "ADHD?",
-        ),
-        CustomCardMainView(
-          color: kWhatAdhdcolor,
-          imgCard: "assets/img/more_adhd.png",
-          imgIcon: "assets/icons/video.png",
-          subtitle: "What is",
-          title: "ADHD?",
-        ),
-        CustomCardMainView(
-          color: kWhatAdhdcolor,
-          imgCard: "assets/img/more_adhd.png",
-          imgIcon: "assets/icons/video.png",
-          subtitle: "What is",
-          title: "ADHD?",
-        ),
+        // CustomCardMainView(
+        //   color: kWhatAdhdcolor,
+        //   imgCard: "assets/img/more_adhd.png",
+        //   imgIcon: "assets/icons/video.png",
+        //   subtitle: "What is",
+        //   title: "ADHD?",
+        // ),
+        // CustomCardMainView(
+        //   color: kWhatAdhdcolor,
+        //   imgCard: "assets/img/more_adhd.png",
+        //   imgIcon: "assets/icons/video.png",
+        //   subtitle: "What is",
+        //   title: "ADHD?",
+        // ),
+        // CustomCardMainView(
+        //   color: kWhatAdhdcolor,
+        //   imgCard: "assets/img/more_adhd.png",
+        //   imgIcon: "assets/icons/video.png",
+        //   subtitle: "What is",
+        //   title: "ADHD?",
+        // ),
       ],
     );
   }
@@ -70,7 +70,7 @@ class CustomCardMainView1 extends StatelessWidget {
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        color: kWhatAdhdcolor,
+        color: kBluecolor_3,
         borderRadius: BorderRadius.circular(25),
       ),
       child: Padding(
@@ -173,7 +173,7 @@ class CustomCardMainView3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color:kAdulttestcolor,
+        color: kAdulttestcolor,
         borderRadius: BorderRadius.circular(25),
       ),
       child: Padding(
