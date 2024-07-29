@@ -1,3 +1,4 @@
+import 'package:adhd/features/authorization/presentation/sign_in/screens/sign_in_view.dart';
 import 'package:adhd/features/main/screens/main_view.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
             appBarTheme: const AppBarTheme(
           color: Colors.amber,
         )),
-        home: const DefineTheKid() //MainView() ,
+        home: SigninView()//DefineTheKid() // ,
         );
   }
 }
