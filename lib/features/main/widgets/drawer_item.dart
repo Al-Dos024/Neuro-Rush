@@ -8,22 +8,27 @@ class DrawerItem extends StatelessWidget {
     super.key,
     required this.img,
     required this.title,
+    this.onTap
   });
   final String img;
   final String title;
+  final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: Image(
-        image: AssetImage(img),
-        height: 20,
-      ),
-      title: Text(
-        title,
-        style: GoogleFonts.kodchasan(
-          color: kBluecolor_1,
-          fontSize: 15,
-          fontWeight: FontWeight.w500,
+    return GestureDetector(
+      onTap: onTap,
+      child: ListTile(
+        leading: Image(
+          image: AssetImage(img),
+          height: 20,
+        ),
+        title: Text(
+          title,
+          style: GoogleFonts.kodchasan(
+            color: kBluecolor_1,
+            fontSize: 15,
+            fontWeight: FontWeight.w500,
+          ),
         ),
       ),
     );

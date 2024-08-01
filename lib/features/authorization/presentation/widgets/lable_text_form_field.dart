@@ -64,6 +64,7 @@ class CustomLableTextFormField extends StatelessWidget {
               obscureText: obscureText,
               controller: controller,
               decoration: InputDecoration(
+                suffixIcon: suffixIcon,
                 filled: true,
                 fillColor: kGraycolor_2,
                 contentPadding: const EdgeInsets.symmetric(
