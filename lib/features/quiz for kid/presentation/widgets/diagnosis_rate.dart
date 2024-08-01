@@ -1,11 +1,17 @@
 import 'package:adhd/constants.dart';
 import 'package:flutter/material.dart';
-
 import 'circle_row.dart';
 
 class DiagnosisRate extends StatelessWidget {
-  const DiagnosisRate({super.key});
+  const DiagnosisRate(
+      {super.key,
+      required this.title,
+      required this.score,
+      required this.subtitle});
 
+  final String title;
+  final String subtitle;
+  final int score;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -16,13 +22,16 @@ class DiagnosisRate extends StatelessWidget {
           children: [
             Row(
               children: [
-                Text(
-                  "A. Title for first one",
-                  style: CustomTextStyle.kodch24BlB,
+                SizedBox(
+                  width: 300,
+                  child: Text(
+                    title,
+                    style: CustomTextStyle.kodch24BlB,
+                  ),
                 ),
                 const Spacer(),
                 Text(
-                  "60",
+                  "$score",
                   style: CustomTextStyle.kodch20BlM,
                 ),
                 Text(
@@ -39,12 +48,14 @@ class DiagnosisRate extends StatelessWidget {
                 SizedBox(
                   width: 230,
                   child: Text(
-                    "Problems with those around Breaking the rules",
+                    subtitle,
                     style: CustomTextStyle.kodch14GM,
                   ),
                 ),
                 const Spacer(),
-                const CircleRow(),
+                CircleRow(
+                  score: score,
+                ),
               ],
             ),
             const SizedBox(
