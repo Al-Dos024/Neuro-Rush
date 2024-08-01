@@ -26,6 +26,57 @@ int numM = 0;
 int scoreM = 0;
 int numN = 0;
 int scoreN = 0;
+
+List classification = [
+  "A) Opposition",
+  "B) Cognitive problems",
+  "C) Hyperactivity",
+  "D) Anxiety and shyness",
+  "E) Perfectionism",
+  "F) Hyperactivity",
+  "G) Hyperactivity",
+  "H) Hyperactivity",
+  "I) Hyperactivity",
+  "J) Hyperactivity",
+  "K) Hyperactivity",
+  "L) Hyperactivity",
+  "M) Hyperactivity",
+  "N) Hyperactivity"
+];
+
+List subtitleClass = [
+  "It involves breaking rules, problems with those around him.",
+  "Indicates inattention, problems with organization, difficulty completing tasks",
+  "Inability to sit still for a period of time, feeling of discomfort and agitation",
+  "anxiety and fears, shy, withdrawn.",
+  "Goals higher than their capabilities, obsessive at work, highly sensitive",
+  "F) Hyperactivity",
+  "G) Hyperactivity",
+  "H) Hyperactivity",
+  "I) Hyperactivity",
+  "J) Hyperactivity",
+  "K) Hyperactivity",
+  "L) Hyperactivity",
+  "M) Hyperactivity",
+  "N) Hyperactivity"
+];
+List<int> allScore = [
+  scoreA,
+  scoreB,
+  scoreC,
+  scoreD,
+  scoreE,
+  scoreF,
+  scoreG,
+  scoreH,
+  scoreI,
+  scoreJ,
+  scoreK,
+  scoreL,
+  scoreM,
+  scoreN,
+];
+
 List<List<int>> nestedList = [
   listA,
   listB,

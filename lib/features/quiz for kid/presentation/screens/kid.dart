@@ -13,6 +13,7 @@ import 'package:adhd/features/quiz%20for%20kid/data/Dataset/male/male9-11.dart';
 import 'package:adhd/features/quiz%20for%20kid/data/model/kid_question.dart';
 import 'package:adhd/features/quiz%20for%20kid/data/model/nested_list.dart';
 import 'package:adhd/features/quiz%20for%20kid/data/model/question_model.dart';
+import 'package:adhd/features/quiz%20for%20kid/presentation/screens/result.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/Next_button.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/back_button.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/passed_color.dart';
@@ -159,7 +160,58 @@ class _QuizForKidsState extends State<QuizForKids> {
                 }
               }
               if (isLastQuestion) {
-                showDialog(context: context, builder: (_) => showScoreDialog());
+                // showDialog(context: context, builder: (_) => showScoreDialog());
+                // String title = isPassed ? "Passed " : "Failed";
+                if (widget.isMale == true &&
+                    (widget.age >= 3 && widget.age <= 5)) {
+                  all3_5FunctionM();
+                  print('in 3 to 5 , male');
+                } else if (widget.isMale == true &&
+                    (widget.age >= 6 && widget.age <= 8)) {
+                  all6_8FunctionM();
+                  print('in 6 to 8 , male');
+                } else if (widget.isMale == true &&
+                    (widget.age >= 9 && widget.age <= 11)) {
+                  all9_11FunctionM();
+                  print('in 9 to 11, male');
+                } else if (widget.isMale == true &&
+                    (widget.age >= 12 && widget.age <= 14)) {
+                  all12_14FunctionM();
+                  print('in 12 to 14, male');
+                } else if (widget.isMale == true &&
+                    (widget.age >= 15 && widget.age <= 17)) {
+                  all15_17FunctionM();
+                  print('in 15 to 17, male');
+                } else if (widget.isMale == false &&
+                    (widget.age >= 3 && widget.age <= 5)) {
+                  all3_5FunctionF();
+                  print('in 3 to 5 , female');
+                } else if (widget.isMale == false &&
+                    (widget.age >= 6 && widget.age <= 8)) {
+                  all6_8FunctionF();
+                  print('in 6 to 8, female');
+                } else if (widget.isMale == false &&
+                    (widget.age >= 9 && widget.age <= 11)) {
+                  all9_11FunctionF();
+                  print('in 9 to 11 , female');
+                  // print(listNumP2.toString());
+                } else if (widget.isMale == false &&
+                    (widget.age >= 12 && widget.age <= 14)) {
+                  all12_14FunctionF();
+                  print('in 12 to 14, female');
+                } else if (widget.isMale == false &&
+                    (widget.age >= 15 && widget.age <= 17)) {
+                  all15_17FunctionF();
+                  print('in 15 to 17, female');
+                }
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Result(
+                      kidslist: kidsList,
+                    ),
+                  ),
+                );
               } else {
                 setState(() {
                   _isPressedOn = false;
@@ -178,43 +230,44 @@ class _QuizForKidsState extends State<QuizForKids> {
     bool isPassed = false;
 
     // String title = isPassed ? "Passed " : "Failed";
-    if (widget.isMale == true && (widget.age >= 3 && widget.age <= 5)) {
-      all3_5FunctionM();
-      print('in 3 to 5 , male');
-    } else if (widget.isMale == true && (widget.age >= 6 && widget.age <= 8)) {
-      all6_8FunctionM();
-      print('in 6 to 8 , male');
-    } else if (widget.isMale == true && (widget.age >= 9 && widget.age <= 11)) {
-      all9_11FunctionM();
-      print('in 9 to 11, male');
-    } else if (widget.isMale == true &&
-        (widget.age >= 12 && widget.age <= 14)) {
-      all12_14FunctionM();
-      print('in 12 to 14, male');
-    } else if (widget.isMale == true &&
-        (widget.age >= 15 && widget.age <= 17)) {
-      all15_17FunctionM();
-      print('in 15 to 17, male');
-    } else if (widget.isMale == false && (widget.age >= 3 && widget.age <= 5)) {
-      all3_5FunctionF();
-      print('in 3 to 5 , female');
-    } else if (widget.isMale == false && (widget.age >= 6 && widget.age <= 8)) {
-      all6_8FunctionF();
-      print('in 6 to 8, female');
-    } else if (widget.isMale == false &&
-        (widget.age >= 9 && widget.age <= 11)) {
-      all9_11FunctionF();
-      print('in 9 to 11 , female');
-      // print(listNumP2.toString());
-    } else if (widget.isMale == false &&
-        (widget.age >= 12 && widget.age <= 14)) {
-      all12_14FunctionF();
-      print('in 12 to 14, female');
-    } else if (widget.isMale == false &&
-        (widget.age >= 15 && widget.age <= 17)) {
-      all15_17FunctionF();
-      print('in 15 to 17, female');
-    }
+    // if (widget.isMale == true && (widget.age >= 3 && widget.age <= 5)) {
+    //   all3_5FunctionM();
+    //   print('in 3 to 5 , male');
+    // } else if (widget.isMale == true && (widget.age >= 6 && widget.age <= 8)) {
+    //   all6_8FunctionM();
+    //   print('in 6 to 8 , male');
+    // } else if (widget.isMale == true && (widget.age >= 9 && widget.age <= 11)) {
+    //   all9_11FunctionM();
+    //   print('in 9 to 11, male');
+    // } else if (widget.isMale == true &&
+    //     (widget.age >= 12 && widget.age <= 14)) {
+    //   all12_14FunctionM();
+    //   print('in 12 to 14, male');
+    // } else if (widget.isMale == true &&
+    //     (widget.age >= 15 && widget.age <= 17)) {
+    //   all15_17FunctionM();
+    //   print('in 15 to 17, male');
+    // } else if (widget.isMale == false && (widget.age >= 3 && widget.age <= 5)) {
+    //   all3_5FunctionF();
+    //   print('in 3 to 5 , female');
+    // } else if (widget.isMale == false && (widget.age >= 6 && widget.age <= 8)) {
+    //   all6_8FunctionF();
+    //   print('in 6 to 8, female');
+    // } else if (widget.isMale == false &&
+    //     (widget.age >= 9 && widget.age <= 11)) {
+    //   all9_11FunctionF();
+    //   print('in 9 to 11 , female');
+    //   // print(listNumP2.toString());
+    // } else if (widget.isMale == false &&
+    //     (widget.age >= 12 && widget.age <= 14)) {
+    //   all12_14FunctionF();
+    //   print('in 12 to 14, female');
+    // } else if (widget.isMale == false &&
+    //     (widget.age >= 15 && widget.age <= 17)) {
+    //   all15_17FunctionF();
+    //   print('in 15 to 17, female');
+    // }
+
     //send data to realtime database
 
     // databaseRef.child(uid).child("phase two Child").set(
@@ -253,7 +306,7 @@ class _QuizForKidsState extends State<QuizForKids> {
                         currentQuestionIndex = 0;
                         score = 0;
                         selectedAnswer = null;
-                        resetnumandScore();
+                        //resetnumandScore();
                       });
                     },
                     child: const Text("Return to phases")),
