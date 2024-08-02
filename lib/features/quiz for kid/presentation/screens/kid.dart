@@ -16,10 +16,11 @@ import 'package:adhd/features/quiz%20for%20kid/data/model/question_model.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/screens/result.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/Next_button.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/back_button.dart';
-import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/passed_color.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/question_widget.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/score_board.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/show_snackbar.dart';
+// import 'package:firebase_auth/firebase_auth.dart';
+// import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 
 class QuizForKids extends StatefulWidget {
@@ -31,7 +32,14 @@ class QuizForKids extends StatefulWidget {
 }
 
 class _QuizForKidsState extends State<QuizForKids> {
+  //firebase things
+  // final FirebaseAuth auth = FirebaseAuth.instance;
+  // final User? user = auth.currentUser;
+  // final uid = user!.uid;
+  // final databaseRef = FirebaseDatabase.instance.ref("users");
+
   //define the datas
+
   List<Question> questionList = questionsForChild();
   int currentQuestionIndex = 0;
   int score = 0;
@@ -85,7 +93,7 @@ class _QuizForKidsState extends State<QuizForKids> {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10.0),
         child: GridView.count(
-          childAspectRatio: (1 / .35),
+          childAspectRatio: (1 / .40),
           crossAxisCount: 2,
           mainAxisSpacing: 15,
           crossAxisSpacing: 15,
@@ -226,95 +234,24 @@ class _QuizForKidsState extends State<QuizForKids> {
     );
   }
 
-  showScoreDialog() {
-    bool isPassed = false;
+  // send data to realtime database
 
-    // String title = isPassed ? "Passed " : "Failed";
-    // if (widget.isMale == true && (widget.age >= 3 && widget.age <= 5)) {
-    //   all3_5FunctionM();
-    //   print('in 3 to 5 , male');
-    // } else if (widget.isMale == true && (widget.age >= 6 && widget.age <= 8)) {
-    //   all6_8FunctionM();
-    //   print('in 6 to 8 , male');
-    // } else if (widget.isMale == true && (widget.age >= 9 && widget.age <= 11)) {
-    //   all9_11FunctionM();
-    //   print('in 9 to 11, male');
-    // } else if (widget.isMale == true &&
-    //     (widget.age >= 12 && widget.age <= 14)) {
-    //   all12_14FunctionM();
-    //   print('in 12 to 14, male');
-    // } else if (widget.isMale == true &&
-    //     (widget.age >= 15 && widget.age <= 17)) {
-    //   all15_17FunctionM();
-    //   print('in 15 to 17, male');
-    // } else if (widget.isMale == false && (widget.age >= 3 && widget.age <= 5)) {
-    //   all3_5FunctionF();
-    //   print('in 3 to 5 , female');
-    // } else if (widget.isMale == false && (widget.age >= 6 && widget.age <= 8)) {
-    //   all6_8FunctionF();
-    //   print('in 6 to 8, female');
-    // } else if (widget.isMale == false &&
-    //     (widget.age >= 9 && widget.age <= 11)) {
-    //   all9_11FunctionF();
-    //   print('in 9 to 11 , female');
-    //   // print(listNumP2.toString());
-    // } else if (widget.isMale == false &&
-    //     (widget.age >= 12 && widget.age <= 14)) {
-    //   all12_14FunctionF();
-    //   print('in 12 to 14, female');
-    // } else if (widget.isMale == false &&
-    //     (widget.age >= 15 && widget.age <= 17)) {
-    //   all15_17FunctionF();
-    //   print('in 15 to 17, female');
-    // }
-
-    //send data to realtime database
-
-    // databaseRef.child(uid).child("phase two Child").set(
-    //   {
-    //     'obstinacy score': scoreA,
-    //     'Lack of attention score': scoreB,
-    //     'Hyperactivity score': scoreC,
-    //     'anxiety score': scoreD,
-    //     'Perfection score': scoreE,
-    //     'social problems score': scoreF,
-    //     'Physical problems score': scoreG,
-    //     'attention deficit score': scoreH,
-    //     'Arousal and impulsivity score': scoreI,
-    //     'Passion score': scoreJ,
-    //     'General indicator score': scoreK,
-    //     'DMS 5 score': scoreL,
-    //     'Hyperactivity DMS 5 score': scoreM,
-    //     'mixed DMS 5 score': scoreN,
-    //   },
-    // );
-    return SingleChildScrollView(
-      child: AlertDialog(
-        title: PassedColorList(isPassed: isPassed),
-        content: const Center(
-            child: Text(
-          'You have passed the phase two',
-          style: TextStyle(fontWeight: FontWeight.bold),
-        )),
-        actions: [
-          Center(
-            child: Column(
-              children: [
-                TextButton(
-                    onPressed: () {
-                      setState(() {
-                        currentQuestionIndex = 0;
-                        score = 0;
-                        selectedAnswer = null;
-                        //resetnumandScore();
-                      });
-                    },
-                    child: const Text("Return to phases")),
-              ],
-            ),
-          )
-        ],
-      ),
-    );
-  }
+  // databaseRef.child(uid).child("phase two Child").set(
+  //   {
+  //     'obstinacy score': scoreA,
+  //     'Lack of attention score': scoreB,
+  //     'Hyperactivity score': scoreC,
+  //     'anxiety score': scoreD,
+  //     'Perfection score': scoreE,
+  //     'social problems score': scoreF,
+  //     'Physical problems score': scoreG,
+  //     'attention deficit score': scoreH,
+  //     'Arousal and impulsivity score': scoreI,
+  //     'Passion score': scoreJ,
+  //     'General indicator score': scoreK,
+  //     'DMS 5 score': scoreL,
+  //     'Hyperactivity DMS 5 score': scoreM,
+  //     'mixed DMS 5 score': scoreN,
+  //   },
+  // );
 }
