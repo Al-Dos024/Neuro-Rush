@@ -60,13 +60,21 @@ class QuestionWidget extends StatelessWidget {
                           .examplesList
                           .map(
                             (e) => Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                const Text(
-                                  "•",
-                                  style: TextStyle(fontSize: 24),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 7.5),
+                                  child: Container(
+                                    width: 5,
+                                    height: 5,
+                                    decoration: const BoxDecoration(
+                                      color: Colors.black,
+                                      shape: BoxShape.circle,
+                                    ),
+                                  ),
                                 ),
                                 const SizedBox(
-                                  width: 5,
+                                  width: 7,
                                 ),
                                 Flexible(
                                   child: Text(

@@ -28,20 +28,20 @@ int numN = 0;
 int scoreN = 0;
 
 List classification = [
-  "A) Opposition",
-  "B) Cognitive problems",
-  "C) Hyperactivity",
-  "D) Anxiety and shyness",
-  "E) Perfectionism",
-  "F) Hyperactivity",
-  "G) Hyperactivity",
-  "H) Hyperactivity",
-  "I) Hyperactivity",
-  "J) Hyperactivity",
-  "K) Hyperactivity",
-  "L) Hyperactivity",
-  "M) Hyperactivity",
-  "N) Hyperactivity"
+  "Opposition",
+  "Cognitive problems",
+  "Hyperactivity",
+  "Anxiety and shyness",
+  "Perfectionism",
+  "Social problems",
+  "Psychosomatic diseases",
+  "Attention deficit",
+  "Arousal and impulsivity",
+  "Passion",
+  "General indicator",
+  "DMS 5",
+  "Hyperactivity DMS 5",
+  "Mixed DMS 5"
 ];
 
 List subtitleClass = [
@@ -50,15 +50,15 @@ List subtitleClass = [
   "Inability to sit still for a period of time, feeling of discomfort and agitation",
   "anxiety and fears, shy, withdrawn.",
   "Goals higher than their capabilities, obsessive at work, highly sensitive",
-  "F) Hyperactivity",
-  "G) Hyperactivity",
-  "H) Hyperactivity",
-  "I) Hyperactivity",
-  "J) Hyperactivity",
-  "K) Hyperactivity",
-  "L) Hyperactivity",
-  "M) Hyperactivity",
-  "N) Hyperactivity"
+  "Low self-confidence, low self-esteem, lack of friends",
+  "Pretends to be sick, but he is not.",
+  "Identifying people with ADHD according to Conners' criteria ",
+  "Identifying people with ADHD according to Conners' criteria",
+  "Identifying people with ADHD according to Conners' criteria",
+  "Identifying people with ADHD according to Conners' criteria",
+  "Diagnostic criteria for attention deficit hyperactivity disorder",
+  "Diagnostic criteria for hyperactivity-impulsivity in the fourth edition of the DSM-IV",
+  "Overall diagnostic criteria for ADHD"
 ];
 List<int> allScore = [
   scoreA,
