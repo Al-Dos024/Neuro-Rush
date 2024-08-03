@@ -1,7 +1,6 @@
-import 'package:adhd/features/authorization/presentation/sign_in/screens/sign_in_view.dart';
-import 'package:adhd/features/main/screens/main_view.dart';
+
+import 'package:adhd/features/what-is-ADHD/screens/what_is_adhd.dart';
 import 'package:flutter/material.dart';
-import 'features/quiz for kid/presentation/screens/def_the_kid.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,8 +16,8 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
             appBarTheme: const AppBarTheme(
           color: Colors.amber,
-        )),
-        home: const DefineTheKid() //SigninView() ,
+        ),),
+        home:const WhatIsAdhd() //SigninView() ,
         );
   }
 }
