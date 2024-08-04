@@ -19,6 +19,7 @@ import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/back_button.
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/question_widget.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/score_board.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/show_snackbar.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 // import 'package:firebase_auth/firebase_auth.dart';
 // import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
@@ -46,6 +47,22 @@ class _QuizForKidsState extends State<QuizForKids> {
   bool _isPressedOn = false;
   final List<int> kidsList = List.filled(80, 0);
   Answer? selectedAnswer;
+  List data = [];
+  FirebaseFirestore db = FirebaseFirestore.instance;
+
+  getData() async {
+    QuerySnapshot querySnapshot = await db.collection('Kids_list').get();
+    data.addAll(querySnapshot.docs);
+    print("We got the data ---------------");
+
+    setState(() {});
+  }
+
+  @override
+  void initState() {
+    getData();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
