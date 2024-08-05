@@ -47,25 +47,62 @@ class _QuizForKidsState extends State<QuizForKids> {
   bool _isPressedOn = false;
   final List<int> kidsList = List.filled(80, 0);
   Answer? selectedAnswer;
-  List data = [];
-  FirebaseFirestore db = FirebaseFirestore.instance;
 
-  getData() async {
-    QuerySnapshot querySnapshot = await db.collection('Kids_list').get();
-    data.addAll(querySnapshot.docs);
-    print("We got the data ---------------");
-
-    setState(() {});
+  Future<List<Map<String, dynamic>>> fetchQuestions() async {
+    final snapshot = await FirebaseFirestore.instance
+        .collection('questions')
+        .orderBy('num')
+        .get();
+    return snapshot.docs.map((doc) => doc.data()).toList();
   }
+
+  Future<List<Map<String, dynamic>>> fetchAnswers() async {
+    final snapshot = await FirebaseFirestore.instance
+        .collection('answers')
+        .orderBy('num')
+        .get();
+    return snapshot.docs.map((doc) => doc.data()).toList();
+  }
+
+  Future<void> loadQuestions() async {
+    final questions = await fetchQuestions();
+    final answers = await fetchAnswers();
+    setState(() {
+      questionsList = questions;
+      answersList = answers;
+    });
+    print(answersList);
+  }
+
+  Answer mapToAnswer(Map<String, dynamic> map) {
+    return Answer(
+      map['name'] as String,
+      map['points'] as int,
+    );
+  }
+
+  Future<List<Answer>> getAnswers() async {
+    final List<Map<String, dynamic>> answerMaps = await fetchAnswers();
+    return answerMaps.map((map) => mapToAnswer(map)).toList();
+  }
+
+  List<Map<String, dynamic>> questionsList = [];
+  List<Map<String, dynamic>> answersList = [];
 
   @override
   void initState() {
-    getData();
     super.initState();
+    loadQuestions();
   }
 
   @override
   Widget build(BuildContext context) {
+    if (questionsList.isEmpty) {
+      return Scaffold(
+        appBar: AppBar(title: const Text('Questions')),
+        body: const Center(child: CircularProgressIndicator()),
+      );
+    }
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -86,7 +123,7 @@ class _QuizForKidsState extends State<QuizForKids> {
         actions: [
           ScoreBoard(
               currentQuestionIndex: currentQuestionIndex,
-              questionList: questionList)
+              questionList: questionsList)
         ],
       ),
       body: Container(
@@ -96,8 +133,9 @@ class _QuizForKidsState extends State<QuizForKids> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               QuestionWidget(
-                  currentQuestionIndex: currentQuestionIndex,
-                  questionList: questionList),
+                questionsList: questionsList,
+                currentQuestionIndex: currentQuestionIndex,
+              ),
               _answerList(),
               _nextButton(),
             ]),
@@ -143,7 +181,7 @@ class _QuizForKidsState extends State<QuizForKids> {
           _isPressedOn = true;
           setState(() {
             selectedAnswer = answer;
-            kidsList[currentQuestionIndex] = answer.isCorrect;
+            kidsList[currentQuestionIndex] = answer.points;
           });
         },
         child: Text(answer.answerText),
@@ -153,7 +191,8 @@ class _QuizForKidsState extends State<QuizForKids> {
 
   _nextButton() {
     bool isLastQuestion = false;
-    if (currentQuestionIndex == questionList.length - 1) {
+
+    if (currentQuestionIndex == questionsList.length - 1) {
       isLastQuestion = true;
     }
     return Row(
@@ -233,7 +272,7 @@ class _QuizForKidsState extends State<QuizForKids> {
                   context,
                   MaterialPageRoute(
                     builder: (context) => Result(
-                      kidslist: kidsList,
+                      kidsList: kidsList,
                     ),
                   ),
                 );

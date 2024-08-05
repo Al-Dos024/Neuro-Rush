@@ -8,7 +8,7 @@ class Question {
 
 class Answer {
   final String answerText;
-  final int isCorrect;
+  final int points;
 
-  Answer(this.answerText, this.isCorrect);
+  Answer(this.answerText, this.points);
 }

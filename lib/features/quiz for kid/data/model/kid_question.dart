@@ -452,7 +452,7 @@ List<Question> questionsForChild() {
   ));
 
   list.add(Question(
-    " He is afraid of being alone.",
+    "He is afraid of being alone.",
     [
       Answer("Rarely", 0),
       Answer("Sometimes", 1),
@@ -701,7 +701,7 @@ List<Question> questionsForChild() {
       ("Forgetting Chores: She frequently forgot to do her assigned chores, like feeding the pets or taking out the trash."),
     ],
   ));
-
+  /////////////50
   list.add(Question(
     "Can't understand math",
     [
@@ -841,7 +841,7 @@ List<Question> questionsForChild() {
       ("Quiet in Class: She rarely spoke up in class, often avoiding eye contact and keeping to herself."),
     ],
   ));
-
+///////////////60
   list.add(Question(
     "Blames others for his mistakes or misbehavior",
     [
@@ -981,7 +981,7 @@ List<Question> questionsForChild() {
       ("Mean Comments: Emma made mean comments or spread rumors about others to hurt their feelings intentionally."),
     ],
   ));
-
+/////////////70
   list.add(Question(
     "Loses things he needs to do his homework and activities: pens, books, tools, school lunches",
     [

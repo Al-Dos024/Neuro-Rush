@@ -1,15 +1,17 @@
 import 'package:adhd/constants.dart';
 import 'package:adhd/features/quiz%20for%20kid/data/model/question_model.dart';
+import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/examples_widget.dart';
 import 'package:flutter/material.dart';
 
 class QuestionWidget extends StatelessWidget {
-  const QuestionWidget(
-      {super.key,
-      required this.currentQuestionIndex,
-      required this.questionList});
+  const QuestionWidget({
+    super.key,
+    required this.questionsList,
+    required this.currentQuestionIndex,
+  });
 
   final int currentQuestionIndex;
-  final List<Question> questionList;
+  final List questionsList;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -43,7 +45,7 @@ class QuestionWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text(questionList[currentQuestionIndex].questionText,
+                    Text(questionsList[currentQuestionIndex]['quiz'],
                         textAlign: TextAlign.center,
                         style: CustomTextStyle.kodch18BM),
                     Padding(
@@ -55,38 +57,13 @@ class QuestionWidget extends StatelessWidget {
                             style: CustomTextStyle.kodch12BlM),
                       ),
                     ),
-                    Column(
-                      children: questionList[currentQuestionIndex]
-                          .examplesList
-                          .map(
-                            (e) => Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 7.5),
-                                  child: Container(
-                                    width: 5,
-                                    height: 5,
-                                    decoration: const BoxDecoration(
-                                      color: Colors.black,
-                                      shape: BoxShape.circle,
-                                    ),
-                                  ),
-                                ),
-                                const SizedBox(
-                                  width: 7,
-                                ),
-                                Flexible(
-                                  child: Text(
-                                    e,
-                                    style: CustomTextStyle.kodch12BM,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          )
-                          .toList(),
+                    ExamplesWidget(
+                        ex: questionsList[currentQuestionIndex]['ex1']),
+                    const SizedBox(
+                      height: 10,
                     ),
+                    ExamplesWidget(
+                        ex: questionsList[currentQuestionIndex]['ex2'])
                   ],
                 ),
               ),

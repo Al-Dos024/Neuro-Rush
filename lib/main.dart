@@ -1,3 +1,4 @@
+import 'package:adhd/features/authorization/presentation/sign_up/screens/sign_up_view.dart';
 import 'package:adhd/features/main/screens/main_view.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/screens/def_the_kid.dart';
 import 'package:adhd/features/what-is-ADHD/screens/what_is_adhd.dart';
