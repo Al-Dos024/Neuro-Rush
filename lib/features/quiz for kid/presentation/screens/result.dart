@@ -5,8 +5,8 @@ import '../widgets/detail_row.dart';
 import '../widgets/diagnosis_rate.dart';
 
 class Result extends StatefulWidget {
-  const Result({super.key, required this.kidslist});
-  final List kidslist;
+  const Result({super.key, required this.kidsList});
+  final List kidsList;
 
   @override
   State<Result> createState() => _ResultState();

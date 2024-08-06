@@ -1,3 +1,7 @@
 {
-    "cmake.sourceDirectory": "D:/program/Flutter/Flutter_Project/ADHD/linux"
+    "cmake.sourceDirectory": "D:/program/Flutter/Flutter_Project/ADHD/linux",
+    "cSpell.words": [
+        "adhd",
+        "firestore"
+    ]
 }

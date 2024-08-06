@@ -1,5 +1,4 @@
 import 'package:adhd/constants.dart';
-import 'package:adhd/features/quiz%20for%20kid/data/model/question_model.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -10,7 +9,7 @@ class ScoreBoard extends StatelessWidget {
       required this.questionList});
 
   final int currentQuestionIndex;
-  final List<Question> questionList;
+  final List questionList;
   @override
   Widget build(BuildContext context) {
     return Stack(
