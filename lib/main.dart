@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
             color: Colors.amber,
           ),
         ),
-        home: const DefineTheKid() //SigninView() ,
+        home:const WhatIsAdhd()// const DefineTheKid() //SigninView() ,
         );
   }
 }
