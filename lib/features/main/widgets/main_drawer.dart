@@ -2,6 +2,7 @@ import 'package:adhd/features/main/widgets/custom_drawer_header.dart';
 import 'package:adhd/features/main/widgets/drawer_item.dart';
 import 'package:adhd/helper/log_out.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../../constants.dart';
 
@@ -18,25 +19,105 @@ class MainDrawer extends StatelessWidget {
           Radius.circular(0),
         ),
       ),
-      child: ListView(
-        padding: EdgeInsets.zero,
-        children:  [
+      child: Column(
+        children: [
           const CustomDrawerHeader(),
-          const DrawerItem(img: "assets/icons/home.png", title: 'Home'),
-          const DrawerItem(img: "assets/icons/profile.png", title: "My Profile"),
-          const DrawerItem(img: "assets/icons/setting.png", title: "Settigs",),
-          const SizedBox(
-            height: 380,
+          const DrawerItem(
+            img: "assets/icons/re.png",
+            title: 'Previous Results',
           ),
+          const DrawerItem(
+            img: "assets/icons/dark_mode.png",
+            title: "Dark Mode",
+          ),
+          const DrawerItem(
+            img: "assets/icons/about_us.png",
+            title: "About Us",
+          ),
+          const DrawerItem(
+            img: "assets/icons/language.png",
+            title: "Language",
+          ),
+          const Spacer(),
           const Divider(
             indent: 30,
             endIndent: 30,
             color: kBluecolor_1,
           ),
-          DrawerItem(img: "assets/icons/logout.png", title: "Log Out",onTap: () {
-            logOut(context);
-          },),
+          DrawerItem(
+            img: "assets/icons/logout.png",
+            title: "Log Out",
+            onTap: () {
+              showDialog(
+                  context: context,
+                  builder: (context) {
+                    return const LogOutDialog();
+                  });
+            },
+          ),
         ],
+      ),
+    );
+  }
+}
+
+class LogOutDialog extends StatelessWidget {
+  const LogOutDialog({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Dialog(
+      backgroundColor: kWhitecolor,
+      child: Container(
+        height: 150,
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          children: [
+            Text(
+              "Are you sure you want to log out this account ?",
+              maxLines: 2,
+              style: GoogleFonts.kodchasan(
+                fontSize: 20,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+            const SizedBox(height: 15,),
+            Row(
+              children: [
+                const Spacer(),
+                GestureDetector(
+                  onTap: (){
+                    logOut(context);
+                  },
+                  child: Text(
+                    "Yes",
+                    style: GoogleFonts.kodchasan(
+                      color: Colors.red,
+                      fontSize: 17,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  width: 15,
+                ),
+                GestureDetector(
+                  onTap: (){},
+                  child: Text(
+                    "No",
+                    style: GoogleFonts.kodchasan(
+                      color: kBluecolor_3,
+                      fontSize: 17,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                )
+              ],
+            )
+          ],
+        ),
       ),
     );
   }

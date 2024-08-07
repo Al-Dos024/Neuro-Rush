@@ -13,33 +13,49 @@ class WhatIsAdhd extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kWhitecolor,
       appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back_ios_new_rounded,
+            color: kWhitecolor,
+          ),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
         backgroundColor: kBluecolor_1,
-        title: Center(
-          child: Text(
-            "What is ADHD ?",
-            style: GoogleFonts.kodchasan(
-              color: kWhitecolor,
-              fontSize: 20,
-              fontWeight: FontWeight.w700,
-            ),
+        title: Text(
+          "What is ADHD ?",
+          style: GoogleFonts.kodchasan(
+            color: kWhitecolor,
+            fontSize: 20,
+            fontWeight: FontWeight.w700,
           ),
         ),
       ),
       body: const SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20,vertical: 15),
+          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               AdhdIntroductionSection(),
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               AdhdSymptomsSection(),
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               AdhdVideoSection(),
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               AdhdReasonsSection(),
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               AdhdPathophysiologySection()
             ],
           ),

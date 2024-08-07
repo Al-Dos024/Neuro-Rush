@@ -1,14 +1,19 @@
-import 'package:adhd/features/authorization/presentation/sign_up/screens/sign_up_view.dart';
+
 import 'package:adhd/features/main/screens/main_view.dart';
-import 'package:adhd/features/quiz%20for%20kid/presentation/screens/def_the_kid.dart';
 import 'package:adhd/features/what-is-ADHD/screens/what_is_adhd.dart';
+import 'package:device_preview/device_preview.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(const MyApp());
+  runApp(
+    DevicePreview(
+      enabled: true,
+      builder: (context) => const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -17,13 +22,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        locale: DevicePreview.locale(context),
+        builder: DevicePreview.appBuilder,
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          appBarTheme: const AppBarTheme(
-            color: Colors.amber,
-          ),
-        ),
-        home:const WhatIsAdhd()// const DefineTheKid() //SigninView() ,
+        home:MainView() // const DefineTheKid() //SigninView() ,
         );
   }
 }

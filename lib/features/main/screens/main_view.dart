@@ -1,6 +1,7 @@
 import 'package:adhd/constants.dart';
 import 'package:adhd/features/main/widgets/custom_app_bar.dart';
 import 'package:adhd/features/main/widgets/main_drawer.dart';
+import 'package:adhd/features/what-is-ADHD/screens/what_is_adhd.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -32,30 +33,21 @@ class MainViewContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        // CustomCardMainView(
-        //   color: kWhatAdhdcolor,
-        //   imgCard: "assets/img/more_adhd.png",
-        //   imgIcon: "assets/icons/video.png",
-        //   subtitle: "What is",
-        //   title: "ADHD?",
-        // ),
-        // CustomCardMainView(
-        //   color: kWhatAdhdcolor,
-        //   imgCard: "assets/img/more_adhd.png",
-        //   imgIcon: "assets/icons/video.png",
-        //   subtitle: "What is",
-        //   title: "ADHD?",
-        // ),
-        // CustomCardMainView(
-        //   color: kWhatAdhdcolor,
-        //   imgCard: "assets/img/more_adhd.png",
-        //   imgIcon: "assets/icons/video.png",
-        //   subtitle: "What is",
-        //   title: "ADHD?",
-        // ),
-      ],
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+      child: Column(
+        children: [
+          CustomCardMainView1(),
+          SizedBox(
+            height: 10,
+          ),
+          CustomCardMainView2(),
+          SizedBox(
+            height: 10,
+          ),
+          CustomCardMainView3(),
+        ],
+      ),
     );
   }
 }
@@ -77,9 +69,12 @@ class CustomCardMainView1 extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Row(
           children: [
-            const Image(
-              image: AssetImage("assets/img/more_adhd.png"),
-              height: 180,
+            const Flexible(
+              flex: 1,
+              child: Image(
+                image: AssetImage("assets/img/more_adhd.png"),
+                height: 180,
+              ),
             ),
             Column(
               children: [
@@ -99,9 +94,19 @@ class CustomCardMainView1 extends StatelessWidget {
                     color: kWhitecolor,
                   ),
                 ),
-                Image.asset(
-                  "assets/icons/video.png",
-                  width: 40,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const WhatIsAdhd(),
+                      ),
+                    );
+                  },
+                  child: Image.asset(
+                    "assets/icons/video.png",
+                    width: 40,
+                  ),
                 ),
               ],
             ),
@@ -126,9 +131,12 @@ class CustomCardMainView2 extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Row(
           children: [
-            Image.asset(
-              "assets/img/kid_test.png",
-              height: 180,
+            Flexible(
+              flex: 1,
+              child: Image.asset(
+                "assets/img/kid_test.png",
+                height: 180,
+              ),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -212,9 +220,12 @@ class CustomCardMainView3 extends StatelessWidget {
             const SizedBox(
               width: 20,
             ),
-            Image.asset(
-              "assets/img/adult_test.png",
-              height: 180,
+            Flexible(
+              flex: 1,
+              child: Image.asset(
+                "assets/img/adult_test.png",
+                height: 180,
+              ),
             ),
           ],
         ),

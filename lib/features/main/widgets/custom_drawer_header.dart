@@ -11,7 +11,7 @@ class CustomDrawerHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 250.0, 
+      height: 230, 
       child: DrawerHeader(
         decoration: const BoxDecoration(
           color: kBluecolor_1,
