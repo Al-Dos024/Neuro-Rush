@@ -22,7 +22,6 @@ class SigninView extends StatefulWidget {
 
 class _SigninViewState extends State<SigninView> {
   String? email;
-
   String? password;
 
   var formKey = GlobalKey<FormState>();
@@ -70,9 +69,9 @@ class _SigninViewState extends State<SigninView> {
                   CustomLableTextFormField(
                     lableText: "Email",
                     hintText: "Enter Email",
-                    onChanged:(p0){
-                      email =p0;
-                    } ,
+                    onChanged: (p0) {
+                      email = p0;
+                    },
                     inputType: TextInputType.text,
                     obscureText: false,
                     validator: (value) {
@@ -132,6 +131,7 @@ class _SigninViewState extends State<SigninView> {
                         if (formKey.currentState!.validate()) {
                           try {
                             await logIn(email!, password!);
+
                             showSnackBar(
                                 context, "Signing Up Successfully !!!");
                             Navigator.pushReplacement(

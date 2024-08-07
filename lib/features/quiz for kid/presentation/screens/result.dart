@@ -47,20 +47,18 @@ class _ResultState extends State<Result> {
                           content: SingleChildScrollView(
                             child: ListBody(
                               children: [
-                                detailRow(Colors.green[900]!,
+                                detailRow(const Color(0xff238800),
                                     'Very much below average'),
-                                detailRow(Colors.green[700]!,
+                                detailRow(const Color(0xff49E718),
                                     'Significantly below average'),
-                                detailRow(Colors.green[500]!, 'Below average'),
-                                detailRow(Colors.green[300]!,
-                                    'Slightly below average'),
-                                detailRow(Colors.yellow[300]!, 'Medium'),
-                                detailRow(Colors.pink[100]!,
-                                    'Slightly above average'),
-                                detailRow(Colors.pink[300]!, 'Above average'),
-                                detailRow(Colors.red[400]!,
+                                detailRow(
+                                    const Color(0xff76E159), 'Below average'),
+                                detailRow(const Color(0xffDDBD9B), 'Medium'),
+                                detailRow(
+                                    const Color(0xffFF8A8A), 'Above average'),
+                                detailRow(const Color(0xffF34C4B),
                                     'Significantly above average'),
-                                detailRow(Colors.red[800]!,
+                                detailRow(const Color(0xffBA0F13),
                                     'Very much above average'),
                               ],
                             ),
