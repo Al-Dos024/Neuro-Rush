@@ -132,8 +132,9 @@ class _SigninViewState extends State<SigninView> {
                           try {
                             await logIn(email!, password!);
 
-                            showSnackBar(
-                                context, "Signing Up Successfully !!!");
+                            showSnackBar(context,
+                                title: "Welcome to our family",
+                                message: "Signing Up Successfully !!!");
                             Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
@@ -144,21 +145,30 @@ class _SigninViewState extends State<SigninView> {
                             print(ex);
                             if (ex is FirebaseAuthException) {
                               if (ex.code == 'invalid-login-credentials') {
-                                showSnackBar(context, 'User not found');
+                                showSnackBar(context,
+                                    title: "Error", message: 'User not found');
                               } else if (ex.code == 'invalid-email') {
-                                showSnackBar(context, 'Invalid email');
+                                showSnackBar(context,
+                                    title: "Error", message: 'Invalid email');
                               } else if (ex.code == 'wrong-password') {
-                                showSnackBar(context, 'Wrong password');
+                                showSnackBar(context,
+                                    title: "Error", message: 'Wrong password');
                               } else if (ex.code == 'network-request-failed') {
-                                showSnackBar(context, 'No internet connection');
+                                showSnackBar(context,
+                                    title: "Error",
+                                    message: 'No internet connection');
                               } else if (ex.code == "invalid-credential") {
-                                showSnackBar(
-                                    context, "Invalid email or pssword");
+                                showSnackBar(context,
+                                    title: "Error",
+                                    message: "Invalid email or pssword");
                               } else {
-                                showSnackBar(context, 'Something went wrong!');
+                                showSnackBar(context,
+                                    title: "Error",
+                                    message: 'Something went wrong!');
                               }
                             } else {
-                              showSnackBar(context, 'Something weong!');
+                              showSnackBar(context,
+                                  title: "Error", message: 'Unexpected error!');
                             }
                           }
                         }

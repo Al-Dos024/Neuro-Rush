@@ -25,6 +25,7 @@ class _SignUpViewState extends State<SignUpView> {
   String? passwordSignIn;
   String? ageSignIn;
   String? nameSignIn;
+  int AttemptNum = 1;
   late DatabaseReference ref;
   @override
   Widget build(BuildContext context) {
@@ -154,14 +155,16 @@ class _SignUpViewState extends State<SignUpView> {
                             String Id = FirebaseAuth.instance.currentUser!.uid;
 
                             ref = FirebaseDatabase.instance.ref("users/$Id");
-                            showSnackBar(
-                                context, "Signing Up Successfully !!!");
+                            showSnackBar(context,
+                                title: "Yay!",
+                                message: "Signing Up Successfully !!!");
                             // ignore: unused_local_variable
                             Map<String, dynamic> users = {};
                             ref.set({
                               "Name": nameSignIn,
                               "Age": ageSignIn,
-                              "Email": emailSignIn
+                              "Email": emailSignIn,
+                              "Attempt Number": AttemptNum
                             });
                             Navigator.pushReplacement(
                               context,
@@ -172,20 +175,30 @@ class _SignUpViewState extends State<SignUpView> {
                           } on FirebaseException catch (e) {
                             if (e.code == "weak-password") {
                               showSnackBar(context,
-                                  "Password should be at least 6 characters");
+                                  title: "Error",
+                                  message:
+                                      "Password should be at least 6 characters");
                             } else if (e.code == "invalid-email") {
                               showSnackBar(context,
-                                  "The email address is badly formatted.");
+                                  title: "Error",
+                                  message:
+                                      "The email address is badly formatted.");
                             } else if (e.code == "email-already-in-use") {
-                              showSnackBar(context, "email already in use");
+                              showSnackBar(context,
+                                  title: "Error",
+                                  message: "email already in use");
                             } else if (e.code == 'network-request-failed') {
-                              showSnackBar(context, 'No internet connection');
+                              showSnackBar(context,
+                                  title: "Error",
+                                  message: 'No internet connection');
                             } else {
-                              showSnackBar(
-                                  context, "An undefined Error happened.");
+                              showSnackBar(context,
+                                  title: "Error",
+                                  message: "An undefined Error happened.");
                             }
                           } catch (e) {
-                            showSnackBar(context, "error");
+                            showSnackBar(context,
+                                title: "Error", message: "Unexpected error");
                           }
                         }
                       },

@@ -1,7 +1,8 @@
 import 'package:adhd/constants.dart';
 import 'package:flutter/material.dart';
 
-void showSnackBar(BuildContext context, String message) {
+void showSnackBar(BuildContext context,
+    {required String message, required String title}) {
   ScaffoldMessenger.of(context).showSnackBar(
     SnackBar(
       padding: EdgeInsets.zero,
@@ -21,7 +22,7 @@ void showSnackBar(BuildContext context, String message) {
             children: [
               Align(
                 alignment: Alignment.topLeft,
-                child: Text("Opps!", style: CustomTextStyle.kodch18WB),
+                child: Text(title, style: CustomTextStyle.kodch18WB),
               ),
               Align(
                 alignment: Alignment.topLeft,
