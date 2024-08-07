@@ -1,3 +1,5 @@
+import 'package:adhd/features/main/screens/about_us.dart';
+import 'package:adhd/features/main/screens/previous_results.dart';
 import 'package:adhd/features/main/widgets/custom_drawer_header.dart';
 import 'package:adhd/features/main/widgets/drawer_item.dart';
 import 'package:adhd/helper/log_out.dart';
@@ -22,17 +24,33 @@ class MainDrawer extends StatelessWidget {
       child: Column(
         children: [
           const CustomDrawerHeader(),
-          const DrawerItem(
+          DrawerItem(
             img: "assets/icons/re.png",
             title: 'Previous Results',
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const PreviousResults(),
+                  ));
+            },
           ),
           const DrawerItem(
             img: "assets/icons/dark_mode.png",
             title: "Dark Mode",
           ),
-          const DrawerItem(
+          DrawerItem(
             img: "assets/icons/about_us.png",
             title: "About Us",
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AboutUs(),
+                  ));
+            },
           ),
           const DrawerItem(
             img: "assets/icons/language.png",
@@ -48,6 +66,7 @@ class MainDrawer extends StatelessWidget {
             img: "assets/icons/logout.png",
             title: "Log Out",
             onTap: () {
+              Navigator.of(context).pop();
               showDialog(
                   context: context,
                   builder: (context) {
@@ -83,12 +102,14 @@ class LogOutDialog extends StatelessWidget {
                 fontWeight: FontWeight.w500,
               ),
             ),
-            const SizedBox(height: 15,),
+            const SizedBox(
+              height: 15,
+            ),
             Row(
               children: [
                 const Spacer(),
                 GestureDetector(
-                  onTap: (){
+                  onTap: () {
                     logOut(context);
                   },
                   child: Text(
@@ -104,7 +125,9 @@ class LogOutDialog extends StatelessWidget {
                   width: 15,
                 ),
                 GestureDetector(
-                  onTap: (){},
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
                   child: Text(
                     "No",
                     style: GoogleFonts.kodchasan(

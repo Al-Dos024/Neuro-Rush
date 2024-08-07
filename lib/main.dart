@@ -1,6 +1,5 @@
 
 import 'package:adhd/features/main/screens/main_view.dart';
-import 'package:adhd/features/what-is-ADHD/screens/what_is_adhd.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +24,7 @@ class MyApp extends StatelessWidget {
         locale: DevicePreview.locale(context),
         builder: DevicePreview.appBuilder,
         debugShowCheckedModeBanner: false,
-        home:MainView() // const DefineTheKid() //SigninView() ,
+        home:const MainView() // const DefineTheKid() //SigninView() ,
         );
   }
 }
