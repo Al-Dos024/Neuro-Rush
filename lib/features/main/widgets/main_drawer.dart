@@ -2,7 +2,7 @@ import 'package:adhd/features/main/screens/about_us.dart';
 import 'package:adhd/features/main/screens/previous_results.dart';
 import 'package:adhd/features/main/widgets/custom_drawer_header.dart';
 import 'package:adhd/features/main/widgets/drawer_item.dart';
-import 'package:adhd/helper/log_out.dart';
+import 'package:adhd/core/helper/log_out.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

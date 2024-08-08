@@ -1,7 +1,8 @@
 // ignore_for_file: avoid_print
+import 'package:adhd/core/utils/font_style.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/send_data_to_firebase.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/process_age_and_gender.dart';
-import 'package:adhd/helper/fetch_data.dart';
+import 'package:adhd/core/helper/fetch_data.dart';
 import 'package:flutter/material.dart';
 import 'package:adhd/constants.dart';
 import 'package:adhd/features/quiz%20for%20kid/data/model/nested_list.dart';

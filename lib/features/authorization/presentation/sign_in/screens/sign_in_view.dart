@@ -6,7 +6,7 @@ import 'package:adhd/features/authorization/presentation/widgets/my_elevated_but
 import 'package:adhd/features/authorization/presentation/widgets/my_text_button.dart';
 import 'package:adhd/features/main/screens/main_view.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/show_snackbar.dart';
-import 'package:adhd/helper/log_in.dart';
+import 'package:adhd/core/helper/log_in.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';

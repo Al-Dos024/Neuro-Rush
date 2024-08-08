@@ -73,7 +73,7 @@ class CustomCardMainView1 extends StatelessWidget {
             const Flexible(
               flex: 1,
               child: Image(
-                image: AssetImage("assets/img/more_adhd.png"),
+                image: AssetImage("assets/images/more_adhd.png"),
                 height: 180,
               ),
             ),
@@ -135,7 +135,7 @@ class CustomCardMainView2 extends StatelessWidget {
             Flexible(
               flex: 1,
               child: Image.asset(
-                "assets/img/kid_test.png",
+                "assets/images/kid_test.png",
                 height: 180,
               ),
             ),
@@ -162,7 +162,11 @@ class CustomCardMainView2 extends StatelessWidget {
                   ),
                   IconButton(
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) =>const DefineTheKid() ),);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const DefineTheKid()),
+                      );
                     },
                     icon: const Icon(
                       Icons.arrow_forward,
@@ -229,7 +233,7 @@ class CustomCardMainView3 extends StatelessWidget {
             Flexible(
               flex: 1,
               child: Image.asset(
-                "assets/img/adult_test.png",
+                "assets/images/adult_test.png",
                 height: 180,
               ),
             ),
