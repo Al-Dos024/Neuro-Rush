@@ -1,4 +1,3 @@
-
 import 'package:adhd/features/what-is-ADHD/widgets/custom_headline_text.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +17,10 @@ class AdhdPathophysiologySection extends StatelessWidget {
           height: 100,
           width: 130,
         ),
-        const CustomHeadlineText(title: "", subTitle: "Neuroimaging studies are now only used for research purposes, not for diagnosis. A 2005 review identified four interconnected frontal brain regions implicated in ADHD: the lateral prefrontal cortex, the dorsal anterior cingulate cortex, the caudate nucleus, and the cortex.")
+        const CustomHeadlineText(
+            title: "",
+            subTitle:
+                "Neuroimaging studies are now only used for research purposes, not for diagnosis. A 2005 review identified four interconnected frontal brain regions implicated in ADHD: the lateral prefrontal cortex, the dorsal anterior cingulate cortex, the caudate nucleus, and the cortex.")
       ],
     );
   }
