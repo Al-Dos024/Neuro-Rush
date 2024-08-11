@@ -17,7 +17,7 @@ class CustomLeading extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 15),
                 child: CircleAvatar(
                   radius: 24,
-                  backgroundImage: AssetImage("assets/img/avatar.png"),
+                  backgroundImage: AssetImage("assets/images/avatar.png"),
                 ),
               ),
               Column(

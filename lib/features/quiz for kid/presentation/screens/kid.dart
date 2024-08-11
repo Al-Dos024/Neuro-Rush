@@ -1,6 +1,8 @@
 // ignore_for_file: avoid_print
+import 'package:adhd/core/utils/font_style.dart';
+import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/send_data_to_firebase.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/process_age_and_gender.dart';
-import 'package:adhd/helper/fetch_data.dart';
+import 'package:adhd/core/helper/fetch_data.dart';
 import 'package:flutter/material.dart';
 import 'package:adhd/constants.dart';
 import 'package:adhd/features/quiz%20for%20kid/data/model/nested_list.dart';
@@ -20,14 +22,7 @@ class QuizForKids extends StatefulWidget {
 }
 
 class _QuizForKidsState extends State<QuizForKids> {
-  //firebase things
-  // final FirebaseAuth auth = FirebaseAuth.instance;
-  // final User? user = auth.currentUser;
-  // final uid = user!.uid;
-  // final databaseRef = FirebaseDatabase.instance.ref("users");
-
   //define the data's
-
   final List<int> kidsList = List.filled(80, 0);
   List<Map<String, dynamic>> questionsList = [];
   List<Map<String, dynamic>> answersList = [];
@@ -43,7 +38,6 @@ class _QuizForKidsState extends State<QuizForKids> {
       questionsList = questions;
       answersList = answers;
     });
-    print(answersList);
   }
 
   @override
@@ -55,9 +49,8 @@ class _QuizForKidsState extends State<QuizForKids> {
   @override
   Widget build(BuildContext context) {
     if (questionsList.isEmpty) {
-      return Scaffold(
-        appBar: AppBar(title: const Text('Questions')),
-        body: const Center(child: CircularProgressIndicator()),
+      return const Scaffold(
+        body: Center(child: CircularProgressIndicator()),
       );
     }
     return Scaffold(
@@ -94,6 +87,17 @@ class _QuizForKidsState extends State<QuizForKids> {
                 currentQuestionIndex: currentQuestionIndex,
               ),
               answerList(),
+              // AnswerList(
+              //   answersList: answersList,
+              //   selectedAnswer: selectedAnswer,
+              //   onPressed: () {
+              //     _isPressedOn = true;
+              //     setState(() {
+              //       selectedAnswer = answer;
+              //       kidsList[currentQuestionIndex] = answer['points'];
+              //     });
+              //   },
+              // ),
               _nextButton(),
             ]),
       ),
@@ -156,7 +160,8 @@ class _QuizForKidsState extends State<QuizForKids> {
         GetBackButton(
           onPressed: () {
             if (currentQuestionIndex == 0) {
-              showSnackBar(context, "You can't get back anymore");
+              showSnackBar(context,
+                  title: "Opps", message: "You can't get back anymore");
             } else {
               setState(() {
                 _isPressedOn = false;
@@ -170,7 +175,8 @@ class _QuizForKidsState extends State<QuizForKids> {
         GetNextButton(
           onPressed: () {
             if (_isPressedOn == false) {
-              showSnackBar(context, "You must select an answer");
+              showSnackBar(context,
+                  title: "Opps", message: "You must select an answer");
             } else {
               for (int j = 0; j < nestedList.length; j++) {
                 for (int i = 0; i < nestedList[j].length; i++) {
@@ -181,6 +187,7 @@ class _QuizForKidsState extends State<QuizForKids> {
               }
               if (isLastQuestion) {
                 processAgeAndGender(isMale: widget.isMale, age: widget.age);
+                sendDataToFirebase();
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -202,25 +209,4 @@ class _QuizForKidsState extends State<QuizForKids> {
       ],
     );
   }
-
-  // send data to realtime database
-
-  // databaseRef.child(uid).child("phase two Child").set(
-  //   {
-  //     'obstinacy score': scoreA,
-  //     'Lack of attention score': scoreB,
-  //     'Hyperactivity score': scoreC,
-  //     'anxiety score': scoreD,
-  //     'Perfection score': scoreE,
-  //     'social problems score': scoreF,
-  //     'Physical problems score': scoreG,
-  //     'attention deficit score': scoreH,
-  //     'Arousal and impulsivity score': scoreI,
-  //     'Passion score': scoreJ,
-  //     'General indicator score': scoreK,
-  //     'DMS 5 score': scoreL,
-  //     'Hyperactivity DMS 5 score': scoreM,
-  //     'mixed DMS 5 score': scoreN,
-  //   },
-  // );
 }

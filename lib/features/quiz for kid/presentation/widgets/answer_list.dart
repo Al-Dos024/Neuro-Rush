@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class AnswerList extends StatelessWidget {
-  const AnswerList(
+class AnswerListdos extends StatelessWidget {
+  const AnswerListdos(
       {super.key,
       required this.answersList,
       required this.selectedAnswer,
@@ -50,5 +50,3 @@ class AnswerList extends StatelessWidget {
     );
   }
 }
-
-

@@ -54,19 +54,19 @@ class _OnBoradingState extends State<OnBoradingView> {
             children: [
               buildPage(
                   color: Colors.white,
-                  urlImage: 'assets/img/World health day.png',
+                  urlImage: 'assets/images/World health day.png',
                   title: "About Our Application",
                   subtitle:
                       "It is an application designed to empower individuals and families affected by ADHD, as it combines three main functions: first, diagnosing ADHD. Second, resources on ADHD Topics such as symptoms, types, management strategies, and coping mechanisms can help users better understand themselves and their experiences."),
               buildPage(
                   color: Colors.white,
-                  urlImage: 'assets/img/Online Doctor.png',
+                  urlImage: 'assets/images/Online Doctor.png',
                   title: "What does the app do?",
                   subtitle:
                       "Third, behavioral therapy tools: The app provides access to evidence-based exercises and techniques to help users manage symptoms, develop life skills, and stimulate and promote positive behaviors"),
               buildPage(
                   color: Colors.white,
-                  urlImage: 'assets/img/Doctor.png',
+                  urlImage: 'assets/images/Doctor.png',
                   title: "Do we start?",
                   subtitle: " "),
             ]),

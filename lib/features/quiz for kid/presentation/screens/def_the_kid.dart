@@ -68,7 +68,7 @@ class _DefineTheKidState extends State<DefineTheKid> {
                             height: 10,
                           ),
                           const Image(
-                            image: AssetImage("assets/icons/male.png"),
+                            image: AssetImage("assets/images/male.png"),
                             height: 125,
                           )
                         ],
@@ -117,7 +117,7 @@ class _DefineTheKidState extends State<DefineTheKid> {
                             height: 10,
                           ),
                           const Image(
-                            image: AssetImage("assets/icons/female.png"),
+                            image: AssetImage("assets/images/female.png"),
                             height: 125,
                           ),
                         ],

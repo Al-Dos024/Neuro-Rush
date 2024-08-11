@@ -1,4 +1,5 @@
 import 'package:adhd/constants.dart';
+import 'package:adhd/core/utils/font_style.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/examples_widget.dart';
 import 'package:flutter/material.dart';
 

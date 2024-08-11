@@ -6,7 +6,7 @@ import 'package:adhd/features/authorization/presentation/widgets/my_elevated_but
 import 'package:adhd/features/authorization/presentation/widgets/my_text_button.dart';
 import 'package:adhd/features/main/screens/main_view.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/show_snackbar.dart';
-import 'package:adhd/helper/log_in.dart';
+import 'package:adhd/core/helper/log_in.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -22,7 +22,6 @@ class SigninView extends StatefulWidget {
 
 class _SigninViewState extends State<SigninView> {
   String? email;
-
   String? password;
 
   var formKey = GlobalKey<FormState>();
@@ -70,9 +69,9 @@ class _SigninViewState extends State<SigninView> {
                   CustomLableTextFormField(
                     lableText: "Email",
                     hintText: "Enter Email",
-                    onChanged:(p0){
-                      email =p0;
-                    } ,
+                    onChanged: (p0) {
+                      email = p0;
+                    },
                     inputType: TextInputType.text,
                     obscureText: false,
                     validator: (value) {
@@ -132,8 +131,10 @@ class _SigninViewState extends State<SigninView> {
                         if (formKey.currentState!.validate()) {
                           try {
                             await logIn(email!, password!);
-                            showSnackBar(
-                                context, "Signing Up Successfully !!!");
+
+                            showSnackBar(context,
+                                title: "Welcome to our family",
+                                message: "Signing Up Successfully !!!");
                             Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
@@ -144,21 +145,30 @@ class _SigninViewState extends State<SigninView> {
                             print(ex);
                             if (ex is FirebaseAuthException) {
                               if (ex.code == 'invalid-login-credentials') {
-                                showSnackBar(context, 'User not found');
+                                showSnackBar(context,
+                                    title: "Error", message: 'User not found');
                               } else if (ex.code == 'invalid-email') {
-                                showSnackBar(context, 'Invalid email');
+                                showSnackBar(context,
+                                    title: "Error", message: 'Invalid email');
                               } else if (ex.code == 'wrong-password') {
-                                showSnackBar(context, 'Wrong password');
+                                showSnackBar(context,
+                                    title: "Error", message: 'Wrong password');
                               } else if (ex.code == 'network-request-failed') {
-                                showSnackBar(context, 'No internet connection');
+                                showSnackBar(context,
+                                    title: "Error",
+                                    message: 'No internet connection');
                               } else if (ex.code == "invalid-credential") {
-                                showSnackBar(
-                                    context, "Invalid email or pssword");
+                                showSnackBar(context,
+                                    title: "Error",
+                                    message: "Invalid email or pssword");
                               } else {
-                                showSnackBar(context, 'Something went wrong!');
+                                showSnackBar(context,
+                                    title: "Error",
+                                    message: 'Something went wrong!');
                               }
                             } else {
-                              showSnackBar(context, 'Something weong!');
+                              showSnackBar(context,
+                                  title: "Error", message: 'Unexpected error!');
                             }
                           }
                         }

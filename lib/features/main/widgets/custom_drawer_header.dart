@@ -1,4 +1,3 @@
-
 import 'package:adhd/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -11,7 +10,7 @@ class CustomDrawerHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 230, 
+      height: 230,
       child: DrawerHeader(
         decoration: const BoxDecoration(
           color: kBluecolor_1,
@@ -23,7 +22,7 @@ class CustomDrawerHeader extends StatelessWidget {
                 padding: EdgeInsets.symmetric(vertical: 10),
                 child: CircleAvatar(
                   radius: 50,
-                  backgroundImage: AssetImage("assets/img/avatar.png"),
+                  backgroundImage: AssetImage("assets/images/avatar.png"),
                 ),
               ),
               Text(
