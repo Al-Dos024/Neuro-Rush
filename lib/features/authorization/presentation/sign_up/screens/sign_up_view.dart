@@ -25,7 +25,7 @@ class _SignUpViewState extends State<SignUpView> {
   String? passwordSignIn;
   String? ageSignIn;
   String? nameSignIn;
-  int AttemptNum = 1;
+  int AttemptNum = 0;
   late DatabaseReference ref;
   @override
   Widget build(BuildContext context) {
@@ -154,7 +154,9 @@ class _SignUpViewState extends State<SignUpView> {
                                     password: passwordSignIn!);
                             String Id = FirebaseAuth.instance.currentUser!.uid;
 
-                            ref = FirebaseDatabase.instance.ref("users/$Id");
+                            ref = FirebaseDatabase.instance
+                                .ref("users/$Id")
+                                .child("Personal Data");
                             showSnackBar(context,
                                 title: "Yay!",
                                 message: "Signing Up Successfully !!!");
