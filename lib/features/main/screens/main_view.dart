@@ -1,7 +1,11 @@
+import 'package:adhd/constants.dart';
 import 'package:adhd/features/main/widgets/custom_app_bar.dart';
 import 'package:adhd/features/main/widgets/main_content.dart';
 import 'package:adhd/features/main/widgets/main_drawer.dart';
+import 'package:adhd/features/quiz%20for%20kid/presentation/screens/def_the_kid.dart';
+import 'package:adhd/features/what-is-ADHD/screens/what_is_adhd.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MainView extends StatelessWidget {
   const MainView({super.key});
@@ -159,7 +163,11 @@ class CustomCardMainView2 extends StatelessWidget {
                   ),
                   IconButton(
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) =>const DefineTheKid() ),);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const DefineTheKid()),
+                      );
                     },
                     icon: const Icon(
                       Icons.arrow_forward,
