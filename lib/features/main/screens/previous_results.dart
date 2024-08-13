@@ -1,5 +1,6 @@
 import 'package:adhd/constants.dart';
 import 'package:adhd/features/main/widgets/result_widget.dart';
+import 'package:adhd/generated/l10n.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -25,7 +26,7 @@ class PreviousResults extends StatelessWidget {
           ),
           backgroundColor: kBluecolor_1,
           title: Text(
-            "Previous Results",
+            S.of(context).Previous_Results,
             style: GoogleFonts.kodchasan(
               color: kWhitecolor,
               fontSize: 20,

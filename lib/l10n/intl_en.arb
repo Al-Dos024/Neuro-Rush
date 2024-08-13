@@ -1,0 +1,67 @@
+{
+    "title": "Welcome aboard",
+    "Previous_Results": "Previous Results",
+    "Dark_Mode": "Welcome aboard",
+
+    "aboutapp": "About Application",
+    "aboutapp_desc": "It is an application designed to empower individuals and families affected by ADHD, as it combines three main functions: first, diagnosing ADHD. Second, resources on ADHD Topics such as symptoms, types, management strategies, and coping mechanisms can help users better understand themselves and their experiences.",
+
+    "Whatappdo": "What does the app do?",
+    "Whatappdo_desc": "Third, behavioral therapy tools: The app provides access to evidence-based exercises and techniques to help users manage symptoms, develop life skills, and stimulate and promote positive behaviors",
+
+    "letsstart": "Let's get start?",
+
+    "Skip_btn": "Skip",
+    "Lets_start_btn": "Let's Start?",
+
+    "sign_up_title": "Let's sign you up.",       
+    "sign_up_subtitle": "Be with our family",
+
+    "Name": "Name",
+    "Enter_name": "Enter your name",
+    "no_name": "Please enter name",
+
+    "Age": "Age",
+    "Enter_Age": "Enter your Age",
+    "no_Age": "Please enter Age",
+
+    "email": "Email",
+    "Enter_Email": "Enter your Email",
+    "no_Email": "Please enter Email",
+
+    "Password": "Password",
+    "Enter_Password": "Enter your Password",
+    "no_Password": "Please enter Password",
+
+    "snackbar_suc": "Welcome to our family",
+    "snackbar_suc_sub": "Signing up Successfully !",
+
+    "snackbar_suc_log": "Yay!",
+    "snackbar_suc_log_sub": "Signing in Successfully !",
+
+    "snackbar_weak": "Error!",
+    "snackbar_weak_sub": "Password should be at least 6 characters",
+    "snackbar_inv_sub": "The email address is badly formatted.",
+    "snackbar_use_sub": "email already in use",
+    "snackbar_fail_sub": "No internet connection",
+    "snackbar_else_sub": "An undefined Error happened.",
+    "snackbar_used_sub": "Unexpected error",
+
+    "snackbar_no_sub": "User not found",
+    "snackbar_inv_pass_sub": "wrong password",
+    "snackbar_inv_email_sub": "Invalid email or pssword",
+
+    "Register": "Register",
+    "have_account": "have an account ?",
+    "login_now": " Login now",
+
+    "sign_you_title": "Let's sign you in",
+    "sign_you_subtitle": "Welcome back, You've been missed",
+
+    "Forgot_Password": "Forgot Password?",
+    "Log_in": "Log in",
+    "dont_account": "don't have an account?",
+    "Register_now": " Register now",
+    "continue_with": "or continue with"
+    
+}

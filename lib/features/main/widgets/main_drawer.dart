@@ -3,6 +3,7 @@ import 'package:adhd/features/main/screens/previous_results.dart';
 import 'package:adhd/features/main/widgets/custom_drawer_header.dart';
 import 'package:adhd/features/main/widgets/drawer_item.dart';
 import 'package:adhd/core/helper/log_out.dart';
+import 'package:adhd/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -23,10 +24,10 @@ class MainDrawer extends StatelessWidget {
       ),
       child: Column(
         children: [
-          const CustomDrawerHeader(),
+          CustomDrawerHeader(),
           DrawerItem(
             img: "assets/icons/re.png",
-            title: 'Previous Results',
+            title: S.of(context).Previous_Results,
             onTap: () {
               Navigator.of(context).pop();
               Navigator.push(
@@ -36,9 +37,9 @@ class MainDrawer extends StatelessWidget {
                   ));
             },
           ),
-          const DrawerItem(
+          DrawerItem(
             img: "assets/icons/dark_mode.png",
-            title: "Dark Mode",
+            title: S.of(context).Dark_Mode,
           ),
           DrawerItem(
             img: "assets/icons/about_us.png",

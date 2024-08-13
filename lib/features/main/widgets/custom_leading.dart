@@ -1,4 +1,5 @@
 import 'package:adhd/constants.dart';
+import 'package:adhd/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -8,7 +9,7 @@ class CustomLeading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 5),
+      padding: EdgeInsets.symmetric(horizontal: 5),
       child: Row(
         children: [
           Row(
@@ -25,7 +26,7 @@ class CustomLeading extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Welcome aboard,",
+                    S.of(context).title,
                     style: GoogleFonts.jura(
                       fontSize: 14,
                       fontWeight: FontWeight.w400,

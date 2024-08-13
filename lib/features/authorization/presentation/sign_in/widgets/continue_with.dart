@@ -1,6 +1,6 @@
-
 import 'package:adhd/constants.dart';
 import 'package:adhd/features/authorization/presentation/widgets/my_elevated_button%20copy.dart';
+import 'package:adhd/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -10,12 +10,12 @@ class ContinueWith extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 12),
+      padding: EdgeInsets.symmetric(vertical: 12),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            "or  continue with ",
+            S.of(context).continue_with,
             style: GoogleFonts.inter(
               color: kGraycolor_1,
               fontSize: 14,

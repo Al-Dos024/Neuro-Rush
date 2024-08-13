@@ -7,6 +7,7 @@ import 'package:adhd/features/authorization/presentation/widgets/my_text_button.
 import 'package:adhd/features/main/screens/main_view.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/show_snackbar.dart';
 import 'package:adhd/core/helper/log_in.dart';
+import 'package:adhd/generated/l10n.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -48,7 +49,7 @@ class _SigninViewState extends State<SigninView> {
                     height: 35,
                   ),
                   Text(
-                    "Let’s sign you in.",
+                    S.of(context).sign_you_title,
                     style: GoogleFonts.inter(
                       color: kBlackcolor,
                       fontSize: 24,
@@ -56,7 +57,7 @@ class _SigninViewState extends State<SigninView> {
                     ),
                   ),
                   Text(
-                    "Welcome back, You’ve been missed",
+                    S.of(context).sign_you_subtitle,
                     style: GoogleFonts.inter(
                       color: kGraycolor_1,
                       fontSize: 14,
@@ -67,8 +68,8 @@ class _SigninViewState extends State<SigninView> {
                     height: 20,
                   ),
                   CustomLableTextFormField(
-                    lableText: "Email",
-                    hintText: "Enter Email",
+                    lableText: S.of(context).email,
+                    hintText: S.of(context).Enter_Email,
                     onChanged: (p0) {
                       email = p0;
                     },
@@ -76,14 +77,14 @@ class _SigninViewState extends State<SigninView> {
                     obscureText: false,
                     validator: (value) {
                       if (value!.isEmpty) {
-                        return "Please enter email";
+                        return S.of(context).no_Email;
                       }
                       return null;
                     },
                   ),
                   CustomLableTextFormField(
-                    lableText: "Password",
-                    hintText: "Enter Password",
+                    lableText: S.of(context).Password,
+                    hintText: S.of(context).Enter_Password,
                     inputType: TextInputType.text,
                     obscureText: showpassword,
                     onChanged: (p0) {
@@ -91,7 +92,7 @@ class _SigninViewState extends State<SigninView> {
                     },
                     validator: (value) {
                       if (value!.isEmpty) {
-                        return "Please enter Password";
+                        return S.of(context).no_Password;
                       }
                       return null;
                     },
@@ -112,7 +113,7 @@ class _SigninViewState extends State<SigninView> {
                     child: MyTextButton(
                       onPressed: () {},
                       child: Text(
-                        "Forgot Password?",
+                        S.of(context).Forgot_Password,
                         style: GoogleFonts.inter(
                           color: kBluecolor_1,
                           fontSize: 13,
@@ -133,8 +134,8 @@ class _SigninViewState extends State<SigninView> {
                             await logIn(email!, password!);
 
                             showSnackBar(context,
-                                title: "Welcome to our family",
-                                message: "Signing Up Successfully !!!");
+                                title: S.of(context).snackbar_suc_log,
+                                message: S.of(context).snackbar_suc_log_sub);
                             Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
@@ -145,36 +146,51 @@ class _SigninViewState extends State<SigninView> {
                             print(ex);
                             if (ex is FirebaseAuthException) {
                               if (ex.code == 'invalid-login-credentials') {
-                                showSnackBar(context,
-                                    title: "Error", message: 'User not found');
+                                showSnackBar(
+                                  context,
+                                  title: S.of(context).snackbar_weak,
+                                  message: S.of(context).snackbar_no_sub,
+                                );
                               } else if (ex.code == 'invalid-email') {
-                                showSnackBar(context,
-                                    title: "Error", message: 'Invalid email');
+                                showSnackBar(
+                                  context,
+                                  title: S.of(context).snackbar_weak,
+                                  message: S.of(context).snackbar_inv_email_sub,
+                                );
                               } else if (ex.code == 'wrong-password') {
                                 showSnackBar(context,
-                                    title: "Error", message: 'Wrong password');
+                                    title: S.of(context).snackbar_weak,
+                                    message:
+                                        S.of(context).snackbar_inv_pass_sub);
                               } else if (ex.code == 'network-request-failed') {
-                                showSnackBar(context,
-                                    title: "Error",
-                                    message: 'No internet connection');
+                                showSnackBar(
+                                  context,
+                                  title: S.of(context).snackbar_weak,
+                                  message: S.of(context).snackbar_fail_sub,
+                                );
                               } else if (ex.code == "invalid-credential") {
-                                showSnackBar(context,
-                                    title: "Error",
-                                    message: "Invalid email or pssword");
+                                showSnackBar(
+                                  context,
+                                  title: S.of(context).snackbar_weak,
+                                  message: S.of(context).snackbar_inv_email_sub,
+                                );
                               } else {
-                                showSnackBar(context,
-                                    title: "Error",
-                                    message: 'Something went wrong!');
+                                showSnackBar(
+                                  context,
+                                  title: S.of(context).snackbar_weak,
+                                  message: S.of(context).snackbar_else_sub,
+                                );
                               }
                             } else {
                               showSnackBar(context,
-                                  title: "Error", message: 'Unexpected error!');
+                                  title: S.of(context).snackbar_weak,
+                                  message: S.of(context).snackbar_use_sub);
                             }
                           }
                         }
                       },
                       child: Text(
-                        "Log in",
+                        S.of(context).Log_in,
                         style: GoogleFonts.inter(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
@@ -183,12 +199,12 @@ class _SigninViewState extends State<SigninView> {
                       ),
                     ),
                   ),
-                  const ContinueWith(),
+                  ContinueWith(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "don’t have an account?",
+                        S.of(context).dont_account,
                         style: GoogleFonts.inter(
                           fontSize: 14,
                           fontWeight: FontWeight.w500,
@@ -205,7 +221,7 @@ class _SigninViewState extends State<SigninView> {
                           );
                         },
                         child: Text(
-                          " Register now",
+                          S.of(context).Register_now,
                           style: GoogleFonts.inter(
                             fontSize: 14,
                             fontWeight: FontWeight.w500,

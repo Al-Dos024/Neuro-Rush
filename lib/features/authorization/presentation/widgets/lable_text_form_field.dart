@@ -28,12 +28,12 @@ class CustomLableTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8),
+      padding: EdgeInsets.symmetric(vertical: 8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 8),
+            padding: EdgeInsets.symmetric(vertical: 8),
             child: Text(
               lableText,
               style: GoogleFonts.inter(
@@ -51,7 +51,7 @@ class CustomLableTextFormField extends StatelessWidget {
                   color: kBlackcolor.withOpacity(0.25),
                   spreadRadius: 0,
                   blurRadius: 4,
-                  offset: const Offset(0, 4),
+                  offset: Offset(0, 4),
                 ),
               ],
             ),
@@ -67,11 +67,11 @@ class CustomLableTextFormField extends StatelessWidget {
                 suffixIcon: suffixIcon,
                 filled: true,
                 fillColor: kGraycolor_2,
-                contentPadding: const EdgeInsets.symmetric(
+                contentPadding: EdgeInsets.symmetric(
                   horizontal: 20,
                   vertical: 15,
                 ),
-                focusedBorder: const OutlineInputBorder(
+                focusedBorder: OutlineInputBorder(
                   borderSide: BorderSide(
                     color: Color.fromARGB(0, 44, 44, 125),
                   ),
@@ -79,7 +79,7 @@ class CustomLableTextFormField extends StatelessWidget {
                     Radius.circular(20),
                   ),
                 ),
-                enabledBorder: const OutlineInputBorder(
+                enabledBorder: OutlineInputBorder(
                   borderSide: BorderSide(
                     color: kGraycolor_2,
                   ),
