@@ -1,4 +1,4 @@
-import 'package:adhd/constants.dart';
+
 import 'package:adhd/main.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -24,7 +24,6 @@ class DrawerItem extends StatelessWidget {
                 height: 20,
               ),
             ),
-
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Text(
@@ -32,7 +31,6 @@ class DrawerItem extends StatelessWidget {
                 style: GoogleFonts.kodchasan(
                   fontSize: 15,
                   fontWeight: FontWeight.w500,
-                  color: myDarkColorScheme.primary
                 ),
               ),
             ),

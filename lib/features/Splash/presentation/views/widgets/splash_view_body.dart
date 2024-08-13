@@ -1,4 +1,4 @@
-import 'package:adhd/core/utils/assets.dart';
+
 import 'package:adhd/features/authorization/presentation/sign_in/screens/sign_in_view.dart';
 import 'package:adhd/features/main/screens/main_view.dart';
 import 'package:firebase_auth/firebase_auth.dart';

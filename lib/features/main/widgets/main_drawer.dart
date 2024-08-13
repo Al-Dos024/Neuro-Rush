@@ -2,12 +2,12 @@ import 'package:adhd/features/main/screens/about_us.dart';
 import 'package:adhd/features/main/screens/previous_results.dart';
 import 'package:adhd/features/main/widgets/custom_drawer_header.dart';
 import 'package:adhd/features/main/widgets/drawer_item.dart';
-import 'package:adhd/core/helper/log_out.dart';
+import 'package:adhd/features/main/widgets/logout_dialog.dart';
+import 'package:adhd/generated/l10n.dart';
+import 'package:adhd/main.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../../constants.dart';
-import '../../../main.dart';
 
 class MainDrawer extends StatelessWidget {
   const MainDrawer({super.key});
@@ -23,7 +23,7 @@ class MainDrawer extends StatelessWidget {
       ),
       child: Column(
         children: [
-          CustomDrawerHeader(),
+          const CustomDrawerHeader(),
           DrawerItem(
             img: "assets/icons/re.png",
             title: S.of(context).Previous_Results,
@@ -36,9 +36,26 @@ class MainDrawer extends StatelessWidget {
                   ));
             },
           ),
-          const DrawerItem(
-            img: "assets/icons/dark_mode.png",
-            title: "Dark Mode",
+          Row(
+            children: [
+              const DrawerItem(
+                img: "assets/icons/dark_mode.png",
+                title: "Dark Mode",
+              ),
+               IconButton(
+                onPressed: () {
+                  MyApp.themeNotifier.value =
+                      MyApp.themeNotifier.value == ThemeMode.light
+                          ? ThemeMode.dark
+                          : ThemeMode.light;
+                },
+                icon: Icon(
+                  MyApp.themeNotifier.value == ThemeMode.light
+                      ? Icons.dark_mode
+                      : Icons.light_mode,
+                ),
+              ),
+            ],
           ),
           DrawerItem(
             img: "assets/icons/about_us.png",
@@ -75,72 +92,6 @@ class MainDrawer extends StatelessWidget {
             },
           ),
         ],
-      ),
-    );
-  }
-}
-
-class LogOutDialog extends StatelessWidget {
-  const LogOutDialog({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Dialog(
-      backgroundColor: kWhitecolor,
-      child: Container(
-        height: 150,
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          children: [
-            Text(
-              "Are you sure you want to log out this account ?",
-              maxLines: 2,
-              style: GoogleFonts.kodchasan(
-                fontSize: 20,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-            Row(
-              children: [
-                const Spacer(),
-                GestureDetector(
-                  onTap: () {
-                    logOut(context);
-                  },
-                  child: Text(
-                    "Yes",
-                    style: GoogleFonts.kodchasan(
-                      color: Colors.red,
-                      fontSize: 17,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  width: 15,
-                ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
-                  child: Text(
-                    "No",
-                    style: GoogleFonts.kodchasan(
-                      color: kBluecolor_3,
-                      fontSize: 17,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                )
-              ],
-            )
-          ],
-        ),
       ),
     );
   }

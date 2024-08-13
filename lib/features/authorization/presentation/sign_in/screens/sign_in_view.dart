@@ -6,7 +6,6 @@ import 'package:adhd/features/authorization/presentation/widgets/my_elevated_but
 import 'package:adhd/features/authorization/presentation/widgets/my_text_button.dart';
 import 'package:adhd/features/main/screens/main_view.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/show_snackbar.dart';
-import 'package:adhd/core/helper/log_in.dart';
 import 'package:adhd/generated/l10n.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -129,8 +128,9 @@ class _SigninViewState extends State<SigninView> {
                       onPressed: () async {
                         if (formKey.currentState!.validate()) {
                           try {
-                             UserCredential user = await FirebaseAuth.instance
-      .signInWithEmailAndPassword(email: email!, password: password!);
+                            UserCredential user = await FirebaseAuth.instance
+                                .signInWithEmailAndPassword(
+                                    email: email!, password: password!);
                             showSnackBar(context,
                                 title: S.of(context).snackbar_suc_log,
                                 message: S.of(context).snackbar_suc_log_sub);
