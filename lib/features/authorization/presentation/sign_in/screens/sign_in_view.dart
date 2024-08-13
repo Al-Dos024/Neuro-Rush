@@ -29,7 +29,6 @@ class _SigninViewState extends State<SigninView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kWhitecolor,
       body: Form(
         key: formKey,
         child: SingleChildScrollView(
@@ -50,7 +49,6 @@ class _SigninViewState extends State<SigninView> {
                   Text(
                     "Let’s sign you in.",
                     style: GoogleFonts.inter(
-                      color: kBlackcolor,
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
                     ),
@@ -130,8 +128,8 @@ class _SigninViewState extends State<SigninView> {
                       onPressed: () async {
                         if (formKey.currentState!.validate()) {
                           try {
-                            await logIn(email!, password!);
-
+                             UserCredential user = await FirebaseAuth.instance
+      .signInWithEmailAndPassword(email: email!, password: password!);
                             showSnackBar(context,
                                 title: "Welcome to our family",
                                 message: "Signing Up Successfully !!!");

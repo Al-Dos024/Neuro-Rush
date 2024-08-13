@@ -13,14 +13,12 @@ class WhatIsAdhd extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kWhitecolor,
       appBar: AppBar(
         toolbarHeight: 80,
         centerTitle: true,
         leading: IconButton(
           icon: const Icon(
             Icons.arrow_back_ios_new_rounded,
-            color: kWhitecolor,
           ),
           onPressed: () {
             Navigator.pop(context);
@@ -30,7 +28,6 @@ class WhatIsAdhd extends StatelessWidget {
         title: Text(
           "What is ADHD ?",
           style: GoogleFonts.kodchasan(
-            color: kWhitecolor,
             fontSize: 20,
             fontWeight: FontWeight.w700,
           ),

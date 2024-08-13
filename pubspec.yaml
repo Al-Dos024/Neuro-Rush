@@ -36,6 +36,7 @@ dependencies:
   firebase_database: ^11.0.4
   flutter:
     sdk: flutter
+  flutter_advanced_switch: ^3.1.0
   font_awesome_flutter: ^10.7.0
   fraction: ^5.0.2
   google_fonts: ^6.2.1

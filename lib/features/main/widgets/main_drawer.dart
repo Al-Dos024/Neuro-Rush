@@ -3,10 +3,13 @@ import 'package:adhd/features/main/screens/previous_results.dart';
 import 'package:adhd/features/main/widgets/custom_drawer_header.dart';
 import 'package:adhd/features/main/widgets/drawer_item.dart';
 import 'package:adhd/core/helper/log_out.dart';
+import 'package:adhd/main.dart';
+import 'package:adhd/main.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../constants.dart';
+import '../../../main.dart';
 
 class MainDrawer extends StatelessWidget {
   const MainDrawer({super.key});
@@ -14,7 +17,6 @@ class MainDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: kWhitecolor,
       width: 230,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(
@@ -36,9 +38,26 @@ class MainDrawer extends StatelessWidget {
                   ));
             },
           ),
-          const DrawerItem(
-            img: "assets/icons/dark_mode.png",
-            title: "Dark Mode",
+          Row(
+            children: [
+              const DrawerItem(
+                img: "assets/icons/dark_mode.png",
+                title: "Dark Mode",
+              ),
+              IconButton(
+                onPressed: () {
+                  MyApp.themeNotifier.value =
+                      MyApp.themeNotifier.value == ThemeMode.light
+                          ? ThemeMode.dark
+                          : ThemeMode.light;
+                },
+                icon: Icon(
+                  MyApp.themeNotifier.value == ThemeMode.light
+                      ? Icons.dark_mode
+                      : Icons.light_mode,
+                ),
+              )
+            ],
           ),
           DrawerItem(
             img: "assets/icons/about_us.png",

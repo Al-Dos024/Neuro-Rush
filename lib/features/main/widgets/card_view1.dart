@@ -1,5 +1,6 @@
 
 import 'package:adhd/constants.dart';
+import 'package:adhd/core/utils/assets.dart';
 import 'package:adhd/features/what-is-ADHD/screens/what_is_adhd.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -24,7 +25,7 @@ class CustomCardMainView1 extends StatelessWidget {
             const Flexible(
               flex: 1,
               child: Image(
-                image: AssetImage("assets/img/more_adhd.png"),
+                image: AssetImage(AssetsData.imageWhatAdhd),
                 height: 180,
               ),
             ),

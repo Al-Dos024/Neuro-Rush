@@ -1,5 +1,6 @@
 
 import 'package:adhd/constants.dart';
+import 'package:adhd/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -52,7 +53,7 @@ class CustomCardMainView3 extends StatelessWidget {
             Flexible(
               flex: 1,
               child: Image.asset(
-                "assets/img/adult_test.png",
+                AssetsData.imageAdulttest,
                 height: 180,
               ),
             ),

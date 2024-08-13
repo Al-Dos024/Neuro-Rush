@@ -30,7 +30,7 @@ class _SignUpViewState extends State<SignUpView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kWhitecolor,
+      
       body: Form(
         key: formKey,
         child: SingleChildScrollView(
@@ -48,7 +48,7 @@ class _SignUpViewState extends State<SignUpView> {
                   Text(
                     "Let’s sign you up.",
                     style: GoogleFonts.inter(
-                      color: kBlackcolor,
+                      
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
                     ),

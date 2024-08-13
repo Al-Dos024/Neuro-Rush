@@ -37,7 +37,7 @@ class CustomLableTextFormField extends StatelessWidget {
             child: Text(
               lableText,
               style: GoogleFonts.inter(
-                color: kBlackcolor,
+                
                 fontSize: 15,
                 fontWeight: FontWeight.bold,
               ),
@@ -56,6 +56,7 @@ class CustomLableTextFormField extends StatelessWidget {
               ],
             ),
             child: TextFormField(
+            
               textAlign: TextAlign.start,
               keyboardType: inputType,
               initialValue: initialValue,
@@ -88,6 +89,7 @@ class CustomLableTextFormField extends StatelessWidget {
                   ),
                 ),
                 hintText: hintText,
+                
               ),
             ),
           ),

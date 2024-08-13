@@ -19,7 +19,6 @@ class _DefineTheKidState extends State<DefineTheKid> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kWhitecolor,
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(

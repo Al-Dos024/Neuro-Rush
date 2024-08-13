@@ -72,7 +72,6 @@ class _AdhdVideoSectionState extends State<AdhdVideoSection> {
         Text(
           "Video explaining attention deficit ",
           style: GoogleFonts.kodchasan(
-            color: kBluecolor_3,
             fontSize: 11,
             fontWeight: FontWeight.w500,
           ),
@@ -80,7 +79,6 @@ class _AdhdVideoSectionState extends State<AdhdVideoSection> {
         Text(
           "hyperactivity disorder",
           style: GoogleFonts.kodchasan(
-            color: kBluecolor_3,
             fontSize: 11,
             fontWeight: FontWeight.w500,
           ),

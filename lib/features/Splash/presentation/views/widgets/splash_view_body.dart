@@ -37,7 +37,7 @@ class _SplashViewbodyState extends State<SplashViewbody>
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Image.asset(AssetsData.logo),
+        Image.asset("assets/images/ADHDGif.gif"/*AssetsData.logo*/),
         const SizedBox(
           height: 4,
         ),
@@ -71,11 +71,11 @@ class _SplashViewbodyState extends State<SplashViewbody>
         // GoRouter.of(context).push(AppRouter.kHomeView);
         FirebaseAuth.instance.authStateChanges().listen((User? user) {
           if (user != null) {
-            Navigator.push(context,
+            Navigator.pushReplacement(context,
                 MaterialPageRoute(builder: (context) => const MainView()));
           }
         });
-        Navigator.push(context,
+        Navigator.pushReplacement(context,
             MaterialPageRoute(builder: (context) => const SigninView()));
       },
     );

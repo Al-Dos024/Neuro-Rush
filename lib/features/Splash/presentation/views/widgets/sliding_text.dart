@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SlidingText extends StatelessWidget {
   const SlidingText({
@@ -15,8 +16,13 @@ class SlidingText extends StatelessWidget {
         builder: (context, _) {
           return SlideTransition(
             position: slidingAnimation,
-            child: const Text(
-              'Gojo Satoru',
+            child: Text(
+              // 'Gojo Satoru',
+              "Neuro Rush",
+              style: GoogleFonts.neucha(
+                color: Color(0xffB8DFF2),
+                fontSize: 30
+              ),
               textAlign: TextAlign.center,
             ),
           );

@@ -26,7 +26,6 @@ class CustomBodyText extends StatelessWidget {
               child: Text(
                 title,
                 style: GoogleFonts.kodchasan(
-                  color: kBluecolor_4,
                   fontSize: 15,
                   fontWeight: FontWeight.w600,
                 ),
@@ -37,7 +36,7 @@ class CustomBodyText extends StatelessWidget {
         Text(
           subTitle,
           style: GoogleFonts.kodchasan(
-            color: kBluecolor_1,
+            
             fontSize: 13,
             fontWeight: FontWeight.w400,
           ),
