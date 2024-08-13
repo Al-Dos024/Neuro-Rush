@@ -6,6 +6,7 @@ import 'package:adhd/features/authorization/presentation/widgets/lable_text_form
 import 'package:adhd/features/authorization/presentation/widgets/my_elevated_button%20copy.dart';
 import 'package:adhd/features/authorization/presentation/widgets/my_text_button.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/show_snackbar.dart';
+import 'package:adhd/generated/l10n.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +26,7 @@ class _SignUpViewState extends State<SignUpView> {
   String? passwordSignIn;
   String? ageSignIn;
   String? nameSignIn;
-  int AttemptNum = 1;
+  int AttemptNum = 0;
   late DatabaseReference ref;
   @override
   Widget build(BuildContext context) {
@@ -46,7 +47,7 @@ class _SignUpViewState extends State<SignUpView> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Let’s sign you up.",
+                    S.of(context).sign_up_title,
                     style: GoogleFonts.inter(
                       
                       fontSize: 24,
@@ -54,19 +55,19 @@ class _SignUpViewState extends State<SignUpView> {
                     ),
                   ),
                   Text(
-                    "Be with our family",
+                    S.of(context).sign_up_subtitle,
                     style: GoogleFonts.inter(
                       color: kGraycolor_1,
                       fontSize: 14,
                       fontWeight: FontWeight.w400,
                     ),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 20,
                   ),
                   CustomLableTextFormField(
-                    lableText: "Name",
-                    hintText: "Enter your name",
+                    lableText: S.of(context).Name,
+                    hintText: S.of(context).Enter_name,
                     inputType: TextInputType.text,
                     obscureText: false,
                     onChanged: (p0) {
@@ -74,14 +75,14 @@ class _SignUpViewState extends State<SignUpView> {
                     },
                     validator: (value) {
                       if (value!.isEmpty) {
-                        return "Please enter name";
+                        return S.of(context).no_name;
                       }
                       return null;
                     },
                   ),
                   CustomLableTextFormField(
-                    lableText: "Age",
-                    hintText: "Enter your age",
+                    lableText: S.of(context).Age,
+                    hintText: S.of(context).Enter_Age,
                     inputType: TextInputType.number,
                     obscureText: false,
                     onChanged: (p0) {
@@ -89,14 +90,14 @@ class _SignUpViewState extends State<SignUpView> {
                     },
                     validator: (value) {
                       if (value!.isEmpty) {
-                        return "Please enter age";
+                        return S.of(context).no_Age;
                       }
                       return null;
                     },
                   ),
                   CustomLableTextFormField(
-                    lableText: "Email",
-                    hintText: "Enter your email",
+                    lableText: S.of(context).email,
+                    hintText: S.of(context).Enter_Email,
                     inputType: TextInputType.emailAddress,
                     obscureText: false,
                     onChanged: (p0) {
@@ -104,14 +105,14 @@ class _SignUpViewState extends State<SignUpView> {
                     },
                     validator: (value) {
                       if (value!.isEmpty) {
-                        return "Please enter E-mail";
+                        return S.of(context).no_Email;
                       }
                       return null;
                     },
                   ),
                   CustomLableTextFormField(
-                    lableText: "Password",
-                    hintText: "Enter your password",
+                    lableText: S.of(context).Password,
+                    hintText: S.of(context).Enter_Password,
                     inputType: TextInputType.visiblePassword,
                     obscureText: showpassword,
                     suffixIcon: IconButton(
@@ -127,7 +128,7 @@ class _SignUpViewState extends State<SignUpView> {
                     ),
                     validator: (value) {
                       if (value!.isEmpty) {
-                        return "Please enter password";
+                        return S.of(context).no_Password;
                       }
                       return null;
                     },
@@ -154,10 +155,10 @@ class _SignUpViewState extends State<SignUpView> {
                                     password: passwordSignIn!);
                             String Id = FirebaseAuth.instance.currentUser!.uid;
 
-                            ref = FirebaseDatabase.instance.ref("users/$Id");
-                            showSnackBar(context,
-                                title: "Yay!",
-                                message: "Signing Up Successfully !!!");
+                            ref = FirebaseDatabase.instance
+                                .ref("users/$Id")
+                                .child("Personal Data");
+                            showSnackBar(context, title: "", message: "!!");
                             // ignore: unused_local_variable
                             Map<String, dynamic> users = {};
                             ref.set({
@@ -175,35 +176,34 @@ class _SignUpViewState extends State<SignUpView> {
                           } on FirebaseException catch (e) {
                             if (e.code == "weak-password") {
                               showSnackBar(context,
-                                  title: "Error",
-                                  message:
-                                      "Password should be at least 6 characters");
+                                  title: S.of(context).snackbar_weak,
+                                  message: S.of(context).snackbar_weak_sub);
                             } else if (e.code == "invalid-email") {
                               showSnackBar(context,
-                                  title: "Error",
-                                  message:
-                                      "The email address is badly formatted.");
+                                  title: S.of(context).snackbar_weak,
+                                  message: S.of(context).snackbar_inv_sub);
                             } else if (e.code == "email-already-in-use") {
                               showSnackBar(context,
-                                  title: "Error",
-                                  message: "email already in use");
+                                  title: S.of(context).snackbar_weak,
+                                  message: S.of(context).snackbar_use_sub);
                             } else if (e.code == 'network-request-failed') {
                               showSnackBar(context,
-                                  title: "Error",
-                                  message: 'No internet connection');
+                                  title: S.of(context).snackbar_weak,
+                                  message: S.of(context).snackbar_fail_sub);
                             } else {
                               showSnackBar(context,
-                                  title: "Error",
-                                  message: "An undefined Error happened.");
+                                  title: S.of(context).snackbar_weak,
+                                  message: S.of(context).snackbar_else_sub);
                             }
                           } catch (e) {
                             showSnackBar(context,
-                                title: "Error", message: "Unexpected error");
+                                title: S.of(context).snackbar_weak,
+                                message: S.of(context).snackbar_used_sub);
                           }
                         }
                       },
                       child: Text(
-                        "Register",
+                        S.of(context).Register,
                         style: GoogleFonts.inter(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
@@ -216,7 +216,7 @@ class _SignUpViewState extends State<SignUpView> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "have an account ?",
+                        S.of(context).have_account,
                         style: GoogleFonts.inter(
                           fontSize: 14,
                           fontWeight: FontWeight.w500,
@@ -228,7 +228,7 @@ class _SignUpViewState extends State<SignUpView> {
                           Navigator.pop(context);
                         },
                         child: Text(
-                          " Login now",
+                          S.of(context).login_now,
                           style: GoogleFonts.inter(
                             fontSize: 14,
                             fontWeight: FontWeight.w500,

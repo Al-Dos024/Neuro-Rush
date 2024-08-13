@@ -1,5 +1,6 @@
 import 'package:adhd/constants.dart';
 import 'package:adhd/features/authorization/presentation/sign_in/screens/sign_in_view.dart';
+import 'package:adhd/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -37,8 +38,8 @@ class _OnBoradingState extends State<OnBoradingView> {
                       MaterialPageRoute(
                           builder: (context) => const SigninView()));
                 },
-                child: const Text(
-                  "Skip",
+                child: Text(
+                  S.of(context).Skip_btn,
                   style: TextStyle(color: Colors.black, fontSize: 16),
                 )),
           ),
@@ -55,19 +56,17 @@ class _OnBoradingState extends State<OnBoradingView> {
               buildPage(
                   color: Colors.white,
                   urlImage: 'assets/images/World health day.png',
-                  title: "About Our Application",
-                  subtitle:
-                      "It is an application designed to empower individuals and families affected by ADHD, as it combines three main functions: first, diagnosing ADHD. Second, resources on ADHD Topics such as symptoms, types, management strategies, and coping mechanisms can help users better understand themselves and their experiences."),
+                  title: S.of(context).aboutapp,
+                  subtitle: S.of(context).aboutapp_desc),
               buildPage(
                   color: Colors.white,
                   urlImage: 'assets/images/Online Doctor.png',
-                  title: "What does the app do?",
-                  subtitle:
-                      "Third, behavioral therapy tools: The app provides access to evidence-based exercises and techniques to help users manage symptoms, develop life skills, and stimulate and promote positive behaviors"),
+                  title: S.of(context).Whatappdo,
+                  subtitle: S.of(context).Whatappdo_desc),
               buildPage(
                   color: Colors.white,
                   urlImage: 'assets/images/Doctor.png',
-                  title: "Do we start?",
+                  title: S.of(context).letsstart,
                   subtitle: " "),
             ]),
       ),
@@ -105,8 +104,8 @@ class _OnBoradingState extends State<OnBoradingView> {
                           MaterialPageRoute(
                               builder: (context) => const SigninView()));
                     },
-                    child: const Text(
-                      "Let’s Start!",
+                    child: Text(
+                      S.of(context).Lets_start_btn,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   )

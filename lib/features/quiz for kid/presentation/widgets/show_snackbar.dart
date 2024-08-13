@@ -21,14 +21,18 @@ void showSnackBar(BuildContext context,
           padding: const EdgeInsets.symmetric(horizontal: 10.0),
           child: Column(
             children: [
-              Align(
-                alignment: Alignment.topLeft,
-                child: Text(title, style: CustomTextStyle.kodch18WB),
-              ),
-              Align(
-                alignment: Alignment.topLeft,
-                child: Text(message, style: CustomTextStyle.kodch14WM),
-              ),
+              //to the left
+
+              //  Align(
+              //   alignment: Alignment.topLeft,
+              //   child: Text(title, style: CustomTextStyle.kodch18WB),
+              // ),
+              // Align(
+              //   alignment: Alignment.topLeft,
+              //   child: Text(message, style: CustomTextStyle.kodch14WM),
+              // ),
+              Text(title, style: CustomTextStyle.kodch18WB),
+              Text(message, style: CustomTextStyle.kodch14WM),
             ],
           ),
         ),

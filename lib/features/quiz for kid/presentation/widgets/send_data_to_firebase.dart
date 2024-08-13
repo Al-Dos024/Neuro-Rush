@@ -1,17 +1,25 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'package:intl/intl.dart';
 import '../../data/model/nested_list.dart';
 
 String id = FirebaseAuth.instance.currentUser!.uid;
-DatabaseReference ref = FirebaseDatabase.instance.ref("users/$id");
+
+DatabaseReference refmain =
+    FirebaseDatabase.instance.ref("users/$id").child("Tests");
+
+DatabaseReference refProper = FirebaseDatabase.instance
+    .ref("users/$id")
+    .child("Tests")
+    .child("Test")
+    .child("properties");
+
+DatabaseReference refPersonal =
+    FirebaseDatabase.instance.ref("users/$id").child("Personal Data");
 
 Future<int> getNumberOfAttempt() async {
   try {
-    DataSnapshot snapshot = await FirebaseDatabase.instance
-        .ref("users/${FirebaseAuth.instance.currentUser!.uid}")
-        .child('Attempt Number')
-        .get();
-
+    DataSnapshot snapshot = await refPersonal.child('Attempt Number').get();
     if (snapshot.exists && snapshot.value != null) {
       return int.parse(snapshot.value.toString());
     } else {
@@ -23,12 +31,15 @@ Future<int> getNumberOfAttempt() async {
   }
 }
 
-void sendDataToFirebase() async {
+void sendDataToFirebase({required bool isMale, required int age}) async {
   try {
     int attempt = await getNumberOfAttempt();
     print('Number of attempts: $attempt');
+    var now = DateTime.now();
+    String formatterDate = DateFormat('yMd').format(now);
+    String formatterTime = DateFormat.jm().format(now);
 
-    ref.child("Attempt Number $attempt").set(
+    refmain.child("$attempt").child("Data").set(
       {
         'A -Opposition score': scoreA,
         'B -Cognitive problems score': scoreB,
@@ -46,7 +57,17 @@ void sendDataToFirebase() async {
         'N -mixed DMS 5 score': scoreN,
       },
     );
-    ref.child('Attempt Number').set(++attempt);
+    refmain.child("$attempt").child("properties").set(
+      {
+        'Attempt Number': attempt,
+        'Average': scoreN,
+        'Time': formatterTime,
+        'Date': formatterDate,
+        'Age': age,
+        'Gender': isMale ? "male" : "female",
+      },
+    );
+    refPersonal.child('Attempt Number').set(++attempt);
   } catch (e) {
     print('Error: $e');
   }
