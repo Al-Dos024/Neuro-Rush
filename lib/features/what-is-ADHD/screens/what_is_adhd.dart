@@ -4,6 +4,7 @@ import 'package:adhd/features/what-is-ADHD/widgets/adhd_pathophysiology_section.
 import 'package:adhd/features/what-is-ADHD/widgets/adhd_reason_section.dart';
 import 'package:adhd/features/what-is-ADHD/widgets/adhd_symptoms_section.dart';
 import 'package:adhd/features/what-is-ADHD/widgets/adhd_video_section.dart';
+import 'package:adhd/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -26,7 +27,7 @@ class WhatIsAdhd extends StatelessWidget {
         ),
         backgroundColor: kBluecolor_1,
         title: Text(
-          "What is ADHD ?",
+          S.of(context).What_is_adhd_title,
           style: GoogleFonts.kodchasan(
             fontSize: 20,
             fontWeight: FontWeight.w700,

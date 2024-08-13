@@ -1,5 +1,6 @@
 import 'package:adhd/constants.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/screens/kid.dart';
+import 'package:adhd/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -28,7 +29,7 @@ class IconWithLableButton extends StatelessWidget {
           );
         },
         label: Text(
-          "Go to quiz phase",
+          S.of(context).go_quiz_btn,
           style: GoogleFonts.kodchasan(
             fontSize: 12,
             color: Colors.white,

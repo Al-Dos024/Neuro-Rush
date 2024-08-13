@@ -1,4 +1,5 @@
 import 'package:adhd/constants.dart';
+import 'package:adhd/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:video_player/video_player.dart';
@@ -70,14 +71,14 @@ class _AdhdVideoSectionState extends State<AdhdVideoSection> {
           ],
         ),
         Text(
-          "Video explaining attention deficit ",
+          S.of(context).video_desc,
           style: GoogleFonts.kodchasan(
             fontSize: 11,
             fontWeight: FontWeight.w500,
           ),
         ),
         Text(
-          "hyperactivity disorder",
+          S.of(context).video_und,
           style: GoogleFonts.kodchasan(
             fontSize: 11,
             fontWeight: FontWeight.w500,

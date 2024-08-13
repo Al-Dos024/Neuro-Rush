@@ -10,15 +10,12 @@ class Subtitle18 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 25),
-      child: Align(
-        alignment: Alignment.bottomLeft,
-        child: Text(
-          text,
-          style: GoogleFonts.kodchasan(
-            fontSize: 18,
-            color: kPrimerycolor,
-            fontWeight: FontWeight.w500,
-          ),
+      child: Text(
+        text,
+        style: GoogleFonts.kodchasan(
+          fontSize: 18,
+          color: kPrimerycolor,
+          fontWeight: FontWeight.w500,
         ),
       ),
     );

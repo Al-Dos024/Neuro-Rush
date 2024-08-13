@@ -8,15 +8,12 @@ class TitleGender22 extends StatelessWidget {
   final String text;
   @override
   Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment.bottomLeft,
-      child: Text(
-        text,
-        style: GoogleFonts.kodchasan(
-          fontSize: 22,
-          color: kBluecolor_1,
-          fontWeight: FontWeight.bold,
-        ),
+    return Text(
+      text,
+      style: GoogleFonts.kodchasan(
+        fontSize: 22,
+        color: kBluecolor_1,
+        fontWeight: FontWeight.bold,
       ),
     );
   }

@@ -3,6 +3,7 @@ import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/Icon_with_la
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/details_text_14.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/subtitle_18.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/title_gender_22.dart';
+import 'package:adhd/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -24,10 +25,9 @@ class _DefineTheKidState extends State<DefineTheKid> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const TitleGender22(text: 'Please fill the information '),
-            const DetailsText14(
-                text: 'this will help us increase the accuracy of the result'),
-            const Subtitle18(text: 'Choose your kid gender :'),
+            TitleGender22(text: S.of(context).enter_data_title),
+            DetailsText14(text: S.of(context).enter_data_subtitle),
+            Subtitle18(text: S.of(context).enter_gender_title),
             Row(
               children: [
                 Expanded(
@@ -59,7 +59,7 @@ class _DefineTheKidState extends State<DefineTheKid> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
-                            'Boy',
+                            S.of(context).boy,
                             style: GoogleFonts.kodchasan(
                                 fontSize: 25, fontWeight: FontWeight.bold),
                           ),
@@ -106,7 +106,7 @@ class _DefineTheKidState extends State<DefineTheKid> {
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           Text(
-                            'Girl',
+                            S.of(context).girl,
                             style: GoogleFonts.kodchasan(
                               fontSize: 25,
                               fontWeight: FontWeight.bold,
@@ -129,7 +129,7 @@ class _DefineTheKidState extends State<DefineTheKid> {
 
             ////////////////////////////////////////////////////////////
 
-            const Subtitle18(text: 'Choose your kid age:'),
+            Subtitle18(text: S.of(context).enter_age_subtitle),
 
             Row(
               children: [

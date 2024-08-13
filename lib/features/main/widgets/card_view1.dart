@@ -1,7 +1,7 @@
-
 import 'package:adhd/constants.dart';
 import 'package:adhd/core/utils/assets.dart';
 import 'package:adhd/features/what-is-ADHD/screens/what_is_adhd.dart';
+import 'package:adhd/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -32,7 +32,7 @@ class CustomCardMainView1 extends StatelessWidget {
             Column(
               children: [
                 Text(
-                  "What is",
+                  S.of(context).What_is,
                   style: GoogleFonts.kodchasan(
                     fontSize: 28,
                     fontWeight: FontWeight.w600,
@@ -40,7 +40,7 @@ class CustomCardMainView1 extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  "ADHD?",
+                  S.of(context).ADHD_ar,
                   style: GoogleFonts.kodchasan(
                     fontSize: 28,
                     fontWeight: FontWeight.w600,

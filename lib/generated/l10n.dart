@@ -80,6 +80,36 @@ class S {
     );
   }
 
+  /// `About Us`
+  String get About_Us {
+    return Intl.message(
+      'About Us',
+      name: 'About_Us',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Language`
+  String get Language {
+    return Intl.message(
+      'Language',
+      name: 'Language',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Log Out`
+  String get Log_Out {
+    return Intl.message(
+      'Log Out',
+      name: 'Log_Out',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `About Application`
   String get aboutapp {
     return Intl.message(
@@ -123,7 +153,7 @@ class S {
   /// `Let's get start?`
   String get letsstart {
     return Intl.message(
-      'Let\'s get start?',
+      'Let`s get start?',
       name: 'letsstart',
       desc: '',
       args: [],
@@ -143,7 +173,7 @@ class S {
   /// `Let's Start?`
   String get Lets_start_btn {
     return Intl.message(
-      'Let\'s Start?',
+      'Let`s Start?',
       name: 'Lets_start_btn',
       desc: '',
       args: [],
@@ -153,7 +183,7 @@ class S {
   /// `Let's sign you up.`
   String get sign_up_title {
     return Intl.message(
-      'Let\'s sign you up.',
+      'Let`s sign you up.',
       name: 'sign_up_title',
       desc: '',
       args: [],
@@ -463,7 +493,7 @@ class S {
   /// `Let's sign you in`
   String get sign_you_title {
     return Intl.message(
-      'Let\'s sign you in',
+      'Let`s sign you in',
       name: 'sign_you_title',
       desc: '',
       args: [],
@@ -473,7 +503,7 @@ class S {
   /// `Welcome back, You've been missed`
   String get sign_you_subtitle {
     return Intl.message(
-      'Welcome back, You\'ve been missed',
+      'Welcome back, You`ve been missed',
       name: 'sign_you_subtitle',
       desc: '',
       args: [],
@@ -503,7 +533,7 @@ class S {
   /// `don't have an account?`
   String get dont_account {
     return Intl.message(
-      'don\'t have an account?',
+      'don`t have an account?',
       name: 'dont_account',
       desc: '',
       args: [],
@@ -525,6 +555,296 @@ class S {
     return Intl.message(
       'or continue with',
       name: 'continue_with',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is`
+  String get What_is {
+    return Intl.message(
+      'What is',
+      name: 'What_is',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ADHD?`
+  String get ADHD_ar {
+    return Intl.message(
+      'ADHD?',
+      name: 'ADHD_ar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is ADHD?`
+  String get What_is_adhd_title {
+    return Intl.message(
+      'What is ADHD?',
+      name: 'What_is_adhd_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Kid Test`
+  String get Kid_Test {
+    return Intl.message(
+      'Kid Test',
+      name: 'Kid_Test',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Adult Test`
+  String get Adult_Test {
+    return Intl.message(
+      'Adult Test',
+      name: 'Adult_Test',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Introduction`
+  String get Introduction_title {
+    return Intl.message(
+      'Introduction',
+      name: 'Introduction_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ADHD is a common neurodevelopmental disorder that starts in childhood and affects around 5% of the global population. Children with ADHD may struggle to follow instructions, control their actions, and integrate into school environments, leading to academic performance issues. Managing children with ADHD can be challenging for parents and teachers. It's important to provide children with love, support, and understanding, and to work with healthcare professionals and teachers to learn how to handle the child best.`
+  String get Introduction_subtitle {
+    return Intl.message(
+      'ADHD is a common neurodevelopmental disorder that starts in childhood and affects around 5% of the global population. Children with ADHD may struggle to follow instructions, control their actions, and integrate into school environments, leading to academic performance issues. Managing children with ADHD can be challenging for parents and teachers. It`s important to provide children with love, support, and understanding, and to work with healthcare professionals and teachers to learn how to handle the child best.',
+      name: 'Introduction_subtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Symptoms`
+  String get Symptoms_title {
+    return Intl.message(
+      'Symptoms',
+      name: 'Symptoms_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Attention deficit hyperactivity disorder (ADHD) is characterized by inattention, hyperactivity, and impulsivity. The symptoms are challenging to define. They must be observed for at least six months in two different settings to diagnose ADHD.  When the symptoms are categorized in children, three subtypes emerge: predominantly inattention, predominantly hyperactivity-impulsivity, and combined inattention, hyperactivity, and impulsivity. Most people exhibit some of these behaviors, but not to the point where they significantly interfere with their work, relationships, or studies. Symptoms may persist into adulthood, but diagnosing ADHD in adults remains a clinical diagnosis. Symptoms may differ from childhood to adolescence due to adaptations and avoidance mechanisms acquired during socialization.`
+  String get Symptoms_subtitle {
+    return Intl.message(
+      'Attention deficit hyperactivity disorder (ADHD) is characterized by inattention, hyperactivity, and impulsivity. The symptoms are challenging to define. They must be observed for at least six months in two different settings to diagnose ADHD.  When the symptoms are categorized in children, three subtypes emerge: predominantly inattention, predominantly hyperactivity-impulsivity, and combined inattention, hyperactivity, and impulsivity. Most people exhibit some of these behaviors, but not to the point where they significantly interfere with their work, relationships, or studies. Symptoms may persist into adulthood, but diagnosing ADHD in adults remains a clinical diagnosis. Symptoms may differ from childhood to adolescence due to adaptations and avoidance mechanisms acquired during socialization.',
+      name: 'Symptoms_subtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Video explaining attention deficit`
+  String get video_desc {
+    return Intl.message(
+      'Video explaining attention deficit',
+      name: 'video_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `hyperactivity disorder`
+  String get video_und {
+    return Intl.message(
+      'hyperactivity disorder',
+      name: 'video_und',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reasons`
+  String get Reasons_title {
+    return Intl.message(
+      'Reasons',
+      name: 'Reasons_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `There is no single cause for ADHD. However, there are a number of factors that may contribute to or worsen it, including genetics, diet, and physical and social environments.\n`
+  String get Reasons_subtitle {
+    return Intl.message(
+      'There is no single cause for ADHD. However, there are a number of factors that may contribute to or worsen it, including genetics, diet, and physical and social environments.\n',
+      name: 'Reasons_subtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Genetic factors`
+  String get Genetic_factors_title {
+    return Intl.message(
+      'Genetic factors',
+      name: 'Genetic_factors_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ADHD is thought to be mainly hereditary, with genetic factors contributing to about 75% of cases. Several genes, including those affecting dopamine transporters, are believed to play a role in the disorder. ADHD is considered to be a complex interaction between genetic and environmental factors. One theory suggests that hyperactivity was an adaptive trait in early humans, with individuals with ADHD being more effective at tasks involving risk or competition in certain ancient societies.\n`
+  String get Genetic_factors_subtitle {
+    return Intl.message(
+      'ADHD is thought to be mainly hereditary, with genetic factors contributing to about 75% of cases. Several genes, including those affecting dopamine transporters, are believed to play a role in the disorder. ADHD is considered to be a complex interaction between genetic and environmental factors. One theory suggests that hyperactivity was an adaptive trait in early humans, with individuals with ADHD being more effective at tasks involving risk or competition in certain ancient societies.\n',
+      name: 'Genetic_factors_subtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Environmental factors`
+  String get Environmental_factors_title {
+    return Intl.message(
+      'Environmental factors',
+      name: 'Environmental_factors_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Environmental factors play a significant role in ADHD development. Factors such as alcohol and tobacco exposure during pregnancy, lead exposure, premature birth, and infectious diseases increase the risk. Studies have linked the pesticide chlorpyrifos to ADHD symptoms in children. Higher pesticide exposure correlates with a 35% increased risk of ADHD, and even low levels of exposure can have an impact.\n`
+  String get Environmental_factors_subtitle {
+    return Intl.message(
+      'Environmental factors play a significant role in ADHD development. Factors such as alcohol and tobacco exposure during pregnancy, lead exposure, premature birth, and infectious diseases increase the risk. Studies have linked the pesticide chlorpyrifos to ADHD symptoms in children. Higher pesticide exposure correlates with a 35% increased risk of ADHD, and even low levels of exposure can have an impact.\n',
+      name: 'Environmental_factors_subtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dietary systems`
+  String get Dietary_systems_title {
+    return Intl.message(
+      'Dietary systems',
+      name: 'Dietary_systems_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A study by the University of Southampton linked children's consumption of certain artificial colors with hyperactivity, prompting action by the British government and the European Commission. In the United States, federal law requires food manufacturers to disclose the use of artificial colors on product packaging. This allows consumers to make informed choices about the products they purchase. The findings highlight the importance of continued vigilance in regulating artificial colors in food.\n`
+  String get Dietary_systems_subtitle {
+    return Intl.message(
+      'A study by the University of Southampton linked children`s consumption of certain artificial colors with hyperactivity, prompting action by the British government and the European Commission. In the United States, federal law requires food manufacturers to disclose the use of artificial colors on product packaging. This allows consumers to make informed choices about the products they purchase. The findings highlight the importance of continued vigilance in regulating artificial colors in food.\n',
+      name: 'Dietary_systems_subtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pathophysiology`
+  String get Pathophysiology_title {
+    return Intl.message(
+      'Pathophysiology',
+      name: 'Pathophysiology_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The pathophysiology of ADHD is complex and unclear. Research shows reduced brain volume in children with ADHD, particularly in the left prefrontal cortex, suggesting dysfunction in the frontal lobe.`
+  String get Pathophysiology_subtitle_one {
+    return Intl.message(
+      'The pathophysiology of ADHD is complex and unclear. Research shows reduced brain volume in children with ADHD, particularly in the left prefrontal cortex, suggesting dysfunction in the frontal lobe.',
+      name: 'Pathophysiology_subtitle_one',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Neuroimaging studies are now only used for research purposes, not for diagnosis. A 2005 review identified four interconnected frontal brain regions implicated in ADHD: the lateral prefrontal cortex, the dorsal anterior cingulate cortex, the caudate nucleus, and the cortex.`
+  String get Pathophysiology_subtitle_two {
+    return Intl.message(
+      'Neuroimaging studies are now only used for research purposes, not for diagnosis. A 2005 review identified four interconnected frontal brain regions implicated in ADHD: the lateral prefrontal cortex, the dorsal anterior cingulate cortex, the caudate nucleus, and the cortex.',
+      name: 'Pathophysiology_subtitle_two',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please fill the information `
+  String get enter_data_title {
+    return Intl.message(
+      'Please fill the information ',
+      name: 'enter_data_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `this will help us increase the accuracy of the result`
+  String get enter_data_subtitle {
+    return Intl.message(
+      'this will help us increase the accuracy of the result',
+      name: 'enter_data_subtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose your kid gender :`
+  String get enter_gender_title {
+    return Intl.message(
+      'Choose your kid gender :',
+      name: 'enter_gender_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose your kid age:`
+  String get enter_age_subtitle {
+    return Intl.message(
+      'Choose your kid age:',
+      name: 'enter_age_subtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Boy`
+  String get boy {
+    return Intl.message(
+      'Boy',
+      name: 'boy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Girl`
+  String get girl {
+    return Intl.message(
+      'Girl',
+      name: 'girl',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Go to quiz phase`
+  String get go_quiz_btn {
+    return Intl.message(
+      'Go to quiz phase',
+      name: 'go_quiz_btn',
       desc: '',
       args: [],
     );

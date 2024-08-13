@@ -1,7 +1,7 @@
-
 import 'package:adhd/constants.dart';
 import 'package:adhd/core/utils/assets.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/screens/def_the_kid.dart';
+import 'package:adhd/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -32,7 +32,7 @@ class CustomCardMainView2 extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Kid Test",
+                    S.of(context).Kid_Test,
                     style: GoogleFonts.kodchasan(
                       fontSize: 28,
                       fontWeight: FontWeight.w600,
@@ -49,7 +49,11 @@ class CustomCardMainView2 extends StatelessWidget {
                   ),
                   IconButton(
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) =>const DefineTheKid() ),);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const DefineTheKid()),
+                      );
                     },
                     icon: const Icon(
                       Icons.arrow_forward,
@@ -66,4 +70,3 @@ class CustomCardMainView2 extends StatelessWidget {
     );
   }
 }
-

@@ -38,11 +38,11 @@ class MainDrawer extends StatelessWidget {
           ),
           Row(
             children: [
-              const DrawerItem(
+              DrawerItem(
                 img: "assets/icons/dark_mode.png",
-                title: "Dark Mode",
+                title: S.of(context).Dark_Mode,
               ),
-               IconButton(
+              IconButton(
                 onPressed: () {
                   MyApp.themeNotifier.value =
                       MyApp.themeNotifier.value == ThemeMode.light
@@ -59,7 +59,7 @@ class MainDrawer extends StatelessWidget {
           ),
           DrawerItem(
             img: "assets/icons/about_us.png",
-            title: "About Us",
+            title: S.of(context).About_Us,
             onTap: () {
               Navigator.of(context).pop();
               Navigator.push(
@@ -69,9 +69,9 @@ class MainDrawer extends StatelessWidget {
                   ));
             },
           ),
-          const DrawerItem(
+          DrawerItem(
             img: "assets/icons/language.png",
-            title: "Language",
+            title: S.of(context).Language,
           ),
           const Spacer(),
           const Divider(
@@ -81,7 +81,7 @@ class MainDrawer extends StatelessWidget {
           ),
           DrawerItem(
             img: "assets/icons/logout.png",
-            title: "Log Out",
+            title: S.of(context).Log_Out,
             onTap: () {
               Navigator.of(context).pop();
               showDialog(

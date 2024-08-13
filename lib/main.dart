@@ -1,5 +1,4 @@
 import 'package:adhd/features/Splash/presentation/views/splash_view.dart';
-import 'package:adhd/features/onborading/presentation/screens/onborading_view.dart';
 import 'package:adhd/generated/l10n.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';

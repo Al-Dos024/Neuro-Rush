@@ -1,6 +1,6 @@
-
 import 'package:adhd/constants.dart';
 import 'package:adhd/core/utils/assets.dart';
+import 'package:adhd/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -24,7 +24,7 @@ class CustomCardMainView3 extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Adult Test",
+                    S.of(context).Adult_Test,
                     style: GoogleFonts.kodchasan(
                       fontSize: 28,
                       fontWeight: FontWeight.w600,
@@ -32,7 +32,7 @@ class CustomCardMainView3 extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    "18 - 40",
+                    "18 - 60",
                     style: GoogleFonts.kodchasan(
                       fontSize: 24,
                       fontWeight: FontWeight.w600,

@@ -7,14 +7,11 @@ class DetailsText14 extends StatelessWidget {
   final String text;
   @override
   Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment.bottomLeft,
-      child: Text(
-        text,
-        style: GoogleFonts.kodchasan(
-          fontSize: 14,
-          color: kGraycolor_1,
-        ),
+    return Text(
+      text,
+      style: GoogleFonts.kodchasan(
+        fontSize: 14,
+        color: kGraycolor_1,
       ),
     );
   }
