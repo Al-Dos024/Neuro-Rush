@@ -40,6 +40,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Environmental factors play a significant role in ADHD development. Factors such as alcohol and tobacco exposure during pregnancy, lead exposure, premature birth, and infectious diseases increase the risk. Studies have linked the pesticide chlorpyrifos to ADHD symptoms in children. Higher pesticide exposure correlates with a 35% increased risk of ADHD, and even low levels of exposure can have an impact.\n"),
         "Environmental_factors_title":
             MessageLookupByLibrary.simpleMessage("Environmental factors"),
+        "Examples_quiz":
+            MessageLookupByLibrary.simpleMessage("Examples during adulthood: "),
         "Forgot_Password":
             MessageLookupByLibrary.simpleMessage("Forgot Password?"),
         "Genetic_factors_subtitle": MessageLookupByLibrary.simpleMessage(
@@ -84,6 +86,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "aboutapp": MessageLookupByLibrary.simpleMessage("About Application"),
         "aboutapp_desc": MessageLookupByLibrary.simpleMessage(
             "It is an application designed to empower individuals and families affected by ADHD, as it combines three main functions: first, diagnosing ADHD. Second, resources on ADHD Topics such as symptoms, types, management strategies, and coping mechanisms can help users better understand themselves and their experiences."),
+        "answer": MessageLookupByLibrary.simpleMessage("  Answer :"),
+        "back": MessageLookupByLibrary.simpleMessage("Back"),
+        "back_btn_massge":
+            MessageLookupByLibrary.simpleMessage("You can`t get back anymore"),
         "boy": MessageLookupByLibrary.simpleMessage("Boy"),
         "continue_with":
             MessageLookupByLibrary.simpleMessage("or continue with"),
@@ -104,11 +110,19 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("have an account ?"),
         "letsstart": MessageLookupByLibrary.simpleMessage("Let`s get start?"),
         "login_now": MessageLookupByLibrary.simpleMessage(" Login now"),
+        "logout": MessageLookupByLibrary.simpleMessage(
+            "Are you sure you want to log out this account ?"),
+        "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "next_btn_massge":
+            MessageLookupByLibrary.simpleMessage("You must select an answer"),
+        "no": MessageLookupByLibrary.simpleMessage("No"),
         "no_Age": MessageLookupByLibrary.simpleMessage("Please enter Age"),
         "no_Email": MessageLookupByLibrary.simpleMessage("Please enter Email"),
         "no_Password":
             MessageLookupByLibrary.simpleMessage("Please enter Password"),
         "no_name": MessageLookupByLibrary.simpleMessage("Please enter name"),
+        "opps": MessageLookupByLibrary.simpleMessage("Opps"),
+        "quiz_for_kid": MessageLookupByLibrary.simpleMessage("Quiz for Kid"),
         "sign_up_subtitle":
             MessageLookupByLibrary.simpleMessage("Be with our family"),
         "sign_up_title":
@@ -147,6 +161,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "video_desc": MessageLookupByLibrary.simpleMessage(
             "Video explaining attention deficit"),
         "video_und":
-            MessageLookupByLibrary.simpleMessage("hyperactivity disorder")
+            MessageLookupByLibrary.simpleMessage("hyperactivity disorder"),
+        "yes": MessageLookupByLibrary.simpleMessage("Yes")
       };
 }

@@ -23,6 +23,7 @@ class _DefineTheKidState extends State<DefineTheKid> {
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TitleGender22(text: S.of(context).enter_data_title),
@@ -216,9 +217,14 @@ class _DefineTheKidState extends State<DefineTheKid> {
             const SizedBox(
               height: 40,
             ),
-            IconWithLableButton(
-              age: age,
-              isMale: isMale,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                IconWithLableButton(
+                  age: age,
+                  isMale: isMale,
+                ),
+              ],
             ),
           ],
         ),

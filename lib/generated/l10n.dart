@@ -849,6 +849,116 @@ class S {
       args: [],
     );
   }
+
+  /// `Back`
+  String get back {
+    return Intl.message(
+      'Back',
+      name: 'back',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next`
+  String get next {
+    return Intl.message(
+      'Next',
+      name: 'next',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Quiz for Kid`
+  String get quiz_for_kid {
+    return Intl.message(
+      'Quiz for Kid',
+      name: 'quiz_for_kid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Opps`
+  String get opps {
+    return Intl.message(
+      'Opps',
+      name: 'opps',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You can't get back anymore`
+  String get back_btn_massge {
+    return Intl.message(
+      'You can`t get back anymore',
+      name: 'back_btn_massge',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You must select an answer`
+  String get next_btn_massge {
+    return Intl.message(
+      'You must select an answer',
+      name: 'next_btn_massge',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `  Answer :`
+  String get answer {
+    return Intl.message(
+      '  Answer :',
+      name: 'answer',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Examples during adulthood: `
+  String get Examples_quiz {
+    return Intl.message(
+      'Examples during adulthood: ',
+      name: 'Examples_quiz',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to log out this account ?`
+  String get logout {
+    return Intl.message(
+      'Are you sure you want to log out this account ?',
+      name: 'logout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yes`
+  String get yes {
+    return Intl.message(
+      'Yes',
+      name: 'yes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No`
+  String get no {
+    return Intl.message(
+      'No',
+      name: 'no',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

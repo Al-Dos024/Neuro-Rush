@@ -3,6 +3,7 @@ import 'package:adhd/core/utils/font_style.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/send_data_to_firebase.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/process_age_and_gender.dart';
 import 'package:adhd/core/helper/fetch_data.dart';
+import 'package:adhd/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:adhd/constants.dart';
 import 'package:adhd/features/quiz%20for%20kid/data/model/nested_list.dart';
@@ -68,7 +69,8 @@ class _QuizForKidsState extends State<QuizForKids> {
         ),
         toolbarHeight: 80,
         backgroundColor: kBluecolor_1,
-        title: Text("Quiz for Kid", style: CustomTextStyle.kodch20WM),
+        title:
+            Text(S.of(context).quiz_for_kid, style: CustomTextStyle.kodch20WM),
         centerTitle: true,
         actions: [
           ScoreBoard(
@@ -161,7 +163,8 @@ class _QuizForKidsState extends State<QuizForKids> {
           onPressed: () {
             if (currentQuestionIndex == 0) {
               showSnackBar(context,
-                  title: "Opps", message: "You can't get back anymore");
+                  title: S.of(context).opps,
+                  message: S.of(context).back_btn_massge);
             } else {
               setState(() {
                 _isPressedOn = false;
@@ -176,7 +179,8 @@ class _QuizForKidsState extends State<QuizForKids> {
           onPressed: () {
             if (_isPressedOn == false) {
               showSnackBar(context,
-                  title: "Opps", message: "You must select an answer");
+                  title: S.of(context).opps,
+                  message: S.of(context).next_btn_massge);
             } else {
               for (int j = 0; j < nestedList.length; j++) {
                 for (int i = 0; i < nestedList[j].length; i++) {

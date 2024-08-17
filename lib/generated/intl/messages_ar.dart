@@ -41,6 +41,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "تلعب العوامل البيئية دورًا مهمًا في تطور اضطراب فرط الحركة ونقص الانتباه. وتزيد عوامل مثل التعرض للكحول والتبغ أثناء الحمل، والتعرض للرصاص، والولادة المبكرة، والأمراض المعدية من خطر الإصابة باضطراب فرط الحركة ونقص الانتباه. وقد ربطت الدراسات بين مبيد كلوربيريفوس وأعراض اضطراب فرط الحركة ونقص الانتباه لدى الأطفال. ويرتبط التعرض المرتفع للمبيدات بزيادة خطر الإصابة باضطراب فرط الحركة ونقص الانتباه بنسبة 35%، وحتى التعرض المنخفض للمبيدات قد يكون له تأثير.\n"),
         "Environmental_factors_title":
             MessageLookupByLibrary.simpleMessage("العوامل البيئية"),
+        "Examples_quiz":
+            MessageLookupByLibrary.simpleMessage("أمثلة واقعية على السؤال :"),
         "Forgot_Password":
             MessageLookupByLibrary.simpleMessage("هل نسيت كلمة المرور؟"),
         "Genetic_factors_subtitle": MessageLookupByLibrary.simpleMessage(
@@ -83,6 +85,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "aboutapp": MessageLookupByLibrary.simpleMessage("حول التطبيق"),
         "aboutapp_desc": MessageLookupByLibrary.simpleMessage(
             "إنه تطبيق مصمم لتمكين الأفراد والأسر المتضررة من اضطراب فرط الحركة ونقص الانتباه، حيث يجمع بين ثلاث وظائف رئيسية: أولاً، تشخيص اضطراب فرط الحركة ونقص الانتباه. ثانياً، يمكن للموارد المتعلقة بموضوعات اضطراب فرط الحركة ونقص الانتباه مثل الأعراض والأنواع واستراتيجيات الإدارة وآليات التأقلم أن تساعد المستخدمين على فهم أنفسهم وتجاربهم بشكل أفضل."),
+        "answer": MessageLookupByLibrary.simpleMessage("  الاختيارات :"),
+        "back": MessageLookupByLibrary.simpleMessage("السابق"),
+        "back_btn_massge": MessageLookupByLibrary.simpleMessage(
+            " لا يمكنك العودة أكثر من ذلك"),
         "boy": MessageLookupByLibrary.simpleMessage("ولد"),
         "continue_with":
             MessageLookupByLibrary.simpleMessage("يمكنك اكمال التسجيل عن طريق"),
@@ -104,12 +110,20 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("لديك حساب سابق ؟"),
         "letsstart": MessageLookupByLibrary.simpleMessage("هيا بنا لنبدأ"),
         "login_now": MessageLookupByLibrary.simpleMessage(" سجل دخول"),
+        "logout": MessageLookupByLibrary.simpleMessage(
+            "هل انت متاكد انك تريد تسجيل الخروج من هذا الحساب ؟"),
+        "next": MessageLookupByLibrary.simpleMessage("التالي"),
+        "next_btn_massge":
+            MessageLookupByLibrary.simpleMessage("يجب عليك اختيار اجابة"),
+        "no": MessageLookupByLibrary.simpleMessage("لا"),
         "no_Age": MessageLookupByLibrary.simpleMessage("فضلا ادخل عمرك هنا"),
         "no_Email": MessageLookupByLibrary.simpleMessage(
             "فضلا ادخل بريدك الالكتروني هنا"),
         "no_Password":
             MessageLookupByLibrary.simpleMessage("فصلا ادخل كلمه المرور هنا"),
         "no_name": MessageLookupByLibrary.simpleMessage("فصلا ادخل اسمك هنا"),
+        "opps": MessageLookupByLibrary.simpleMessage("معذرة"),
+        "quiz_for_kid": MessageLookupByLibrary.simpleMessage("أسالة عن الطفل"),
         "sign_up_subtitle":
             MessageLookupByLibrary.simpleMessage("كن فردا من عائلتنا"),
         "sign_up_title":
@@ -147,6 +161,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "title": MessageLookupByLibrary.simpleMessage("أهلا وسهلا"),
         "video_desc": MessageLookupByLibrary.simpleMessage(
             "فيديو يوضح اضطراب نقص الانتباه"),
-        "video_und": MessageLookupByLibrary.simpleMessage("اضطراب فرط النشاط")
+        "video_und": MessageLookupByLibrary.simpleMessage("اضطراب فرط النشاط"),
+        "yes": MessageLookupByLibrary.simpleMessage("نعم")
       };
 }

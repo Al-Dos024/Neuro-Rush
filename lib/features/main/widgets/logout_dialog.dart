@@ -1,6 +1,6 @@
-
 import 'package:adhd/constants.dart';
 import 'package:adhd/core/helper/log_out.dart';
+import 'package:adhd/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -19,7 +19,7 @@ class LogOutDialog extends StatelessWidget {
         child: Column(
           children: [
             Text(
-              "Are you sure you want to log out this account ?",
+              S.of(context).logout,
               maxLines: 2,
               style: GoogleFonts.kodchasan(
                 fontSize: 20,
@@ -37,7 +37,7 @@ class LogOutDialog extends StatelessWidget {
                     logOut(context);
                   },
                   child: Text(
-                    "Yes",
+                    S.of(context).yes,
                     style: GoogleFonts.kodchasan(
                       color: Colors.red,
                       fontSize: 17,
@@ -53,7 +53,7 @@ class LogOutDialog extends StatelessWidget {
                     Navigator.pop(context);
                   },
                   child: Text(
-                    "No",
+                    S.of(context).no,
                     style: GoogleFonts.kodchasan(
                       color: kBluecolor_3,
                       fontSize: 17,

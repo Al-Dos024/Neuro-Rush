@@ -11,36 +11,33 @@ class IconWithLableButton extends StatelessWidget {
   final int age;
   @override
   Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment.topRight,
-      child: TextButton.icon(
-        style: TextButton.styleFrom(
-          backgroundColor: kBluecolor_1,
-        ),
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => QuizForKids(
-                isMale: isMale,
-                age: age,
-              ),
+    return TextButton.icon(
+      style: TextButton.styleFrom(
+        backgroundColor: kBluecolor_1,
+      ),
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => QuizForKids(
+              isMale: isMale,
+              age: age,
             ),
-          );
-        },
-        label: Text(
-          S.of(context).go_quiz_btn,
-          style: GoogleFonts.kodchasan(
-            fontSize: 12,
-            color: Colors.white,
           ),
-        ),
-        iconAlignment: IconAlignment.end,
-        icon: const Icon(
-          Icons.arrow_forward,
+        );
+      },
+      label: Text(
+        S.of(context).go_quiz_btn,
+        style: GoogleFonts.kodchasan(
+          fontSize: 12,
           color: Colors.white,
-          size: 14,
         ),
+      ),
+      iconAlignment: IconAlignment.end,
+      icon: const Icon(
+        Icons.arrow_forward,
+        color: Colors.white,
+        size: 14,
       ),
     );
   }

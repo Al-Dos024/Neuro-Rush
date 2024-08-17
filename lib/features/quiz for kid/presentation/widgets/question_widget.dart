@@ -1,6 +1,7 @@
 import 'package:adhd/constants.dart';
 import 'package:adhd/core/utils/font_style.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/examples_widget.dart';
+import 'package:adhd/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class QuestionWidget extends StatelessWidget {
@@ -43,19 +44,19 @@ class QuestionWidget extends StatelessWidget {
               Expanded(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(questionsList[currentQuestionIndex]['quiz'],
-                        textAlign: TextAlign.center,
-                        style: CustomTextStyle.kodch18BM),
+                    Align(
+                      alignment: Alignment.center,
+                      child: Text(questionsList[currentQuestionIndex]['quiz'],
+                          textAlign: TextAlign.center,
+                          style: CustomTextStyle.kodch18BM),
+                    ),
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 5.0),
-                      child: Align(
-                        alignment: Alignment.topLeft,
-                        child: Text("Examples during adulthood:",
-                            textAlign: TextAlign.start,
-                            style: CustomTextStyle.kodch12BlM),
-                      ),
+                      child: Text(S.of(context).Examples_quiz,
+                          textAlign: TextAlign.start,
+                          style: CustomTextStyle.kodch12BlM),
                     ),
                     ExamplesWidget(
                         ex: questionsList[currentQuestionIndex]['ex1']),
@@ -72,7 +73,7 @@ class QuestionWidget extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.only(top: 25.0, bottom: 15),
-          child: Text("  Answer :", style: CustomTextStyle.kodch14BM),
+          child: Text(S.of(context).answer, style: CustomTextStyle.kodch14BM),
         )
       ],
     );

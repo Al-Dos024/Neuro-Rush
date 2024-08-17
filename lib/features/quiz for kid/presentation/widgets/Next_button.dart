@@ -1,5 +1,6 @@
 import 'package:adhd/constants.dart';
 import 'package:adhd/core/utils/font_style.dart';
+import 'package:adhd/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class GetNextButton extends StatelessWidget {
@@ -14,7 +15,7 @@ class GetNextButton extends StatelessWidget {
           // style: TextButton.styleFrom(
           //   backgroundColor: kBluecolor_1,
           // ),
-          label: Text("Next", style: CustomTextStyle.kodch16BB),
+          label: Text(S.of(context).next, style: CustomTextStyle.kodch16BB),
           iconAlignment: IconAlignment.end,
           icon: Container(
             decoration: BoxDecoration(

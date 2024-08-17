@@ -1,4 +1,5 @@
 import 'package:adhd/constants.dart';
+import 'package:adhd/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -12,7 +13,7 @@ class GetBackButton extends StatelessWidget {
       alignment: Alignment.topLeft,
       child: TextButton.icon(
           label: Text(
-            "Back",
+            S.of(context).back,
             style: GoogleFonts.kodchasan(
                 fontSize: 16, color: Colors.black, fontWeight: FontWeight.bold),
           ),

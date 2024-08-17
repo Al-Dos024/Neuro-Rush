@@ -105,10 +105,18 @@
     "enter_age_subtitle": "Choose your kid age:",
     "boy": "Boy",
     "girl": "Girl",
-    "go_quiz_btn": "Go to quiz phase"
+    "go_quiz_btn": "Go to quiz phase",
 
-
-
-
+    "back": "Back",
+    "next": "Next",
+    "quiz_for_kid": "Quiz for Kid",
     
+    "opps":"Opps",
+    "back_btn_massge":"You can`t get back anymore",
+    "next_btn_massge":"You must select an answer",
+    "answer":"  Answer :",
+    "Examples_quiz":"Examples during adulthood: ",
+    "logout":"Are you sure you want to log out this account ?",
+    "yes":"Yes",
+    "no":"No"
 }
