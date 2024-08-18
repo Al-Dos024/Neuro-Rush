@@ -27,39 +27,6 @@ int scoreM = 0;
 int numN = 0;
 int scoreN = 0;
 
-List classification = [
-  "Opposition",
-  "Cognitive problems",
-  "Hyperactivity",
-  "Anxiety and shyness",
-  "Perfectionism",
-  "Social problems",
-  "Psychosomatic diseases",
-  "Attention deficit",
-  "Arousal and impulsivity",
-  "Passion",
-  "General indicator",
-  "DMS 5",
-  "Hyperactivity DMS 5",
-  "Mixed DMS 5"
-];
-
-List subtitleClass = [
-  "It involves breaking rules, problems with those around him.",
-  "Indicates inattention, problems with organization, difficulty completing tasks",
-  "Inability to sit still for a period of time, feeling of discomfort and agitation",
-  "anxiety and fears, shy, withdrawn.",
-  "Goals higher than their capabilities, obsessive at work, highly sensitive",
-  "Low self-confidence, low self-esteem, lack of friends",
-  "Pretends to be sick, but he is not.",
-  "Identifying people with ADHD according to Conners' criteria ",
-  "Identifying people with ADHD according to Conners' criteria",
-  "Identifying people with ADHD according to Conners' criteria",
-  "Identifying people with ADHD according to Conners' criteria",
-  "Diagnostic criteria for attention deficit hyperactivity disorder",
-  "Diagnostic criteria for hyperactivity-impulsivity in the fourth edition of the DSM-IV",
-  "Overall diagnostic criteria for ADHD"
-];
 List<int> allScore = [
   scoreA,
   scoreB,

@@ -118,5 +118,65 @@
     "Examples_quiz":"Examples during adulthood: ",
     "logout":"Are you sure you want to log out this account ?",
     "yes":"Yes",
-    "no":"No"
+    "no":"No",
+
+    "Opposition":"Opposition",
+    "Opposition_sub":"It involves breaking rules, problems with those around him.",
+
+    "Cognitive_Problems":"Cognitive problems",
+    "Cognitive_Problems_sub":"Indicates inattention, problems with organization, difficulty completing tasks",
+
+    "Hyperactivity":"Hyperactivity",
+    "Hyperactivity_sub":"Inability to sit still for a period of time, feeling of discomfort and agitation",
+
+    "Anxiety_and_shyness":"Anxiety and shyness",
+    "Anxiety_and_shyness_sub":"anxiety and fears, shy, withdrawn.",
+
+    "Perfectionism":"Perfectionism",
+    "Perfectionism_sub":"Goals higher than their capabilities, obsessive at work, highly sensitive",
+
+    "Social_problems":"Social problems",
+    "Social_problems_sub":"Low self-confidence, low self-esteem, lack of friends",
+
+    "Psychosomatic_diseases":"Psychosomatic diseases",
+    "Psychosomatic_diseases_sub":"Pretends to be sick, but he is not.",
+
+    "Attention_deficit":"Attention deficit",
+    "Attention_deficit_sub":"Difficulty in sustaining focus and concentration.",
+
+    "Arousal_and_impulsivity":"Arousal and impulsivity",
+    "Arousal_and_impulsivity_sub":"Arousal is heightened activity, impulsivity is acting without thinking.",
+
+    "Passion":"Passion",
+    "Passion_sub":"intense enthusiasm or strong emotion for something.",
+
+    "General_indicator":"General indicator",
+    "General_indicator_sub":"Persistent inattention, hyperactivity, and impulsivity that interferes with daily functioning.",
+
+    "DMS_5":"DMS 5",
+    "DMS_5_sub":"Diagnostic and Statistical Manual of Mental Disorders, 5th Edition",
+
+    "Hyperactivity_DMS_5":"Hyperactivity DMS 5",
+    "Hyperactivity_DMS_5_sub":"Diagnostic criteria for hyperactivity-impulsivity in the fifth edition.",
+
+    "Mixed_DMS_5":"Mixed DMS 5",
+    "Mixed_DMS_5_sub":"Overall diagnostic criteria for ADHD",
+
+    "More_Details":"More Details",
+    "vba":"Very much below average",
+    "sba":"Significantly below average",
+    "ba":"Below average",
+    "m":"Medium",
+    "aa":"Above average",
+    "saa":"Significantly above average",
+    "vaa":"Very much above average",
+    "ok":"Ok",
+    "Result_of_Test":"Result of Test",
+
+    "Attempt_Number":"Attempt Number",
+    "Average":"Average:",
+    "Gender_Age":"Gender/Age:",
+    "Test_Time":"Test Time:",
+    "Date":"Date:"
+
 }

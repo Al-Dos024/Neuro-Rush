@@ -959,6 +959,436 @@ class S {
       args: [],
     );
   }
+
+  /// `Opposition`
+  String get Opposition {
+    return Intl.message(
+      'Opposition',
+      name: 'Opposition',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `It involves breaking rules, problems with those around him.`
+  String get Opposition_sub {
+    return Intl.message(
+      'It involves breaking rules, problems with those around him.',
+      name: 'Opposition_sub',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cognitive problems`
+  String get Cognitive_Problems {
+    return Intl.message(
+      'Cognitive problems',
+      name: 'Cognitive_Problems',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Indicates inattention, problems with organization, difficulty completing tasks`
+  String get Cognitive_Problems_sub {
+    return Intl.message(
+      'Indicates inattention, problems with organization, difficulty completing tasks',
+      name: 'Cognitive_Problems_sub',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hyperactivity`
+  String get Hyperactivity {
+    return Intl.message(
+      'Hyperactivity',
+      name: 'Hyperactivity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Inability to sit still for a period of time, feeling of discomfort and agitation`
+  String get Hyperactivity_sub {
+    return Intl.message(
+      'Inability to sit still for a period of time, feeling of discomfort and agitation',
+      name: 'Hyperactivity_sub',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Anxiety and shyness`
+  String get Anxiety_and_shyness {
+    return Intl.message(
+      'Anxiety and shyness',
+      name: 'Anxiety_and_shyness',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `anxiety and fears, shy, withdrawn.`
+  String get Anxiety_and_shyness_sub {
+    return Intl.message(
+      'anxiety and fears, shy, withdrawn.',
+      name: 'Anxiety_and_shyness_sub',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Perfectionism`
+  String get Perfectionism {
+    return Intl.message(
+      'Perfectionism',
+      name: 'Perfectionism',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Goals higher than their capabilities, obsessive at work, highly sensitive`
+  String get Perfectionism_sub {
+    return Intl.message(
+      'Goals higher than their capabilities, obsessive at work, highly sensitive',
+      name: 'Perfectionism_sub',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Social problems`
+  String get Social_problems {
+    return Intl.message(
+      'Social problems',
+      name: 'Social_problems',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Low self-confidence, low self-esteem, lack of friends`
+  String get Social_problems_sub {
+    return Intl.message(
+      'Low self-confidence, low self-esteem, lack of friends',
+      name: 'Social_problems_sub',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Psychosomatic diseases`
+  String get Psychosomatic_diseases {
+    return Intl.message(
+      'Psychosomatic diseases',
+      name: 'Psychosomatic_diseases',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pretends to be sick, but he is not.`
+  String get Psychosomatic_diseases_sub {
+    return Intl.message(
+      'Pretends to be sick, but he is not.',
+      name: 'Psychosomatic_diseases_sub',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Attention deficit`
+  String get Attention_deficit {
+    return Intl.message(
+      'Attention deficit',
+      name: 'Attention_deficit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Difficulty in sustaining focus and concentration.`
+  String get Attention_deficit_sub {
+    return Intl.message(
+      'Difficulty in sustaining focus and concentration.',
+      name: 'Attention_deficit_sub',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Arousal and impulsivity`
+  String get Arousal_and_impulsivity {
+    return Intl.message(
+      'Arousal and impulsivity',
+      name: 'Arousal_and_impulsivity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Arousal is heightened activity, impulsivity is acting without thinking.`
+  String get Arousal_and_impulsivity_sub {
+    return Intl.message(
+      'Arousal is heightened activity, impulsivity is acting without thinking.',
+      name: 'Arousal_and_impulsivity_sub',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Passion`
+  String get Passion {
+    return Intl.message(
+      'Passion',
+      name: 'Passion',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `intense enthusiasm or strong emotion for something.`
+  String get Passion_sub {
+    return Intl.message(
+      'intense enthusiasm or strong emotion for something.',
+      name: 'Passion_sub',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `General indicator`
+  String get General_indicator {
+    return Intl.message(
+      'General indicator',
+      name: 'General_indicator',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Persistent inattention, hyperactivity, and impulsivity that interferes with daily functioning.`
+  String get General_indicator_sub {
+    return Intl.message(
+      'Persistent inattention, hyperactivity, and impulsivity that interferes with daily functioning.',
+      name: 'General_indicator_sub',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `DMS 5`
+  String get DMS_5 {
+    return Intl.message(
+      'DMS 5',
+      name: 'DMS_5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diagnostic and Statistical Manual of Mental Disorders, 5th Edition`
+  String get DMS_5_sub {
+    return Intl.message(
+      'Diagnostic and Statistical Manual of Mental Disorders, 5th Edition',
+      name: 'DMS_5_sub',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hyperactivity DMS 5`
+  String get Hyperactivity_DMS_5 {
+    return Intl.message(
+      'Hyperactivity DMS 5',
+      name: 'Hyperactivity_DMS_5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diagnostic criteria for hyperactivity-impulsivity in the fifth edition.`
+  String get Hyperactivity_DMS_5_sub {
+    return Intl.message(
+      'Diagnostic criteria for hyperactivity-impulsivity in the fifth edition.',
+      name: 'Hyperactivity_DMS_5_sub',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mixed DMS 5`
+  String get Mixed_DMS_5 {
+    return Intl.message(
+      'Mixed DMS 5',
+      name: 'Mixed_DMS_5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Overall diagnostic criteria for ADHD`
+  String get Mixed_DMS_5_sub {
+    return Intl.message(
+      'Overall diagnostic criteria for ADHD',
+      name: 'Mixed_DMS_5_sub',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `More Details`
+  String get More_Details {
+    return Intl.message(
+      'More Details',
+      name: 'More_Details',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Very much below average`
+  String get vba {
+    return Intl.message(
+      'Very much below average',
+      name: 'vba',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Significantly below average`
+  String get sba {
+    return Intl.message(
+      'Significantly below average',
+      name: 'sba',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Below average`
+  String get ba {
+    return Intl.message(
+      'Below average',
+      name: 'ba',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Medium`
+  String get m {
+    return Intl.message(
+      'Medium',
+      name: 'm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Above average`
+  String get aa {
+    return Intl.message(
+      'Above average',
+      name: 'aa',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Significantly above average`
+  String get saa {
+    return Intl.message(
+      'Significantly above average',
+      name: 'saa',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Very much above average`
+  String get vaa {
+    return Intl.message(
+      'Very much above average',
+      name: 'vaa',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ok`
+  String get ok {
+    return Intl.message(
+      'Ok',
+      name: 'ok',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Result of Test`
+  String get Result_of_Test {
+    return Intl.message(
+      'Result of Test',
+      name: 'Result_of_Test',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Attempt Number`
+  String get Attempt_Number {
+    return Intl.message(
+      'Attempt Number',
+      name: 'Attempt_Number',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Average:`
+  String get Average {
+    return Intl.message(
+      'Average:',
+      name: 'Average',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gender/Age:`
+  String get Gender_Age {
+    return Intl.message(
+      'Gender/Age:',
+      name: 'Gender_Age',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Test Time:`
+  String get Test_Time {
+    return Intl.message(
+      'Test Time:',
+      name: 'Test_Time',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Date:`
+  String get Date {
+    return Intl.message(
+      'Date:',
+      name: 'Date',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

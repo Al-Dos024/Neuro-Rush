@@ -26,7 +26,30 @@ class MessageLookup extends MessageLookupByLibrary {
         "About_Us": MessageLookupByLibrary.simpleMessage("About Us"),
         "Adult_Test": MessageLookupByLibrary.simpleMessage("Adult Test"),
         "Age": MessageLookupByLibrary.simpleMessage("Age"),
+        "Anxiety_and_shyness":
+            MessageLookupByLibrary.simpleMessage("Anxiety and shyness"),
+        "Anxiety_and_shyness_sub": MessageLookupByLibrary.simpleMessage(
+            "anxiety and fears, shy, withdrawn."),
+        "Arousal_and_impulsivity":
+            MessageLookupByLibrary.simpleMessage("Arousal and impulsivity"),
+        "Arousal_and_impulsivity_sub": MessageLookupByLibrary.simpleMessage(
+            "Arousal is heightened activity, impulsivity is acting without thinking."),
+        "Attempt_Number":
+            MessageLookupByLibrary.simpleMessage("Attempt Number"),
+        "Attention_deficit":
+            MessageLookupByLibrary.simpleMessage("Attention deficit"),
+        "Attention_deficit_sub": MessageLookupByLibrary.simpleMessage(
+            "Difficulty in sustaining focus and concentration."),
+        "Average": MessageLookupByLibrary.simpleMessage("Average:"),
+        "Cognitive_Problems":
+            MessageLookupByLibrary.simpleMessage("Cognitive problems"),
+        "Cognitive_Problems_sub": MessageLookupByLibrary.simpleMessage(
+            "Indicates inattention, problems with organization, difficulty completing tasks"),
+        "DMS_5": MessageLookupByLibrary.simpleMessage("DMS 5"),
+        "DMS_5_sub": MessageLookupByLibrary.simpleMessage(
+            "Diagnostic and Statistical Manual of Mental Disorders, 5th Edition"),
         "Dark_Mode": MessageLookupByLibrary.simpleMessage("Welcome aboard"),
+        "Date": MessageLookupByLibrary.simpleMessage("Date:"),
         "Dietary_systems_subtitle": MessageLookupByLibrary.simpleMessage(
             "A study by the University of Southampton linked children`s consumption of certain artificial colors with hyperactivity, prompting action by the British government and the European Commission. In the United States, federal law requires food manufacturers to disclose the use of artificial colors on product packaging. This allows consumers to make informed choices about the products they purchase. The findings highlight the importance of continued vigilance in regulating artificial colors in food.\n"),
         "Dietary_systems_title":
@@ -44,10 +67,22 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Examples during adulthood: "),
         "Forgot_Password":
             MessageLookupByLibrary.simpleMessage("Forgot Password?"),
+        "Gender_Age": MessageLookupByLibrary.simpleMessage("Gender/Age:"),
+        "General_indicator":
+            MessageLookupByLibrary.simpleMessage("General indicator"),
+        "General_indicator_sub": MessageLookupByLibrary.simpleMessage(
+            "Persistent inattention, hyperactivity, and impulsivity that interferes with daily functioning."),
         "Genetic_factors_subtitle": MessageLookupByLibrary.simpleMessage(
             "ADHD is thought to be mainly hereditary, with genetic factors contributing to about 75% of cases. Several genes, including those affecting dopamine transporters, are believed to play a role in the disorder. ADHD is considered to be a complex interaction between genetic and environmental factors. One theory suggests that hyperactivity was an adaptive trait in early humans, with individuals with ADHD being more effective at tasks involving risk or competition in certain ancient societies.\n"),
         "Genetic_factors_title":
             MessageLookupByLibrary.simpleMessage("Genetic factors"),
+        "Hyperactivity": MessageLookupByLibrary.simpleMessage("Hyperactivity"),
+        "Hyperactivity_DMS_5":
+            MessageLookupByLibrary.simpleMessage("Hyperactivity DMS 5"),
+        "Hyperactivity_DMS_5_sub": MessageLookupByLibrary.simpleMessage(
+            "Diagnostic criteria for hyperactivity-impulsivity in the fifth edition."),
+        "Hyperactivity_sub": MessageLookupByLibrary.simpleMessage(
+            "Inability to sit still for a period of time, feeling of discomfort and agitation"),
         "Introduction_subtitle": MessageLookupByLibrary.simpleMessage(
             "ADHD is a common neurodevelopmental disorder that starts in childhood and affects around 5% of the global population. Children with ADHD may struggle to follow instructions, control their actions, and integrate into school environments, leading to academic performance issues. Managing children with ADHD can be challenging for parents and teachers. It`s important to provide children with love, support, and understanding, and to work with healthcare professionals and teachers to learn how to handle the child best."),
         "Introduction_title":
@@ -57,7 +92,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "Lets_start_btn": MessageLookupByLibrary.simpleMessage("Let`s Start?"),
         "Log_Out": MessageLookupByLibrary.simpleMessage("Log Out"),
         "Log_in": MessageLookupByLibrary.simpleMessage("Log in"),
+        "Mixed_DMS_5": MessageLookupByLibrary.simpleMessage("Mixed DMS 5"),
+        "Mixed_DMS_5_sub": MessageLookupByLibrary.simpleMessage(
+            "Overall diagnostic criteria for ADHD"),
+        "More_Details": MessageLookupByLibrary.simpleMessage("More Details"),
         "Name": MessageLookupByLibrary.simpleMessage("Name"),
+        "Opposition": MessageLookupByLibrary.simpleMessage("Opposition"),
+        "Opposition_sub": MessageLookupByLibrary.simpleMessage(
+            "It involves breaking rules, problems with those around him."),
+        "Passion": MessageLookupByLibrary.simpleMessage("Passion"),
+        "Passion_sub": MessageLookupByLibrary.simpleMessage(
+            "intense enthusiasm or strong emotion for something."),
         "Password": MessageLookupByLibrary.simpleMessage("Password"),
         "Pathophysiology_subtitle_one": MessageLookupByLibrary.simpleMessage(
             "The pathophysiology of ADHD is complex and unclear. Research shows reduced brain volume in children with ADHD, particularly in the left prefrontal cortex, suggesting dysfunction in the frontal lobe."),
@@ -65,17 +110,31 @@ class MessageLookup extends MessageLookupByLibrary {
             "Neuroimaging studies are now only used for research purposes, not for diagnosis. A 2005 review identified four interconnected frontal brain regions implicated in ADHD: the lateral prefrontal cortex, the dorsal anterior cingulate cortex, the caudate nucleus, and the cortex."),
         "Pathophysiology_title":
             MessageLookupByLibrary.simpleMessage("Pathophysiology"),
+        "Perfectionism": MessageLookupByLibrary.simpleMessage("Perfectionism"),
+        "Perfectionism_sub": MessageLookupByLibrary.simpleMessage(
+            "Goals higher than their capabilities, obsessive at work, highly sensitive"),
         "Previous_Results":
             MessageLookupByLibrary.simpleMessage("Previous Results"),
+        "Psychosomatic_diseases":
+            MessageLookupByLibrary.simpleMessage("Psychosomatic diseases"),
+        "Psychosomatic_diseases_sub": MessageLookupByLibrary.simpleMessage(
+            "Pretends to be sick, but he is not."),
         "Reasons_subtitle": MessageLookupByLibrary.simpleMessage(
             "There is no single cause for ADHD. However, there are a number of factors that may contribute to or worsen it, including genetics, diet, and physical and social environments.\n"),
         "Reasons_title": MessageLookupByLibrary.simpleMessage("Reasons"),
         "Register": MessageLookupByLibrary.simpleMessage("Register"),
         "Register_now": MessageLookupByLibrary.simpleMessage(" Register now"),
+        "Result_of_Test":
+            MessageLookupByLibrary.simpleMessage("Result of Test"),
         "Skip_btn": MessageLookupByLibrary.simpleMessage("Skip"),
+        "Social_problems":
+            MessageLookupByLibrary.simpleMessage("Social problems"),
+        "Social_problems_sub": MessageLookupByLibrary.simpleMessage(
+            "Low self-confidence, low self-esteem, lack of friends"),
         "Symptoms_subtitle": MessageLookupByLibrary.simpleMessage(
             "Attention deficit hyperactivity disorder (ADHD) is characterized by inattention, hyperactivity, and impulsivity. The symptoms are challenging to define. They must be observed for at least six months in two different settings to diagnose ADHD.  When the symptoms are categorized in children, three subtypes emerge: predominantly inattention, predominantly hyperactivity-impulsivity, and combined inattention, hyperactivity, and impulsivity. Most people exhibit some of these behaviors, but not to the point where they significantly interfere with their work, relationships, or studies. Symptoms may persist into adulthood, but diagnosing ADHD in adults remains a clinical diagnosis. Symptoms may differ from childhood to adolescence due to adaptations and avoidance mechanisms acquired during socialization."),
         "Symptoms_title": MessageLookupByLibrary.simpleMessage("Symptoms"),
+        "Test_Time": MessageLookupByLibrary.simpleMessage("Test Time:"),
         "What_is": MessageLookupByLibrary.simpleMessage("What is"),
         "What_is_adhd_title":
             MessageLookupByLibrary.simpleMessage("What is ADHD?"),
@@ -83,10 +142,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("What does the app do?"),
         "Whatappdo_desc": MessageLookupByLibrary.simpleMessage(
             "Third, behavioral therapy tools: The app provides access to evidence-based exercises and techniques to help users manage symptoms, develop life skills, and stimulate and promote positive behaviors"),
+        "aa": MessageLookupByLibrary.simpleMessage("Above average"),
         "aboutapp": MessageLookupByLibrary.simpleMessage("About Application"),
         "aboutapp_desc": MessageLookupByLibrary.simpleMessage(
             "It is an application designed to empower individuals and families affected by ADHD, as it combines three main functions: first, diagnosing ADHD. Second, resources on ADHD Topics such as symptoms, types, management strategies, and coping mechanisms can help users better understand themselves and their experiences."),
         "answer": MessageLookupByLibrary.simpleMessage("  Answer :"),
+        "ba": MessageLookupByLibrary.simpleMessage("Below average"),
         "back": MessageLookupByLibrary.simpleMessage("Back"),
         "back_btn_massge":
             MessageLookupByLibrary.simpleMessage("You can`t get back anymore"),
@@ -112,6 +173,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "login_now": MessageLookupByLibrary.simpleMessage(" Login now"),
         "logout": MessageLookupByLibrary.simpleMessage(
             "Are you sure you want to log out this account ?"),
+        "m": MessageLookupByLibrary.simpleMessage("Medium"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "next_btn_massge":
             MessageLookupByLibrary.simpleMessage("You must select an answer"),
@@ -121,8 +183,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "no_Password":
             MessageLookupByLibrary.simpleMessage("Please enter Password"),
         "no_name": MessageLookupByLibrary.simpleMessage("Please enter name"),
+        "ok": MessageLookupByLibrary.simpleMessage("Ok"),
         "opps": MessageLookupByLibrary.simpleMessage("Opps"),
         "quiz_for_kid": MessageLookupByLibrary.simpleMessage("Quiz for Kid"),
+        "saa":
+            MessageLookupByLibrary.simpleMessage("Significantly above average"),
+        "sba":
+            MessageLookupByLibrary.simpleMessage("Significantly below average"),
         "sign_up_subtitle":
             MessageLookupByLibrary.simpleMessage("Be with our family"),
         "sign_up_title":
@@ -158,6 +225,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "snackbar_weak_sub": MessageLookupByLibrary.simpleMessage(
             "Password should be at least 6 characters"),
         "title": MessageLookupByLibrary.simpleMessage("Welcome aboard"),
+        "vaa": MessageLookupByLibrary.simpleMessage("Very much above average"),
+        "vba": MessageLookupByLibrary.simpleMessage("Very much below average"),
         "video_desc": MessageLookupByLibrary.simpleMessage(
             "Video explaining attention deficit"),
         "video_und":

@@ -192,7 +192,7 @@ class _QuizForKidsState extends State<QuizForKids> {
               if (isLastQuestion) {
                 processAgeAndGender(isMale: widget.isMale, age: widget.age);
                 sendDataToFirebase(isMale: widget.isMale, age: widget.age);
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
                     builder: (context) => Result(

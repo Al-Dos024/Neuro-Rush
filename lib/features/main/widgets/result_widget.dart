@@ -1,6 +1,7 @@
 import 'package:adhd/constants.dart';
 import 'package:adhd/core/utils/assets.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/screens/def_the_kid.dart';
+import 'package:adhd/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -44,7 +45,7 @@ class ResultWidget extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Attempt Number $attemptNum",
+                      "${S.of(context).Attempt_Number} $attemptNum",
                       style: GoogleFonts.kodchasan(
                         fontSize: 18,
                         fontWeight: FontWeight.w600,
@@ -55,34 +56,35 @@ class ResultWidget extends StatelessWidget {
                       height: 15,
                     ),
                     TwoRowText(
-                      name: "Average:",
+                      name: S.of(context).Average,
                       value: "$average",
                     ),
                     const SizedBox(
                       height: 3,
                     ),
                     TwoRowText(
-                      name: "Gender/Age:",
+                      name: S.of(context).Gender_Age,
                       value: "$gender $age",
                     ),
                     const SizedBox(
                       height: 3,
                     ),
                     TwoRowText(
-                      name: "Test Time:",
+                      name: S.of(context).Test_Time,
                       value: testTime,
                     ),
                     const SizedBox(
                       height: 3,
                     ),
                     TwoRowText(
-                      name: "Date:",
+                      name: S.of(context).Date,
                       value: testDate,
                     ),
                   ],
                 ),
               ),
               Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Flexible(

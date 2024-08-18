@@ -26,7 +26,30 @@ class MessageLookup extends MessageLookupByLibrary {
         "About_Us": MessageLookupByLibrary.simpleMessage("من نحن؟"),
         "Adult_Test": MessageLookupByLibrary.simpleMessage("اختبار البالغ"),
         "Age": MessageLookupByLibrary.simpleMessage("العمر"),
+        "Anxiety_and_shyness":
+            MessageLookupByLibrary.simpleMessage("القلق والخجل"),
+        "Anxiety_and_shyness_sub": MessageLookupByLibrary.simpleMessage(
+            "القلق والمخاوف، الخجل، الانطواء."),
+        "Arousal_and_impulsivity":
+            MessageLookupByLibrary.simpleMessage("الإثارة والاندفاع"),
+        "Arousal_and_impulsivity_sub": MessageLookupByLibrary.simpleMessage(
+            "الإثارة في نشاط متزايد، والاندفاع التصرف دون تفكير."),
+        "Attempt_Number":
+            MessageLookupByLibrary.simpleMessage("نتيجة المحاولة رقم "),
+        "Attention_deficit":
+            MessageLookupByLibrary.simpleMessage("نقص الانتباه"),
+        "Attention_deficit_sub": MessageLookupByLibrary.simpleMessage(
+            "صعوبة في الحفاظ على التركيز."),
+        "Average": MessageLookupByLibrary.simpleMessage("متوسط النتائج :"),
+        "Cognitive_Problems":
+            MessageLookupByLibrary.simpleMessage("مشاكل معرفية"),
+        "Cognitive_Problems_sub": MessageLookupByLibrary.simpleMessage(
+            "يشير إلى عدم الانتباه ومشاكل في التنظيم وصعوبة في إكمال المهام"),
+        "DMS_5": MessageLookupByLibrary.simpleMessage("DMS 5"),
+        "DMS_5_sub": MessageLookupByLibrary.simpleMessage(
+            "الدليل التشخيصي والإحصائي للاضطرابات العقلية، الطبعة الخامسة"),
         "Dark_Mode": MessageLookupByLibrary.simpleMessage("الوضع الداكن"),
+        "Date": MessageLookupByLibrary.simpleMessage("التاريخ :"),
         "Dietary_systems_subtitle": MessageLookupByLibrary.simpleMessage(
             "وقد ربطت دراسة أجرتها جامعة ساوثهامبتون بين استهلاك الأطفال لبعض الألوان الصناعية وفرط النشاط، مما دفع الحكومة البريطانية والمفوضية الأوروبية إلى اتخاذ إجراءات. وفي الولايات المتحدة، يتطلب القانون الفيدرالي من مصنعي الأغذية الكشف عن استخدام الألوان الصناعية على أغلفة المنتجات. وهذا يسمح للمستهلكين باتخاذ خيارات مستنيرة بشأن المنتجات التي يشترونها. وتسلط النتائج الضوء على أهمية اليقظة المستمرة في تنظيم الألوان الصناعية في الأغذية.\n"),
         "Dietary_systems_title":
@@ -45,10 +68,21 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("أمثلة واقعية على السؤال :"),
         "Forgot_Password":
             MessageLookupByLibrary.simpleMessage("هل نسيت كلمة المرور؟"),
+        "Gender_Age": MessageLookupByLibrary.simpleMessage("الجنس / العمر"),
+        "General_indicator": MessageLookupByLibrary.simpleMessage("مؤشر عام"),
+        "General_indicator_sub": MessageLookupByLibrary.simpleMessage(
+            "عدم الانتباه المستمر، وفرط النشاط، والاندفاع الذي يتعارض مع الأداء اليومي."),
         "Genetic_factors_subtitle": MessageLookupByLibrary.simpleMessage(
             "يُعتقد أن اضطراب فرط الحركة ونقص الانتباه وراثي في ​​المقام الأول، حيث تساهم العوامل الوراثية في حوالي 75% من الحالات. ويُعتقد أن العديد من الجينات، بما في ذلك تلك التي تؤثر على ناقلات الدوبامين، تلعب دورًا في الاضطراب. ويُعتبر اضطراب فرط الحركة ونقص الانتباه تفاعلًا معقدًا بين العوامل الوراثية والبيئية. وتشير إحدى النظريات إلى أن فرط النشاط كان سمة تكيفية لدى البشر الأوائل، حيث كان الأفراد المصابون باضطراب فرط الحركة ونقص الانتباه أكثر فعالية في المهام التي تنطوي على المخاطرة أو المنافسة في بعض المجتمعات القديمة.\n"),
         "Genetic_factors_title":
             MessageLookupByLibrary.simpleMessage("العوامل الوراثية"),
+        "Hyperactivity": MessageLookupByLibrary.simpleMessage("فرط النشاط"),
+        "Hyperactivity_DMS_5":
+            MessageLookupByLibrary.simpleMessage("فرط النشاط DMS 5"),
+        "Hyperactivity_DMS_5_sub": MessageLookupByLibrary.simpleMessage(
+            "معايير تشخيص فرط النشاط والاندفاع في الطبعة الخامسة"),
+        "Hyperactivity_sub": MessageLookupByLibrary.simpleMessage(
+            "عدم القدرة على الجلوس ساكنًا لفترة من الوقت، والشعور بعدم الراحة والانفعال"),
         "Introduction_subtitle": MessageLookupByLibrary.simpleMessage(
             " اضطراب نقص الانتباه وفرط الحركة هو اضطراب شائع في النمو العصبي يبدأ في مرحلة الطفولة ويؤثر على حوالي 5% من سكان العالم. قد يواجه الأطفال المصابون باضطراب نقص الانتباه وفرط الحركة صعوبة في اتباع التعليمات والتحكم في أفعالهم والاندماج في البيئات المدرسية، مما يؤدي إلى مشاكل في الأداء الأكاديمي. قد يكون التعامل مع الأطفال المصابين باضطراب نقص الانتباه وفرط الحركة أمرًا صعبًا بالنسبة للآباء والمعلمين. من المهم توفير الحب والدعم والتفهم للأطفال، والعمل مع المتخصصين في الرعاية الصحية والمعلمين لمعرفة كيفية التعامل مع الطفل بشكل أفضل."),
         "Introduction_title": MessageLookupByLibrary.simpleMessage("مقدمة"),
@@ -57,7 +91,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "Lets_start_btn": MessageLookupByLibrary.simpleMessage("هيا لنبدا !"),
         "Log_Out": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
         "Log_in": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "Mixed_DMS_5": MessageLookupByLibrary.simpleMessage("اجمالي DMS 5"),
+        "Mixed_DMS_5_sub": MessageLookupByLibrary.simpleMessage(
+            "المعايير التشخيصية الشاملة لاضطراب نقص الانتباه وفرط الحركة"),
+        "More_Details":
+            MessageLookupByLibrary.simpleMessage("المزيد من المعلومات"),
         "Name": MessageLookupByLibrary.simpleMessage("الاسم"),
+        "Opposition": MessageLookupByLibrary.simpleMessage("المعارضة"),
+        "Opposition_sub": MessageLookupByLibrary.simpleMessage(
+            "يتضمن كسر القواعد والمشاكل مع من حوله."),
+        "Passion": MessageLookupByLibrary.simpleMessage("العواطف"),
+        "Passion_sub": MessageLookupByLibrary.simpleMessage(
+            "حماسة شديدة أو عاطفة قوية تجاه شيء ما."),
         "Password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "Pathophysiology_subtitle_one": MessageLookupByLibrary.simpleMessage(
             "إن الفسيولوجيا المرضية لاضطراب نقص الانتباه وفرط الحركة معقدة وغير واضحة. تشير الأبحاث إلى انخفاض حجم المخ لدى الأطفال المصابين باضطراب نقص الانتباه وفرط الحركة، وخاصة في القشرة الجبهية اليسرى، مما يشير إلى خلل في الفص الجبهي."),
@@ -65,27 +110,42 @@ class MessageLookup extends MessageLookupByLibrary {
             "تُستخدم دراسات التصوير العصبي الآن لأغراض البحث فقط، وليس للتشخيص. حددت دراسة أجريت عام 2005 أربع مناطق مترابطة في الدماغ الأمامي متورطة في اضطراب فرط الحركة ونقص الانتباه: القشرة الجبهية الأمامية الجانبية، والقشرة الحزامية الأمامية الظهرية، والنواة المذنبة، والقشرة."),
         "Pathophysiology_title":
             MessageLookupByLibrary.simpleMessage("الفسيولوجيا المرضية"),
+        "Perfectionism": MessageLookupByLibrary.simpleMessage("الكمال"),
+        "Perfectionism_sub": MessageLookupByLibrary.simpleMessage(
+            "أهداف أعلى من قدراتهم، مهووسون بالعمل، حساسون للغاية"),
         "Previous_Results":
             MessageLookupByLibrary.simpleMessage("النتائج السابقه"),
+        "Psychosomatic_diseases":
+            MessageLookupByLibrary.simpleMessage("الأمراض النفسية الجسدية"),
+        "Psychosomatic_diseases_sub": MessageLookupByLibrary.simpleMessage(
+            "يتظاهر بأنه مريض، لكنه ليس كذلك."),
         "Reasons_subtitle": MessageLookupByLibrary.simpleMessage(
             "لا يوجد سبب واحد لاضطراب نقص الانتباه وفرط الحركة. ومع ذلك، هناك عدد من العوامل التي قد تساهم في حدوثه أو تزيد من تفاقمه، بما في ذلك العوامل الوراثية والنظام الغذائي والبيئات المادية والاجتماعية.\n"),
         "Reasons_title": MessageLookupByLibrary.simpleMessage("الأسباب"),
         "Register": MessageLookupByLibrary.simpleMessage("سجل حسابك"),
         "Register_now": MessageLookupByLibrary.simpleMessage(" سجل حسابك"),
+        "Result_of_Test": MessageLookupByLibrary.simpleMessage("نتائج الفحص"),
         "Skip_btn": MessageLookupByLibrary.simpleMessage("تخطي"),
+        "Social_problems":
+            MessageLookupByLibrary.simpleMessage("المشاكل الاجتماعية"),
+        "Social_problems_sub": MessageLookupByLibrary.simpleMessage(
+            "انخفاض الثقة بالنفس، انخفاض تقدير الذات، قلة الأصدقاء"),
         "Symptoms_subtitle": MessageLookupByLibrary.simpleMessage(
             " يتسم اضطراب نقص الانتباه وفرط النشاط بعدم الانتباه وفرط النشاط والاندفاعية. ويصعب تحديد الأعراض. ​​إذ يجب ملاحظتها لمدة ستة أشهر على الأقل في بيئتين مختلفتين لتشخيص اضطراب نقص الانتباه وفرط النشاط. وعند تصنيف الأعراض لدى الأطفال، تظهر ثلاثة أنواع فرعية: عدم الانتباه بشكل أساسي، وفرط النشاط والاندفاعية بشكل أساسي، وعدم الانتباه وفرط النشاط والاندفاعية بشكل مشترك. ويُظهِر معظم الأشخاص بعض هذه السلوكيات، ولكن ليس إلى الحد الذي تتداخل فيه بشكل كبير مع عملهم أو علاقاتهم أو دراستهم. وقد تستمر الأعراض حتى مرحلة البلوغ، ولكن يظل تشخيص اضطراب نقص الانتباه وفرط النشاط لدى البالغين تشخيصًا سريريًا. وقد تختلف الأعراض من الطفولة إلى المراهقة بسبب التكيفات وآليات التجنب المكتسبة أثناء التنشئة الاجتماعية."),
         "Symptoms_title": MessageLookupByLibrary.simpleMessage("الاعراض"),
+        "Test_Time": MessageLookupByLibrary.simpleMessage("الوقت :"),
         "What_is": MessageLookupByLibrary.simpleMessage("ما هو"),
         "What_is_adhd_title":
             MessageLookupByLibrary.simpleMessage("ما هو ADHD؟"),
         "Whatappdo": MessageLookupByLibrary.simpleMessage("ماذا يفعل التطبيق؟"),
         "Whatappdo_desc": MessageLookupByLibrary.simpleMessage(
             "ثالثًا، أدوات العلاج السلوكي: يوفر التطبيق إمكانية الوصول إلى تمارين وتقنيات قائمة على الأدلة لمساعدة المستخدمين على إدارة الأعراض وتطوير المهارات الحياتية وتحفيز السلوكيات الإيجابية وتعزيزها."),
+        "aa": MessageLookupByLibrary.simpleMessage("فوق المتوسط"),
         "aboutapp": MessageLookupByLibrary.simpleMessage("حول التطبيق"),
         "aboutapp_desc": MessageLookupByLibrary.simpleMessage(
             "إنه تطبيق مصمم لتمكين الأفراد والأسر المتضررة من اضطراب فرط الحركة ونقص الانتباه، حيث يجمع بين ثلاث وظائف رئيسية: أولاً، تشخيص اضطراب فرط الحركة ونقص الانتباه. ثانياً، يمكن للموارد المتعلقة بموضوعات اضطراب فرط الحركة ونقص الانتباه مثل الأعراض والأنواع واستراتيجيات الإدارة وآليات التأقلم أن تساعد المستخدمين على فهم أنفسهم وتجاربهم بشكل أفضل."),
         "answer": MessageLookupByLibrary.simpleMessage("  الاختيارات :"),
+        "ba": MessageLookupByLibrary.simpleMessage("أقل من المتوسط"),
         "back": MessageLookupByLibrary.simpleMessage("السابق"),
         "back_btn_massge": MessageLookupByLibrary.simpleMessage(
             " لا يمكنك العودة أكثر من ذلك"),
@@ -112,6 +172,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "login_now": MessageLookupByLibrary.simpleMessage(" سجل دخول"),
         "logout": MessageLookupByLibrary.simpleMessage(
             "هل انت متاكد انك تريد تسجيل الخروج من هذا الحساب ؟"),
+        "m": MessageLookupByLibrary.simpleMessage("متوسط"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
         "next_btn_massge":
             MessageLookupByLibrary.simpleMessage("يجب عليك اختيار اجابة"),
@@ -122,8 +183,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "no_Password":
             MessageLookupByLibrary.simpleMessage("فصلا ادخل كلمه المرور هنا"),
         "no_name": MessageLookupByLibrary.simpleMessage("فصلا ادخل اسمك هنا"),
+        "ok": MessageLookupByLibrary.simpleMessage("حسنا"),
         "opps": MessageLookupByLibrary.simpleMessage("معذرة"),
         "quiz_for_kid": MessageLookupByLibrary.simpleMessage("أسالة عن الطفل"),
+        "saa": MessageLookupByLibrary.simpleMessage(
+            "أعلى من المتوسط ​​بشكل ملحوظ"),
+        "sba":
+            MessageLookupByLibrary.simpleMessage("أقل من المتوسط ​​بشكل ملحوظ"),
         "sign_up_subtitle":
             MessageLookupByLibrary.simpleMessage("كن فردا من عائلتنا"),
         "sign_up_title":
@@ -159,6 +225,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "snackbar_weak_sub": MessageLookupByLibrary.simpleMessage(
             "كلمة المرور يجب ان لا تقل عن 6 احرف"),
         "title": MessageLookupByLibrary.simpleMessage("أهلا وسهلا"),
+        "vaa": MessageLookupByLibrary.simpleMessage("أعلى من المتوسط ​​بكثير"),
+        "vba": MessageLookupByLibrary.simpleMessage("أقل من المتوسط ​​بكثير"),
         "video_desc": MessageLookupByLibrary.simpleMessage(
             "فيديو يوضح اضطراب نقص الانتباه"),
         "video_und": MessageLookupByLibrary.simpleMessage("اضطراب فرط النشاط"),
