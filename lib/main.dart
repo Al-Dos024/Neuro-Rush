@@ -19,52 +19,68 @@ var myDarkColorScheme = ColorScheme.fromSeed(
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
   static final ValueNotifier<ThemeMode> themeNotifier =
       ValueNotifier(ThemeMode.light);
+
+  // ValueNotifier for Locale
+  static final ValueNotifier<Locale> localeNotifier =
+      ValueNotifier(const Locale('ar'));
+
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder(
+      valueListenable: themeNotifier,
       builder: (_, ThemeMode currentMode, __) {
-        return MaterialApp(
-          //localization//
-          locale: const Locale('ar'),
-          debugShowCheckedModeBanner: false,
-          localizationsDelegates: const [
-            S.delegate,
-            GlobalMaterialLocalizations.delegate,
-            GlobalWidgetsLocalizations.delegate,
-            GlobalCupertinoLocalizations.delegate,
-          ],
-          supportedLocales: S.delegate.supportedLocales,
-          home: SplashView(),
-          //darktheme//
-          theme: ThemeData().copyWith(
-            appBarTheme: const AppBarTheme().copyWith(
-              foregroundColor: myColorScheme.secondary,
-            ),
-            colorScheme: myColorScheme,
-            textTheme: const TextTheme().copyWith(
-              bodyMedium: TextStyle(
-                color: myColorScheme.primary,
+        return ValueListenableBuilder(
+          valueListenable: localeNotifier,
+          builder: (_, Locale currentLocale, __) {
+            return MaterialApp(
+              // localization
+              locale: currentLocale,
+              debugShowCheckedModeBanner: false,
+              localizationsDelegates: const [
+                S.delegate,
+                GlobalMaterialLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate,
+                GlobalCupertinoLocalizations.delegate,
+              ],
+              supportedLocales: S.delegate.supportedLocales,
+              home: SplashView(),
+              // dark theme
+              theme: ThemeData().copyWith(
+                appBarTheme: const AppBarTheme().copyWith(
+                  foregroundColor: myColorScheme.secondary,
+                ),
+                colorScheme: myColorScheme,
+                textTheme: const TextTheme().copyWith(
+                  bodyMedium: TextStyle(
+                    color: myColorScheme.primary,
+                  ),
+                ),
               ),
-            ),
-          ),
-          darkTheme: ThemeData.dark().copyWith(
-            scaffoldBackgroundColor: myDarkColorScheme.onSurface,
-            colorScheme: myDarkColorScheme,
-            drawerTheme: const DrawerThemeData().copyWith(
-              backgroundColor: myDarkColorScheme.onSurface,
-            ),
-            textTheme: const TextTheme().copyWith(
-              bodyMedium: TextStyle(
-                color: myDarkColorScheme.primaryFixedDim,
+              darkTheme: ThemeData.dark().copyWith(
+                scaffoldBackgroundColor: myDarkColorScheme.onSurface,
+                colorScheme: myDarkColorScheme,
+                drawerTheme: const DrawerThemeData().copyWith(
+                  backgroundColor: myDarkColorScheme.onSurface,
+                ),
+                textTheme: const TextTheme().copyWith(
+                  bodyMedium: TextStyle(
+                    color: myDarkColorScheme.primaryFixedDim,
+                  ),
+                ),
               ),
-            ),
-          ),
-          themeMode: currentMode, // const DefineTheKid() //SigninView() ,
+              themeMode: currentMode, // const DefineTheKid() //SigninView() ,
+            );
+          },
         );
       },
-      valueListenable: themeNotifier,
     );
   }
+}
+
+// Function to change the language
+void changeLanguage(Locale newLocale) {
+  MyApp.localeNotifier.value = newLocale;
 }

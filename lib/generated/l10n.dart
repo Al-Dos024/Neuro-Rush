@@ -70,10 +70,10 @@ class S {
     );
   }
 
-  /// `Welcome aboard`
+  /// `Dark Mode`
   String get Dark_Mode {
     return Intl.message(
-      'Welcome aboard',
+      'Dark Mode',
       name: 'Dark_Mode',
       desc: '',
       args: [],

@@ -57,6 +57,31 @@ class MainDrawer extends StatelessWidget {
               ),
             ],
           ),
+          Row(
+            children: [
+              DrawerItem(
+                img: "assets/icons/language.png",
+                title: S.of(context).Language,
+              ),
+              ValueListenableBuilder(
+                valueListenable: MyApp.localeNotifier,
+                builder: (_, Locale currentLocale, __) {
+                  // Determine the current language and toggle to the other
+                  String language =
+                      currentLocale.languageCode == 'ar' ? 'en' : 'ar';
+                  String buttonText =
+                      currentLocale.languageCode == 'ar' ? 'en' : 'ar';
+
+                  return ElevatedButton(
+                    onPressed: () {
+                      changeLanguage(Locale(language));
+                    },
+                    child: Text(buttonText),
+                  );
+                },
+              ),
+            ],
+          ),
           DrawerItem(
             img: "assets/icons/about_us.png",
             title: S.of(context).About_Us,
@@ -68,10 +93,6 @@ class MainDrawer extends StatelessWidget {
                     builder: (context) => const AboutUs(),
                   ));
             },
-          ),
-          DrawerItem(
-            img: "assets/icons/language.png",
-            title: S.of(context).Language,
           ),
           const Spacer(),
           const Divider(

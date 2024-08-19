@@ -48,7 +48,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "DMS_5": MessageLookupByLibrary.simpleMessage("DMS 5"),
         "DMS_5_sub": MessageLookupByLibrary.simpleMessage(
             "Diagnostic and Statistical Manual of Mental Disorders, 5th Edition"),
-        "Dark_Mode": MessageLookupByLibrary.simpleMessage("Welcome aboard"),
+        "Dark_Mode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
         "Date": MessageLookupByLibrary.simpleMessage("Date:"),
         "Dietary_systems_subtitle": MessageLookupByLibrary.simpleMessage(
             "A study by the University of Southampton linked children`s consumption of certain artificial colors with hyperactivity, prompting action by the British government and the European Commission. In the United States, federal law requires food manufacturers to disclose the use of artificial colors on product packaging. This allows consumers to make informed choices about the products they purchase. The findings highlight the importance of continued vigilance in regulating artificial colors in food.\n"),
