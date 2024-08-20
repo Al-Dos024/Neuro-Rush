@@ -94,13 +94,8 @@ class ResultWidget extends StatelessWidget {
                   IconButton(
                     alignment: Alignment.centerRight,
                     onPressed: () async {
-                      // Fetch data using the index and userId
                       final data = await fetchData(index, userId);
-
-                      // Log the fetched data for debugging purposes
                       print("Fetched Data: $data");
-
-                      // Navigate to the ResultFirebase screen
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -130,32 +125,24 @@ class ResultWidget extends StatelessWidget {
 
   Future<List<int>> fetchData(String index, String id) async {
     try {
-      // Reference to the specific test data
+      print("Fetched index: $index , Fetched id: $id");
       final DatabaseReference ref = FirebaseDatabase.instance
           .ref("users")
           .child(id)
           .child("Tests")
-          .child(index);
+          .child(index)
+          .child("Data");
 
-      // Fetch the data from Firebase
       final snapshot = await ref.once();
-
-      // Check if the snapshot contains data
       if (snapshot.snapshot.value == null) {
-        return []; // Return an empty list if no data is found
+        return [];
       }
 
-      // Assume the snapshot contains a map
       final data = snapshot.snapshot.value as Map<dynamic, dynamic>;
-
-      // Convert the map's values to a list and filter out non-int items
-      return data.values
-          .where((value) => value is int) // Ensure only integers are included
-          .cast<int>() // Cast the values to integers
-          .toList();
+      return data.values.whereType<int>().cast<int>().toList();
     } catch (e) {
       print("Error fetching data: $e");
-      return []; // Return an empty list in case of error
+      return [];
     }
   }
 }
