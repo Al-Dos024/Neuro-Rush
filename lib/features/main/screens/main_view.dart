@@ -1,4 +1,3 @@
-
 import 'package:adhd/features/main/widgets/card_view1.dart';
 import 'package:adhd/features/main/widgets/custom_app_bar.dart';
 import 'package:adhd/features/main/widgets/main_drawer.dart';

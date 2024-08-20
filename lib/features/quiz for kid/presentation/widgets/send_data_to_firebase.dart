@@ -5,14 +5,8 @@ import '../../data/model/nested_list.dart';
 
 String id = FirebaseAuth.instance.currentUser!.uid;
 
-DatabaseReference refmain =
+DatabaseReference refmain_pri =
     FirebaseDatabase.instance.ref("users/$id").child("Tests");
-
-DatabaseReference refProper = FirebaseDatabase.instance
-    .ref("users/$id")
-    .child("Tests")
-    .child("Test")
-    .child("properties");
 
 DatabaseReference refPersonal =
     FirebaseDatabase.instance.ref("users/$id").child("Personal Data");
@@ -39,7 +33,7 @@ void sendDataToFirebase({required bool isMale, required int age}) async {
     String formatterDate = DateFormat('yMd').format(now);
     String formatterTime = DateFormat.jm().format(now);
 
-    refmain.child("$attempt").child("Data").set(
+    refmain_pri.child("$attempt").child("Data").set(
       {
         'A -Opposition score': scoreA,
         'B -Cognitive problems score': scoreB,
@@ -57,7 +51,7 @@ void sendDataToFirebase({required bool isMale, required int age}) async {
         'N -mixed DMS 5 score': scoreN,
       },
     );
-    refmain.child("$attempt").child("properties").set(
+    refmain_pri.child("$attempt").child("properties").set(
       {
         'Attempt Number': attempt,
         'Average': scoreN,
