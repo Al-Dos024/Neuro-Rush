@@ -1,3 +1,4 @@
+import 'package:adhd/constants.dart';
 import 'package:adhd/features/Splash/presentation/views/splash_view.dart';
 import 'package:adhd/generated/l10n.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -53,7 +54,9 @@ class MyApp extends StatelessWidget {
                 colorScheme: myColorScheme,
               ),
               darkTheme: ThemeData.dark().copyWith(
-                scaffoldBackgroundColor: myDarkColorScheme.onSurface,
+                textTheme: TextTheme(
+                  bodyMedium: TextStyle(color: kBlackcolor)
+                ),
                 colorScheme: myDarkColorScheme,
                 drawerTheme: const DrawerThemeData().copyWith(
                   backgroundColor: myDarkColorScheme.onSurface,

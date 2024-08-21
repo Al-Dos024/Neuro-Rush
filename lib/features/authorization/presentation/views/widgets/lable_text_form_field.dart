@@ -1,6 +1,6 @@
 import 'package:adhd/constants.dart';
+import 'package:adhd/main.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CustomLableTextFormField extends StatelessWidget {
@@ -27,17 +27,19 @@ class CustomLableTextFormField extends StatelessWidget {
   final bool obscureText;
   @override
   Widget build(BuildContext context) {
+    bool isDarkMode = MyApp.themeNotifier.value == ThemeMode.dark;
+
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 8),
+      padding: const EdgeInsets.symmetric(vertical: 8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: EdgeInsets.symmetric(vertical: 8),
+            padding: const EdgeInsets.symmetric(vertical: 8),
             child: Text(
               lableText,
               style: GoogleFonts.inter(
-                
+                color: isDarkMode ? kWhitecolor : kBlackcolor,
                 fontSize: 15,
                 fontWeight: FontWeight.bold,
               ),
@@ -51,12 +53,16 @@ class CustomLableTextFormField extends StatelessWidget {
                   color: kBlackcolor.withOpacity(0.25),
                   spreadRadius: 0,
                   blurRadius: 4,
-                  offset: Offset(0, 4),
+                  offset: const Offset(0, 4),
                 ),
               ],
             ),
             child: TextFormField(
-            
+              style: GoogleFonts.inter(
+                fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: kBlackcolor_1,
+              ),
               textAlign: TextAlign.start,
               keyboardType: inputType,
               initialValue: initialValue,
@@ -68,11 +74,11 @@ class CustomLableTextFormField extends StatelessWidget {
                 suffixIcon: suffixIcon,
                 filled: true,
                 fillColor: kGraycolor_2,
-                contentPadding: EdgeInsets.symmetric(
+                contentPadding: const EdgeInsets.symmetric(
                   horizontal: 20,
                   vertical: 15,
                 ),
-                focusedBorder: OutlineInputBorder(
+                focusedBorder: const OutlineInputBorder(
                   borderSide: BorderSide(
                     color: Color.fromARGB(0, 44, 44, 125),
                   ),
@@ -80,7 +86,7 @@ class CustomLableTextFormField extends StatelessWidget {
                     Radius.circular(20),
                   ),
                 ),
-                enabledBorder: OutlineInputBorder(
+                enabledBorder: const OutlineInputBorder(
                   borderSide: BorderSide(
                     color: kGraycolor_2,
                   ),
@@ -89,7 +95,11 @@ class CustomLableTextFormField extends StatelessWidget {
                   ),
                 ),
                 hintText: hintText,
-                
+                hintStyle: GoogleFonts.inter(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: kGraycolor_1,
+                ),
               ),
             ),
           ),

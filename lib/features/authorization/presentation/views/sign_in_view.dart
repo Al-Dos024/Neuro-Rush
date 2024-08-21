@@ -7,6 +7,7 @@ import 'package:adhd/features/authorization/presentation/views/widgets/my_text_b
 import 'package:adhd/features/main/presentation/views/main_view.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/show_snackbar.dart';
 import 'package:adhd/generated/l10n.dart';
+import 'package:adhd/main.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -28,7 +29,9 @@ class _SigninViewState extends State<SigninView> {
 
   @override
   Widget build(BuildContext context) {
+    bool isDarkMode = MyApp.themeNotifier.value == ThemeMode.dark;
     return Scaffold(
+      backgroundColor: isDarkMode ? kBlackcolor_1 : kWhitecolor_2,
       body: Form(
         key: formKey,
         child: SingleChildScrollView(
@@ -51,6 +54,7 @@ class _SigninViewState extends State<SigninView> {
                     style: GoogleFonts.inter(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
+                      color:  isDarkMode ? kWhitecolor :kBlackcolor,
                     ),
                   ),
                   Text(

@@ -59,30 +59,31 @@ class _OnBoradingState extends State<OnBoradingView> {
       body: Container(
         padding: const EdgeInsets.only(bottom: 80),
         child: PageView(
-            controller: controller,
-            onPageChanged: (index) {
-              setState(() => isLastpage = index == 2);
-            },
-            children: [
-              buildPage(
-                color: isDarkMode ? kBlackcolor_1 : kWhitecolor,
-                urlImage: 'assets/images/World health day.png',
-                title: S.of(context).aboutapp,
-                subtitle: S.of(context).aboutapp_desc,
-              ),
-              buildPage(
-                color: isDarkMode ? kBlackcolor_1 : kWhitecolor,
-                urlImage: 'assets/images/Online Doctor.png',
-                title: S.of(context).Whatappdo,
-                subtitle: S.of(context).Whatappdo_desc,
-              ),
-              buildPage(
-                color: isDarkMode ? kBlackcolor_1 : kWhitecolor,
-                urlImage: 'assets/images/Doctor.png',
-                title: S.of(context).letsstart,
-                subtitle: " ",
-              ),
-            ]),
+          controller: controller,
+          onPageChanged: (index) {
+            setState(() => isLastpage = index == 2);
+          },
+          children: [
+            buildPage(
+              color: isDarkMode ? kBlackcolor_1 : kWhitecolor,
+              urlImage: 'assets/images/World health day.png',
+              title: S.of(context).aboutapp,
+              subtitle: S.of(context).aboutapp_desc,
+            ),
+            buildPage(
+              color: isDarkMode ? kBlackcolor_1 : kWhitecolor,
+              urlImage: 'assets/images/Online Doctor.png',
+              title: S.of(context).Whatappdo,
+              subtitle: S.of(context).Whatappdo_desc,
+            ),
+            buildPage(
+              color: isDarkMode ? kBlackcolor_1 : kWhitecolor,
+              urlImage: 'assets/images/Doctor.png',
+              title: S.of(context).letsstart,
+              subtitle: " ",
+            ),
+          ],
+        ),
       ),
       bottomSheet: isLastpage
           ? Container(
@@ -98,12 +99,14 @@ class _OnBoradingState extends State<OnBoradingView> {
                       count: 3,
                       effect: const WormEffect(
                         spacing: 10,
-                        dotColor:kWhitecolor_2,
+                        dotColor: kWhitecolor_2,
                         activeDotColor: kPrimerycolor,
                       ),
-                      onDotClicked: (index) => controller.animateToPage(index,
-                          duration: const Duration(milliseconds: 400),
-                          curve: Curves.easeIn),
+                      onDotClicked: (index) => controller.animateToPage(
+                        index,
+                        duration: const Duration(milliseconds: 400),
+                        curve: Curves.easeIn,
+                      ),
                     ),
                   ),
                   TextButton(
@@ -158,7 +161,7 @@ class _OnBoradingState extends State<OnBoradingView> {
                   ),
                   IconButton(
                     style: TextButton.styleFrom(
-                      backgroundColor:kBluecolor_7,
+                      backgroundColor: kBluecolor_7,
                     ),
                     onPressed: () => controller.nextPage(
                         duration: const Duration(milliseconds: 500),

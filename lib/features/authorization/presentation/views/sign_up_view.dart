@@ -12,6 +12,8 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../../../main.dart';
+
 class SignUpView extends StatefulWidget {
   const SignUpView({super.key});
 
@@ -30,8 +32,9 @@ class _SignUpViewState extends State<SignUpView> {
   late DatabaseReference ref;
   @override
   Widget build(BuildContext context) {
+    bool isDarkMode = MyApp.themeNotifier.value == ThemeMode.dark;
     return Scaffold(
-      
+       backgroundColor: isDarkMode ? kBlackcolor_1 : kWhitecolor_2,
       body: Form(
         key: formKey,
         child: SingleChildScrollView(
@@ -49,7 +52,7 @@ class _SignUpViewState extends State<SignUpView> {
                   Text(
                     S.of(context).sign_up_title,
                     style: GoogleFonts.inter(
-                      
+                      color:  isDarkMode ? kWhitecolor :kBlackcolor,
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
                     ),
@@ -62,7 +65,7 @@ class _SignUpViewState extends State<SignUpView> {
                       fontWeight: FontWeight.w400,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   CustomLableTextFormField(
