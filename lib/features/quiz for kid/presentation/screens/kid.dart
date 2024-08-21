@@ -1,6 +1,7 @@
-import 'package:adhd/features/quiz%20for%20kid/data/cubit/quiz_cubit.dart';
-import 'package:adhd/features/quiz%20for%20kid/data/cubit/quiz_state.dart';
+import 'package:adhd/features/quiz%20for%20kid/data/cubit/quiz_view/quiz_cubit.dart';
+import 'package:adhd/features/quiz%20for%20kid/data/cubit/quiz_view/quiz_state.dart';
 import 'package:adhd/features/quiz%20for%20kid/data/model/nested_list.dart';
+import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/shimmer_loading.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/answer_list_and_button.dart';
@@ -55,7 +56,7 @@ class QuizForKids extends StatelessWidget {
         body: BlocBuilder<QuizForKidsCubit, QuizForKidsState>(
           builder: (context, state) {
             if (state is QuizForKidsLoading) {
-              return const Center(child: CircularProgressIndicator());
+              return const ShimmerLoading();
             } else if (state is QuizForKidsLoaded) {
               return Container(
                 margin: const EdgeInsets.only(

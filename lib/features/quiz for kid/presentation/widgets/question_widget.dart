@@ -30,17 +30,6 @@ class QuestionWidget extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Container(
-              //   height: 35,
-              //   width: 35,
-              //   decoration: const BoxDecoration(
-              //     borderRadius: BorderRadius.all(Radius.circular(10)),
-              //     color: kBluecolor_3,
-              //   ),
-              //   alignment: Alignment.center,
-              //   child: Text('${currentQuestionIndex + 1}',
-              //       style: CustomTextStyle.kodch18WM),
-              // ),
               Expanded(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,

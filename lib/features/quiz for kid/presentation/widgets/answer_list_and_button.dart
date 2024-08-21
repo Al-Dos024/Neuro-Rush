@@ -60,7 +60,6 @@ class AnswerList extends StatelessWidget {
           ),
           itemCount: answersList.length,
           itemBuilder: (context, index) {
-            // Ensure answerList[index] is valid and not null
             final answer = answersList[index]['ans'];
             return AnswerButton(
               answer: answer,

@@ -1,5 +1,5 @@
 // lib/features/quiz_for_kid/presentation/cubit/quiz_for_kids_cubit.dart
-import 'package:adhd/features/quiz%20for%20kid/data/cubit/quiz_state.dart';
+import 'package:adhd/features/quiz%20for%20kid/data/cubit/quiz_view/quiz_state.dart';
 import 'package:bloc/bloc.dart';
 import 'package:adhd/core/helper/fetch_data.dart';
 import 'package:adhd/main.dart';
