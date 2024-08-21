@@ -1,4 +1,5 @@
 import 'package:adhd/core/utils/font_style.dart';
+import 'package:adhd/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'circle_row.dart';
 
@@ -32,7 +33,7 @@ class DiagnosisRate extends StatelessWidget {
                   style: CustomTextStyle.kodch20BlM,
                 ),
                 Text(
-                  " points",
+                  S.of(context).points,
                   style: CustomTextStyle.kodch10Bll,
                 )
               ],

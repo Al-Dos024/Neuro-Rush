@@ -1,4 +1,5 @@
 import 'package:adhd/constants.dart';
+import 'package:adhd/features/quiz%20for%20kid/data/model/nested_list.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/screens/kid.dart';
 import 'package:adhd/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +17,7 @@ class IconWithLableButton extends StatelessWidget {
         backgroundColor: kBluecolor_1,
       ),
       onPressed: () {
+        resetnumandScore();
         Navigator.push(
           context,
           MaterialPageRoute(

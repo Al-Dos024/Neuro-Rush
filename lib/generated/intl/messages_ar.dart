@@ -185,6 +185,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "no_name": MessageLookupByLibrary.simpleMessage("فصلا ادخل اسمك هنا"),
         "ok": MessageLookupByLibrary.simpleMessage("حسنا"),
         "opps": MessageLookupByLibrary.simpleMessage("معذرة"),
+        "points": MessageLookupByLibrary.simpleMessage(" نقطة"),
         "quiz_for_kid": MessageLookupByLibrary.simpleMessage("أسالة عن الطفل"),
         "saa": MessageLookupByLibrary.simpleMessage(
             "أعلى من المتوسط ​​بشكل ملحوظ"),

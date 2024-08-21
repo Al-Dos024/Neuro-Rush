@@ -110,6 +110,16 @@ class S {
     );
   }
 
+  /// ` Points`
+  String get points {
+    return Intl.message(
+      ' Points',
+      name: 'points',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `About Application`
   String get aboutapp {
     return Intl.message(
