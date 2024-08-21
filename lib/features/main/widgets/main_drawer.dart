@@ -66,7 +66,6 @@ class MainDrawer extends StatelessWidget {
               ValueListenableBuilder(
                 valueListenable: MyApp.localeNotifier,
                 builder: (_, Locale currentLocale, __) {
-                  // Determine the current language and toggle to the other
                   String language =
                       currentLocale.languageCode == 'ar' ? 'en' : 'ar';
                   String buttonText =

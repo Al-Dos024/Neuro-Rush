@@ -4,6 +4,7 @@ import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/send_data_to
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/process_age_and_gender.dart';
 import 'package:adhd/core/helper/fetch_data.dart';
 import 'package:adhd/generated/l10n.dart';
+import 'package:adhd/main.dart';
 import 'package:flutter/material.dart';
 import 'package:adhd/constants.dart';
 import 'package:adhd/features/quiz%20for%20kid/data/model/nested_list.dart';
@@ -33,8 +34,19 @@ class _QuizForKidsState extends State<QuizForKids> {
   Map<String, dynamic>? selectedAnswer;
 
   Future<void> loadQuestionsAndAnswer() async {
-    final questions = await fetchQuestions();
-    final answers = await fetchAnswers();
+    // Obtain the current locale
+    final currentLocale = MyApp.localeNotifier.value;
+
+    // Determine which fetching functions to call based on the locale
+    final questions = currentLocale.languageCode == 'ar'
+        ? await fetchQuestionsAr()
+        : await fetchQuestionsEng();
+
+    final answers = currentLocale.languageCode == 'ar'
+        ? await fetchAnswersAr()
+        : await fetchAnswersEng();
+
+    // Update the state with the fetched questions and answers
     setState(() {
       questionsList = questions;
       answersList = answers;
