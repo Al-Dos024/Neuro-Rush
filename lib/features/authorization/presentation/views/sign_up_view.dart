@@ -34,7 +34,7 @@ class _SignUpViewState extends State<SignUpView> {
   Widget build(BuildContext context) {
     bool isDarkMode = MyApp.themeNotifier.value == ThemeMode.dark;
     return Scaffold(
-       backgroundColor: isDarkMode ? kBlackcolor_1 : kWhitecolor_2,
+       backgroundColor: isDarkMode ? kBlackcolor_1 : kWhitecolor,
       body: Form(
         key: formKey,
         child: SingleChildScrollView(
