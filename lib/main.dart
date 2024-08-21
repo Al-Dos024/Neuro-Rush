@@ -32,6 +32,7 @@ class MyApp extends StatelessWidget {
     return ValueListenableBuilder(
       valueListenable: themeNotifier,
       builder: (_, ThemeMode currentMode, __) {
+        print(themeNotifier.value);
         return ValueListenableBuilder(
           valueListenable: localeNotifier,
           builder: (_, Locale currentLocale, __) {
@@ -46,29 +47,16 @@ class MyApp extends StatelessWidget {
                 GlobalCupertinoLocalizations.delegate,
               ],
               supportedLocales: S.delegate.supportedLocales,
-              home: SplashView(),
+              home: const SplashView(),
               // dark theme
               theme: ThemeData().copyWith(
-                appBarTheme: const AppBarTheme().copyWith(
-                  foregroundColor: myColorScheme.secondary,
-                ),
                 colorScheme: myColorScheme,
-                textTheme: const TextTheme().copyWith(
-                  bodyMedium: TextStyle(
-                    color: myColorScheme.primary,
-                  ),
-                ),
               ),
               darkTheme: ThemeData.dark().copyWith(
                 scaffoldBackgroundColor: myDarkColorScheme.onSurface,
                 colorScheme: myDarkColorScheme,
                 drawerTheme: const DrawerThemeData().copyWith(
                   backgroundColor: myDarkColorScheme.onSurface,
-                ),
-                textTheme: const TextTheme().copyWith(
-                  bodyMedium: TextStyle(
-                    color: myDarkColorScheme.primaryFixedDim,
-                  ),
                 ),
               ),
               themeMode: currentMode, // const DefineTheKid() //SigninView() ,

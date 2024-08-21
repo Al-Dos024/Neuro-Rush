@@ -32,7 +32,7 @@ class IconWithLableButton extends StatelessWidget {
         S.of(context).go_quiz_btn,
         style: GoogleFonts.kodchasan(
           fontSize: 12,
-          color: Colors.white,
+          //color: Colors.white,
         ),
       ),
       iconAlignment: IconAlignment.end,

@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 
 const Color kPrimerycolor = Color(0xff51C4D3);
 const Color kBlackcolor = Color(0xff000000);
+const Color kBlackcolor_1 = Color(0xff22282A);
 const Color kWhitecolor = Color(0xffffffff);
 const Color kWhitecolor_1 = Color(0xffFAFAFA);
+const Color kWhitecolor_2 = Color(0xffD8E3E7);
 const Color kGraycolor_1 = Color(0xff7C7C7C);
 const Color kGraycolor_2 = Color(0xffE9E9E9);
 const Color kGraycolor_3 = Color(0xffD9D9D9);
@@ -13,6 +15,7 @@ const Color kBluecolor_3 = Color(0xff325762);
 const Color kBluecolor_4 = Color(0xff004A5A);
 const Color kBluecolor_5 = Color(0xffB0DDE7);
 const Color kBluecolor_6 = Color(0xff5A9AA8);
+const Color kBluecolor_7 = Color(0xff51C4D3);
 const Color kFemalecolor = Color(0xffF85B90);
 const Color kMalecolor = Color(0xff000BCC);
 const Color kKindtestcolor = Color(0xff5A4FCE);

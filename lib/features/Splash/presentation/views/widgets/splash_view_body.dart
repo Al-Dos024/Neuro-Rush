@@ -1,6 +1,6 @@
 
-import 'package:adhd/features/authorization/presentation/sign_in/screens/sign_in_view.dart';
-import 'package:adhd/features/main/screens/main_view.dart';
+import 'package:adhd/features/authorization/presentation/views/sign_in_view.dart';
+import 'package:adhd/features/main/presentation/views/main_view.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'sliding_text.dart';
