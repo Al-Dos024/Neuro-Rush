@@ -1,7 +1,6 @@
 import 'package:adhd/constants.dart';
 import 'package:adhd/features/main/presentation/views/widgets/result_widget.dart';
 import 'package:adhd/generated/l10n.dart';
-import 'package:adhd/main.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -12,8 +11,6 @@ class PreviousResults extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isDarkMode = MyApp.themeNotifier.value == ThemeMode.dark;
-
     Query refmain =
         FirebaseDatabase.instance.ref("users/$id").child("Tests").orderByKey();
 
@@ -22,9 +19,9 @@ class PreviousResults extends StatelessWidget {
         toolbarHeight: 80,
         centerTitle: true,
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios_new_rounded,
-             color: isDarkMode ? kBlackcolor_1 : kWhitecolor,
+             color:kWhitecolor,
           ),
           onPressed: () {
             Navigator.pop(context);
@@ -34,7 +31,7 @@ class PreviousResults extends StatelessWidget {
         title: Text(
           S.of(context).Previous_Results,
           style: GoogleFonts.kodchasan(
-           color: isDarkMode ? kBlackcolor_1 : kWhitecolor,
+           color: kWhitecolor,
             fontSize: 20,
             fontWeight: FontWeight.w700,
           ),

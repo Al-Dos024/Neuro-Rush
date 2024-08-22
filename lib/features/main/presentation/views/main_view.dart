@@ -1,8 +1,7 @@
-import 'package:adhd/constants.dart';
+
 import 'package:adhd/features/main/presentation/views/widgets/card_view1.dart';
 import 'package:adhd/features/main/presentation/views/widgets/custom_app_bar.dart';
 import 'package:adhd/features/main/presentation/views/widgets/main_drawer.dart';
-import 'package:adhd/main.dart';
 import 'package:flutter/material.dart';
 import 'widgets/card_view2.dart';
 import 'widgets/card_view3.dart';

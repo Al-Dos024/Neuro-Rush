@@ -5,7 +5,6 @@ import 'package:adhd/features/what-is-ADHD/presentation/views/widgets/adhd_reaso
 import 'package:adhd/features/what-is-ADHD/presentation/views/widgets/adhd_symptoms_section.dart';
 import 'package:adhd/features/what-is-ADHD/presentation/views/widgets/adhd_video_section.dart';
 import 'package:adhd/generated/l10n.dart';
-import 'package:adhd/main.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -14,16 +13,14 @@ class WhatIsAdhd extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isDarkMode = MyApp.themeNotifier.value == ThemeMode.dark;
-
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 80,
         centerTitle: true,
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios_new_rounded,
-             color: isDarkMode ? kBlackcolor : kWhitecolor,
+             color:kWhitecolor,
           ),
           onPressed: () {
             Navigator.pop(context);
@@ -35,7 +32,7 @@ class WhatIsAdhd extends StatelessWidget {
           style: GoogleFonts.kodchasan(
             fontSize: 20,
             fontWeight: FontWeight.w700,
-            color: isDarkMode ? kBlackcolor : kWhitecolor,
+            color: kWhitecolor,
           ),
         ),
       ),
