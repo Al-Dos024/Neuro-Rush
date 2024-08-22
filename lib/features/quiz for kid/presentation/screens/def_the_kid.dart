@@ -1,4 +1,6 @@
+import 'package:adhd/constants.dart';
 import 'package:adhd/features/quiz%20for%20kid/data/cubit/define_view/define_cubit.dart';
+import 'package:adhd/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/gender_selection.dart';
@@ -14,9 +16,12 @@ class DefineTheKid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isDarkMode = MyApp.themeNotifier.value == ThemeMode.dark;
+
     return BlocProvider(
       create: (context) => DefineTheKidCubit(),
       child: Scaffold(
+        backgroundColor: isDarkMode ? kBlackcolor_1 :kWhitecolor,
         body: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(

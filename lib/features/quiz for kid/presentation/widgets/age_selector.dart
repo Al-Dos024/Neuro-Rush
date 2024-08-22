@@ -1,6 +1,7 @@
 // lib/features/quiz_for_kid/presentation/widgets/age_selector.dart
 import 'package:adhd/features/quiz%20for%20kid/data/cubit/define_view/define_cubit.dart';
 import 'package:adhd/features/quiz%20for%20kid/data/cubit/define_view/define_state.dart';
+import 'package:adhd/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:adhd/constants.dart';
@@ -11,6 +12,8 @@ class AgeSelector extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isDarkMode = MyApp.themeNotifier.value == ThemeMode.dark;
+
     return BlocBuilder<DefineTheKidCubit, DefineTheKidState>(
       builder: (context, state) {
         if (state is DefineTheKidData) {
@@ -53,7 +56,9 @@ class AgeSelector extends StatelessWidget {
                           child: Text(
                             '${state.age}',
                             style: GoogleFonts.kodchasan(
-                                fontSize: 32, color: Colors.white),
+                              fontSize: 32,
+                              color: isDarkMode ? kBlackcolor_1 : kWhitecolor,
+                            ),
                           ),
                         ),
                       ),

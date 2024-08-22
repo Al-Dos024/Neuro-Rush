@@ -10,6 +10,7 @@ class ContinueWith extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
+      // ignore: prefer_const_constructors
       padding: EdgeInsets.symmetric(vertical: 12),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

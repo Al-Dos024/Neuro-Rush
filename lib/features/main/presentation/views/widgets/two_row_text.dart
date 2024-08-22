@@ -1,4 +1,5 @@
 import 'package:adhd/constants.dart';
+import 'package:adhd/main.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -9,14 +10,16 @@ class TwoRowText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isDarkMode = MyApp.themeNotifier.value == ThemeMode.dark;
+
     return Row(
       children: [
         Text(
           name,
           style: GoogleFonts.kodchasan(
             fontSize: 14,
-            fontWeight: FontWeight.w600,
-            color: kBluecolor_1,
+            fontWeight: FontWeight.w500,
+             color: isDarkMode ? kBluecolor_9 :kBluecolor_1,
           ),
         ),
         const SizedBox(
@@ -27,7 +30,7 @@ class TwoRowText extends StatelessWidget {
           style: GoogleFonts.kodchasan(
             fontSize: 14,
             fontWeight: FontWeight.w600,
-            color: kBluecolor_6,
+             color: isDarkMode ? kWhitecolor : kBluecolor_6,
           ),
         ),
       ],

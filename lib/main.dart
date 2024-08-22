@@ -54,10 +54,11 @@ class MyApp extends StatelessWidget {
                 colorScheme: myColorScheme,
               ),
               darkTheme: ThemeData.dark().copyWith(
-                textTheme: TextTheme(
+                textTheme: const TextTheme(
                   bodyMedium: TextStyle(color: kBlackcolor)
                 ),
                 colorScheme: myDarkColorScheme,
+                scaffoldBackgroundColor: const Color(0xff22282A),
                 drawerTheme: const DrawerThemeData().copyWith(
                   backgroundColor: myDarkColorScheme.onSurface,
                 ),

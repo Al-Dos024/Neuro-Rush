@@ -6,11 +6,15 @@ import 'package:adhd/constants.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:adhd/generated/l10n.dart';
 
+import '../../../../main.dart';
+
 class GenderSelection extends StatelessWidget {
   const GenderSelection({super.key});
 
   @override
   Widget build(BuildContext context) {
+    bool isDarkMode = MyApp.themeNotifier.value == ThemeMode.dark;
+
     return BlocBuilder<DefineTheKidCubit, DefineTheKidState>(
       builder: (context, state) {
         if (state is DefineTheKidData) {
@@ -36,7 +40,9 @@ class GenderSelection extends StatelessWidget {
                       borderRadius: BorderRadius.circular(25),
                       color: state.isMale
                           ? kMalecolor.withOpacity(0.5)
-                          : kWhitecolor_1,
+                          : isDarkMode
+                              ? kBlackcolor_2
+                              : kWhitecolor_1,
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -81,7 +87,9 @@ class GenderSelection extends StatelessWidget {
                       ],
                       borderRadius: BorderRadius.circular(25),
                       color: state.isMale
-                          ? kWhitecolor_1
+                          ? isDarkMode
+                              ? kBlackcolor_2
+                              : kWhitecolor_1
                           : kFemalecolor.withOpacity(0.5),
                     ),
                     child: Column(

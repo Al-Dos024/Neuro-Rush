@@ -2,6 +2,7 @@ import 'package:adhd/constants.dart';
 import 'package:adhd/core/utils/assets.dart';
 import 'package:adhd/features/what-is-ADHD/presentation/views/what_is_adhd.dart';
 import 'package:adhd/generated/l10n.dart';
+import 'package:adhd/main.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -12,6 +13,8 @@ class CustomCardMainView1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isDarkMode = MyApp.themeNotifier.value == ThemeMode.dark;
+
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
@@ -36,7 +39,7 @@ class CustomCardMainView1 extends StatelessWidget {
                   style: GoogleFonts.kodchasan(
                     fontSize: 28,
                     fontWeight: FontWeight.w600,
-                    //color: kWhitecolor,
+                    color: isDarkMode ? kBlackcolor:kWhitecolor,
                   ),
                 ),
                 Text(
