@@ -1,5 +1,7 @@
-import 'package:adhd/core/utils/font_style.dart';
+import 'package:adhd/constants.dart';
+import 'package:adhd/main.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ExamplesWidget extends StatelessWidget {
   const ExamplesWidget({super.key, required this.ex});
@@ -7,6 +9,8 @@ class ExamplesWidget extends StatelessWidget {
   final String ex;
   @override
   Widget build(BuildContext context) {
+    bool isDarkMode = MyApp.themeNotifier.value == ThemeMode.dark;
+
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -15,8 +19,8 @@ class ExamplesWidget extends StatelessWidget {
           child: Container(
             width: 5,
             height: 5,
-            decoration: const BoxDecoration(
-              color: Colors.black,
+            decoration: BoxDecoration(
+              color: isDarkMode ? kWhitecolor : kBlackcolor,
               shape: BoxShape.circle,
             ),
           ),
@@ -27,7 +31,11 @@ class ExamplesWidget extends StatelessWidget {
         Flexible(
           child: Text(
             ex,
-            style: CustomTextStyle.kodch12BM,
+            style: GoogleFonts.kodchasan(
+              fontSize: 12,
+              color: isDarkMode ? kWhitecolor_2 : kBlackcolor_2,
+              fontWeight: FontWeight.w500,
+            ),
           ),
         ),
       ],

@@ -3,19 +3,26 @@ import 'package:adhd/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../../../main.dart';
+
 class GetBackButton extends StatelessWidget {
   const GetBackButton({super.key, required this.onPressed});
 
   final void Function() onPressed;
   @override
   Widget build(BuildContext context) {
+       bool isDarkMode = MyApp.themeNotifier.value == ThemeMode.dark;
+
     return Align(
       alignment: Alignment.topLeft,
       child: TextButton.icon(
           label: Text(
             S.of(context).back,
             style: GoogleFonts.kodchasan(
-                fontSize: 16, color: Colors.black, fontWeight: FontWeight.bold),
+              fontSize: 16,
+              color:  isDarkMode ?kWhitecolor : kBlackcolor,
+              fontWeight: FontWeight.bold,
+            ),
           ),
           iconAlignment: IconAlignment.start,
           icon: Container(
@@ -29,12 +36,12 @@ class GetBackButton extends StatelessWidget {
               ],
               borderRadius: BorderRadius.circular(25),
             ),
-            child: const CircleAvatar(
-              backgroundColor: kQuizphase,
-              child: Icon(
+            child:  CircleAvatar(
+              backgroundColor:isDarkMode ? const Color(0xff4E5254) : const Color(0xffE8E8F6),
+              child:  Icon(
                 fill: BorderSide.strokeAlignCenter,
                 Icons.arrow_back,
-                color: Colors.black,
+                color: isDarkMode ? kWhitecolor:kBlackcolor,
                 size: 27,
               ),
             ),

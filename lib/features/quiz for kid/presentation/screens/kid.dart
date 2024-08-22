@@ -2,6 +2,7 @@ import 'package:adhd/features/quiz%20for%20kid/data/cubit/quiz_view/quiz_cubit.d
 import 'package:adhd/features/quiz%20for%20kid/data/cubit/quiz_view/quiz_state.dart';
 import 'package:adhd/features/quiz%20for%20kid/data/model/nested_list.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/shimmer_loading.dart';
+import 'package:adhd/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/answer_list_and_button.dart';
@@ -12,6 +13,7 @@ import 'package:adhd/constants.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/question_widget.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/score_board.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/show_snackbar.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class QuizForKids extends StatelessWidget {
   const QuizForKids({super.key, required this.age, required this.isMale});
@@ -20,6 +22,8 @@ class QuizForKids extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isDarkMode = MyApp.themeNotifier.value == ThemeMode.dark;
+
     final List<int> kidsList = List.filled(80, 0);
     return BlocProvider(
       create: (context) => QuizForKidsCubit()..loadQuestionsAndAnswers(),
@@ -29,15 +33,19 @@ class QuizForKids extends StatelessWidget {
             onPressed: () {
               Navigator.pop(context);
             },
-            icon: const Icon(
-              Icons.arrow_back,
-              color: Colors.white,
-            ),
+            icon: const Icon(Icons.arrow_back,
+                color: kWhitecolor),
           ),
           toolbarHeight: 80,
           backgroundColor: kBluecolor_1,
-          title: Text(S.of(context).quiz_for_kid,
-              style: CustomTextStyle.kodch20WM),
+          title: Text(
+            S.of(context).quiz_for_kid,
+            style: GoogleFonts.kodchasan(
+              color: kWhitecolor,
+              fontSize: 22,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
           centerTitle: true,
           actions: [
             BlocBuilder<QuizForKidsCubit, QuizForKidsState>(

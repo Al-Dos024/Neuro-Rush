@@ -1,4 +1,7 @@
+import 'package:adhd/constants.dart';
+import 'package:adhd/main.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 // Define the AnswerButton widget
 class AnswerButton extends StatelessWidget {
@@ -15,19 +18,33 @@ class AnswerButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isDarkMode = MyApp.themeNotifier.value == ThemeMode.dark;
+
     return Container(
       width: double.infinity,
       margin: const EdgeInsets.symmetric(vertical: 8),
       height: 48,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          foregroundColor: isSelected ? Colors.white : Colors.black,
-          backgroundColor:
-              isSelected ? const Color(0xffC972B1) : const Color(0xffE8E8F6),
+          foregroundColor: isDarkMode
+              ? isSelected
+                  ? kBlackcolor_2
+                  : kWhitecolor
+              : isSelected
+                  ? kWhitecolor
+                  : kBlackcolor_2,
+          backgroundColor: isSelected
+              ? const Color(0xffC972B1)
+              : isDarkMode
+                  ? kBlackcolor_3
+                  : const Color(0xffE8E8F6),
           shape: const StadiumBorder(),
         ),
         onPressed: onPressed,
-        child: Text(answer['name']),
+        child: Text(answer['name'], style: GoogleFonts.kodchasan(
+          fontSize: 14,
+          fontWeight: FontWeight.w600
+        ),),
       ),
     );
   }
