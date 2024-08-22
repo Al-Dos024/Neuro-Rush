@@ -1,3 +1,4 @@
+import 'package:adhd/constants.dart';
 import 'package:adhd/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'detail_row.dart';
@@ -8,6 +9,7 @@ class ResultIconInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
+      backgroundColor: kBlackcolor_2,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20),
       ),

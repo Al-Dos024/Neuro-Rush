@@ -1,6 +1,7 @@
 import 'package:adhd/constants.dart';
 import 'package:adhd/core/helper/log_out.dart';
 import 'package:adhd/generated/l10n.dart';
+import 'package:adhd/main.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -11,8 +12,10 @@ class LogOutDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+       bool isDarkMode = MyApp.themeNotifier.value == ThemeMode.dark;
+
     return Dialog(
-      backgroundColor: kWhitecolor,
+      backgroundColor: isDarkMode ? kBlackcolor_2: kWhitecolor,
       child: Container(
         height: 150,
         padding: const EdgeInsets.all(20),
@@ -23,6 +26,7 @@ class LogOutDialog extends StatelessWidget {
               maxLines: 2,
               style: GoogleFonts.kodchasan(
                 fontSize: 20,
+                color: kWhitecolor_2,
                 fontWeight: FontWeight.w500,
               ),
             ),
