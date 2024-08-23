@@ -10,14 +10,9 @@ import 'package:toggle_switch/toggle_switch.dart';
 
 import '../../../../../constants.dart';
 
-class MainDrawer extends StatefulWidget {
+class MainDrawer extends StatelessWidget {
   const MainDrawer({super.key});
 
-  @override
-  State<MainDrawer> createState() => _MainDrawerState();
-}
-
-class _MainDrawerState extends State<MainDrawer> {
   @override
   Widget build(BuildContext context) {
     bool isDarkMode = MyApp.themeNotifier.value == ThemeMode.dark;
@@ -73,22 +68,6 @@ class _MainDrawerState extends State<MainDrawer> {
                       index == 1 ? ThemeMode.light : ThemeMode.dark;
                 },
               ),
-              /**
-               * mIconButton(
-                onPressed: () {
-                  MyApp.themeNotifier.value =
-                      MyApp.themeNotifier.value == ThemeMode.light
-                          ? ThemeMode.dark
-                          : ThemeMode.light;
-                },
-                icon: Icon(
-                  MyApp.themeNotifier.value == ThemeMode.light
-                      ? Icons.dark_mode
-                      : Icons.light_mode,
-                  color: kBlackcolor,
-                ),
-              ),
-               */
             ],
           ),
           Row(
@@ -100,16 +79,30 @@ class _MainDrawerState extends State<MainDrawer> {
               ValueListenableBuilder(
                 valueListenable: MyApp.localeNotifier,
                 builder: (_, Locale currentLocale, __) {
-                  String language =
-                      currentLocale.languageCode == 'ar' ? 'en' : 'ar';
-                  String buttonText =
-                      currentLocale.languageCode == 'ar' ? 'en' : 'ar';
-
-                  return ElevatedButton(
-                    onPressed: () {
-                      changeLanguage(Locale(language));
+                  return ToggleSwitch(
+                    minWidth: 30,
+                    minHeight: 20,
+                    cornerRadius: 25,
+                    activeBgColors: const [
+                      [kBluecolor_4, kBluecolor_4],
+                      [kBluecolor_4, kBluecolor_4],
+                    ],
+                    radiusStyle: true,
+                    activeFgColor: kWhitecolor,
+                    inactiveBgColor: Colors.grey[400],
+                    inactiveFgColor: kWhitecolor,
+                    initialLabelIndex:
+                        currentLocale.languageCode == 'en' ? 0 : 1,
+                    totalSwitches: 2,
+                    labels: const ['EN', 'AR'],
+                    fontSize: 7,
+                    onToggle: (index) {
+                      if (index == 0) {
+                        MyApp.localeNotifier.value = const Locale('en');
+                      } else {
+                        MyApp.localeNotifier.value = const Locale('ar');
+                      }
                     },
-                    child: Text(buttonText),
                   );
                 },
               ),
@@ -150,3 +143,19 @@ class _MainDrawerState extends State<MainDrawer> {
     );
   }
 }
+              /**
+               * mIconButton(
+                onPressed: () {
+                  MyApp.themeNotifier.value =
+                      MyApp.themeNotifier.value == ThemeMode.light
+                          ? ThemeMode.dark
+                          : ThemeMode.light;
+                },
+                icon: Icon(
+                  MyApp.themeNotifier.value == ThemeMode.light
+                      ? Icons.dark_mode
+                      : Icons.light_mode,
+                  color: kBlackcolor,
+                ),
+              ),
+               */

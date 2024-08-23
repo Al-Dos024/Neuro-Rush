@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
     return ValueListenableBuilder(
       valueListenable: themeNotifier,
       builder: (_, ThemeMode currentMode, __) {
-        // print(themeNotifier.value);
+        // print(localeNotifier.value);
         return ValueListenableBuilder(
           valueListenable: localeNotifier,
           builder: (_, Locale currentLocale, __) {
