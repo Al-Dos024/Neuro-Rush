@@ -6,14 +6,22 @@ import 'package:adhd/features/main/presentation/views/widgets/logout_dialog.dart
 import 'package:adhd/generated/l10n.dart';
 import 'package:adhd/main.dart';
 import 'package:flutter/material.dart';
+import 'package:toggle_switch/toggle_switch.dart';
 
 import '../../../../../constants.dart';
 
-class MainDrawer extends StatelessWidget {
+class MainDrawer extends StatefulWidget {
   const MainDrawer({super.key});
 
   @override
+  State<MainDrawer> createState() => _MainDrawerState();
+}
+
+class _MainDrawerState extends State<MainDrawer> {
+  @override
   Widget build(BuildContext context) {
+    bool isDarkMode = MyApp.themeNotifier.value == ThemeMode.dark;
+
     return Drawer(
       width: 230,
       shape: const RoundedRectangleBorder(
@@ -42,7 +50,31 @@ class MainDrawer extends StatelessWidget {
                 img: "assets/icons/dark_mode.png",
                 title: S.of(context).Dark_Mode,
               ),
-              IconButton(
+              ToggleSwitch(
+                minWidth: 30,
+                minHeight: 20,
+                cornerRadius: 25,
+                radiusStyle: true,
+                activeFgColor: kWhitecolor,
+                inactiveBgColor: Colors.grey[400],
+                inactiveFgColor: kBlackcolor_1,
+                icons: const [
+                  Icons.dark_mode,
+                  Icons.light_mode,
+                ],
+                iconSize: 18,
+                activeBgColors: const [
+                  [kBluecolor_4, kBluecolor_4],
+                  [kBluecolor_1, kBluecolor_1]
+                ],
+                initialLabelIndex: isDarkMode ? 0 : 1,
+                onToggle: (index) {
+                  MyApp.themeNotifier.value =
+                      index == 1 ? ThemeMode.light : ThemeMode.dark;
+                },
+              ),
+              /**
+               * mIconButton(
                 onPressed: () {
                   MyApp.themeNotifier.value =
                       MyApp.themeNotifier.value == ThemeMode.light
@@ -53,9 +85,10 @@ class MainDrawer extends StatelessWidget {
                   MyApp.themeNotifier.value == ThemeMode.light
                       ? Icons.dark_mode
                       : Icons.light_mode,
-                      color: kBlackcolor,
+                  color: kBlackcolor,
                 ),
               ),
+               */
             ],
           ),
           Row(
