@@ -28,7 +28,7 @@ class CustomCardMainView3 extends StatelessWidget {
                     style: GoogleFonts.kodchasan(
                       fontSize: 28,
                       fontWeight: FontWeight.w600,
-                      color: kWhitecolor,
+                      //color: kWhitecolor,
                     ),
                   ),
                   Text(
@@ -36,13 +36,13 @@ class CustomCardMainView3 extends StatelessWidget {
                     style: GoogleFonts.kodchasan(
                       fontSize: 24,
                       fontWeight: FontWeight.w600,
-                      color: kWhitecolor.withOpacity(0.6),
+                      //color: kWhitecolor.withOpacity(0.6),
                     ),
                   ),
                   const Icon(
                     Icons.arrow_forward,
                     size: 34,
-                    color: kWhitecolor,
+                    //color: kWhitecolor,
                   )
                 ],
               ),

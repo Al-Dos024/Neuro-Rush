@@ -28,7 +28,7 @@ class CustomDrawerHeader extends StatelessWidget {
               Text(
                 "Scarlett Johansson",
                 style: GoogleFonts.inter(
-                  color: kWhitecolor,
+                  //color: kWhitecolor,
                   fontWeight: FontWeight.w800,
                   fontSize: 16,
                 ),
@@ -38,7 +38,7 @@ class CustomDrawerHeader extends StatelessWidget {
                 style: GoogleFonts.inter(
                   fontSize: 10,
                   fontWeight: FontWeight.w200,
-                  color: kWhitecolor,
+                  //color: kWhitecolor,
                 ),
               ),
             ],

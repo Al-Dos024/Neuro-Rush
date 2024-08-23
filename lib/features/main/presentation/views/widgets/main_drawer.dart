@@ -53,6 +53,7 @@ class MainDrawer extends StatelessWidget {
                   MyApp.themeNotifier.value == ThemeMode.light
                       ? Icons.dark_mode
                       : Icons.light_mode,
+                      color: kBlackcolor,
                 ),
               ),
             ],

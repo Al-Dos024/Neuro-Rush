@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
     return ValueListenableBuilder(
       valueListenable: themeNotifier,
       builder: (_, ThemeMode currentMode, __) {
-        print(themeNotifier.value);
+        // print(themeNotifier.value);
         return ValueListenableBuilder(
           valueListenable: localeNotifier,
           builder: (_, Locale currentLocale, __) {
@@ -52,15 +52,29 @@ class MyApp extends StatelessWidget {
               // dark theme
               theme: ThemeData().copyWith(
                 colorScheme: myColorScheme,
+                textTheme: const TextTheme(
+                  bodyMedium: TextStyle(
+                    color: kWhitecolor,
+                  ),
+                ),
+                iconTheme: const IconThemeData(
+                  color: kWhitecolor,
+                ),
               ),
               darkTheme: ThemeData.dark().copyWith(
                 textTheme: const TextTheme(
-                  bodyMedium: TextStyle(color: kBlackcolor)
+                  bodyMedium: TextStyle(
+                    color: kBlackcolor_1,
+                  ),
+                ),
+                iconTheme: const IconThemeData(
+                  color: kBlackcolor_1,
                 ),
                 colorScheme: myDarkColorScheme,
-                scaffoldBackgroundColor: const Color(0xff22282A),
+                scaffoldBackgroundColor: kBlackcolor_1,
                 drawerTheme: const DrawerThemeData().copyWith(
-                  backgroundColor: myDarkColorScheme.onSurface,
+                  backgroundColor: kBlackcolor_1,
+                  
                 ),
               ),
               themeMode: currentMode, // const DefineTheKid() //SigninView() ,
