@@ -42,6 +42,8 @@ class CustomCardMainView3 extends StatelessWidget {
                   ),
                   IconButton(
                     onPressed: () {
+                      scoreA = 0;
+                      scoreB = 0;
                       Navigator.push(
                         context,
                         MaterialPageRoute(

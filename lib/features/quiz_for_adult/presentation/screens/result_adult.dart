@@ -1,50 +1,25 @@
 import 'package:adhd/constants.dart';
 import 'package:adhd/core/utils/font_style.dart';
 import 'package:adhd/features/main/presentation/views/main_view.dart';
-import 'package:adhd/features/quiz%20for%20kid/data/model/nested_list.dart';
-import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/result_icon_info.dart';
+import 'package:adhd/features/quiz_for_adult/presentation/widgets/result_icon_info.dart';
 import 'package:adhd/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import '../widgets/diagnosis_rate.dart';
 
-class Result extends StatelessWidget {
-  const Result({super.key, required this.kidsList});
-  final List kidsList;
+class ResultAdult extends StatelessWidget {
+  const ResultAdult({super.key, required this.adultList});
+  final List adultList;
 
   @override
   Widget build(BuildContext context) {
     List classification = [
       S.of(context).Opposition,
       S.of(context).Cognitive_Problems,
-      S.of(context).Hyperactivity,
-      S.of(context).Anxiety_and_shyness,
-      S.of(context).Perfectionism,
-      S.of(context).Social_problems,
-      S.of(context).Psychosomatic_diseases,
-      S.of(context).Attention_deficit,
-      S.of(context).Arousal_and_impulsivity,
-      S.of(context).Passion,
-      S.of(context).General_indicator,
-      S.of(context).DMS_5,
-      S.of(context).Hyperactivity_DMS_5,
-      S.of(context).Mixed_DMS_5,
     ];
 
     List subtitleClass = [
       S.of(context).Opposition_sub,
       S.of(context).Cognitive_Problems_sub,
-      S.of(context).Hyperactivity_sub,
-      S.of(context).Anxiety_and_shyness_sub,
-      S.of(context).Perfectionism_sub,
-      S.of(context).Social_problems_sub,
-      S.of(context).Psychosomatic_diseases_sub,
-      S.of(context).Attention_deficit_sub,
-      S.of(context).Arousal_and_impulsivity_sub,
-      S.of(context).Passion_sub,
-      S.of(context).General_indicator_sub,
-      S.of(context).DMS_5_sub,
-      S.of(context).Hyperactivity_DMS_5_sub,
-      S.of(context).Mixed_DMS_5_sub,
     ];
 
     return Scaffold(
@@ -90,12 +65,12 @@ class Result extends StatelessWidget {
         ],
       ),
       body: ListView.builder(
-        itemCount: allScore.length,
+        itemCount: 2,
         itemBuilder: (context, index) {
           return DiagnosisRate(
             title: classification[index],
             subtitle: subtitleClass[index],
-            score: allScore[index],
+            score: adultList[index],
           );
         },
       ),

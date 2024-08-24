@@ -52,16 +52,20 @@ class QuestionWidget extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding:  const EdgeInsets.symmetric(vertical: 8.0),
+                      padding: const EdgeInsets.symmetric(vertical: 8.0),
                       child: Text(
                         S.of(context).Examples_quiz,
                         textAlign: TextAlign.start,
                         style: GoogleFonts.kodchasan(
                           fontSize: 12,
-                          color: isDarkMode ? const Color(0xff189EBB) : kBluecolor_1,
+                          color: isDarkMode
+                              ? const Color(0xff189EBB)
+                              : kBluecolor_1,
                           fontWeight: FontWeight.w600,
                           decoration: TextDecoration.underline,
-                          decorationColor:  isDarkMode ? const Color(0xff189EBB) : kBluecolor_1,
+                          decorationColor: isDarkMode
+                              ? const Color(0xff189EBB)
+                              : kBluecolor_1,
                         ),
                       ),
                     ),

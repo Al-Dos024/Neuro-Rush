@@ -5,7 +5,7 @@ import 'package:adhd/main.dart';
 
 class QuizForAdultCubit extends Cubit<QuizForAdultState> {
   QuizForAdultCubit() : super(QuizForAdultInitial());
-  final List<int> kidsList = List.filled(20, 0);
+  final List<int> adultList = List.filled(18, 0);
 
   Future<void> loadQuestionsAndAnswers() async {
     emit(QuizForAdultLoading());
@@ -32,9 +32,9 @@ class QuizForAdultCubit extends Cubit<QuizForAdultState> {
     }
   }
 
-  void answerSelected(Map<String, dynamic> answer, List<int> kidsList,
+  void answerSelected(Map<String, dynamic> answer, List<int> adultList,
       int currentQuestionIndex) {
-    kidsList[currentQuestionIndex] = answer['points'] ?? 0;
+    adultList[currentQuestionIndex] = answer['points'] ?? 0;
 
     final state = this.state;
     if (state is QuizForAdultLoaded) {

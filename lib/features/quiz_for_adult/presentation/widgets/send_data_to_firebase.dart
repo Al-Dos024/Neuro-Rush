@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:intl/intl.dart';
-import '../../data/model/nested_list.dart';
 
 String id = FirebaseAuth.instance.currentUser!.uid;
 
@@ -35,26 +34,14 @@ void sendDataToFirebaseAdult() async {
 
     refmain_pri.child("$attempt").child("Data").set(
       {
-        'A -Opposition score': scoreA,
-        'B -Cognitive problems score': scoreB,
-        'C -Hyperactivity score': scoreC,
-        'D -Anxiety and shyness score': scoreD,
-        'E -Perfectionism score': scoreE,
-        'F -Social problems score': scoreF,
-        'G -Psychosomatic diseases score': scoreG,
-        'H -Attention deficit score': scoreH,
-        'I -Arousal and impulsivity score': scoreI,
-        'J -Passion score': scoreJ,
-        'K -General indicator score': scoreK,
-        'L -DMS 5 score': scoreL,
-        'M -Hyperactivity DMS 5 score': scoreM,
-        'N -mixed DMS 5 score': scoreN,
+        'A -Opposition score': 12,
+        'B -Cognitive problems score': 12,
       },
     );
     refmain_pri.child("$attempt").child("properties").set(
       {
         'Attempt Number': attempt,
-        'Average': scoreN,
+        'Average': "Yes or No",
         'Time': formatterTime,
         'Date': formatterDate,
       },

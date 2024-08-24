@@ -2,7 +2,6 @@ import 'package:adhd/constants.dart';
 import 'package:adhd/core/utils/show_snackbar.dart';
 import 'package:adhd/features/quiz_for_adult/data/cubit/quiz_cubit.dart';
 import 'package:adhd/features/quiz_for_adult/data/cubit/quiz_state.dart';
-import 'package:adhd/features/quiz_for_adult/data/model/nested_list.dart';
 import 'package:adhd/features/quiz_for_adult/presentation/widgets/answer_list_and_button.dart';
 import 'package:adhd/features/quiz_for_adult/presentation/widgets/next_button_widget.dart';
 import 'package:adhd/features/quiz_for_adult/presentation/widgets/question_widget.dart';
@@ -13,12 +12,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+int scoreA = 0;
+int scoreB = 0;
+
 class QuizForAdult extends StatelessWidget {
   const QuizForAdult({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final List<int> kidsList = List.filled(80, 0);
+    final List<int> adultList = List.filled(18, 0);
     return BlocProvider(
       create: (context) => QuizForAdultCubit()..loadQuestionsAndAnswers(),
       child: Scaffold(
@@ -76,7 +78,7 @@ class QuizForAdult extends StatelessWidget {
                       onAnswerSelected: (answer) {
                         context.read<QuizForAdultCubit>().answerSelected(
                               answer,
-                              kidsList,
+                              adultList,
                               state.currentQuestionIndex,
                             );
                       },
@@ -93,20 +95,18 @@ class QuizForAdult extends StatelessWidget {
                         } else {
                           context.read<QuizForAdultCubit>().changeQuestion(
                                 state.currentQuestionIndex - 1,
-                                kidsList,
+                                adultList,
                               );
                         }
                       },
                       onNextPressed: () {
                         context.read<QuizForAdultCubit>().changeQuestion(
                               state.currentQuestionIndex + 1,
-                              kidsList,
+                              adultList,
                             );
                       },
-                      kidsList: kidsList,
+                      adultList: adultList,
                       currentQuestionIndex: state.currentQuestionIndex,
-                      nestedList: nestedList,
-                      listNumP2: listNumP2,
                     ),
                   ],
                 ),

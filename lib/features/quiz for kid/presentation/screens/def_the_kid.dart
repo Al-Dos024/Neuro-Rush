@@ -21,7 +21,7 @@ class DefineTheKid extends StatelessWidget {
     return BlocProvider(
       create: (context) => DefineTheKidCubit(),
       child: Scaffold(
-        backgroundColor: isDarkMode ? kBlackcolor_1 :kWhitecolor,
+        backgroundColor: isDarkMode ? kBlackcolor_1 : kWhitecolor,
         body: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
