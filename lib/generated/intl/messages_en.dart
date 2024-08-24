@@ -186,6 +186,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "ok": MessageLookupByLibrary.simpleMessage("Ok"),
         "opps": MessageLookupByLibrary.simpleMessage("Opps"),
         "points": MessageLookupByLibrary.simpleMessage(" Points"),
+        "quiz_for_adult":
+            MessageLookupByLibrary.simpleMessage("Quiz for Adult"),
         "quiz_for_kid": MessageLookupByLibrary.simpleMessage("Quiz for Kid"),
         "saa":
             MessageLookupByLibrary.simpleMessage("Significantly above average"),

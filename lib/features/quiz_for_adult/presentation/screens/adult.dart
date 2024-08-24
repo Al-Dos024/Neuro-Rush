@@ -1,28 +1,26 @@
-import 'package:adhd/features/quiz%20for%20kid/data/cubit/quiz_view/quiz_cubit.dart';
-import 'package:adhd/features/quiz%20for%20kid/data/cubit/quiz_view/quiz_state.dart';
-import 'package:adhd/features/quiz%20for%20kid/data/model/nested_list.dart';
-import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/shimmer_loading.dart';
+import 'package:adhd/constants.dart';
+import 'package:adhd/core/utils/show_snackbar.dart';
+import 'package:adhd/features/quiz_for_adult/data/cubit/quiz_cubit.dart';
+import 'package:adhd/features/quiz_for_adult/data/cubit/quiz_state.dart';
+import 'package:adhd/features/quiz_for_adult/data/model/nested_list.dart';
+import 'package:adhd/features/quiz_for_adult/presentation/widgets/answer_list_and_button.dart';
+import 'package:adhd/features/quiz_for_adult/presentation/widgets/next_button_widget.dart';
+import 'package:adhd/features/quiz_for_adult/presentation/widgets/question_widget.dart';
+import 'package:adhd/features/quiz_for_adult/presentation/widgets/score_board.dart';
+import 'package:adhd/features/quiz_for_adult/presentation/widgets/shimmer_loading.dart';
+import 'package:adhd/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/answer_list_and_button.dart';
-import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/next_button_widget.dart';
-import 'package:adhd/generated/l10n.dart';
-import 'package:adhd/constants.dart';
-import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/question_widget.dart';
-import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/score_board.dart';
-import 'package:adhd/core/utils/show_snackbar.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class QuizForKids extends StatelessWidget {
-  const QuizForKids({super.key, required this.age, required this.isMale});
-  final int age;
-  final bool isMale;
+class QuizForAdult extends StatelessWidget {
+  const QuizForAdult({super.key});
 
   @override
   Widget build(BuildContext context) {
     final List<int> kidsList = List.filled(80, 0);
     return BlocProvider(
-      create: (context) => QuizForKidsCubit()..loadQuestionsAndAnswers(),
+      create: (context) => QuizForAdultCubit()..loadQuestionsAndAnswers(),
       child: Scaffold(
         appBar: AppBar(
           leading: IconButton(
@@ -34,7 +32,7 @@ class QuizForKids extends StatelessWidget {
           toolbarHeight: 80,
           backgroundColor: kBluecolor_1,
           title: Text(
-            S.of(context).quiz_for_kid,
+            S.of(context).quiz_for_adult,
             style: GoogleFonts.kodchasan(
               color: kWhitecolor,
               fontSize: 22,
@@ -43,9 +41,9 @@ class QuizForKids extends StatelessWidget {
           ),
           centerTitle: true,
           actions: [
-            BlocBuilder<QuizForKidsCubit, QuizForKidsState>(
+            BlocBuilder<QuizForAdultCubit, QuizForAdultState>(
               builder: (context, state) {
-                if (state is QuizForKidsLoaded) {
+                if (state is QuizForAdultLoaded) {
                   return ScoreBoard(
                     currentQuestionIndex: state.currentQuestionIndex,
                     questionList: state.questionsList,
@@ -56,11 +54,11 @@ class QuizForKids extends StatelessWidget {
             ),
           ],
         ),
-        body: BlocBuilder<QuizForKidsCubit, QuizForKidsState>(
+        body: BlocBuilder<QuizForAdultCubit, QuizForAdultState>(
           builder: (context, state) {
-            if (state is QuizForKidsLoading) {
+            if (state is QuizForAdultLoading) {
               return const ShimmerLoading();
-            } else if (state is QuizForKidsLoaded) {
+            } else if (state is QuizForAdultLoaded) {
               return Container(
                 margin: const EdgeInsets.only(
                     right: 20, left: 20, top: 30, bottom: 50),
@@ -76,7 +74,7 @@ class QuizForKids extends StatelessWidget {
                       answersList: state.answersList,
                       selectedAnswer: state.selectedAnswer,
                       onAnswerSelected: (answer) {
-                        context.read<QuizForKidsCubit>().answerSelected(
+                        context.read<QuizForAdultCubit>().answerSelected(
                               answer,
                               kidsList,
                               state.currentQuestionIndex,
@@ -93,14 +91,14 @@ class QuizForKids extends StatelessWidget {
                               title: S.of(context).opps,
                               message: S.of(context).back_btn_massge);
                         } else {
-                          context.read<QuizForKidsCubit>().changeQuestion(
+                          context.read<QuizForAdultCubit>().changeQuestion(
                                 state.currentQuestionIndex - 1,
                                 kidsList,
                               );
                         }
                       },
                       onNextPressed: () {
-                        context.read<QuizForKidsCubit>().changeQuestion(
+                        context.read<QuizForAdultCubit>().changeQuestion(
                               state.currentQuestionIndex + 1,
                               kidsList,
                             );
@@ -109,13 +107,11 @@ class QuizForKids extends StatelessWidget {
                       currentQuestionIndex: state.currentQuestionIndex,
                       nestedList: nestedList,
                       listNumP2: listNumP2,
-                      isMale: isMale,
-                      age: age,
                     ),
                   ],
                 ),
               );
-            } else if (state is QuizForKidsError) {
+            } else if (state is QuizForAdultError) {
               return Center(child: Text('Error: ${state.error}'));
             }
             return const SizedBox.shrink();

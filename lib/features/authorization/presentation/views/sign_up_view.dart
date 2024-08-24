@@ -5,7 +5,7 @@ import 'package:adhd/features/authorization/presentation/views/sign_in_view.dart
 import 'package:adhd/features/authorization/presentation/views/widgets/lable_text_form_field.dart';
 import 'package:adhd/features/authorization/presentation/views/widgets/my_elevated_button%20copy.dart';
 import 'package:adhd/features/authorization/presentation/views/widgets/my_text_button.dart';
-import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/show_snackbar.dart';
+import 'package:adhd/core/utils/show_snackbar.dart';
 import 'package:adhd/generated/l10n.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -34,7 +34,7 @@ class _SignUpViewState extends State<SignUpView> {
   Widget build(BuildContext context) {
     bool isDarkMode = MyApp.themeNotifier.value == ThemeMode.dark;
     return Scaffold(
-       backgroundColor: isDarkMode ? kBlackcolor_1 : kWhitecolor,
+      backgroundColor: isDarkMode ? kBlackcolor_1 : kWhitecolor,
       body: Form(
         key: formKey,
         child: SingleChildScrollView(
@@ -52,7 +52,7 @@ class _SignUpViewState extends State<SignUpView> {
                   Text(
                     S.of(context).sign_up_title,
                     style: GoogleFonts.inter(
-                      color:  isDarkMode ? kWhitecolor :kBlackcolor,
+                      color: isDarkMode ? kWhitecolor : kBlackcolor,
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
                     ),

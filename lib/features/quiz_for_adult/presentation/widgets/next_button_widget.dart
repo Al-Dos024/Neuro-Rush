@@ -1,7 +1,5 @@
-// lib/features/quiz_for_kid/presentation/widgets/next_button_widget.dart
 import 'package:adhd/features/quiz%20for%20kid/presentation/screens/result.dart';
-import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/process_age_and_gender.dart';
-import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/send_data_to_firebase.dart';
+import 'package:adhd/features/quiz_for_adult/presentation/widgets/send_data_to_firebase.dart';
 import 'package:flutter/material.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/Next_button.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/back_button.dart';
@@ -17,8 +15,6 @@ class NextButtonWidget extends StatelessWidget {
   final int currentQuestionIndex;
   final List<List<int>> nestedList;
   final List<int> listNumP2;
-  final bool isMale;
-  final int age;
 
   const NextButtonWidget({
     super.key,
@@ -30,8 +26,6 @@ class NextButtonWidget extends StatelessWidget {
     required this.currentQuestionIndex,
     required this.nestedList,
     required this.listNumP2,
-    required this.isMale,
-    required this.age,
   });
 
   @override
@@ -57,8 +51,7 @@ class NextButtonWidget extends StatelessWidget {
                 }
               }
               if (isLastQuestion) {
-                processAgeAndGender(isMale: isMale, age: age);
-                sendDataToFirebase(isMale: isMale, age: age);
+                sendDataToFirebaseAdult();
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(

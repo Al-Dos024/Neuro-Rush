@@ -1,5 +1,6 @@
 import 'package:adhd/constants.dart';
 import 'package:adhd/core/utils/assets.dart';
+import 'package:adhd/features/quiz_for_adult/presentation/screens/adult.dart';
 import 'package:adhd/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -39,11 +40,20 @@ class CustomCardMainView3 extends StatelessWidget {
                       //color: kWhitecolor.withOpacity(0.6),
                     ),
                   ),
-                  const Icon(
-                    Icons.arrow_forward,
-                    size: 34,
-                    //color: kWhitecolor,
-                  )
+                  IconButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const QuizForAdult()),
+                      );
+                    },
+                    icon: const Icon(
+                      Icons.arrow_forward,
+                      size: 34,
+                      // color: kWhitecolor,
+                    ),
+                  ),
                 ],
               ),
             ),

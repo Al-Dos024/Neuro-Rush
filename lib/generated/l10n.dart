@@ -890,6 +890,16 @@ class S {
     );
   }
 
+  /// `Quiz for Adult`
+  String get quiz_for_adult {
+    return Intl.message(
+      'Quiz for Adult',
+      name: 'quiz_for_adult',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Opps`
   String get opps {
     return Intl.message(

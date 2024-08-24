@@ -31,3 +31,36 @@ Future<List<Map<String, dynamic>>> fetchAnswersAr() async {
       .get();
   return snapshot.docs.map((doc) => doc.data()).toList();
 }
+
+//////////////////////////
+Future<List<Map<String, dynamic>>> fetchQuestionsAduEng() async {
+  final snapshot = await FirebaseFirestore.instance
+      .collection('questionsAdultEng')
+      .orderBy('num')
+      .get();
+  return snapshot.docs.map((doc) => doc.data()).toList();
+}
+
+Future<List<Map<String, dynamic>>> fetchAnswersAduEng() async {
+  final snapshot = await FirebaseFirestore.instance
+      .collection('answersAdultEng')
+      .orderBy('num')
+      .get();
+  return snapshot.docs.map((doc) => doc.data()).toList();
+}
+
+Future<List<Map<String, dynamic>>> fetchQuestionsAduAr() async {
+  final snapshot = await FirebaseFirestore.instance
+      .collection('questionsAdultAr')
+      .orderBy('num')
+      .get();
+  return snapshot.docs.map((doc) => doc.data()).toList();
+}
+
+Future<List<Map<String, dynamic>>> fetchAnswersAduAr() async {
+  final snapshot = await FirebaseFirestore.instance
+      .collection('answersAdultAr')
+      .orderBy('num')
+      .get();
+  return snapshot.docs.map((doc) => doc.data()).toList();
+}

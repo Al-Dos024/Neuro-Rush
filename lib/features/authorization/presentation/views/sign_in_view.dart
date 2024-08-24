@@ -5,7 +5,7 @@ import 'package:adhd/features/authorization/presentation/views/widgets/lable_tex
 import 'package:adhd/features/authorization/presentation/views/widgets/my_elevated_button%20copy.dart';
 import 'package:adhd/features/authorization/presentation/views/widgets/my_text_button.dart';
 import 'package:adhd/features/main/presentation/views/main_view.dart';
-import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/show_snackbar.dart';
+import 'package:adhd/core/utils/show_snackbar.dart';
 import 'package:adhd/generated/l10n.dart';
 import 'package:adhd/main.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -54,7 +54,7 @@ class _SigninViewState extends State<SigninView> {
                     style: GoogleFonts.inter(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
-                      color:  isDarkMode ? kWhitecolor :kBlackcolor,
+                      color: isDarkMode ? kWhitecolor : kBlackcolor,
                     ),
                   ),
                   Text(
