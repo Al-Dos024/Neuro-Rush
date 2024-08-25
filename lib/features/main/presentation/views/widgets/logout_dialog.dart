@@ -26,7 +26,7 @@ class LogOutDialog extends StatelessWidget {
               maxLines: 2,
               style: GoogleFonts.kodchasan(
                 fontSize: 20,
-                color: kWhitecolor_2,
+                color: isDarkMode ? kWhitecolor_2 :kBlackcolor_1,
                 fontWeight: FontWeight.w500,
               ),
             ),

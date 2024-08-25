@@ -1,4 +1,5 @@
 import 'package:adhd/constants.dart';
+import 'package:adhd/main.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -8,6 +9,8 @@ Widget buildPage({
   required String title,
   required String subtitle,
 }) {
+  bool isDarkMode = MyApp.themeNotifier.value == ThemeMode.dark;
+
   return Container(
     color: color,
     child: Column(
@@ -24,7 +27,7 @@ Widget buildPage({
         Text(
           title,
           style: GoogleFonts.kodchasan(
-              fontSize: 24, fontWeight: FontWeight.bold, color: kBluecolor_7),
+              fontSize: 24, fontWeight: FontWeight.bold, color: kBluecolor_7,),
         ),
         const SizedBox(
           height: 24,
@@ -38,7 +41,7 @@ Widget buildPage({
             subtitle,
             textAlign: TextAlign.center,
             style: GoogleFonts.kodchasan(
-              color: kWhitecolor,
+              color:isDarkMode? kWhitecolor: kBlackcolor_1,
               fontSize: 16,
             ),
           ),

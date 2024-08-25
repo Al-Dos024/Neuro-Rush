@@ -51,25 +51,31 @@ class _AdhdVideoSectionState extends State<AdhdVideoSection> {
         Row(
           children: [
             IconButton(
-                onPressed: () {
-                  if (controller.value.isPlaying) {
-                    controller.pause();
-                  } else {
-                    controller.play();
-                  }
+              onPressed: () {
+                if (controller.value.isPlaying) {
+                  controller.pause();
+                } else {
+                  controller.play();
+                }
 
-                  setState(() {});
-                },
-                icon: Icon(controller.value.isPlaying
-                    ? Icons.pause
-                    : Icons.play_arrow)),
+                setState(() {});
+              },
+              icon: Icon(
+                controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
+                color: kBluecolor_1,
+              ),
+            ),
             IconButton(
-                onPressed: () {
-                  controller.seekTo(const Duration(seconds: 0));
+              onPressed: () {
+                controller.seekTo(const Duration(seconds: 0));
 
-                  setState(() {});
-                },
-                icon: const Icon(Icons.stop))
+                setState(() {});
+              },
+              icon: const Icon(
+                Icons.replay,
+                color: kBluecolor_1,
+              ),
+            )
           ],
         ),
         Text(
