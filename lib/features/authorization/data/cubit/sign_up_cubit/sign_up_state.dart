@@ -1,10 +1,15 @@
 part of 'sign_up_cubit.dart';
 
-sealed class SignUpState extends Equatable {
-  const SignUpState();
-
-  @override
-  List<Object> get props => [];
-}
+sealed class SignUpState {}
 
 final class SignUpInitial extends SignUpState {}
+
+final class SignUpSuccess extends SignUpState {}
+
+final class SignUpLoading extends SignUpState {}
+
+// ignore: must_be_immutable
+final class SignUpFailure extends SignUpState {
+  String errMsg;
+  SignUpFailure({required this.errMsg});
+}
