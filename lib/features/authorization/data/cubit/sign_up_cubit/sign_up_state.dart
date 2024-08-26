@@ -13,3 +13,8 @@ final class SignUpFailure extends SignUpState {
   String errMsg;
   SignUpFailure({required this.errMsg});
 }
+
+class SignUpPasswordVisibilityChanged extends SignUpState {
+  final bool showPassword;
+  SignUpPasswordVisibilityChanged(this.showPassword);
+}

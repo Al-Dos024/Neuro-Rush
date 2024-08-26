@@ -9,46 +9,43 @@ import 'package:adhd/features/main/presentation/views/main_view.dart';
 import 'package:adhd/core/utils/show_snackbar.dart';
 import 'package:adhd/generated/l10n.dart';
 import 'package:adhd/main.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
-bool showpassword = true;
+// ignore: must_be_immutable
 class SigninView extends StatelessWidget {
-  GlobalKey<FormState> formKey = GlobalKey();
+  final GlobalKey<FormState> formKey = GlobalKey();
   String? email;
-
   String? password;
-  bool isLoading = false;
+
+  SigninView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    print(FirebaseAuth.instance.currentUser?.uid);
     return BlocConsumer<SignInCubit, SignInState>(
       listener: (context, state) {
-        if (state is SignInLoading) {
-          isLoading = true;
-        } else if (state is SignInSuccess) {
+        if (state is SignInSuccess) {
           showSnackBar(context,
               title: S.of(context).snackbar_suc_log,
               message: S.of(context).snackbar_suc_log_sub);
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const MainView(),
-            ),
-          );
-          isLoading = false;
+          Future.microtask(() {
+            if (context.mounted) {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const MainView()),
+              );
+            }
+          });
         } else if (state is SignInFailure) {
-          showSnackBar(context, message: "hhhhhhhhh", title: "ggggggggggggggg");
-          isLoading = false;
+          showSnackBar(context, message: state.errMsg, title: "Login Failed");
         }
       },
       builder: (context, state) {
+        bool isLoading = state is SignInLoading;
         bool isDarkMode = MyApp.themeNotifier.value == ThemeMode.dark;
+
         return ModalProgressHUD(
           inAsyncCall: isLoading,
           child: Scaffold(
@@ -60,41 +57,31 @@ class SigninView extends StatelessWidget {
                   height: MediaQuery.sizeOf(context).height,
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
-                      horizontal: 20,
-                      vertical: 20,
-                    ),
+                        horizontal: 20, vertical: 20),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const SizedBox(
-                          height: 35,
-                        ),
+                        const SizedBox(height: 35),
                         Text(
                           S.of(context).sign_you_title,
                           style: GoogleFonts.inter(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            color: isDarkMode ? kWhitecolor : kBlackcolor,
-                          ),
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                              color: isDarkMode ? kWhitecolor : kBlackcolor),
                         ),
                         Text(
                           S.of(context).sign_you_subtitle,
                           style: GoogleFonts.inter(
-                            color: kGraycolor_1,
-                            fontSize: 14,
-                            fontWeight: FontWeight.w400,
-                          ),
+                              color: kGraycolor_1,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400),
                         ),
-                        const SizedBox(
-                          height: 20,
-                        ),
+                        const SizedBox(height: 20),
                         CustomLableTextFormField(
                           lableText: S.of(context).email,
                           hintText: S.of(context).Enter_Email,
-                          onChanged: (p0) {
-                            email = p0;
-                          },
+                          onChanged: (p0) => email = p0,
                           inputType: TextInputType.text,
                           obscureText: false,
                           validator: (value) {
@@ -108,10 +95,9 @@ class SigninView extends StatelessWidget {
                           lableText: S.of(context).Password,
                           hintText: S.of(context).Enter_Password,
                           inputType: TextInputType.text,
-                          obscureText: showpassword,
-                          onChanged: (p0) {
-                            password = p0;
-                          },
+                          obscureText: BlocProvider.of<SignInCubit>(context)
+                              .showPassword,
+                          onChanged: (p0) => password = p0,
                           validator: (value) {
                             if (value!.isEmpty) {
                               return S.of(context).no_Password;
@@ -119,11 +105,11 @@ class SigninView extends StatelessWidget {
                             return null;
                           },
                           suffixIcon: IconButton(
-                            onPressed: () {
-                              BlocProvider.of<SignInCubit>(context).togglePasswordVisibility();
-                            },
+                            onPressed: () =>
+                                BlocProvider.of<SignInCubit>(context)
+                                    .togglePasswordVisibility(),
                             icon: Icon(
-                              showpassword
+                              BlocProvider.of<SignInCubit>(context).showPassword
                                   ? Icons.visibility_off
                                   : Icons.visibility,
                               color: kGraycolor_1,
@@ -137,10 +123,9 @@ class SigninView extends StatelessWidget {
                             child: Text(
                               S.of(context).Forgot_Password,
                               style: GoogleFonts.inter(
-                                color: kBluecolor_1,
-                                fontSize: 13,
-                                fontWeight: FontWeight.w400,
-                              ),
+                                  color: kBluecolor_1,
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w400),
                             ),
                           ),
                         ),
@@ -159,10 +144,9 @@ class SigninView extends StatelessWidget {
                             child: Text(
                               S.of(context).Log_in,
                               style: GoogleFonts.inter(
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold,
-                                color: kWhitecolor,
-                              ),
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold,
+                                  color: kWhitecolor),
                             ),
                           ),
                         ),
@@ -173,29 +157,26 @@ class SigninView extends StatelessWidget {
                             Text(
                               S.of(context).dont_account,
                               style: GoogleFonts.inter(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w500,
-                                color: kGraycolor_1,
-                              ),
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                  color: kGraycolor_1),
                             ),
                             MyTextButton(
                               onPressed: () {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => const SignUpView(),
-                                  ),
+                                      builder: (context) => SignUpView()),
                                 );
                               },
                               child: Text(
                                 S.of(context).Register_now,
                                 style: GoogleFonts.inter(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w500,
-                                  color: kBluecolor_1,
-                                ),
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500,
+                                    color: kBluecolor_1),
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ],

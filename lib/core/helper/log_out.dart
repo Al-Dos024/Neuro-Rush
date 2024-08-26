@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 
 Future<void> logOut(BuildContext context) async {
   FirebaseAuth.instance.signOut();
+  Navigator.pop(
+    context,
+  );
   if (!context.mounted) return;
   Navigator.pushReplacement(
     context,

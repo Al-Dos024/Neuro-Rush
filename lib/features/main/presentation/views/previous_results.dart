@@ -1,6 +1,7 @@
 import 'package:adhd/constants.dart';
 import 'package:adhd/features/main/presentation/views/widgets/result_widget.dart';
 import 'package:adhd/generated/l10n.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -11,8 +12,10 @@ class PreviousResults extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Query refmain =
-        FirebaseDatabase.instance.ref("users/$id").child("Tests").orderByKey();
+    Query refmain = FirebaseDatabase.instance
+        .ref("users/${FirebaseAuth.instance.currentUser!.uid}")
+        .child("Tests")
+        .orderByKey();
 
     return Scaffold(
       appBar: AppBar(
@@ -21,7 +24,7 @@ class PreviousResults extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(
             Icons.arrow_back_ios_new_rounded,
-             color:kWhitecolor,
+            color: kWhitecolor,
           ),
           onPressed: () {
             Navigator.pop(context);
@@ -31,7 +34,7 @@ class PreviousResults extends StatelessWidget {
         title: Text(
           S.of(context).Previous_Results,
           style: GoogleFonts.kodchasan(
-           color: kWhitecolor,
+            color: kWhitecolor,
             fontSize: 20,
             fontWeight: FontWeight.w700,
           ),
@@ -48,7 +51,11 @@ class PreviousResults extends StatelessWidget {
             final dataSnapshot = snapshot.data!.snapshot;
 
             if (dataSnapshot.value == null) {
-              return const Center(child: Text('No Tests Available'));
+              return const Center(
+                  child: Text(
+                'No Tests Available',
+                style: TextStyle(color: Colors.black),
+              ));
             } else {
               final value = dataSnapshot.value;
 
@@ -77,7 +84,7 @@ class PreviousResults extends StatelessWidget {
                 final data = value.values.toList()
                   ..sort(
                       (a, b) => int.parse(a.key).compareTo(int.parse(b.key)));
-                ;
+
                 return ListView.builder(
                   itemCount: data.length,
                   itemBuilder: (context, index) {
