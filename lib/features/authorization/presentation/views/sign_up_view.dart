@@ -173,7 +173,7 @@ class _SignUpViewState extends State<SignUpView> {
                             Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const SigninView(),
+                                builder: (context) => SigninView(),
                               ),
                             );
                           } on FirebaseException catch (e) {

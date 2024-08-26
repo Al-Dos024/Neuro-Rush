@@ -8,3 +8,8 @@ final class SignInFailure extends SignInState {
   String errMsg;
   SignInFailure({required this.errMsg});
 }
+
+class SignInPasswordVisibilityChanged extends SignInState {
+  final bool showPassword;
+  SignInPasswordVisibilityChanged(this.showPassword);
+}

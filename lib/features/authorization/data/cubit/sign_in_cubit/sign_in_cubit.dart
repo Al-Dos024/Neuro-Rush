@@ -4,6 +4,15 @@ part 'sign_in_state.dart';
 
 class SignInCubit extends Cubit<SignInState> {
   SignInCubit() : super(SignInInitial());
+  bool showPassword = true;
+
+  void togglePasswordVisibility() {
+    showPassword = !showPassword;
+    emit(
+      SignInPasswordVisibilityChanged(showPassword),
+    );
+  }
+
   Future<void> loginUser(
       {required String email, required String password}) async {
     emit(SignInLoading());
@@ -15,14 +24,22 @@ class SignInCubit extends Cubit<SignInState> {
     } on FirebaseAuthException catch (e) {
       if (e.code == 'invalid-login-credentials') {
         emit(
-          SignInFailure(errMsg: 'user not found'),
-         );
+          SignInFailure(errMsg: 'User Not Found'),
+        );
+      } else if (e.code == 'invalid-email') {
+        emit(
+          SignInFailure(errMsg: "Invaild Email"),
+        );
+      } else if (e.code == 'network-request-failed') {
+        emit(
+          SignInFailure(errMsg: "Network Request Failed"),
+        );
       } else if (e.code == 'wrong-password') {
         emit(
-          SignInFailure(errMsg: 'wrong password'),
+          SignInFailure(errMsg: 'Wrong Password'),
         );
       }
-    // ignore: unused_catch_clause
+      // ignore: unused_catch_clause
     } on Exception catch (e) {
       emit(
         SignInFailure(errMsg: 'something want wrong'),

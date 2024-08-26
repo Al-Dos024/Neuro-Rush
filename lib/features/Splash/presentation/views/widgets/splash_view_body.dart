@@ -76,7 +76,7 @@ class _SplashViewbodyState extends State<SplashViewbody>
           }
         });
         Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => const SigninView()));
+            MaterialPageRoute(builder: (context) => SigninView()));
       },
     );
   }
