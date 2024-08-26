@@ -9,6 +9,7 @@ import 'package:adhd/features/main/presentation/views/main_view.dart';
 import 'package:adhd/core/utils/show_snackbar.dart';
 import 'package:adhd/generated/l10n.dart';
 import 'package:adhd/main.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -25,6 +26,7 @@ class SigninView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(FirebaseAuth.instance.currentUser?.uid);
     return BlocConsumer<SignInCubit, SignInState>(
       listener: (context, state) {
         if (state is SignInLoading) {
