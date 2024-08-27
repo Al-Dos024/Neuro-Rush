@@ -50,6 +50,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "الدليل التشخيصي والإحصائي للاضطرابات العقلية، الطبعة الخامسة"),
         "Dark_Mode": MessageLookupByLibrary.simpleMessage("الوضع الداكن"),
         "Date": MessageLookupByLibrary.simpleMessage("التاريخ :"),
+        "Detailed_subtitle": MessageLookupByLibrary.simpleMessage(
+            "تشير الدرجات العالية في كل من الجزء الماضي وهذا الجزء إلى وجود اضطراب نقص الانتباه وفرط النشاط. ويسلط هذا الجزء الضوء على تحديات محددة في مجالات مثل إدارة المهام، والتحكم في الانفعالات، والتركيز، والتي غالبًا ما ترتبط باضطراب نقص الانتباه وفرط النشاط."),
+        "Detailed_title":
+            MessageLookupByLibrary.simpleMessage("تحليل مفصل اضافي"),
         "Dietary_systems_subtitle": MessageLookupByLibrary.simpleMessage(
             "وقد ربطت دراسة أجرتها جامعة ساوثهامبتون بين استهلاك الأطفال لبعض الألوان الصناعية وفرط النشاط، مما دفع الحكومة البريطانية والمفوضية الأوروبية إلى اتخاذ إجراءات. وفي الولايات المتحدة، يتطلب القانون الفيدرالي من مصنعي الأغذية الكشف عن استخدام الألوان الصناعية على أغلفة المنتجات. وهذا يسمح للمستهلكين باتخاذ خيارات مستنيرة بشأن المنتجات التي يشترونها. وتسلط النتائج الضوء على أهمية اليقظة المستمرة في تنظيم الألوان الصناعية في الأغذية.\n"),
         "Dietary_systems_title":
@@ -91,6 +95,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "Lets_start_btn": MessageLookupByLibrary.simpleMessage("هيا لنبدا !"),
         "Log_Out": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
         "Log_in": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "Low": MessageLookupByLibrary.simpleMessage("منخفض"),
+        "Medium": MessageLookupByLibrary.simpleMessage("متوسط"),
         "Mixed_DMS_5": MessageLookupByLibrary.simpleMessage("اجمالي DMS 5"),
         "Mixed_DMS_5_sub": MessageLookupByLibrary.simpleMessage(
             "المعايير التشخيصية الشاملة لاضطراب نقص الانتباه وفرط الحركة"),
@@ -115,6 +121,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "أهداف أعلى من قدراتهم، مهووسون بالعمل، حساسون للغاية"),
         "Previous_Results":
             MessageLookupByLibrary.simpleMessage("النتائج السابقه"),
+        "Previous_Results_main":
+            MessageLookupByLibrary.simpleMessage("النتائج السابقة الرئيسية"),
         "Psychosomatic_diseases":
             MessageLookupByLibrary.simpleMessage("الأمراض النفسية الجسدية"),
         "Psychosomatic_diseases_sub": MessageLookupByLibrary.simpleMessage(
@@ -168,6 +176,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("انتقل الى صفحة الاسالة"),
         "have_account":
             MessageLookupByLibrary.simpleMessage("لديك حساب سابق ؟"),
+        "high": MessageLookupByLibrary.simpleMessage("عالي"),
         "letsstart": MessageLookupByLibrary.simpleMessage("هيا بنا لنبدأ"),
         "login_now": MessageLookupByLibrary.simpleMessage(" سجل دخول"),
         "logout": MessageLookupByLibrary.simpleMessage(
@@ -185,6 +194,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "no_name": MessageLookupByLibrary.simpleMessage("فصلا ادخل اسمك هنا"),
         "ok": MessageLookupByLibrary.simpleMessage("حسنا"),
         "opps": MessageLookupByLibrary.simpleMessage("معذرة"),
+        "overall_subtitle": MessageLookupByLibrary.simpleMessage(
+            "تشير درجاتك في هذا الجزء (حسب نتيجتك) إلى أنك قد تعاني من أعراض اضطراب فرط الحركة ونقص الانتباه. لا يؤكد هذا تشخيص اضطراب فرط الحركة ونقص الانتباه، ولكنه يشير إلى أن إجراء تقييم إضافي من قبل متخصص في الرعاية الصحية قد يكون مفيدًا."),
+        "overall_title": MessageLookupByLibrary.simpleMessage("ملخص فحص ADHD"),
         "points": MessageLookupByLibrary.simpleMessage(" نقطة"),
         "quiz_for_adult":
             MessageLookupByLibrary.simpleMessage("أسالة للبالغين"),

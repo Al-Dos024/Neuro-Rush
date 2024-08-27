@@ -4,7 +4,7 @@ import 'package:adhd/features/main/presentation/views/main_view.dart';
 import 'package:adhd/features/quiz_for_adult/presentation/widgets/result_icon_info.dart';
 import 'package:adhd/generated/l10n.dart';
 import 'package:flutter/material.dart';
-import '../widgets/diagnosis_rate.dart';
+import '../widgets/diagnosis_rate_adult.dart';
 
 class ResultAdult extends StatelessWidget {
   const ResultAdult({super.key, required this.adultList});
@@ -13,13 +13,13 @@ class ResultAdult extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List classification = [
-      S.of(context).Opposition,
-      S.of(context).Cognitive_Problems,
+      S.of(context).overall_title,
+      S.of(context).Detailed_title,
     ];
 
     List subtitleClass = [
-      S.of(context).Opposition_sub,
-      S.of(context).Cognitive_Problems_sub,
+      S.of(context).overall_subtitle,
+      S.of(context).Detailed_subtitle,
     ];
 
     return Scaffold(
@@ -42,18 +42,13 @@ class ResultAdult extends StatelessWidget {
           S.of(context).Result_of_Test,
           style: CustomTextStyle.kodch20WB,
         ),
-        // actions: const [
-        //   Padding(
-        //       padding: EdgeInsets.only(right: 7.0), child: ResultIconInfo()),
-
-        // ],
         actions: [
           IconButton(
               onPressed: () {
                 showDialog(
                   context: context,
                   builder: (context) {
-                    return const ResultIconInfo();
+                    return const ResultIconInfoAdult();
                   },
                 );
               },

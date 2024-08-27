@@ -1,5 +1,5 @@
 import 'package:adhd/features/main/presentation/views/about_us.dart';
-import 'package:adhd/features/main/presentation/views/previous_results.dart';
+import 'package:adhd/features/main/presentation/views/previous_result_main.dart';
 import 'package:adhd/features/main/presentation/views/widgets/custom_drawer_header.dart';
 import 'package:adhd/features/main/presentation/views/widgets/drawer_item.dart';
 import 'package:adhd/features/main/presentation/views/widgets/logout_dialog.dart';
@@ -35,7 +35,7 @@ class MainDrawer extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const PreviousResults(),
+                    builder: (context) => const PreviousResultMain(),
                   ));
             },
           ),

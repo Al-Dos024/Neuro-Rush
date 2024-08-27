@@ -1,7 +1,7 @@
 // lib/features/quiz_for_kid/presentation/widgets/next_button_widget.dart
 import 'package:adhd/features/quiz%20for%20kid/presentation/screens/result.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/process_age_and_gender.dart';
-import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/send_data_to_firebase.dart';
+import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/send_data_to_firebase_kid.dart';
 import 'package:flutter/material.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/Next_button.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/back_button.dart';

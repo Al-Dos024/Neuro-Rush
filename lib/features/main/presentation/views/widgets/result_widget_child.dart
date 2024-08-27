@@ -1,5 +1,5 @@
 import 'package:adhd/core/utils/assets.dart';
-import 'package:adhd/features/main/presentation/views/widgets/result_firebase.dart';
+import 'package:adhd/features/main/presentation/views/widgets/result_firebase_child.dart';
 import 'package:adhd/features/main/presentation/views/widgets/two_row_text.dart';
 import 'package:adhd/generated/l10n.dart';
 import 'package:adhd/main.dart';
@@ -41,7 +41,7 @@ class ResultWidget extends StatelessWidget {
         height: 200,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: isDarkMode ? kBluecolor_8: kBluecolor_5,
+          color: isDarkMode ? kBluecolor_8 : kBluecolor_5,
           borderRadius: BorderRadius.circular(10),
         ),
         child: Padding(
@@ -58,7 +58,7 @@ class ResultWidget extends StatelessWidget {
                       style: GoogleFonts.kodchasan(
                         fontSize: 18,
                         fontWeight: FontWeight.w600,
-                        color:isDarkMode ? kBlackcolor_1 :kBluecolor_4 ,
+                        color: isDarkMode ? kBlackcolor_1 : kBluecolor_4,
                       ),
                     ),
                     const SizedBox(height: 15),
@@ -84,7 +84,9 @@ class ResultWidget extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(width: 15,),
+              const SizedBox(
+                width: 15,
+              ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.end,
@@ -99,7 +101,7 @@ class ResultWidget extends StatelessWidget {
                     alignment: Alignment.centerRight,
                     onPressed: () async {
                       final data = await fetchData(index, userId);
-                     // print("Fetched Data: $data");
+                      // print("Fetched Data: $data");
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -110,7 +112,8 @@ class ResultWidget extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       shape: const CircleBorder(),
                       padding: const EdgeInsets.all(10),
-                      backgroundColor: isDarkMode ? kBlackcolor_1 : kWhitecolor_1,
+                      backgroundColor:
+                          isDarkMode ? kBlackcolor_1 : kWhitecolor_1,
                     ),
                     icon: const Icon(
                       Icons.arrow_forward_ios_rounded,
@@ -134,6 +137,7 @@ class ResultWidget extends StatelessWidget {
           .ref("users")
           .child(id)
           .child("Tests")
+          .child("child")
           .child(index)
           .child("Data");
 

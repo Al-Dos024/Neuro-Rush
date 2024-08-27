@@ -1,7 +1,6 @@
 import 'package:adhd/core/utils/font_style.dart';
-import 'package:adhd/generated/l10n.dart';
+import 'package:adhd/features/quiz_for_adult/presentation/widgets/circle_row.dart';
 import 'package:flutter/material.dart';
-import 'circle_row.dart';
 
 class DiagnosisRate extends StatelessWidget {
   const DiagnosisRate(
@@ -25,16 +24,11 @@ class DiagnosisRate extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: CustomTextStyle.kodch23BlB,
+                  style: CustomTextStyle.kodch21BlB,
                 ),
                 const Spacer(),
-                Text(
-                  "$score",
-                  style: CustomTextStyle.kodch20BlM,
-                ),
-                Text(
-                  S.of(context).points,
-                  style: CustomTextStyle.kodch10Bll,
+                TitleAdult(
+                  score: score,
                 )
               ],
             ),
@@ -44,14 +38,14 @@ class DiagnosisRate extends StatelessWidget {
             Row(
               children: [
                 SizedBox(
-                  width: 230,
+                  width: 280,
                   child: Text(
                     subtitle,
                     style: CustomTextStyle.kodch14GM,
                   ),
                 ),
                 const Spacer(),
-                CircleRow(
+                CircleRowAdult(
                   score: score,
                 ),
               ],

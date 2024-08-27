@@ -50,6 +50,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Diagnostic and Statistical Manual of Mental Disorders, 5th Edition"),
         "Dark_Mode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
         "Date": MessageLookupByLibrary.simpleMessage("Date:"),
+        "Detailed_subtitle": MessageLookupByLibrary.simpleMessage(
+            "A high score in both Part A and Part B further suggests the presence of ADHD. Part B highlights specific challenges in areas like task management, impulse control, and focus, which are often associated with ADHD."),
+        "Detailed_title":
+            MessageLookupByLibrary.simpleMessage("Detailed Analysis"),
         "Dietary_systems_subtitle": MessageLookupByLibrary.simpleMessage(
             "A study by the University of Southampton linked children`s consumption of certain artificial colors with hyperactivity, prompting action by the British government and the European Commission. In the United States, federal law requires food manufacturers to disclose the use of artificial colors on product packaging. This allows consumers to make informed choices about the products they purchase. The findings highlight the importance of continued vigilance in regulating artificial colors in food.\n"),
         "Dietary_systems_title":
@@ -92,6 +96,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "Lets_start_btn": MessageLookupByLibrary.simpleMessage("Let`s Start?"),
         "Log_Out": MessageLookupByLibrary.simpleMessage("Log Out"),
         "Log_in": MessageLookupByLibrary.simpleMessage("Log in"),
+        "Low": MessageLookupByLibrary.simpleMessage("Low"),
+        "Medium": MessageLookupByLibrary.simpleMessage("Medium"),
         "Mixed_DMS_5": MessageLookupByLibrary.simpleMessage("Mixed DMS 5"),
         "Mixed_DMS_5_sub": MessageLookupByLibrary.simpleMessage(
             "Overall diagnostic criteria for ADHD"),
@@ -115,6 +121,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Goals higher than their capabilities, obsessive at work, highly sensitive"),
         "Previous_Results":
             MessageLookupByLibrary.simpleMessage("Previous Results"),
+        "Previous_Results_main":
+            MessageLookupByLibrary.simpleMessage("Previous Results Main"),
         "Psychosomatic_diseases":
             MessageLookupByLibrary.simpleMessage("Psychosomatic diseases"),
         "Psychosomatic_diseases_sub": MessageLookupByLibrary.simpleMessage(
@@ -169,6 +177,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "go_quiz_btn": MessageLookupByLibrary.simpleMessage("Go to quiz phase"),
         "have_account":
             MessageLookupByLibrary.simpleMessage("have an account ?"),
+        "high": MessageLookupByLibrary.simpleMessage("High"),
         "letsstart": MessageLookupByLibrary.simpleMessage("Let`s get start?"),
         "login_now": MessageLookupByLibrary.simpleMessage(" Login now"),
         "logout": MessageLookupByLibrary.simpleMessage(
@@ -185,6 +194,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "no_name": MessageLookupByLibrary.simpleMessage("Please enter name"),
         "ok": MessageLookupByLibrary.simpleMessage("Ok"),
         "opps": MessageLookupByLibrary.simpleMessage("Opps"),
+        "overall_subtitle": MessageLookupByLibrary.simpleMessage(
+            "Your Part A score indicates that you may have significant ADHD symptoms. This doesn`t confirm an ADHD diagnosis but suggests that further evaluation by a healthcare professional might be beneficial."),
+        "overall_title":
+            MessageLookupByLibrary.simpleMessage("ADHD Screening Summary"),
         "points": MessageLookupByLibrary.simpleMessage(" Points"),
         "quiz_for_adult":
             MessageLookupByLibrary.simpleMessage("Quiz for Adult"),

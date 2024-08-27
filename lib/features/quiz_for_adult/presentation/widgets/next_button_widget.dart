@@ -2,7 +2,7 @@ import 'package:adhd/features/quiz_for_adult/presentation/screens/adult.dart';
 import 'package:adhd/features/quiz_for_adult/presentation/screens/result_adult.dart';
 import 'package:adhd/features/quiz_for_adult/presentation/widgets/Next_button.dart';
 import 'package:adhd/features/quiz_for_adult/presentation/widgets/back_button.dart';
-// import 'package:adhd/features/quiz_for_adult/presentation/widgets/send_data_to_firebase.dart';
+import 'package:adhd/features/quiz_for_adult/presentation/widgets/send_data_to_firebase.dart';
 import 'package:flutter/material.dart';
 import 'package:adhd/core/utils/show_snackbar.dart';
 import 'package:adhd/generated/l10n.dart';
@@ -46,13 +46,13 @@ class NextButtonWidget extends StatelessWidget {
                 scoreB += adultList[currentQuestionIndex];
               }
               if (isLastQuestion) {
-                // sendDataToFirebaseAdult();
-                print(adultList);
+                sendDataToFirebaseAdult(scoreA);
+                //print(adultList);
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
                     builder: (context) => ResultAdult(
-                      adultList: [scoreA, scoreB],
+                      adultList: [(scoreA / 6).round(), (scoreB / 12).round()],
                     ),
                   ),
                 );
