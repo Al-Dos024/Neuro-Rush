@@ -1410,6 +1410,16 @@ class S {
     );
   }
 
+  /// `Previous Results Main`
+  String get Previous_Results_main {
+    return Intl.message(
+      'Previous Results Main',
+      name: 'Previous_Results_main',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `ADHD Screening Summary`
   String get overall_title {
     return Intl.message(

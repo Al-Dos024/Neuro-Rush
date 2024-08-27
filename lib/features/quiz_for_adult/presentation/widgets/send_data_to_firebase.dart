@@ -13,8 +13,8 @@ String defTheAvg(int score) {
           : "High";
 }
 
-DatabaseReference refmain_pri =
-    FirebaseDatabase.instance.ref("users/$id").child("Tests");
+DatabaseReference refmainAdult =
+    FirebaseDatabase.instance.ref("users/$id").child("Tests").child("Adult");
 
 DatabaseReference refPersonal =
     FirebaseDatabase.instance.ref("users/$id").child("Personal Data");
@@ -42,13 +42,13 @@ void sendDataToFirebaseAdult(int score) async {
     String formatterDate = DateFormat('yMd').format(now);
     String formatterTime = DateFormat.jm().format(now);
 
-    refmain_pri.child("$attempt").child("Data").set(
+    refmainAdult.child("$attempt").child("Data").set(
       {
         'A -Overall ADhd': (scoreA / 6).round(),
         'B -Detailed ADHD': (scoreB / 12).round(),
       },
     );
-    refmain_pri.child("$attempt").child("properties").set(
+    refmainAdult.child("$attempt").child("properties").set(
       {
         'Attempt Number': attempt,
         'Average': avg,

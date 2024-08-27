@@ -1,5 +1,7 @@
-
+import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/sketon.dart';
 import 'package:adhd/generated/l10n.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -8,6 +10,10 @@ class CustomLeading extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    DatabaseReference ref = FirebaseDatabase.instance
+        .ref("users/${FirebaseAuth.instance.currentUser!.uid}")
+        .child("Personal Data");
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 5),
       child: Row(
@@ -30,16 +36,31 @@ class CustomLeading extends StatelessWidget {
                     style: GoogleFonts.jura(
                       fontSize: 14,
                       fontWeight: FontWeight.w400,
-                      //color: kWhitecolor,
                     ),
                   ),
-                  Text(
-                    "Scarlett Johansson",
-                    style: GoogleFonts.inter(
-                      //color: kWhitecolor,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w800,
-                    ),
+                  FutureBuilder(
+                    future: ref.child("Name").get(),
+                    builder: (context, AsyncSnapshot<DataSnapshot> snapshot) {
+                      if (snapshot.connectionState == ConnectionState.waiting) {
+                        return const Skeleton(
+                          height: 10,
+                        );
+                      } else if (snapshot.hasError) {
+                        return Text('Error: ${snapshot.error}');
+                      } else if (!snapshot.hasData ||
+                          snapshot.data!.value == null) {
+                        return const Text('No name found');
+                      } else {
+                        String name = snapshot.data!.value.toString();
+                        return Text(
+                          name,
+                          style: GoogleFonts.inter(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w800,
+                          ),
+                        );
+                      }
+                    },
                   ),
                 ],
               ),
@@ -50,7 +71,6 @@ class CustomLeading extends StatelessWidget {
             builder: (context) => IconButton(
               icon: const Icon(
                 Icons.menu,
-                //color: kWhitecolor,
               ),
               onPressed: () => Scaffold.of(context).openEndDrawer(),
             ),

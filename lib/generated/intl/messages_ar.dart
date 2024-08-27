@@ -121,6 +121,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "أهداف أعلى من قدراتهم، مهووسون بالعمل، حساسون للغاية"),
         "Previous_Results":
             MessageLookupByLibrary.simpleMessage("النتائج السابقه"),
+        "Previous_Results_main":
+            MessageLookupByLibrary.simpleMessage("النتائج السابقة الرئيسية"),
         "Psychosomatic_diseases":
             MessageLookupByLibrary.simpleMessage("الأمراض النفسية الجسدية"),
         "Psychosomatic_diseases_sub": MessageLookupByLibrary.simpleMessage(

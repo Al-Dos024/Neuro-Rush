@@ -1,5 +1,5 @@
 import 'package:adhd/core/utils/assets.dart';
-import 'package:adhd/features/main/presentation/views/widgets/result_firebase.dart';
+import 'package:adhd/features/main/presentation/views/widgets/result_firebase_child.dart';
 import 'package:adhd/features/main/presentation/views/widgets/two_row_text.dart';
 import 'package:adhd/generated/l10n.dart';
 import 'package:adhd/main.dart';
@@ -137,6 +137,7 @@ class ResultWidget extends StatelessWidget {
           .ref("users")
           .child(id)
           .child("Tests")
+          .child("child")
           .child(index)
           .child("Data");
 

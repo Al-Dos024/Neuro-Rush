@@ -1,11 +1,11 @@
 import 'package:adhd/constants.dart';
-import 'package:adhd/features/main/presentation/views/widgets/result_widget.dart';
+import 'package:adhd/features/main/presentation/views/widgets/result_widget_child.dart';
 import 'package:adhd/generated/l10n.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../../../quiz for kid/presentation/widgets/send_data_to_firebase.dart';
+import '../../../quiz for kid/presentation/widgets/send_data_to_firebase_kid.dart';
 
 class PreviousResults extends StatelessWidget {
   const PreviousResults({super.key});
@@ -15,6 +15,7 @@ class PreviousResults extends StatelessWidget {
     Query refmain = FirebaseDatabase.instance
         .ref("users/${FirebaseAuth.instance.currentUser!.uid}")
         .child("Tests")
+        .child("child")
         .orderByKey();
 
     return Scaffold(

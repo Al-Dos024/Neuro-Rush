@@ -121,6 +121,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Goals higher than their capabilities, obsessive at work, highly sensitive"),
         "Previous_Results":
             MessageLookupByLibrary.simpleMessage("Previous Results"),
+        "Previous_Results_main":
+            MessageLookupByLibrary.simpleMessage("Previous Results Main"),
         "Psychosomatic_diseases":
             MessageLookupByLibrary.simpleMessage("Psychosomatic diseases"),
         "Psychosomatic_diseases_sub": MessageLookupByLibrary.simpleMessage(

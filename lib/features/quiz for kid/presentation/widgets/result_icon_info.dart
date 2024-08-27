@@ -23,16 +23,9 @@ class ResultIconInfo extends StatelessWidget {
       content: SingleChildScrollView(
         child: ListBody(
           children: [
-            detailRow(
-              const Color(0xff238800),
-              S.of(context).vba,
-            ),
-            detailRow(const Color(0xff49E718), S.of(context).sba),
-            detailRow(const Color(0xff76E159), S.of(context).ba),
-            detailRow(const Color(0xffDDBD9B), S.of(context).m),
-            detailRow(const Color(0xffFF8A8A), S.of(context).aa),
-            detailRow(const Color(0xffF34C4B), S.of(context).saa),
-            detailRow(const Color(0xffBA0F13), S.of(context).vaa),
+            detailRow(const Color(0xff238800), S.of(context).Low),
+            detailRow(const Color(0xffFF8A8A), S.of(context).Medium),
+            detailRow(const Color(0xffBA0F13), S.of(context).high),
           ],
         ),
       ),
