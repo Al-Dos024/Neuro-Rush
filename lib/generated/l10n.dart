@@ -1409,6 +1409,76 @@ class S {
       args: [],
     );
   }
+
+  /// `ADHD Screening Summary`
+  String get overall_title {
+    return Intl.message(
+      'ADHD Screening Summary',
+      name: 'overall_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your Part A score indicates that you may have significant ADHD symptoms. This doesn't confirm an ADHD diagnosis but suggests that further evaluation by a healthcare professional might be beneficial.`
+  String get overall_subtitle {
+    return Intl.message(
+      'Your Part A score indicates that you may have significant ADHD symptoms. This doesn`t confirm an ADHD diagnosis but suggests that further evaluation by a healthcare professional might be beneficial.',
+      name: 'overall_subtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Detailed Analysis`
+  String get Detailed_title {
+    return Intl.message(
+      'Detailed Analysis',
+      name: 'Detailed_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A high score in both Part A and Part B further suggests the presence of ADHD. Part B highlights specific challenges in areas like task management, impulse control, and focus, which are often associated with ADHD.`
+  String get Detailed_subtitle {
+    return Intl.message(
+      'A high score in both Part A and Part B further suggests the presence of ADHD. Part B highlights specific challenges in areas like task management, impulse control, and focus, which are often associated with ADHD.',
+      name: 'Detailed_subtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Low`
+  String get Low {
+    return Intl.message(
+      'Low',
+      name: 'Low',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Medium`
+  String get Medium {
+    return Intl.message(
+      'Medium',
+      name: 'Medium',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `High`
+  String get high {
+    return Intl.message(
+      'High',
+      name: 'high',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

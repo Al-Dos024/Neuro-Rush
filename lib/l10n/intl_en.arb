@@ -179,6 +179,15 @@
     "Average":"Average:",
     "Gender_Age":"Gender/Age:",
     "Test_Time":"Test Time:",
-    "Date":"Date:"
+    "Date":"Date:",
+
+    "overall_title":"ADHD Screening Summary",
+    "overall_subtitle":"Your Part A score indicates that you may have significant ADHD symptoms. This doesn`t confirm an ADHD diagnosis but suggests that further evaluation by a healthcare professional might be beneficial.",
+    
+    "Detailed_title":"Detailed Analysis",
+    "Detailed_subtitle":"A high score in both Part A and Part B further suggests the presence of ADHD. Part B highlights specific challenges in areas like task management, impulse control, and focus, which are often associated with ADHD.",
+    "Low":"Low",
+    "Medium":"Medium",
+    "high":"High"
 
 }
