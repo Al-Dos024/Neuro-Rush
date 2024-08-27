@@ -2,6 +2,7 @@
 import 'package:adhd/features/main/presentation/views/widgets/card_view1.dart';
 import 'package:adhd/features/main/presentation/views/widgets/custom_app_bar.dart';
 import 'package:adhd/features/main/presentation/views/widgets/main_drawer.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'widgets/card_view2.dart';
 import 'widgets/card_view3.dart';
@@ -11,6 +12,7 @@ class MainView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+     print("${FirebaseAuth.instance.currentUser?.uid} mainnnnnnnnnnnnnnnnnn");
     return const SafeArea(
       child: Scaffold(
         endDrawer: MainDrawer(),
