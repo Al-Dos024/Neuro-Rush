@@ -21,7 +21,8 @@ DatabaseReference refPersonal =
 
 Future<int> getNumberOfAttempt() async {
   try {
-    DataSnapshot snapshot = await refPersonal.child('Attempt Number').get();
+    DataSnapshot snapshot =
+        await refPersonal.child('Adult Attempt Number').get();
     if (snapshot.exists && snapshot.value != null) {
       return int.parse(snapshot.value.toString());
     } else {
@@ -35,28 +36,28 @@ Future<int> getNumberOfAttempt() async {
 
 void sendDataToFirebaseAdult(int score) async {
   try {
-    int attempt = await getNumberOfAttempt();
+    int adultattempt = await getNumberOfAttempt();
     String avg = defTheAvg(score);
-    print('Number of attempts: $attempt');
+    print('Number of attempts: $adultattempt');
     var now = DateTime.now();
     String formatterDate = DateFormat('yMd').format(now);
     String formatterTime = DateFormat.jm().format(now);
 
-    refmainAdult.child("$attempt").child("Data").set(
+    refmainAdult.child("$adultattempt").child("Data").set(
       {
         'A -Overall ADhd': (scoreA / 6).round(),
         'B -Detailed ADHD': (scoreB / 12).round(),
       },
     );
-    refmainAdult.child("$attempt").child("properties").set(
+    refmainAdult.child("$adultattempt").child("properties").set(
       {
-        'Attempt Number': attempt,
+        'Adult Attempt Number': adultattempt,
         'Average': avg,
         'Time': formatterTime,
         'Date': formatterDate,
       },
     );
-    refPersonal.child('Attempt Number').set(++attempt);
+    refPersonal.child('Adult Attempt Number').set(++adultattempt);
   } catch (e) {
     print('Error: $e');
   }

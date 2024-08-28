@@ -1,5 +1,4 @@
 import 'package:adhd/features/main/presentation/views/about_us.dart';
-import 'package:adhd/features/main/presentation/views/previous_result_main.dart';
 import 'package:adhd/features/main/presentation/views/widgets/custom_drawer_header.dart';
 import 'package:adhd/features/main/presentation/views/widgets/drawer_item.dart';
 import 'package:adhd/features/main/presentation/views/widgets/logout_dialog.dart';
@@ -9,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
 import '../../../../../constants.dart';
+import '../previous_results_child.dart';
 
 class MainDrawer extends StatelessWidget {
   const MainDrawer({super.key});
@@ -35,7 +35,7 @@ class MainDrawer extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const PreviousResultMain(),
+                    builder: (context) => const PreviousResults(),
                   ));
             },
           ),

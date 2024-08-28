@@ -10,61 +10,62 @@ class CustomCardMainView2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: kKindtestcolor,
-        borderRadius: BorderRadius.circular(25),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Row(
-          children: [
-            Flexible(
-              flex: 1,
-              child: Image.asset(
-                AssetsData.imageKidtest,
-                height: 180,
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const DefineTheKid(),
+          ),
+        );
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          color: kKindtestcolor,
+          borderRadius: BorderRadius.circular(25),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Row(
+            children: [
+              Flexible(
+                flex: 1,
+                child: Image.asset(
+                  AssetsData.imageKidtest,
+                  height: 180,
+                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    S.of(context).Kid_Test,
-                    style: GoogleFonts.kodchasan(
-                      fontSize: 28,
-                      fontWeight: FontWeight.w600,
-                      //color: kWhitecolor,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      S.of(context).Kid_Test,
+                      style: GoogleFonts.kodchasan(
+                        fontSize: 28,
+                        fontWeight: FontWeight.w600,
+                        //color: kWhitecolor,
+                      ),
                     ),
-                  ),
-                  Text(
-                    "3 - 17",
-                    style: GoogleFonts.kodchasan(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w600,
-                      //color: kWhitecolor.withOpacity(0.6),
+                    Text(
+                      "3 - 17",
+                      style: GoogleFonts.kodchasan(
+                        fontSize: 24,
+                        fontWeight: FontWeight.w600,
+                        //color: kWhitecolor.withOpacity(0.6),
+                      ),
                     ),
-                  ),
-                  IconButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const DefineTheKid()),
-                      );
-                    },
-                    icon: const Icon(
+                    const Icon(
                       Icons.arrow_forward,
                       size: 34,
-                     // color: kWhitecolor,
+                      // color: kWhitecolor,
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

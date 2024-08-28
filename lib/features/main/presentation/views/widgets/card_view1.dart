@@ -12,57 +12,57 @@ class CustomCardMainView1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      decoration: BoxDecoration(
-        color: kBluecolor_3,
-        borderRadius: BorderRadius.circular(25),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Row(
-          children: [
-            const Flexible(
-              flex: 1,
-              child: Image(
-                image: AssetImage(AssetsData.imageWhatAdhd),
-                height: 180,
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const WhatIsAdhd(),
+          ),
+        );
+      },
+      child: Container(
+        width: double.infinity,
+        decoration: BoxDecoration(
+          color: kBluecolor_3,
+          borderRadius: BorderRadius.circular(25),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Row(
+            children: [
+              const Flexible(
+                flex: 1,
+                child: Image(
+                  image: AssetImage(AssetsData.imageWhatAdhd),
+                  height: 180,
+                ),
               ),
-            ),
-            Column(
-              children: [
-                Text(
-                  S.of(context).What_is,
-                  style: GoogleFonts.kodchasan(
-                    fontSize: 28,
-                    fontWeight: FontWeight.w600,
+              Column(
+                children: [
+                  Text(
+                    S.of(context).What_is,
+                    style: GoogleFonts.kodchasan(
+                      fontSize: 28,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
-                ),
-                Text(
-                  S.of(context).ADHD_ar,
-                  style: GoogleFonts.kodchasan(
-                    fontSize: 28,
-                    fontWeight: FontWeight.w600,
-                    //color: kWhitecolor,
+                  Text(
+                    S.of(context).ADHD_ar,
+                    style: GoogleFonts.kodchasan(
+                      fontSize: 28,
+                      fontWeight: FontWeight.w600,
+                      //color: kWhitecolor,
+                    ),
                   ),
-                ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const WhatIsAdhd(),
-                      ),
-                    );
-                  },
-                  child: const Icon(
+                  const Icon(
                     Icons.play_circle_outline_outlined,
-                    weight: 40,
+                    size: 40,
                   ),
-                ),
-              ],
-            ),
-          ],
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -12,12 +12,12 @@ class LogOutDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-       bool isDarkMode = MyApp.themeNotifier.value == ThemeMode.dark;
+    bool isDarkMode = MyApp.themeNotifier.value == ThemeMode.dark;
 
     return Dialog(
-      backgroundColor: isDarkMode ? kBlackcolor_2: kWhitecolor,
+      backgroundColor: isDarkMode ? kBlackcolor_2 : kWhitecolor,
       child: Container(
-        height: 150,
+        height: MediaQuery.of(context).size.height * .175,
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
@@ -26,13 +26,11 @@ class LogOutDialog extends StatelessWidget {
               maxLines: 2,
               style: GoogleFonts.kodchasan(
                 fontSize: 20,
-                color: isDarkMode ? kWhitecolor_2 :kBlackcolor_1,
+                color: isDarkMode ? kWhitecolor_2 : kBlackcolor_1,
                 fontWeight: FontWeight.w500,
               ),
             ),
-            const SizedBox(
-              height: 15,
-            ),
+            const Spacer(),
             Row(
               children: [
                 const Spacer(),
@@ -50,7 +48,7 @@ class LogOutDialog extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  width: 15,
+                  width: 30,
                 ),
                 GestureDetector(
                   onTap: () {
@@ -64,7 +62,10 @@ class LogOutDialog extends StatelessWidget {
                       fontWeight: FontWeight.w700,
                     ),
                   ),
-                )
+                ),
+                const SizedBox(
+                  width: 10,
+                ),
               ],
             )
           ],

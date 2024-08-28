@@ -1,8 +1,6 @@
-
 import 'package:adhd/features/main/presentation/views/widgets/card_view1.dart';
 import 'package:adhd/features/main/presentation/views/widgets/custom_app_bar.dart';
 import 'package:adhd/features/main/presentation/views/widgets/main_drawer.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'widgets/card_view2.dart';
 import 'widgets/card_view3.dart';
@@ -12,7 +10,6 @@ class MainView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-     print("${FirebaseAuth.instance.currentUser?.uid} mainnnnnnnnnnnnnnnnnn");
     return const SafeArea(
       child: Scaffold(
         endDrawer: MainDrawer(),
@@ -37,16 +34,16 @@ class MainViewContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
       child: Column(
         children: [
           CustomCardMainView1(),
           SizedBox(
-            height: 10,
+            height: 15,
           ),
           CustomCardMainView2(),
           SizedBox(
-            height: 10,
+            height: 15,
           ),
           CustomCardMainView3(),
         ],

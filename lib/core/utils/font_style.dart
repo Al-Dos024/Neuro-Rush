@@ -5,8 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 class CustomTextStyle {
   //name of font // size // color // font weight
 
-  static TextStyle kodch21BlB = GoogleFonts.kodchasan(
-      fontSize: 21, color: kBluecolor_1, fontWeight: FontWeight.bold);
+  static TextStyle kodch20BlB = GoogleFonts.kodchasan(
+      fontSize: 20, color: kBluecolor_1, fontWeight: FontWeight.bold);
 
   static TextStyle kodch20WM = GoogleFonts.kodchasan(
       fontSize: 20, color: Colors.white, fontWeight: FontWeight.w600);

@@ -1,4 +1,5 @@
 import 'package:adhd/constants.dart';
+import 'package:adhd/core/utils/show_snackbar.dart';
 import 'package:adhd/features/authorization/presentation/views/widgets/my_elevated_button%20copy.dart';
 import 'package:adhd/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -31,7 +32,11 @@ class ContinueWith extends StatelessWidget {
                 MyElevatedButton(
                   borderRadius: BorderRadius.circular(10),
                   color: kWhitecolor_1,
-                  onPressed: () {},
+                  onPressed: () {
+                    showSnackBar(context,
+                        title: S.of(context).next_ver_title,
+                        message: S.of(context).next_ver_subtitle);
+                  },
                   height: 45,
                   width: 85,
                   child: Image.asset(
@@ -43,7 +48,11 @@ class ContinueWith extends StatelessWidget {
                 MyElevatedButton(
                   borderRadius: BorderRadius.circular(10),
                   color: kWhitecolor_1,
-                  onPressed: () {},
+                  onPressed: () {
+                    showSnackBar(context,
+                        title: S.of(context).next_ver_title,
+                        message: S.of(context).next_ver_subtitle);
+                  },
                   height: 45,
                   width: 85,
                   child: Image.asset(
@@ -55,7 +64,11 @@ class ContinueWith extends StatelessWidget {
                 MyElevatedButton(
                   borderRadius: BorderRadius.circular(10),
                   color: kWhitecolor_1,
-                  onPressed: () {},
+                  onPressed: () {
+                    showSnackBar(context,
+                        title: S.of(context).next_ver_title,
+                        message: S.of(context).next_ver_subtitle);
+                  },
                   height: 45,
                   width: 85,
                   child: Image.asset(

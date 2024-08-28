@@ -60,10 +60,10 @@ class S {
     );
   }
 
-  /// `Previous Results`
+  /// `Previous Results Kids`
   String get Previous_Results {
     return Intl.message(
-      'Previous Results',
+      'Previous Results Kids',
       name: 'Previous_Results',
       desc: '',
       args: [],
@@ -130,10 +130,10 @@ class S {
     );
   }
 
-  /// `It is an application designed to empower individuals and families affected by ADHD, as it combines three main functions: first, diagnosing ADHD. Second, resources on ADHD Topics such as symptoms, types, management strategies, and coping mechanisms can help users better understand themselves and their experiences.`
+  /// `Our app helps diagnose ADHD and offers comprehensive resources on ADHD topics, including symptoms, types, management strategies, and coping mechanisms.`
   String get aboutapp_desc {
     return Intl.message(
-      'It is an application designed to empower individuals and families affected by ADHD, as it combines three main functions: first, diagnosing ADHD. Second, resources on ADHD Topics such as symptoms, types, management strategies, and coping mechanisms can help users better understand themselves and their experiences.',
+      'Our app helps diagnose ADHD and offers comprehensive resources on ADHD topics, including symptoms, types, management strategies, and coping mechanisms.',
       name: 'aboutapp_desc',
       desc: '',
       args: [],
@@ -1485,6 +1485,86 @@ class S {
     return Intl.message(
       'High',
       name: 'high',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sorry`
+  String get next_ver_title {
+    return Intl.message(
+      'Sorry',
+      name: 'next_ver_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This feature would be added next version`
+  String get next_ver_subtitle {
+    return Intl.message(
+      'This feature would be added next version',
+      name: 'next_ver_subtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User Not Found`
+  String get user_not_found {
+    return Intl.message(
+      'User Not Found',
+      name: 'user_not_found',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid Email`
+  String get invalid_email {
+    return Intl.message(
+      'Invalid Email',
+      name: 'invalid_email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Network Request Failed`
+  String get network_request_failed {
+    return Intl.message(
+      'Network Request Failed',
+      name: 'network_request_failed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wrong Password`
+  String get wrong_password {
+    return Intl.message(
+      'Wrong Password',
+      name: 'wrong_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Something went wrong`
+  String get something_went_wrong {
+    return Intl.message(
+      'Something went wrong',
+      name: 'something_went_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login Failed`
+  String get login_failed {
+    return Intl.message(
+      'Login Failed',
+      name: 'login_failed',
       desc: '',
       args: [],
     );

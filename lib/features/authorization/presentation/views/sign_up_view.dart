@@ -146,11 +146,13 @@ class SignUpView extends StatelessWidget {
                           onPressed: () {
                             if (formKey.currentState!.validate()) {
                               context.read<SignUpCubit>().registerUser(
-                                    emailSignIn!,
-                                    passwordSignIn!,
-                                    nameSignIn!,
-                                    int.parse(ageSignIn!),
-                                    0, // Assuming `AttemptNum` is a counter or starting at 0
+                                  emailSignIn!,
+                                  passwordSignIn!,
+                                  nameSignIn!,
+                                  int.parse(ageSignIn!),
+                                  0,
+                                  0
+                                  // Assuming `AttemptNum` is a counter or starting at 0
                                   );
                             }
                           },

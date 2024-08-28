@@ -120,7 +120,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Perfectionism_sub": MessageLookupByLibrary.simpleMessage(
             "أهداف أعلى من قدراتهم، مهووسون بالعمل، حساسون للغاية"),
         "Previous_Results":
-            MessageLookupByLibrary.simpleMessage("النتائج السابقه"),
+            MessageLookupByLibrary.simpleMessage("النتائج السابقه للطفل"),
         "Previous_Results_main":
             MessageLookupByLibrary.simpleMessage("النتائج السابقة الرئيسية"),
         "Psychosomatic_diseases":
@@ -177,14 +177,23 @@ class MessageLookup extends MessageLookupByLibrary {
         "have_account":
             MessageLookupByLibrary.simpleMessage("لديك حساب سابق ؟"),
         "high": MessageLookupByLibrary.simpleMessage("عالي"),
+        "invalid_email":
+            MessageLookupByLibrary.simpleMessage("بريد إلكتروني غير صالح"),
         "letsstart": MessageLookupByLibrary.simpleMessage("هيا بنا لنبدأ"),
+        "login_failed":
+            MessageLookupByLibrary.simpleMessage("فشل تسجيل الدخول"),
         "login_now": MessageLookupByLibrary.simpleMessage(" سجل دخول"),
         "logout": MessageLookupByLibrary.simpleMessage(
             "هل انت متاكد انك تريد تسجيل الخروج من هذا الحساب ؟"),
         "m": MessageLookupByLibrary.simpleMessage("متوسط"),
+        "network_request_failed":
+            MessageLookupByLibrary.simpleMessage("فشل طلب الشبكة"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
         "next_btn_massge":
             MessageLookupByLibrary.simpleMessage("يجب عليك اختيار اجابة"),
+        "next_ver_subtitle": MessageLookupByLibrary.simpleMessage(
+            "سيتم إضافة هذه الميزة في الإصدار القادم"),
+        "next_ver_title": MessageLookupByLibrary.simpleMessage("ناسف"),
         "no": MessageLookupByLibrary.simpleMessage("لا"),
         "no_Age": MessageLookupByLibrary.simpleMessage("فضلا ادخل عمرك هنا"),
         "no_Email": MessageLookupByLibrary.simpleMessage(
@@ -239,12 +248,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "snackbar_weak": MessageLookupByLibrary.simpleMessage("خطأ !"),
         "snackbar_weak_sub": MessageLookupByLibrary.simpleMessage(
             "كلمة المرور يجب ان لا تقل عن 6 احرف"),
+        "something_went_wrong":
+            MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
         "title": MessageLookupByLibrary.simpleMessage("أهلا وسهلا"),
+        "user_not_found":
+            MessageLookupByLibrary.simpleMessage("المستخدم غير موجود"),
         "vaa": MessageLookupByLibrary.simpleMessage("أعلى من المتوسط ​​بكثير"),
         "vba": MessageLookupByLibrary.simpleMessage("أقل من المتوسط ​​بكثير"),
         "video_desc": MessageLookupByLibrary.simpleMessage(
             "فيديو يوضح اضطراب نقص الانتباه"),
         "video_und": MessageLookupByLibrary.simpleMessage("اضطراب فرط النشاط"),
+        "wrong_password":
+            MessageLookupByLibrary.simpleMessage("كلمة مرور خاطئة"),
         "yes": MessageLookupByLibrary.simpleMessage("نعم")
       };
 }

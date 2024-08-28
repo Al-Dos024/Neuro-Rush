@@ -24,7 +24,7 @@ class DiagnosisRate extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: CustomTextStyle.kodch21BlB,
+                  style: CustomTextStyle.kodch20BlB,
                 ),
                 const Spacer(),
                 TitleAdult(

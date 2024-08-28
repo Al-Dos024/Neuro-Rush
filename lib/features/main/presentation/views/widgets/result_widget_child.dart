@@ -133,13 +133,14 @@ class ResultWidget extends StatelessWidget {
   Future<List<int>> fetchData(String index, String id) async {
     try {
       print("Fetched index: $index , Fetched id: $id");
-      final DatabaseReference ref = FirebaseDatabase.instance
+      final Query ref = FirebaseDatabase.instance
           .ref("users")
           .child(id)
           .child("Tests")
           .child("child")
           .child(index)
-          .child("Data");
+          .child("Data")
+          .orderByValue();
 
       final snapshot = await ref.once();
       if (snapshot.snapshot.value == null) {
@@ -147,6 +148,7 @@ class ResultWidget extends StatelessWidget {
       }
 
       final data = snapshot.snapshot.value as Map<dynamic, dynamic>;
+      print(data);
       return data.values.whereType<int>().cast<int>().toList();
     } catch (e) {
       print("Error fetching data: $e");

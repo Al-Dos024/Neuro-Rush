@@ -120,7 +120,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Perfectionism_sub": MessageLookupByLibrary.simpleMessage(
             "Goals higher than their capabilities, obsessive at work, highly sensitive"),
         "Previous_Results":
-            MessageLookupByLibrary.simpleMessage("Previous Results"),
+            MessageLookupByLibrary.simpleMessage("Previous Results Kids"),
         "Previous_Results_main":
             MessageLookupByLibrary.simpleMessage("Previous Results Main"),
         "Psychosomatic_diseases":
@@ -153,7 +153,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "aa": MessageLookupByLibrary.simpleMessage("Above average"),
         "aboutapp": MessageLookupByLibrary.simpleMessage("About Application"),
         "aboutapp_desc": MessageLookupByLibrary.simpleMessage(
-            "It is an application designed to empower individuals and families affected by ADHD, as it combines three main functions: first, diagnosing ADHD. Second, resources on ADHD Topics such as symptoms, types, management strategies, and coping mechanisms can help users better understand themselves and their experiences."),
+            "Our app helps diagnose ADHD and offers comprehensive resources on ADHD topics, including symptoms, types, management strategies, and coping mechanisms."),
         "answer": MessageLookupByLibrary.simpleMessage("  Answer :"),
         "ba": MessageLookupByLibrary.simpleMessage("Below average"),
         "back": MessageLookupByLibrary.simpleMessage("Back"),
@@ -178,14 +178,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "have_account":
             MessageLookupByLibrary.simpleMessage("have an account ?"),
         "high": MessageLookupByLibrary.simpleMessage("High"),
+        "invalid_email": MessageLookupByLibrary.simpleMessage("Invalid Email"),
         "letsstart": MessageLookupByLibrary.simpleMessage("Let`s get start?"),
+        "login_failed": MessageLookupByLibrary.simpleMessage("Login Failed"),
         "login_now": MessageLookupByLibrary.simpleMessage(" Login now"),
         "logout": MessageLookupByLibrary.simpleMessage(
             "Are you sure you want to log out this account ?"),
         "m": MessageLookupByLibrary.simpleMessage("Medium"),
+        "network_request_failed":
+            MessageLookupByLibrary.simpleMessage("Network Request Failed"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "next_btn_massge":
             MessageLookupByLibrary.simpleMessage("You must select an answer"),
+        "next_ver_subtitle": MessageLookupByLibrary.simpleMessage(
+            "This feature would be added next version"),
+        "next_ver_title": MessageLookupByLibrary.simpleMessage("Sorry"),
         "no": MessageLookupByLibrary.simpleMessage("No"),
         "no_Age": MessageLookupByLibrary.simpleMessage("Please enter Age"),
         "no_Email": MessageLookupByLibrary.simpleMessage("Please enter Email"),
@@ -240,13 +247,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "snackbar_weak": MessageLookupByLibrary.simpleMessage("Error!"),
         "snackbar_weak_sub": MessageLookupByLibrary.simpleMessage(
             "Password should be at least 6 characters"),
+        "something_went_wrong":
+            MessageLookupByLibrary.simpleMessage("Something went wrong"),
         "title": MessageLookupByLibrary.simpleMessage("Welcome aboard"),
+        "user_not_found":
+            MessageLookupByLibrary.simpleMessage("User Not Found"),
         "vaa": MessageLookupByLibrary.simpleMessage("Very much above average"),
         "vba": MessageLookupByLibrary.simpleMessage("Very much below average"),
         "video_desc": MessageLookupByLibrary.simpleMessage(
             "Video explaining attention deficit"),
         "video_und":
             MessageLookupByLibrary.simpleMessage("hyperactivity disorder"),
+        "wrong_password":
+            MessageLookupByLibrary.simpleMessage("Wrong Password"),
         "yes": MessageLookupByLibrary.simpleMessage("Yes")
       };
 }

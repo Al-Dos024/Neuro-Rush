@@ -12,7 +12,7 @@ class ResultFire extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //print("Received kidsList: $kidsList");
+    print("Received kidsList: $kidsList");
 
     // Classification list (Categories)
     List<String> classification = [
@@ -71,7 +71,6 @@ class ResultFire extends StatelessWidget {
           IconButton(
             onPressed: () {
               showDialog(
-                
                 context: context,
                 builder: (context) {
                   return const ResultIconInfo();

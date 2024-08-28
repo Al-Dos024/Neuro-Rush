@@ -23,6 +23,7 @@ class SignUpCubit extends Cubit<SignUpState> {
     String name,
     int age,
     int attemptNum,
+    int adultattemptNum,
   ) async {
     emit(SignUpLoading());
     try {
@@ -38,6 +39,7 @@ class SignUpCubit extends Cubit<SignUpState> {
         "Age": age,
         "Email": email,
         "Attempt Number": attemptNum,
+        "Adult Attempt Number": adultattemptNum,
       });
 
       emit(SignUpSuccess());
