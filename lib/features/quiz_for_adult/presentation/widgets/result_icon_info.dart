@@ -1,5 +1,6 @@
 import 'package:adhd/constants.dart';
 import 'package:adhd/generated/l10n.dart';
+import 'package:adhd/main.dart';
 import 'package:flutter/material.dart';
 import 'detail_row.dart';
 
@@ -8,15 +9,17 @@ class ResultIconInfoAdult extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isDarkMode = MyApp.themeNotifier.value == ThemeMode.dark;
     return AlertDialog(
-      backgroundColor: kBlackcolor_2,
+      backgroundColor: isDarkMode ? kBlackcolor_2 : kWhitecolor,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20),
       ),
       title: Text(
         S.of(context).More_Details,
-        style: const TextStyle(
+        style: TextStyle(
           fontWeight: FontWeight.bold,
+          color: isDarkMode ? kWhitecolor : kBlackcolor_2,
         ),
         textAlign: TextAlign.center,
       ),

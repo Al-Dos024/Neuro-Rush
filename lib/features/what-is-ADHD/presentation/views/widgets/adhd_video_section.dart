@@ -17,18 +17,25 @@ class _AdhdVideoSectionState extends State<AdhdVideoSection> {
 
   @override
   void initState() {
-    loadVideoPlayer();
     super.initState();
+    loadVideoPlayer();
   }
 
-  loadVideoPlayer() {
+  void loadVideoPlayer() {
     controller = VideoPlayerController.asset('assets/videos/What_is_ADHD.mp4');
     controller.addListener(() {
       setState(() {});
     });
-    controller.initialize().then((value) {
+    controller.initialize().then((_) {
       setState(() {});
     });
+  }
+
+  @override
+  void dispose() {
+    // Dispose the controller when the widget is disposed
+    controller.dispose();
+    super.dispose();
   }
 
   @override
@@ -93,7 +100,7 @@ class _AdhdVideoSectionState extends State<AdhdVideoSection> {
             fontWeight: FontWeight.w500,
             color: isDarkMode ? kBluecolor_7 : kBluecolor_4,
           ),
-        )
+        ),
       ],
     );
   }
