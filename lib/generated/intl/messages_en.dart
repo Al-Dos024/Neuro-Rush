@@ -225,6 +225,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "An undefined Error happened."),
         "snackbar_fail_sub":
             MessageLookupByLibrary.simpleMessage("No internet connection"),
+        "snackbar_firebase_sub":
+            MessageLookupByLibrary.simpleMessage("Unexpected Firebase Error"),
         "snackbar_inv_email_sub":
             MessageLookupByLibrary.simpleMessage("Invalid email or pssword"),
         "snackbar_inv_pass_sub":

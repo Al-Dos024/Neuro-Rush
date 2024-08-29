@@ -47,8 +47,31 @@ class SignUpView extends StatelessWidget {
           );
           isLoading = false;
         } else if (state is SignUpFailure) {
-          showSnackBar(context, title: "Error", message: state.errMsg);
-          isLoading = false;
+          String errorMessage;
+          switch (state.errMsg) {
+            case 'weak-password':
+              errorMessage = S.of(context).snackbar_weak_sub;
+              break;
+            case 'invalid-email':
+              errorMessage = S.of(context).snackbar_inv_sub;
+              break;
+            case 'email-already-in-use':
+              errorMessage = S.of(context).snackbar_use_sub;
+              break;
+            case 'Unexpected-Firebase-Error':
+              errorMessage = S.of(context).snackbar_firebase_sub;
+              break;
+            case 'Unexpected-Error':
+              errorMessage = S.of(context).snackbar_used_sub;
+              break;
+            default:
+              errorMessage = state.errMsg;
+          }
+          showSnackBar(
+            context,
+            title: S.of(context).login_failed,
+            message: errorMessage,
+          );
         }
       },
       builder: (context, state) {

@@ -41,6 +41,7 @@
     "snackbar_no_sub": "المستخدم غير موجود",
     "snackbar_inv_pass_sub": "كلم’ المرور خاطئه",
     "snackbar_inv_email_sub": "اسم المستخدم او كلمة المرور خاطئه",
+    "snackbar_firebase_sub":"خطأ غير متوقع من جهة الفايربيز",
     "Register": "سجل حسابك",
     "have_account": "لديك حساب سابق ؟",
     "login_now": " سجل دخول",

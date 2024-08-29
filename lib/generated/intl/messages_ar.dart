@@ -226,6 +226,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("خطأ غير متوقع"),
         "snackbar_fail_sub":
             MessageLookupByLibrary.simpleMessage("لا يوجد اتصال بالانترنت"),
+        "snackbar_firebase_sub": MessageLookupByLibrary.simpleMessage(
+            "خطأ غير متوقع من جهة الفايربيز"),
         "snackbar_inv_email_sub": MessageLookupByLibrary.simpleMessage(
             "اسم المستخدم او كلمة المرور خاطئه"),
         "snackbar_inv_pass_sub":

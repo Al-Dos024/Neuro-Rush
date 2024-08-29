@@ -470,6 +470,16 @@ class S {
     );
   }
 
+  /// `Unexpected Firebase Error`
+  String get snackbar_firebase_sub {
+    return Intl.message(
+      'Unexpected Firebase Error',
+      name: 'snackbar_firebase_sub',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Register`
   String get Register {
     return Intl.message(

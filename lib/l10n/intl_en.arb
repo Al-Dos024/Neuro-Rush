@@ -41,6 +41,7 @@
     "snackbar_no_sub": "User not found",
     "snackbar_inv_pass_sub": "wrong password",
     "snackbar_inv_email_sub": "Invalid email or pssword",
+    "snackbar_firebase_sub":"Unexpected Firebase Error",
     "Register": "Register",
     "have_account": "have an account ?",
     "login_now": " Login now",

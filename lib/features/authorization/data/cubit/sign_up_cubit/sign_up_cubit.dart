@@ -44,15 +44,17 @@ class SignUpCubit extends Cubit<SignUpState> {
 
       emit(SignUpSuccess());
     } on FirebaseAuthException catch (ex) {
-      if (ex.code == "weak-password") {
-        emit(SignUpFailure(errMsg: "Weak password"));
+      if (ex.code == "invalid-email") {
+        emit(SignUpFailure(errMsg: "invalid-email"));
+      } else if (ex.code == "weak-password") {
+        emit(SignUpFailure(errMsg: "weak-password"));
       } else if (ex.code == "email-already-in-use") {
-        emit(SignUpFailure(errMsg: "Email already exists"));
+        emit(SignUpFailure(errMsg: "email-already-in-use"));
       }
-    } on FirebaseException catch (e) {
-      emit(SignUpFailure(errMsg: 'Unexpected Firebase Error: ${e.message}'));
-    } catch (e) {
-      emit(SignUpFailure(errMsg: 'Unexpected Error: ${e.toString()}'));
+    } on FirebaseException catch (_) {
+      emit(SignUpFailure(errMsg: 'Unexpected-Firebase-Error'));
+    } catch (_) {
+      emit(SignUpFailure(errMsg: 'Unexpected-Error'));
     }
   }
 }

@@ -44,23 +44,26 @@ class SigninView extends StatelessWidget {
         } else if (state is SignInFailure) {
           String errorMessage;
           switch (state.errMsg) {
-            case 'user_not_found':
+            case 'user-not-found':
               errorMessage = S.of(context).user_not_found;
               break;
-            case 'invalid_email':
+            case 'invalid-email':
               errorMessage = S.of(context).invalid_email;
               break;
-            case 'network_request_failed':
+            case 'network-request-failed':
               errorMessage = S.of(context).network_request_failed;
               break;
-            case 'wrong_password':
+            case 'wrong-password':
               errorMessage = S.of(context).wrong_password;
               break;
-            case 'something_went_wrong':
+            case 'Unexpected-Firebase-Error':
+              errorMessage = S.of(context).snackbar_firebase_sub;
+              break;
+            case 'something-went-wrong':
               errorMessage = S.of(context).something_went_wrong;
               break;
             default:
-              errorMessage = state.errMsg; // Fallback
+              errorMessage = S.of(context).something_went_wrong;
           }
           showSnackBar(
             context,

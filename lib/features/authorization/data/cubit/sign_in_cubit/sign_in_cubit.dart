@@ -22,27 +22,28 @@ class SignInCubit extends Cubit<SignInState> {
           .signInWithEmailAndPassword(email: email, password: password);
       emit(SignInSuccess());
     } on FirebaseAuthException catch (e) {
-      if (e.code == 'invalid-login-credentials') {
+      if (e.code == 'user-not-found') {
         emit(
-          SignInFailure(errMsg: 'User Not Found'),
+          SignInFailure(errMsg: 'user-not-found'),
         );
       } else if (e.code == 'invalid-email') {
         emit(
-          SignInFailure(errMsg: "Invaild Email"),
+          SignInFailure(errMsg: "invalid-email"),
         );
       } else if (e.code == 'network-request-failed') {
         emit(
-          SignInFailure(errMsg: "Network Request Failed"),
+          SignInFailure(errMsg: "network-request-failed"),
         );
       } else if (e.code == 'wrong-password') {
         emit(
-          SignInFailure(errMsg: 'Wrong Password'),
+          SignInFailure(errMsg: 'wrong-password'),
         );
       }
-      // ignore: unused_catch_clause
-    } on Exception catch (e) {
+    } on FirebaseException catch (_) {
+      emit(SignInFailure(errMsg: 'Unexpected-Firebase-Error'));
+    } on Exception catch (_) {
       emit(
-        SignInFailure(errMsg: 'something want wrong'),
+        SignInFailure(errMsg: 'something-went-wrong'),
       );
     }
   }
