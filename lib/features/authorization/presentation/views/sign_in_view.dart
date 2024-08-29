@@ -15,6 +15,7 @@ import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 import 'widgets/my_elevated_button copy.dart';
 
+// ignore: must_be_immutable
 class SigninView extends StatelessWidget {
   final GlobalKey<FormState> formKey = GlobalKey();
   String? email;

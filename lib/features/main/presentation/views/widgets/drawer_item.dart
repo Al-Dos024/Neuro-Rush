@@ -21,18 +21,15 @@ class DrawerItem extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Image(
                 image: AssetImage(img),
-                height: 20,
+                height: 16,
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Text(
-                title,
-                style: GoogleFonts.kodchasan(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w500,
-                  color: kBluecolor_1
-                ),
+            Text(
+              title,
+              style: GoogleFonts.kodchasan(
+                fontSize:13 ,
+                fontWeight: FontWeight.w500,
+                color: kBluecolor_1
               ),
             ),
           ],
