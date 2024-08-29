@@ -1,12 +1,14 @@
 // ignore_for_file: use_build_context_synchronously, non_constant_identifier_names
 import 'package:adhd/constants.dart';
 import 'package:adhd/features/authorization/data/cubit/sign_up_cubit/sign_up_cubit.dart';
+import 'package:adhd/features/authorization/presentation/views/profile_picture.dart';
 import 'package:adhd/features/authorization/presentation/views/widgets/lable_text_form_field.dart';
 import 'package:adhd/features/authorization/presentation/views/widgets/my_elevated_button%20copy.dart';
 import 'package:adhd/features/authorization/presentation/views/widgets/my_text_button.dart';
 import 'package:adhd/core/utils/show_snackbar.dart';
-import 'package:adhd/features/main/presentation/views/main_view.dart';
 import 'package:adhd/generated/l10n.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -37,10 +39,11 @@ class SignUpView extends StatelessWidget {
             title: S.of(context).snackbar_suc,
             message: S.of(context).snackbar_suc_sub,
           );
+          print(FirebaseAuth.instance.currentUser!.uid);
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) => const MainView(),
+              builder: (context) => const ProfilePicure(),
             ),
           );
           isLoading = false;

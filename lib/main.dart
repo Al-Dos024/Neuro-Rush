@@ -61,7 +61,7 @@ class MyApp extends StatelessWidget {
                   GlobalCupertinoLocalizations.delegate,
                 ],
                 supportedLocales: S.delegate.supportedLocales,
-                home: const ProfilePicure(),
+                home: const SplashView(),
                 // dark theme
                 theme: ThemeData().copyWith(
                   colorScheme: myColorScheme,

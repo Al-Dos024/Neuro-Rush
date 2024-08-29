@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:adhd/core/utils/show_snackbar.dart';
 import 'package:adhd/features/authorization/presentation/views/widgets/my_elevated_button%20copy.dart';
+import 'package:adhd/features/main/presentation/views/main_view.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -40,7 +41,7 @@ File? _image;
     if (_image == null) return;
 
     try {
-      String fileName = user!.uid;
+      String fileName = "jjj";
       Reference ref = _storage.ref().child(fileName);
       UploadTask uploadTask = ref.putFile(_image!);
       TaskSnapshot taskSnapshot = await uploadTask;
@@ -48,6 +49,7 @@ File? _image;
       await _firestore.collection('images').add({'url': downloadUrl});
       showSnackBar(context,
           message: "Image uploaded successfully", title: "yap!");
+          Navigator.push(context,MaterialPageRoute(builder: (context) => MainView(),),);
     } catch (e) {
       showSnackBar(context,
           message: "Failed to upload image: $e", title: "oops!");
