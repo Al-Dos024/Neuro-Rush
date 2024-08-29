@@ -8,7 +8,6 @@ import 'package:adhd/features/authorization/presentation/views/widgets/my_text_b
 import 'package:adhd/core/utils/show_snackbar.dart';
 import 'package:adhd/generated/l10n.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';

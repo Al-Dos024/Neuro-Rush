@@ -2,7 +2,6 @@ import 'package:adhd/constants.dart';
 import 'package:adhd/features/Splash/presentation/views/splash_view.dart';
 import 'package:adhd/features/authorization/data/cubit/sign_in_cubit/sign_in_cubit.dart';
 import 'package:adhd/features/authorization/data/cubit/sign_up_cubit/sign_up_cubit.dart';
-import 'package:adhd/features/authorization/presentation/views/profile_picture.dart';
 import 'package:adhd/generated/l10n.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';

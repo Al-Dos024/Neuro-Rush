@@ -151,7 +151,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "aa": MessageLookupByLibrary.simpleMessage("فوق المتوسط"),
         "aboutapp": MessageLookupByLibrary.simpleMessage("حول التطبيق"),
         "aboutapp_desc": MessageLookupByLibrary.simpleMessage(
-            "إنه تطبيق مصمم لتمكين الأفراد والأسر المتضررة من اضطراب فرط الحركة ونقص الانتباه، حيث يجمع بين ثلاث وظائف رئيسية: أولاً، تشخيص اضطراب فرط الحركة ونقص الانتباه. ثانياً، يمكن للموارد المتعلقة بموضوعات اضطراب فرط الحركة ونقص الانتباه مثل الأعراض والأنواع واستراتيجيات الإدارة وآليات التأقلم أن تساعد المستخدمين على فهم أنفسهم وتجاربهم بشكل أفضل."),
+            " يساعد تطبيقنا في تشخيص اضطراب فرط الحركة ونقص الانتباه ويوفر موارد شاملة حول موضوعات اضطراب فرط الحركة ونقص الانتباه، بما في ذلك الأعراض والأنواع واستراتيجيات الإدارة وآليات المواجهة"),
         "answer": MessageLookupByLibrary.simpleMessage("  الاختيارات :"),
         "ba": MessageLookupByLibrary.simpleMessage("أقل من المتوسط"),
         "back": MessageLookupByLibrary.simpleMessage("السابق"),

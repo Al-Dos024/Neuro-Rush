@@ -20,7 +20,7 @@ class ProfilePicure extends StatefulWidget {
 }
 
 class _ProfilePicureState extends State<ProfilePicure> {
-File? _image;
+  File? _image;
   final ImagePicker _picker = ImagePicker();
   final FirebaseStorage _storage = FirebaseStorage.instance;
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
@@ -41,7 +41,7 @@ File? _image;
     if (_image == null) return;
 
     try {
-      String fileName = "jjj";
+      String fileName = FirebaseAuth.instance.currentUser!.uid;
       Reference ref = _storage.ref().child(fileName);
       UploadTask uploadTask = ref.putFile(_image!);
       TaskSnapshot taskSnapshot = await uploadTask;
@@ -49,7 +49,12 @@ File? _image;
       await _firestore.collection('images').add({'url': downloadUrl});
       showSnackBar(context,
           message: "Image uploaded successfully", title: "yap!");
-          Navigator.push(context,MaterialPageRoute(builder: (context) => MainView(),),);
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => MainView(),
+        ),
+      );
     } catch (e) {
       showSnackBar(context,
           message: "Failed to upload image: $e", title: "oops!");
@@ -82,15 +87,15 @@ File? _image;
                 padding: const EdgeInsets.all(8.0),
                 child: _image != null
                     ? GestureDetector(
-                      onTap: _pickImage,
-                      child: ClipRRect(
+                        onTap: _pickImage,
+                        child: ClipRRect(
                           borderRadius: BorderRadius.circular(90),
                           child: Image.file(
                             _image!,
                             fit: BoxFit.cover,
                           ),
                         ),
-                    )
+                      )
                     : IconButton(
                         icon: const Icon(
                           Icons.image,

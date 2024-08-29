@@ -306,7 +306,7 @@ void tJscore3_5(int num) {
 }
 
 List<int> scoreKborad3_5 = [
-  0,
+  38,
   39,
   41,
   42,
@@ -369,14 +369,12 @@ List<int> scoreLborad3_5 = [
   84,
   86,
   88,
+  90,
+  90
 ];
 
 void tLscore3_5(int num) {
-  if (numL >= 26) {
-    scoreL = 90;
-  } else {
-    scoreL = scoreLborad3_5[num];
-  }
+  scoreL = scoreLborad3_5[num];
 }
 
 List<int> scoreMborad3_5 = [

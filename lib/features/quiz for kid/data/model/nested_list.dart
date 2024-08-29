@@ -27,23 +27,6 @@ int scoreM = 0;
 int numN = 0;
 int scoreN = 0;
 
-List<int> allScore = [
-  scoreA,
-  scoreB,
-  scoreC,
-  scoreD,
-  scoreE,
-  scoreF,
-  scoreG,
-  scoreH,
-  scoreI,
-  scoreJ,
-  scoreK,
-  scoreL,
-  scoreM,
-  scoreN,
-];
-
 List<List<int>> nestedList = [
   listA,
   listB,

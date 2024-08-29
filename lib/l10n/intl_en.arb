@@ -84,7 +84,6 @@
     "next": "Next",
     "quiz_for_kid": "Quiz for Kid",
     "quiz_for_adult": "Quiz for Adult",
-    
     "opps":"Opps",
     "back_btn_massge":"You can`t get back anymore",
     "next_btn_massge":"You must select an answer",
@@ -146,12 +145,10 @@
     "high":"High",
     "next_ver_title":"Sorry",
     "next_ver_subtitle":"This feature would be added next version",
-
     "user_not_found": "User Not Found",
     "invalid_email": "Invalid Email",
     "network_request_failed": "Network Request Failed",
     "wrong_password": "Wrong Password",
     "something_went_wrong": "Something went wrong",
     "login_failed": "Login Failed"
-
 }

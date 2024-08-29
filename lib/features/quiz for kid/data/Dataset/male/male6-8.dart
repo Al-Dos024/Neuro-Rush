@@ -352,8 +352,8 @@ List<int> scoreKborad6_8 = [
   89,
   90,
 ];
-void tKscore6_8(int numL) {
-  scoreL = scoreKborad6_8[numL];
+void tKscore6_8(int numK) {
+  scoreK = scoreKborad6_8[numK];
 }
 
 List<int> scoreLborad6_8 = [

@@ -29,7 +29,6 @@ class Result extends StatelessWidget {
       S.of(context).Hyperactivity_DMS_5,
       S.of(context).Mixed_DMS_5,
     ];
-
     List subtitleClass = [
       S.of(context).Opposition_sub,
       S.of(context).Cognitive_Problems_sub,
@@ -46,11 +45,28 @@ class Result extends StatelessWidget {
       S.of(context).Hyperactivity_DMS_5_sub,
       S.of(context).Mixed_DMS_5_sub,
     ];
+    List<int> allScore = [
+      scoreA,
+      scoreB,
+      scoreC,
+      scoreD,
+      scoreE,
+      scoreF,
+      scoreG,
+      scoreH,
+      scoreI,
+      scoreJ,
+      scoreK,
+      scoreL,
+      scoreM,
+      scoreN,
+    ];
 
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
             onPressed: () {
+              resetnumandScore();
               Navigator.pushReplacement(context,
                   MaterialPageRoute(builder: (context) => const MainView()));
             },
@@ -67,11 +83,6 @@ class Result extends StatelessWidget {
           S.of(context).Result_of_Test,
           style: CustomTextStyle.kodch20WB,
         ),
-        // actions: const [
-        //   Padding(
-        //       padding: EdgeInsets.only(right: 7.0), child: ResultIconInfo()),
-
-        // ],
         actions: [
           IconButton(
               onPressed: () {
