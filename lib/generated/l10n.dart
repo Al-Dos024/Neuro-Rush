@@ -1579,6 +1579,96 @@ class S {
       args: [],
     );
   }
+
+  /// `Our Mission`
+  String get Our_Mission {
+    return Intl.message(
+      'Our Mission',
+      name: 'Our_Mission',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Our mission is to provide a reliable and user-friendly platform that helps diagnose and manage ADHD for both children and adults. We aim to support doctors, patients, and their families by offering tools that simplify the assessment process and track progress over time.`
+  String get Our_Mission_sub {
+    return Intl.message(
+      'Our mission is to provide a reliable and user-friendly platform that helps diagnose and manage ADHD for both children and adults. We aim to support doctors, patients, and their families by offering tools that simplify the assessment process and track progress over time.',
+      name: 'Our_Mission_sub',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What We Offer`
+  String get What_We_Offer {
+    return Intl.message(
+      'What We Offer',
+      name: 'What_We_Offer',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Our application offers three main features: detailed information about ADHD, an assessment test for children, and an assessment test for adults. Additionally, users can access past results, allowing them to monitor changes and improvements over time.`
+  String get What_We_Offer_sub {
+    return Intl.message(
+      'Our application offers three main features: detailed information about ADHD, an assessment test for children, and an assessment test for adults. Additionally, users can access past results, allowing them to monitor changes and improvements over time.',
+      name: 'What_We_Offer_sub',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Why We Developed This App`
+  String get Why_We_Developed_This_App {
+    return Intl.message(
+      'Why We Developed This App',
+      name: 'Why_We_Developed_This_App',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We developed this app to address the growing need for accessible, accurate, and convenient tools to diagnose ADHD. Traditional methods can be time-consuming and stressful, so we designed this app to make the process easier and more approachable for everyone involved.`
+  String get Why_We_Developed_This_App_sub {
+    return Intl.message(
+      'We developed this app to address the growing need for accessible, accurate, and convenient tools to diagnose ADHD. Traditional methods can be time-consuming and stressful, so we designed this app to make the process easier and more approachable for everyone involved.',
+      name: 'Why_We_Developed_This_App_sub',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Future Vision`
+  String get Future_Vision {
+    return Intl.message(
+      'Future Vision',
+      name: 'Future_Vision',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Looking ahead, we plan to expand our offerings by adding more features, such as personalized treatment plans and community support resources, to better serve our users and contribute to ADHD awareness and management.`
+  String get Future_Vision_sub {
+    return Intl.message(
+      'Looking ahead, we plan to expand our offerings by adding more features, such as personalized treatment plans and community support resources, to better serve our users and contribute to ADHD awareness and management.',
+      name: 'Future_Vision_sub',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ready to find out if you have ADHD? Let's get you signed in to start the assessment.`
+  String get let_start_sub {
+    return Intl.message(
+      'Ready to find out if you have ADHD? Let`s get you signed in to start the assessment.',
+      name: 'let_start_sub',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

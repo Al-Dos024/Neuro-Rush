@@ -71,6 +71,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Examples during adulthood: "),
         "Forgot_Password":
             MessageLookupByLibrary.simpleMessage("Forgot Password?"),
+        "Future_Vision": MessageLookupByLibrary.simpleMessage("Future Vision"),
+        "Future_Vision_sub": MessageLookupByLibrary.simpleMessage(
+            "Looking ahead, we plan to expand our offerings by adding more features, such as personalized treatment plans and community support resources, to better serve our users and contribute to ADHD awareness and management."),
         "Gender_Age": MessageLookupByLibrary.simpleMessage("Gender/Age:"),
         "General_indicator":
             MessageLookupByLibrary.simpleMessage("General indicator"),
@@ -106,6 +109,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "Opposition": MessageLookupByLibrary.simpleMessage("Opposition"),
         "Opposition_sub": MessageLookupByLibrary.simpleMessage(
             "It involves breaking rules, problems with those around him."),
+        "Our_Mission": MessageLookupByLibrary.simpleMessage("Our Mission"),
+        "Our_Mission_sub": MessageLookupByLibrary.simpleMessage(
+            "Our mission is to provide a reliable and user-friendly platform that helps diagnose and manage ADHD for both children and adults. We aim to support doctors, patients, and their families by offering tools that simplify the assessment process and track progress over time."),
         "Passion": MessageLookupByLibrary.simpleMessage("Passion"),
         "Passion_sub": MessageLookupByLibrary.simpleMessage(
             "intense enthusiasm or strong emotion for something."),
@@ -143,6 +149,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Attention deficit hyperactivity disorder (ADHD) is characterized by inattention, hyperactivity, and impulsivity. The symptoms are challenging to define. They must be observed for at least six months in two different settings to diagnose ADHD.  When the symptoms are categorized in children, three subtypes emerge: predominantly inattention, predominantly hyperactivity-impulsivity, and combined inattention, hyperactivity, and impulsivity. Most people exhibit some of these behaviors, but not to the point where they significantly interfere with their work, relationships, or studies. Symptoms may persist into adulthood, but diagnosing ADHD in adults remains a clinical diagnosis. Symptoms may differ from childhood to adolescence due to adaptations and avoidance mechanisms acquired during socialization."),
         "Symptoms_title": MessageLookupByLibrary.simpleMessage("Symptoms"),
         "Test_Time": MessageLookupByLibrary.simpleMessage("Test Time:"),
+        "What_We_Offer": MessageLookupByLibrary.simpleMessage("What We Offer"),
+        "What_We_Offer_sub": MessageLookupByLibrary.simpleMessage(
+            "Our application offers three main features: detailed information about ADHD, an assessment test for children, and an assessment test for adults. Additionally, users can access past results, allowing them to monitor changes and improvements over time."),
         "What_is": MessageLookupByLibrary.simpleMessage("What is"),
         "What_is_adhd_title":
             MessageLookupByLibrary.simpleMessage("What is ADHD?"),
@@ -150,6 +159,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("What does the app do?"),
         "Whatappdo_desc": MessageLookupByLibrary.simpleMessage(
             "Third, behavioral therapy tools: The app provides access to evidence-based exercises and techniques to help users manage symptoms, develop life skills, and stimulate and promote positive behaviors"),
+        "Why_We_Developed_This_App":
+            MessageLookupByLibrary.simpleMessage("Why We Developed This App"),
+        "Why_We_Developed_This_App_sub": MessageLookupByLibrary.simpleMessage(
+            "We developed this app to address the growing need for accessible, accurate, and convenient tools to diagnose ADHD. Traditional methods can be time-consuming and stressful, so we designed this app to make the process easier and more approachable for everyone involved."),
         "aa": MessageLookupByLibrary.simpleMessage("Above average"),
         "aboutapp": MessageLookupByLibrary.simpleMessage("About Application"),
         "aboutapp_desc": MessageLookupByLibrary.simpleMessage(
@@ -179,6 +192,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("have an account ?"),
         "high": MessageLookupByLibrary.simpleMessage("High"),
         "invalid_email": MessageLookupByLibrary.simpleMessage("Invalid Email"),
+        "let_start_sub": MessageLookupByLibrary.simpleMessage(
+            "Ready to find out if you have ADHD? Let`s get you signed in to start the assessment."),
         "letsstart": MessageLookupByLibrary.simpleMessage("Let`s get start?"),
         "login_failed": MessageLookupByLibrary.simpleMessage("Login Failed"),
         "login_now": MessageLookupByLibrary.simpleMessage(" Login now"),

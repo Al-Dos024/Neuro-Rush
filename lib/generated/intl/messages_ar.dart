@@ -72,6 +72,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("أمثلة واقعية على السؤال :"),
         "Forgot_Password":
             MessageLookupByLibrary.simpleMessage("هل نسيت كلمة المرور؟"),
+        "Future_Vision":
+            MessageLookupByLibrary.simpleMessage("الرؤية المستقبلية"),
+        "Future_Vision_sub": MessageLookupByLibrary.simpleMessage(
+            "وفي المستقبل، نخطط لتوسيع عروضنا من خلال إضافة المزيد من الميزات، مثل خطط العلاج المخصصة وموارد دعم المجتمع، لتقديم خدمة أفضل لمستخدمينا والمساهمة في التوعية باضطراب فرط الحركة ونقص الانتباه وإدارته."),
         "Gender_Age": MessageLookupByLibrary.simpleMessage("الجنس / العمر"),
         "General_indicator": MessageLookupByLibrary.simpleMessage("مؤشر عام"),
         "General_indicator_sub": MessageLookupByLibrary.simpleMessage(
@@ -106,6 +110,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "Opposition": MessageLookupByLibrary.simpleMessage("المعارضة"),
         "Opposition_sub": MessageLookupByLibrary.simpleMessage(
             "يتضمن كسر القواعد والمشاكل مع من حوله."),
+        "Our_Mission": MessageLookupByLibrary.simpleMessage("مهمتنا"),
+        "Our_Mission_sub": MessageLookupByLibrary.simpleMessage(
+            "مهمتنا هي توفير منصة موثوقة وسهلة الاستخدام تساعد في تشخيص وإدارة اضطراب فرط الحركة ونقص الانتباه لكل من الأطفال والبالغين. نهدف إلى دعم الأطباء والمرضى وأسرهم من خلال تقديم أدوات تبسط عملية التقييم وتتبع التقدم بمرور الوقت."),
         "Passion": MessageLookupByLibrary.simpleMessage("العواطف"),
         "Passion_sub": MessageLookupByLibrary.simpleMessage(
             "حماسة شديدة أو عاطفة قوية تجاه شيء ما."),
@@ -142,12 +149,19 @@ class MessageLookup extends MessageLookupByLibrary {
             " يتسم اضطراب نقص الانتباه وفرط النشاط بعدم الانتباه وفرط النشاط والاندفاعية. ويصعب تحديد الأعراض. ​​إذ يجب ملاحظتها لمدة ستة أشهر على الأقل في بيئتين مختلفتين لتشخيص اضطراب نقص الانتباه وفرط النشاط. وعند تصنيف الأعراض لدى الأطفال، تظهر ثلاثة أنواع فرعية: عدم الانتباه بشكل أساسي، وفرط النشاط والاندفاعية بشكل أساسي، وعدم الانتباه وفرط النشاط والاندفاعية بشكل مشترك. ويُظهِر معظم الأشخاص بعض هذه السلوكيات، ولكن ليس إلى الحد الذي تتداخل فيه بشكل كبير مع عملهم أو علاقاتهم أو دراستهم. وقد تستمر الأعراض حتى مرحلة البلوغ، ولكن يظل تشخيص اضطراب نقص الانتباه وفرط النشاط لدى البالغين تشخيصًا سريريًا. وقد تختلف الأعراض من الطفولة إلى المراهقة بسبب التكيفات وآليات التجنب المكتسبة أثناء التنشئة الاجتماعية."),
         "Symptoms_title": MessageLookupByLibrary.simpleMessage("الاعراض"),
         "Test_Time": MessageLookupByLibrary.simpleMessage("الوقت :"),
+        "What_We_Offer": MessageLookupByLibrary.simpleMessage("ما نقدمه"),
+        "What_We_Offer_sub": MessageLookupByLibrary.simpleMessage(
+            "يقدم تطبيقنا ثلاث ميزات رئيسية: معلومات مفصلة عن اضطراب نقص الانتباه وفرط النشاط، واختبار تقييم للأطفال، واختبار تقييم للبالغين. بالإضافة إلى ذلك، يمكن للمستخدمين الوصول إلى النتائج السابقة، مما يسمح لهم بمراقبة التغييرات والتحسينات بمرور الوقت."),
         "What_is": MessageLookupByLibrary.simpleMessage("ما هو"),
         "What_is_adhd_title":
             MessageLookupByLibrary.simpleMessage("ما هو ADHD؟"),
         "Whatappdo": MessageLookupByLibrary.simpleMessage("ماذا يفعل التطبيق؟"),
         "Whatappdo_desc": MessageLookupByLibrary.simpleMessage(
             "ثالثًا، أدوات العلاج السلوكي: يوفر التطبيق إمكانية الوصول إلى تمارين وتقنيات قائمة على الأدلة لمساعدة المستخدمين على إدارة الأعراض وتطوير المهارات الحياتية وتحفيز السلوكيات الإيجابية وتعزيزها."),
+        "Why_We_Developed_This_App": MessageLookupByLibrary.simpleMessage(
+            "لماذا قمنا بتطوير هذا التطبيق"),
+        "Why_We_Developed_This_App_sub": MessageLookupByLibrary.simpleMessage(
+            "لقد قمنا بتطوير هذا التطبيق لتلبية الحاجة المتزايدة إلى أدوات سهلة الوصول ودقيقة ومريحة لتشخيص اضطراب فرط الحركة ونقص الانتباه. قد تكون الطرق التقليدية مستهلكة للوقت ومجهدة، لذا فقد قمنا بتصميم هذا التطبيق لجعل العملية أسهل وأكثر قابلية للتطبيق بالنسبة للجميع."),
         "aa": MessageLookupByLibrary.simpleMessage("فوق المتوسط"),
         "aboutapp": MessageLookupByLibrary.simpleMessage("حول التطبيق"),
         "aboutapp_desc": MessageLookupByLibrary.simpleMessage(
@@ -179,6 +193,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "high": MessageLookupByLibrary.simpleMessage("عالي"),
         "invalid_email":
             MessageLookupByLibrary.simpleMessage("بريد إلكتروني غير صالح"),
+        "let_start_sub": MessageLookupByLibrary.simpleMessage(
+            "هل أنت مستعد لاختبار نفسك ومعرفة ما إذا كنت تعاني من اضطراب فرط الحركة ونقص الانتباه؟ دعنا نسجل دخولك"),
         "letsstart": MessageLookupByLibrary.simpleMessage("هيا بنا لنبدأ"),
         "login_failed":
             MessageLookupByLibrary.simpleMessage("فشل تسجيل الدخول"),
