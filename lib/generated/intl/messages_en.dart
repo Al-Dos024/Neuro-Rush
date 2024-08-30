@@ -69,6 +69,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Environmental factors"),
         "Examples_quiz":
             MessageLookupByLibrary.simpleMessage("Examples during adulthood: "),
+        "Failed_to_upload_image":
+            MessageLookupByLibrary.simpleMessage("Failed to upload image"),
         "Forgot_Password":
             MessageLookupByLibrary.simpleMessage("Forgot Password?"),
         "Future_Vision": MessageLookupByLibrary.simpleMessage("Future Vision"),
@@ -90,6 +92,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Diagnostic criteria for hyperactivity-impulsivity in the fifth edition."),
         "Hyperactivity_sub": MessageLookupByLibrary.simpleMessage(
             "Inability to sit still for a period of time, feeling of discomfort and agitation"),
+        "Image_uploaded_successfully":
+            MessageLookupByLibrary.simpleMessage("Image uploaded successfully"),
+        "Info": MessageLookupByLibrary.simpleMessage("Info"),
         "Introduction_subtitle": MessageLookupByLibrary.simpleMessage(
             "ADHD is a common neurodevelopmental disorder that starts in childhood and affects around 5% of the global population. Children with ADHD may struggle to follow instructions, control their actions, and integrate into school environments, leading to academic performance issues. Managing children with ADHD can be challenging for parents and teachers. It`s important to provide children with love, support, and understanding, and to work with healthcare professionals and teachers to learn how to handle the child best."),
         "Introduction_title":
@@ -106,6 +111,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Overall diagnostic criteria for ADHD"),
         "More_Details": MessageLookupByLibrary.simpleMessage("More Details"),
         "Name": MessageLookupByLibrary.simpleMessage("Name"),
+        "No_image_selected":
+            MessageLookupByLibrary.simpleMessage("No image selected"),
         "Opposition": MessageLookupByLibrary.simpleMessage("Opposition"),
         "Opposition_sub": MessageLookupByLibrary.simpleMessage(
             "It involves breaking rules, problems with those around him."),
@@ -129,6 +136,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Previous Results Kids"),
         "Previous_Results_main":
             MessageLookupByLibrary.simpleMessage("Previous Results Main"),
+        "Profile_Photo": MessageLookupByLibrary.simpleMessage("Profile Photo"),
+        "Profile_Photo_sub": MessageLookupByLibrary.simpleMessage(
+            "Please make sure that the photo you upload will not be modified later"),
         "Psychosomatic_diseases":
             MessageLookupByLibrary.simpleMessage("Psychosomatic diseases"),
         "Psychosomatic_diseases_sub": MessageLookupByLibrary.simpleMessage(
@@ -145,10 +155,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Social problems"),
         "Social_problems_sub": MessageLookupByLibrary.simpleMessage(
             "Low self-confidence, low self-esteem, lack of friends"),
+        "Success": MessageLookupByLibrary.simpleMessage("Success"),
         "Symptoms_subtitle": MessageLookupByLibrary.simpleMessage(
             "Attention deficit hyperactivity disorder (ADHD) is characterized by inattention, hyperactivity, and impulsivity. The symptoms are challenging to define. They must be observed for at least six months in two different settings to diagnose ADHD.  When the symptoms are categorized in children, three subtypes emerge: predominantly inattention, predominantly hyperactivity-impulsivity, and combined inattention, hyperactivity, and impulsivity. Most people exhibit some of these behaviors, but not to the point where they significantly interfere with their work, relationships, or studies. Symptoms may persist into adulthood, but diagnosing ADHD in adults remains a clinical diagnosis. Symptoms may differ from childhood to adolescence due to adaptations and avoidance mechanisms acquired during socialization."),
         "Symptoms_title": MessageLookupByLibrary.simpleMessage("Symptoms"),
         "Test_Time": MessageLookupByLibrary.simpleMessage("Test Time:"),
+        "Upload_Picture":
+            MessageLookupByLibrary.simpleMessage("Upload Picture"),
+        "Uploading_load": MessageLookupByLibrary.simpleMessage("Uploading..."),
         "What_We_Offer": MessageLookupByLibrary.simpleMessage("What We Offer"),
         "What_We_Offer_sub": MessageLookupByLibrary.simpleMessage(
             "Our application offers three main features: detailed information about ADHD, an assessment test for children, and an assessment test for adults. Additionally, users can access past results, allowing them to monitor changes and improvements over time."),
@@ -216,6 +230,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "no_Email": MessageLookupByLibrary.simpleMessage("Please enter Email"),
         "no_Password":
             MessageLookupByLibrary.simpleMessage("Please enter Password"),
+        "no_image":
+            MessageLookupByLibrary.simpleMessage("No image selected to upload"),
         "no_name": MessageLookupByLibrary.simpleMessage("Please enter name"),
         "ok": MessageLookupByLibrary.simpleMessage("Ok"),
         "opps": MessageLookupByLibrary.simpleMessage("Opps"),

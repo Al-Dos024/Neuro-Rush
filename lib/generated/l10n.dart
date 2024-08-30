@@ -1689,6 +1689,106 @@ class S {
       args: [],
     );
   }
+
+  /// `No image selected`
+  String get No_image_selected {
+    return Intl.message(
+      'No image selected',
+      name: 'No_image_selected',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Uploading...`
+  String get Uploading_load {
+    return Intl.message(
+      'Uploading...',
+      name: 'Uploading_load',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Info`
+  String get Info {
+    return Intl.message(
+      'Info',
+      name: 'Info',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Image uploaded successfully`
+  String get Image_uploaded_successfully {
+    return Intl.message(
+      'Image uploaded successfully',
+      name: 'Image_uploaded_successfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Success`
+  String get Success {
+    return Intl.message(
+      'Success',
+      name: 'Success',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Failed to upload image`
+  String get Failed_to_upload_image {
+    return Intl.message(
+      'Failed to upload image',
+      name: 'Failed_to_upload_image',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Profile Photo`
+  String get Profile_Photo {
+    return Intl.message(
+      'Profile Photo',
+      name: 'Profile_Photo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please make sure that the photo you upload will not be modified later`
+  String get Profile_Photo_sub {
+    return Intl.message(
+      'Please make sure that the photo you upload will not be modified later',
+      name: 'Profile_Photo_sub',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Upload Picture`
+  String get Upload_Picture {
+    return Intl.message(
+      'Upload Picture',
+      name: 'Upload_Picture',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No image selected to upload`
+  String get no_image {
+    return Intl.message(
+      'No image selected to upload',
+      name: 'no_image',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

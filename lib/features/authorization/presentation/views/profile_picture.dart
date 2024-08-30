@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:adhd/core/utils/show_snackbar.dart';
 import 'package:adhd/features/authorization/presentation/views/widgets/my_elevated_button%20copy.dart';
 import 'package:adhd/features/main/presentation/views/main_view.dart';
+import 'package:adhd/generated/l10n.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -25,7 +26,8 @@ class ProfilePicture extends StatelessWidget {
     if (pickedImage != null) {
       _selectedImageNotifier.value = File(pickedImage.path);
     } else {
-      showSnackBar(context, message: "No image selected", title: "Error");
+      showSnackBar(context,
+          message: "No image selected", title: S.of(context).snackbar_weak);
     }
   }
 
@@ -51,7 +53,8 @@ class ProfilePicture extends StatelessWidget {
       );
     } catch (e) {
       showSnackBar(context,
-          message: "Failed to upload image: $e", title: "Error");
+          message: "Failed to upload image: $e",
+          title: S.of(context).snackbar_weak);
     }
   }
 
@@ -135,7 +138,8 @@ class ProfilePicture extends StatelessWidget {
                   _uploadImage(context, image);
                 } else {
                   showSnackBar(context,
-                      message: "No image selected to upload", title: "Error");
+                      message: "No image selected to upload",
+                      title: S.of(context).snackbar_weak);
                 }
               },
               color: kBluecolor_1,

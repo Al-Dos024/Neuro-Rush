@@ -162,5 +162,15 @@
     "Future_Vision_sub": "Looking ahead, we plan to expand our offerings by adding more features, such as personalized treatment plans and community support resources, to better serve our users and contribute to ADHD awareness and management.",
     "let_start_sub":"Ready to find out if you have ADHD? Let`s get you signed in to start the assessment.",
     "Who_We_Are":"Who We Are",
-    "Who_We_Are_sub":"We are two dedicated team members from the Faculty of Computer Science at Zagazig University, specializing in Flutter development and UI/UX design. With a shared passion for technology and mental health, we have come together to create an application that simplifies the ADHD assessment process. Our combined skills ensure a seamless and user-friendly experience for all users, making it easier for patients and their families to access the information and tools they need."
+    "Who_We_Are_sub":"We are two dedicated team members from the Faculty of Computer Science at Zagazig University, specializing in Flutter development and UI/UX design. With a shared passion for technology and mental health, we have come together to create an application that simplifies the ADHD assessment process. Our combined skills ensure a seamless and user-friendly experience for all users, making it easier for patients and their families to access the information and tools they need.",
+    "No_image_selected":"No image selected",
+    "Uploading_load":"Uploading...",
+    "Info":"Info",
+    "Image_uploaded_successfully":"Image uploaded successfully",
+    "Success":"Success",
+    "Failed_to_upload_image":"Failed to upload image",
+    "Profile_Photo":"Profile Photo",
+    "Profile_Photo_sub":"Please make sure that the photo you upload will not be modified later",
+    "Upload_Picture":"Upload Picture",
+    "no_image":"No image selected to upload"
 }

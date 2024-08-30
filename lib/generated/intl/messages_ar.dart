@@ -70,6 +70,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("العوامل البيئية"),
         "Examples_quiz":
             MessageLookupByLibrary.simpleMessage("أمثلة واقعية على السؤال :"),
+        "Failed_to_upload_image":
+            MessageLookupByLibrary.simpleMessage("فشل في رفع الصورة"),
         "Forgot_Password":
             MessageLookupByLibrary.simpleMessage("هل نسيت كلمة المرور؟"),
         "Future_Vision":
@@ -91,6 +93,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "معايير تشخيص فرط النشاط والاندفاع في الطبعة الخامسة"),
         "Hyperactivity_sub": MessageLookupByLibrary.simpleMessage(
             "عدم القدرة على الجلوس ساكنًا لفترة من الوقت، والشعور بعدم الراحة والانفعال"),
+        "Image_uploaded_successfully":
+            MessageLookupByLibrary.simpleMessage("تم رفع الصورة بنجاح"),
+        "Info": MessageLookupByLibrary.simpleMessage("تحديث المعلومات"),
         "Introduction_subtitle": MessageLookupByLibrary.simpleMessage(
             " اضطراب نقص الانتباه وفرط الحركة هو اضطراب شائع في النمو العصبي يبدأ في مرحلة الطفولة ويؤثر على حوالي 5% من سكان العالم. قد يواجه الأطفال المصابون باضطراب نقص الانتباه وفرط الحركة صعوبة في اتباع التعليمات والتحكم في أفعالهم والاندماج في البيئات المدرسية، مما يؤدي إلى مشاكل في الأداء الأكاديمي. قد يكون التعامل مع الأطفال المصابين باضطراب نقص الانتباه وفرط الحركة أمرًا صعبًا بالنسبة للآباء والمعلمين. من المهم توفير الحب والدعم والتفهم للأطفال، والعمل مع المتخصصين في الرعاية الصحية والمعلمين لمعرفة كيفية التعامل مع الطفل بشكل أفضل."),
         "Introduction_title": MessageLookupByLibrary.simpleMessage("مقدمة"),
@@ -107,6 +112,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "More_Details":
             MessageLookupByLibrary.simpleMessage("المزيد من المعلومات"),
         "Name": MessageLookupByLibrary.simpleMessage("الاسم"),
+        "No_image_selected":
+            MessageLookupByLibrary.simpleMessage("لا يوجد صورة"),
         "Opposition": MessageLookupByLibrary.simpleMessage("المعارضة"),
         "Opposition_sub": MessageLookupByLibrary.simpleMessage(
             "يتضمن كسر القواعد والمشاكل مع من حوله."),
@@ -130,6 +137,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("النتائج السابقه للطفل"),
         "Previous_Results_main":
             MessageLookupByLibrary.simpleMessage("النتائج السابقة الرئيسية"),
+        "Profile_Photo": MessageLookupByLibrary.simpleMessage("الصورة الشخصية"),
+        "Profile_Photo_sub": MessageLookupByLibrary.simpleMessage(
+            "يرجى التأكد من أن الصورة التي تقوم بتحميلها لن يتم تعديلها لاحقًا"),
         "Psychosomatic_diseases":
             MessageLookupByLibrary.simpleMessage("الأمراض النفسية الجسدية"),
         "Psychosomatic_diseases_sub": MessageLookupByLibrary.simpleMessage(
@@ -145,10 +155,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("المشاكل الاجتماعية"),
         "Social_problems_sub": MessageLookupByLibrary.simpleMessage(
             "انخفاض الثقة بالنفس، انخفاض تقدير الذات، قلة الأصدقاء"),
+        "Success": MessageLookupByLibrary.simpleMessage("نجاح"),
         "Symptoms_subtitle": MessageLookupByLibrary.simpleMessage(
             " يتسم اضطراب نقص الانتباه وفرط النشاط بعدم الانتباه وفرط النشاط والاندفاعية. ويصعب تحديد الأعراض. ​​إذ يجب ملاحظتها لمدة ستة أشهر على الأقل في بيئتين مختلفتين لتشخيص اضطراب نقص الانتباه وفرط النشاط. وعند تصنيف الأعراض لدى الأطفال، تظهر ثلاثة أنواع فرعية: عدم الانتباه بشكل أساسي، وفرط النشاط والاندفاعية بشكل أساسي، وعدم الانتباه وفرط النشاط والاندفاعية بشكل مشترك. ويُظهِر معظم الأشخاص بعض هذه السلوكيات، ولكن ليس إلى الحد الذي تتداخل فيه بشكل كبير مع عملهم أو علاقاتهم أو دراستهم. وقد تستمر الأعراض حتى مرحلة البلوغ، ولكن يظل تشخيص اضطراب نقص الانتباه وفرط النشاط لدى البالغين تشخيصًا سريريًا. وقد تختلف الأعراض من الطفولة إلى المراهقة بسبب التكيفات وآليات التجنب المكتسبة أثناء التنشئة الاجتماعية."),
         "Symptoms_title": MessageLookupByLibrary.simpleMessage("الاعراض"),
         "Test_Time": MessageLookupByLibrary.simpleMessage("الوقت :"),
+        "Upload_Picture": MessageLookupByLibrary.simpleMessage("ارفع الصورة"),
+        "Uploading_load":
+            MessageLookupByLibrary.simpleMessage("يتم رفع الصورة ..."),
         "What_We_Offer": MessageLookupByLibrary.simpleMessage("ما نقدمه"),
         "What_We_Offer_sub": MessageLookupByLibrary.simpleMessage(
             "يقدم تطبيقنا ثلاث ميزات رئيسية: معلومات مفصلة عن اضطراب نقص الانتباه وفرط النشاط، واختبار تقييم للأطفال، واختبار تقييم للبالغين. بالإضافة إلى ذلك، يمكن للمستخدمين الوصول إلى النتائج السابقة، مما يسمح لهم بمراقبة التغييرات والتحسينات بمرور الوقت."),
@@ -219,6 +233,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "فضلا ادخل بريدك الالكتروني هنا"),
         "no_Password":
             MessageLookupByLibrary.simpleMessage("فصلا ادخل كلمه المرور هنا"),
+        "no_image": MessageLookupByLibrary.simpleMessage("لا يوجد صورة للرفع"),
         "no_name": MessageLookupByLibrary.simpleMessage("فصلا ادخل اسمك هنا"),
         "ok": MessageLookupByLibrary.simpleMessage("حسنا"),
         "opps": MessageLookupByLibrary.simpleMessage("معذرة"),
