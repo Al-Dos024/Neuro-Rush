@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
 
   // ValueNotifier for Locale
   static final ValueNotifier<Locale> localeNotifier =
-      ValueNotifier(const Locale('ar'));
+      ValueNotifier(const Locale('en'));
 
   @override
   Widget build(BuildContext context) {

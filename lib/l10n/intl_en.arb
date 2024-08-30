@@ -151,5 +151,14 @@
     "network_request_failed": "Network Request Failed",
     "wrong_password": "Wrong Password",
     "something_went_wrong": "Something went wrong",
-    "login_failed": "Login Failed"
+    "login_failed": "Login Failed",
+    "Our_Mission": "Our Mission",
+    "Our_Mission_sub": "Our mission is to provide a reliable and user-friendly platform that helps diagnose and manage ADHD for both children and adults. We aim to support doctors, patients, and their families by offering tools that simplify the assessment process and track progress over time.",
+    "What_We_Offer": "What We Offer",
+    "What_We_Offer_sub": "Our application offers three main features: detailed information about ADHD, an assessment test for children, and an assessment test for adults. Additionally, users can access past results, allowing them to monitor changes and improvements over time.",
+    "Why_We_Developed_This_App": "Why We Developed This App",
+    "Why_We_Developed_This_App_sub": "We developed this app to address the growing need for accessible, accurate, and convenient tools to diagnose ADHD. Traditional methods can be time-consuming and stressful, so we designed this app to make the process easier and more approachable for everyone involved.",
+    "Future_Vision": "Future Vision",
+    "Future_Vision_sub": "Looking ahead, we plan to expand our offerings by adding more features, such as personalized treatment plans and community support resources, to better serve our users and contribute to ADHD awareness and management.",
+    "let_start_sub":"Ready to find out if you have ADHD? Let`s get you signed in to start the assessment."
 }

@@ -40,7 +40,7 @@ class _OnBoradingState extends State<OnBoradingView> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) =>  SigninView(),
+                    builder: (context) => SigninView(),
                   ),
                 );
               },
@@ -74,13 +74,13 @@ class _OnBoradingState extends State<OnBoradingView> {
               color: isDarkMode ? kBlackcolor_1 : kWhitecolor,
               urlImage: 'assets/images/Online Doctor.png',
               title: S.of(context).Whatappdo,
-              subtitle: S.of(context).Whatappdo_desc,
+              subtitle: S.of(context).What_We_Offer_sub,
             ),
             buildPage(
               color: isDarkMode ? kBlackcolor_1 : kWhitecolor,
               urlImage: 'assets/images/Doctor.png',
               title: S.of(context).letsstart,
-              subtitle: " ",
+              subtitle: S.of(context).let_start_sub,
             ),
           ],
         ),
@@ -120,7 +120,7 @@ class _OnBoradingState extends State<OnBoradingView> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) =>  SigninView(),
+                          builder: (context) => SigninView(),
                         ),
                       );
                     },
