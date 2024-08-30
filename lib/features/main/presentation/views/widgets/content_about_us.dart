@@ -25,6 +25,15 @@ class ContentAboutUs extends StatelessWidget {
               height: 20,
             ),
             const ImageSectionAboutUs(),
+            const SizedBox(
+              height: 10,
+            ),
+            CustomTitleSubTitle(
+                title: S.of(context).Who_We_Are,
+                subTitle: S.of(context).Who_We_Are_sub),
+            const SizedBox(
+              height: 20,
+            ),
             CustomTitleSubTitle(
                 title: S.of(context).What_We_Offer,
                 subTitle: S.of(context).What_We_Offer_sub),

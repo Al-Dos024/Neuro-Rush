@@ -1,69 +1,67 @@
 import 'dart:io';
-
 import 'package:adhd/core/utils/show_snackbar.dart';
 import 'package:adhd/features/authorization/presentation/views/widgets/my_elevated_button%20copy.dart';
 import 'package:adhd/features/main/presentation/views/main_view.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
-
 import '../../../../constants.dart';
 
-class ProfilePicure extends StatefulWidget {
-  const ProfilePicure({super.key});
+class ProfilePicture extends StatelessWidget {
+  ProfilePicture({super.key});
 
-  @override
-  State<ProfilePicure> createState() => _ProfilePicureState();
-}
+  final ValueNotifier<File?> _selectedImageNotifier =
+      ValueNotifier<File?>(null);
 
-class _ProfilePicureState extends State<ProfilePicure> {
-  File? _image;
-  String? kdownloadURL;
-  final ImagePicker _picker = ImagePicker();
-  final FirebaseStorage _storage = FirebaseStorage.instance;
-  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
-  late User? user;
-
-  Future<void> _pickImage() async {
+  Future<void> _pickImage(BuildContext context) async {
+    final ImagePicker picker = ImagePicker();
     final XFile? pickedImage =
-        await _picker.pickImage(source: ImageSource.gallery);
+        await picker.pickImage(source: ImageSource.gallery);
 
     if (pickedImage != null) {
-      setState(() {
-        _image = File(pickedImage.path);
-      });
+      _selectedImageNotifier.value = File(pickedImage.path);
+    } else {
+      showSnackBar(context, message: "No image selected", title: "Error");
     }
   }
 
-  Future<void> _uploadImage() async {
-    if (_image == null) return;
+  Future<void> _uploadImage(BuildContext context, File image) async {
+    showSnackBar(context, message: "Uploading...", title: "Info");
 
     try {
       String fileName = FirebaseAuth.instance.currentUser!.uid;
-      Reference ref = _storage.ref().child(fileName);
-      UploadTask uploadTask = ref.putFile(_image!);
+      Reference ref = FirebaseStorage.instance.ref().child(fileName);
+      UploadTask uploadTask = ref.putFile(image);
       TaskSnapshot taskSnapshot = await uploadTask;
       String downloadUrl = await taskSnapshot.ref.getDownloadURL();
-      await _firestore.collection('images').add({'url': downloadUrl});
+
+      await _saveImageUrlToDatabase(downloadUrl);
       showSnackBar(context,
-          message: "Image uploaded successfully", title: "yap!");
+          message: "Image uploaded successfully", title: "Success");
 
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) =>  MainView(urlImg:kdownloadURL,),
+          builder: (context) => MainView(urlImg: downloadUrl),
         ),
       );
-      setState(() {
-        kdownloadURL=downloadUrl;
-      });
     } catch (e) {
       showSnackBar(context,
-          message: "Failed to upload image: $e", title: "oops!");
+          message: "Failed to upload image: $e", title: "Error");
     }
+  }
+
+  Future<void> _saveImageUrlToDatabase(String url) async {
+    DatabaseReference ref = FirebaseDatabase.instance
+        .ref("users/${FirebaseAuth.instance.currentUser!.uid}")
+        .child("Personal Data")
+        .child("Profile Image");
+    await ref.set(url);
+    await FirebaseFirestore.instance.collection('images').add({'url': url});
   }
 
   @override
@@ -73,48 +71,43 @@ class _ProfilePicureState extends State<ProfilePicure> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              height: 150,
-              width: 150,
-              decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                    color: kBlackcolor.withOpacity(0.25),
-                    spreadRadius: 0,
-                    blurRadius: 8,
-                    offset: const Offset(0, 8),
-                  ),
-                ],
-                borderRadius: BorderRadius.circular(90),
-                color: kBluecolor_1,
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: _image != null
-                    ? GestureDetector(
-                        onTap: _pickImage,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(90),
-                          child: Image.file(
-                            _image!,
-                            fit: BoxFit.cover,
-                          ),
+            GestureDetector(
+              onTap: () => _pickImage(context),
+              child: ValueListenableBuilder<File?>(
+                valueListenable: _selectedImageNotifier,
+                builder: (context, image, child) {
+                  return Container(
+                    height: 150,
+                    width: 150,
+                    decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                          color: kBlackcolor.withOpacity(0.25),
+                          spreadRadius: 0,
+                          blurRadius: 8,
+                          offset: const Offset(0, 8),
                         ),
-                      )
-                    : IconButton(
-                        icon: const Icon(
-                          Icons.image,
-                        ),
-                        onPressed: _pickImage,
-                      ),
+                      ],
+                      borderRadius: BorderRadius.circular(90),
+                      color: kBluecolor_1,
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(90),
+                      child: image != null
+                          ? Image.file(
+                              image,
+                              fit: BoxFit.cover,
+                            )
+                          : const Icon(Icons.image),
+                    ),
+                  );
+                },
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(
-                vertical: 8,
-              ),
+              padding: const EdgeInsets.symmetric(vertical: 8),
               child: Text(
-                "profile photo",
+                "Profile Photo",
                 style: GoogleFonts.kodchasan(
                   color: kBluecolor_4,
                   fontSize: 24,
@@ -134,31 +127,38 @@ class _ProfilePicureState extends State<ProfilePicure> {
                 ),
               ),
             ),
-            const SizedBox(
-              height: 30,
-            ),
+            const SizedBox(height: 30),
             MyElevatedButton(
-              onPressed: _uploadImage,
+              onPressed: () {
+                final image = _selectedImageNotifier.value;
+                if (image != null) {
+                  _uploadImage(context, image);
+                } else {
+                  showSnackBar(context,
+                      message: "No image selected to upload", title: "Error");
+                }
+              },
               color: kBluecolor_1,
               borderRadius: BorderRadius.circular(25),
               width: 200,
               height: 48,
               child: Text(
-                'Upload picture',
+                'Upload Picture',
                 style: GoogleFonts.kodchasan(
-                    color: kWhitecolor,
-                    fontSize: 15,
-                    fontWeight: FontWeight.w500),
+                  color: kWhitecolor,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                ),
               ),
             ),
-          
-          
           ],
         ),
       ),
     );
   }
 }
+
+
 /**_downloadURL != null ? Container(
             color: Colors.amber,
             child: ClipRRect(

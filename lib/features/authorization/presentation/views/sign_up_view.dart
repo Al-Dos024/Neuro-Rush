@@ -42,7 +42,7 @@ class SignUpView extends StatelessWidget {
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) => const ProfilePicure(),
+              builder: (context) => ProfilePicture(),
             ),
           );
           isLoading = false;

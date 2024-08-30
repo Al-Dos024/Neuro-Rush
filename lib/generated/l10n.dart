@@ -1669,6 +1669,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Who We Are`
+  String get Who_We_Are {
+    return Intl.message(
+      'Who We Are',
+      name: 'Who_We_Are',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We are two dedicated team members from the Faculty of Computer Science at Zagazig University, specializing in Flutter development and UI/UX design. With a shared passion for technology and mental health, we have come together to create an application that simplifies the ADHD assessment process. Our combined skills ensure a seamless and user-friendly experience for all users, making it easier for patients and their families to access the information and tools they need.`
+  String get Who_We_Are_sub {
+    return Intl.message(
+      'We are two dedicated team members from the Faculty of Computer Science at Zagazig University, specializing in Flutter development and UI/UX design. With a shared passion for technology and mental health, we have come together to create an application that simplifies the ADHD assessment process. Our combined skills ensure a seamless and user-friendly experience for all users, making it easier for patients and their families to access the information and tools they need.',
+      name: 'Who_We_Are_sub',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

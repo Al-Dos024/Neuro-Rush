@@ -3,15 +3,14 @@ import 'package:adhd/features/main/presentation/views/widgets/custom_leading.dar
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({super.key, this.urlImg});
-  final String? urlImg;
+  const CustomAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 98,
       color: kBluecolor_1,
-      child: CustomLeading(urlImg: urlImg),
+      child: const CustomLeading(),
     );
   }
 }

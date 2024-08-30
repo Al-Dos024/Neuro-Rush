@@ -158,6 +158,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "Whatappdo": MessageLookupByLibrary.simpleMessage("ماذا يفعل التطبيق؟"),
         "Whatappdo_desc": MessageLookupByLibrary.simpleMessage(
             "ثالثًا، أدوات العلاج السلوكي: يوفر التطبيق إمكانية الوصول إلى تمارين وتقنيات قائمة على الأدلة لمساعدة المستخدمين على إدارة الأعراض وتطوير المهارات الحياتية وتحفيز السلوكيات الإيجابية وتعزيزها."),
+        "Who_We_Are": MessageLookupByLibrary.simpleMessage("من نحن"),
+        "Who_We_Are_sub": MessageLookupByLibrary.simpleMessage(
+            "نحن عضوان متفانون في فريق من كلية علوم الحاسب الآلي بجامعة الزقازيق، متخصصون في تطوير Flutter وتصميم واجهة المستخدم/تجربة المستخدم. وبفضل شغفنا المشترك بالتكنولوجيا والصحة العقلية، اجتمعنا معًا لإنشاء تطبيق يبسط عملية تقييم اضطراب فرط الحركة ونقص الانتباه. تضمن مهاراتنا المشتركة تجربة سلسة وسهلة الاستخدام لجميع المستخدمين، مما يسهل على المرضى وأسرهم الوصول إلى المعلومات والأدوات التي يحتاجون إليها."),
         "Why_We_Developed_This_App": MessageLookupByLibrary.simpleMessage(
             "لماذا قمنا بتطوير هذا التطبيق"),
         "Why_We_Developed_This_App_sub": MessageLookupByLibrary.simpleMessage(

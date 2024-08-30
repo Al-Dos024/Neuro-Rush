@@ -6,18 +6,18 @@ import 'widgets/card_view2.dart';
 import 'widgets/card_view3.dart';
 
 class MainView extends StatelessWidget {
-  const MainView({super.key , this.urlImg});
+  const MainView({super.key, this.urlImg});
   final String? urlImg;
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return const SafeArea(
       child: Scaffold(
         endDrawer: MainDrawer(),
-        body:SingleChildScrollView(
+        body: SingleChildScrollView(
           child: Column(
             children: [
-              CustomAppBar(urlImg: urlImg),
+              CustomAppBar(),
               MainViewContent(),
             ],
           ),

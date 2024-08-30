@@ -159,6 +159,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("What does the app do?"),
         "Whatappdo_desc": MessageLookupByLibrary.simpleMessage(
             "Third, behavioral therapy tools: The app provides access to evidence-based exercises and techniques to help users manage symptoms, develop life skills, and stimulate and promote positive behaviors"),
+        "Who_We_Are": MessageLookupByLibrary.simpleMessage("Who We Are"),
+        "Who_We_Are_sub": MessageLookupByLibrary.simpleMessage(
+            "We are two dedicated team members from the Faculty of Computer Science at Zagazig University, specializing in Flutter development and UI/UX design. With a shared passion for technology and mental health, we have come together to create an application that simplifies the ADHD assessment process. Our combined skills ensure a seamless and user-friendly experience for all users, making it easier for patients and their families to access the information and tools they need."),
         "Why_We_Developed_This_App":
             MessageLookupByLibrary.simpleMessage("Why We Developed This App"),
         "Why_We_Developed_This_App_sub": MessageLookupByLibrary.simpleMessage(
