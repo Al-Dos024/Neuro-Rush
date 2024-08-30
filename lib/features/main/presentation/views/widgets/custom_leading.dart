@@ -6,7 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CustomLeading extends StatelessWidget {
-  const CustomLeading({super.key});
+  const CustomLeading({super.key, this.urlImg});
+  final String? urlImg;
 
   @override
   Widget build(BuildContext context) {
@@ -20,12 +21,34 @@ class CustomLeading extends StatelessWidget {
         children: [
           Row(
             children: [
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 15),
-                child: CircleAvatar(
-                  radius: 24,
-                  backgroundImage: AssetImage("assets/images/avatar.png"),
-                ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                // ignore: unnecessary_null_comparison
+                child: urlImg != null
+                    ? Container(
+                        margin: const EdgeInsets.symmetric(vertical: 20),
+                        height: 150,
+                        width: 150,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(75),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.25),
+                              spreadRadius: 0,
+                              blurRadius: 8,
+                              offset: const Offset(0, 8),
+                            ),
+                          ],
+                        ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(75),
+                          child: Image.network(
+                            urlImg!,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      )
+                    : const Text("No image uploaded"),
               ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -80,3 +103,23 @@ class CustomLeading extends StatelessWidget {
     );
   }
 }
+/**_downloadURL != null ? Container(
+            color: Colors.amber,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image.network(_downloadURL!)),
+          ) : Container(height: 10,width: 10,color: Colors.amber,),
+            UrlImg != null
+                    ? Container(
+                        color: Colors.amber,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: Image.network(
+                            UrlImg,
+                          ),
+                        ),
+                      )
+                    : 
+           
+           
+           */

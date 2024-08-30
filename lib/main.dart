@@ -88,7 +88,7 @@ class MyApp extends StatelessWidget {
                     backgroundColor: kBlackcolor_1,
                   ),
                 ),
-                themeMode: currentMode, // const DefineTheKid() //SigninView() ,
+                themeMode: currentMode, 
               );
             },
           );

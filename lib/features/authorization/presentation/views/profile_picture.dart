@@ -21,6 +21,7 @@ class ProfilePicure extends StatefulWidget {
 
 class _ProfilePicureState extends State<ProfilePicure> {
   File? _image;
+  String? kdownloadURL;
   final ImagePicker _picker = ImagePicker();
   final FirebaseStorage _storage = FirebaseStorage.instance;
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
@@ -49,12 +50,16 @@ class _ProfilePicureState extends State<ProfilePicure> {
       await _firestore.collection('images').add({'url': downloadUrl});
       showSnackBar(context,
           message: "Image uploaded successfully", title: "yap!");
+
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => MainView(),
+          builder: (context) =>  MainView(urlImg:kdownloadURL,),
         ),
       );
+      setState(() {
+        kdownloadURL=downloadUrl;
+      });
     } catch (e) {
       showSnackBar(context,
           message: "Failed to upload image: $e", title: "oops!");
@@ -146,9 +151,17 @@ class _ProfilePicureState extends State<ProfilePicure> {
                     fontWeight: FontWeight.w500),
               ),
             ),
+          
+          
           ],
         ),
       ),
     );
   }
 }
+/**_downloadURL != null ? Container(
+            color: Colors.amber,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image.network(_downloadURL!)),
+          ) : Container(height: 10,width: 10,color: Colors.amber,), */
