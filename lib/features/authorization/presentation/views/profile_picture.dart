@@ -27,12 +27,14 @@ class ProfilePicture extends StatelessWidget {
       _selectedImageNotifier.value = File(pickedImage.path);
     } else {
       showSnackBar(context,
-          message: "No image selected", title: S.of(context).snackbar_weak);
+          message: S.of(context).No_image_selected,
+          title: S.of(context).snackbar_weak);
     }
   }
 
   Future<void> _uploadImage(BuildContext context, File image) async {
-    showSnackBar(context, message: "Uploading...", title: "Info");
+    showSnackBar(context,
+        message: S.of(context).Uploading_load, title: S.of(context).Info);
 
     try {
       String fileName = FirebaseAuth.instance.currentUser!.uid;
@@ -43,7 +45,8 @@ class ProfilePicture extends StatelessWidget {
 
       await _saveImageUrlToDatabase(downloadUrl);
       showSnackBar(context,
-          message: "Image uploaded successfully", title: "Success");
+          message: S.of(context).Image_uploaded_successfully,
+          title: S.of(context).Success);
 
       Navigator.push(
         context,
@@ -53,7 +56,7 @@ class ProfilePicture extends StatelessWidget {
       );
     } catch (e) {
       showSnackBar(context,
-          message: "Failed to upload image: $e",
+          message: S.of(context).Failed_to_upload_image,
           title: S.of(context).snackbar_weak);
     }
   }
@@ -110,7 +113,7 @@ class ProfilePicture extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 8),
               child: Text(
-                "Profile Photo",
+                S.of(context).Profile_Photo,
                 style: GoogleFonts.kodchasan(
                   color: kBluecolor_4,
                   fontSize: 24,
@@ -122,7 +125,7 @@ class ProfilePicture extends StatelessWidget {
               width: 210,
               child: Text(
                 textAlign: TextAlign.center,
-                "Please make sure that the photo you upload will not be modified later",
+                S.of(context).Profile_Photo_sub,
                 style: GoogleFonts.kodchasan(
                   color: kGraycolor_1,
                   fontSize: 11,
@@ -138,7 +141,7 @@ class ProfilePicture extends StatelessWidget {
                   _uploadImage(context, image);
                 } else {
                   showSnackBar(context,
-                      message: "No image selected to upload",
+                      message: S.of(context).No_image_selected,
                       title: S.of(context).snackbar_weak);
                 }
               },
@@ -147,7 +150,7 @@ class ProfilePicture extends StatelessWidget {
               width: 200,
               height: 48,
               child: Text(
-                'Upload Picture',
+                S.of(context).Upload_Picture,
                 style: GoogleFonts.kodchasan(
                   color: kWhitecolor,
                   fontSize: 15,

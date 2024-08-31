@@ -1,42 +1,46 @@
 import 'package:adhd/constants.dart';
+import 'package:adhd/features/main/data/Image_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class CustomDrawerHeader extends StatelessWidget {
   const CustomDrawerHeader({super.key});
 
-  Future<String?> _fetchImageUrl() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    String? cachedUrl = prefs.getString('profileImageUrl');
+  static String? _cachedUserId;
+  static Future<String?>? _userName;
+  static Future<String?>? _userEmail;
+  static Future<String?>? _imageUrl;
 
-    DatabaseReference ref = FirebaseDatabase.instance
-        .ref("users/${FirebaseAuth.instance.currentUser!.uid}")
-        .child("Personal Data")
-        .child("Profile Image");
+  static void _resetCacheIfNeeded() {
+    final currentUserId = FirebaseAuth.instance.currentUser?.uid;
+    if (_cachedUserId != currentUserId) {
+      _cachedUserId = currentUserId;
+      _userName = _fetchUserData("Name");
+      _userEmail = _fetchUserData("Email");
+      _imageUrl = ImageService().fetchImageUrl();
+    }
+  }
 
+  static Future<String?> _fetchUserData(String key) async {
+    final String userId = FirebaseAuth.instance.currentUser!.uid;
+    DatabaseReference ref =
+        FirebaseDatabase.instance.ref("users/$userId").child("Personal Data");
     try {
-      DataSnapshot snapshot = await ref.get();
+      DataSnapshot snapshot = await ref.child(key).get();
       if (snapshot.exists) {
-        String newUrl = snapshot.value.toString();
-        if (newUrl != cachedUrl) {
-          prefs.setString('profileImageUrl', newUrl);
-        }
-        return newUrl;
+        return snapshot.value.toString();
       }
     } catch (error) {
-      print('Error fetching image URL: $error');
+      print('Error fetching $key: $error');
     }
-    return cachedUrl;
+    return null;
   }
 
   @override
   Widget build(BuildContext context) {
-    final String userId = FirebaseAuth.instance.currentUser!.uid;
-    DatabaseReference ref =
-        FirebaseDatabase.instance.ref("users/$userId").child("Personal Data");
+    _resetCacheIfNeeded();
 
     return SizedBox(
       height: 230,
@@ -48,7 +52,7 @@ class CustomDrawerHeader extends StatelessWidget {
           child: Column(
             children: [
               FutureBuilder<String?>(
-                future: _fetchImageUrl(),
+                future: _imageUrl,
                 builder: (context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) {
                     return const CircularProgressIndicator();
@@ -83,21 +87,18 @@ class CustomDrawerHeader extends StatelessWidget {
                   }
                 },
               ),
-              // Fetch and display the user's name
-              FutureBuilder(
-                future: ref.child("Name").get(),
-                builder: (context, AsyncSnapshot<DataSnapshot> snapshot) {
+              FutureBuilder<String?>(
+                future: _userName,
+                builder: (context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) {
                     return const CircularProgressIndicator();
                   } else if (snapshot.hasError) {
                     return Text('Error: ${snapshot.error}');
-                  } else if (!snapshot.hasData ||
-                      snapshot.data!.value == null) {
+                  } else if (snapshot.data == null) {
                     return const Text('No name found');
                   } else {
-                    String name = snapshot.data!.value.toString();
                     return Text(
-                      name,
+                      snapshot.data!,
                       style: GoogleFonts.inter(
                         fontWeight: FontWeight.w800,
                         fontSize: 18,
@@ -106,21 +107,18 @@ class CustomDrawerHeader extends StatelessWidget {
                   }
                 },
               ),
-              // Fetch and display the user's email
-              FutureBuilder(
-                future: ref.child("Email").get(),
-                builder: (context, AsyncSnapshot<DataSnapshot> snapshot) {
+              FutureBuilder<String?>(
+                future: _userEmail,
+                builder: (context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) {
                     return const CircularProgressIndicator();
                   } else if (snapshot.hasError) {
                     return Text('Error: ${snapshot.error}');
-                  } else if (!snapshot.hasData ||
-                      snapshot.data!.value == null) {
+                  } else if (snapshot.data == null) {
                     return const Text('No email found');
                   } else {
-                    String email = snapshot.data!.value.toString();
                     return Text(
-                      email,
+                      snapshot.data!,
                       style: GoogleFonts.inter(
                         fontSize: 12,
                         fontWeight: FontWeight.w200,
