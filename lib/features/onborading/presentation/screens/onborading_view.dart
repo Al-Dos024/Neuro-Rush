@@ -5,7 +5,7 @@ import 'package:adhd/main.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-
+import 'package:shared_preferences/shared_preferences.dart';
 import 'widgets/buildpage.dart';
 
 class OnBoradingView extends StatefulWidget {
@@ -36,8 +36,10 @@ class _OnBoradingState extends State<OnBoradingView> {
           Padding(
             padding: const EdgeInsets.only(right: 30.0, top: 20),
             child: TextButton(
-              onPressed: () {
-                Navigator.push(
+              onPressed: () async {
+                SharedPreferences prefs = await SharedPreferences.getInstance();
+                await prefs.setBool('seenOnboarding', true);
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
                     builder: (context) => SigninView(),
@@ -113,7 +115,7 @@ class _OnBoradingState extends State<OnBoradingView> {
                     style: TextButton.styleFrom(
                       backgroundColor: kPrimerycolor,
                     ),
-                    onPressed: () {
+                    onPressed: () async {
                       controller.nextPage(
                           duration: const Duration(milliseconds: 500),
                           curve: Curves.easeInOut);
@@ -123,6 +125,9 @@ class _OnBoradingState extends State<OnBoradingView> {
                           builder: (context) => SigninView(),
                         ),
                       );
+                      SharedPreferences prefs =
+                          await SharedPreferences.getInstance();
+                      await prefs.setBool('seenOnboarding', true);
                     },
                     child: Text(
                       S.of(context).Lets_start_btn,
