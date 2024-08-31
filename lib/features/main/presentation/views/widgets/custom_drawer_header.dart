@@ -1,35 +1,23 @@
 import 'package:adhd/constants.dart';
+import 'package:adhd/features/main/data/Image_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class CustomDrawerHeader extends StatelessWidget {
   const CustomDrawerHeader({super.key});
 
-  Future<String?> _fetchImageUrl() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    String? cachedUrl = prefs.getString('profileImageUrl');
-
-    DatabaseReference ref = FirebaseDatabase.instance
-        .ref("users/${FirebaseAuth.instance.currentUser!.uid}")
-        .child("Personal Data")
-        .child("Profile Image");
-
+  Future<String?> _fetchUserData(DatabaseReference ref, String key) async {
     try {
-      DataSnapshot snapshot = await ref.get();
+      DataSnapshot snapshot = await ref.child(key).get();
       if (snapshot.exists) {
-        String newUrl = snapshot.value.toString();
-        if (newUrl != cachedUrl) {
-          prefs.setString('profileImageUrl', newUrl);
-        }
-        return newUrl;
+        return snapshot.value.toString();
       }
     } catch (error) {
-      print('Error fetching image URL: $error');
+      print('Error fetching $key: $error');
     }
-    return cachedUrl;
+    return null;
   }
 
   @override
@@ -47,8 +35,9 @@ class CustomDrawerHeader extends StatelessWidget {
         child: Center(
           child: Column(
             children: [
+              // Fetch and display the profile image using the shared service
               FutureBuilder<String?>(
-                future: _fetchImageUrl(),
+                future: ImageService().fetchImageUrl(),
                 builder: (context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) {
                     return const CircularProgressIndicator();
@@ -84,20 +73,18 @@ class CustomDrawerHeader extends StatelessWidget {
                 },
               ),
               // Fetch and display the user's name
-              FutureBuilder(
-                future: ref.child("Name").get(),
-                builder: (context, AsyncSnapshot<DataSnapshot> snapshot) {
+              FutureBuilder<String?>(
+                future: _fetchUserData(ref, "Name"),
+                builder: (context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) {
                     return const CircularProgressIndicator();
                   } else if (snapshot.hasError) {
                     return Text('Error: ${snapshot.error}');
-                  } else if (!snapshot.hasData ||
-                      snapshot.data!.value == null) {
+                  } else if (snapshot.data == null) {
                     return const Text('No name found');
                   } else {
-                    String name = snapshot.data!.value.toString();
                     return Text(
-                      name,
+                      snapshot.data!,
                       style: GoogleFonts.inter(
                         fontWeight: FontWeight.w800,
                         fontSize: 18,
@@ -107,20 +94,18 @@ class CustomDrawerHeader extends StatelessWidget {
                 },
               ),
               // Fetch and display the user's email
-              FutureBuilder(
-                future: ref.child("Email").get(),
-                builder: (context, AsyncSnapshot<DataSnapshot> snapshot) {
+              FutureBuilder<String?>(
+                future: _fetchUserData(ref, "Email"),
+                builder: (context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) {
                     return const CircularProgressIndicator();
                   } else if (snapshot.hasError) {
                     return Text('Error: ${snapshot.error}');
-                  } else if (!snapshot.hasData ||
-                      snapshot.data!.value == null) {
+                  } else if (snapshot.data == null) {
                     return const Text('No email found');
                   } else {
-                    String email = snapshot.data!.value.toString();
                     return Text(
-                      email,
+                      snapshot.data!,
                       style: GoogleFonts.inter(
                         fontSize: 12,
                         fontWeight: FontWeight.w200,

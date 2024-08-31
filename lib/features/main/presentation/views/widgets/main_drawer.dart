@@ -95,7 +95,7 @@ class MainDrawer extends StatelessWidget {
                         currentLocale.languageCode == 'en' ? 0 : 1,
                     totalSwitches: 2,
                     labels: const ['EN', 'AR'],
-                    fontSize: 7,
+                    fontSize: 5,
                     onToggle: (index) {
                       if (index == 0) {
                         MyApp.localeNotifier.value = const Locale('en');

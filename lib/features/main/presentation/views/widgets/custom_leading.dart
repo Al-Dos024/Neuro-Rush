@@ -1,37 +1,13 @@
+import 'package:adhd/features/main/data/Image_service.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/sketon.dart';
-import 'package:adhd/generated/l10n.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:firebase_database/firebase_database.dart';
+import 'package:adhd/generated/l10n.dart';
 
 class CustomLeading extends StatelessWidget {
   const CustomLeading({super.key});
-
-  Future<String?> _fetchImageUrl() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    String? cachedUrl = prefs.getString('profileImageUrl');
-
-    DatabaseReference ref = FirebaseDatabase.instance
-        .ref("users/${FirebaseAuth.instance.currentUser!.uid}")
-        .child("Personal Data")
-        .child("Profile Image");
-
-    try {
-      DataSnapshot snapshot = await ref.get();
-      if (snapshot.exists) {
-        String newUrl = snapshot.value.toString();
-        if (newUrl != cachedUrl) {
-          prefs.setString('profileImageUrl', newUrl);
-        }
-        return newUrl;
-      }
-    } catch (error) {
-      print('Error fetching image URL: $error');
-    }
-    return cachedUrl;
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +22,7 @@ class CustomLeading extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15),
             child: FutureBuilder<String?>(
-              future: _fetchImageUrl(),
+              future: ImageService().fetchImageUrl(), // Use the shared service
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
                   return const CircularProgressIndicator();
