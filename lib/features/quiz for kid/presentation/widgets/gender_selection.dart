@@ -51,7 +51,10 @@ class GenderSelection extends StatelessWidget {
                         Text(
                           S.of(context).boy,
                           style: GoogleFonts.kodchasan(
-                              fontSize: 25, fontWeight: FontWeight.bold),
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
+                            color: isDarkMode ? kWhitecolor_1 : kBlackcolor_2,
+                          ),
                         ),
                         const SizedBox(
                           height: 10,
@@ -100,6 +103,7 @@ class GenderSelection extends StatelessWidget {
                           style: GoogleFonts.kodchasan(
                             fontSize: 25,
                             fontWeight: FontWeight.bold,
+                            color: isDarkMode ? kWhitecolor_1 : kBlackcolor_2,
                           ),
                         ),
                         const SizedBox(

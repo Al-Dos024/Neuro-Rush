@@ -1,5 +1,4 @@
 import 'package:adhd/features/main/data/Image_service.dart';
-import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/shimmer_loading.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/sketon.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:firebase_auth/firebase_auth.dart';

@@ -164,11 +164,3 @@ class ProfilePicture extends StatelessWidget {
     );
   }
 }
-
-
-/**_downloadURL != null ? Container(
-            color: Colors.amber,
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: Image.network(_downloadURL!)),
-          ) : Container(height: 10,width: 10,color: Colors.amber,), */

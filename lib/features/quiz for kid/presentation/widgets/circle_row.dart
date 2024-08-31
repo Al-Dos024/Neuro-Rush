@@ -8,7 +8,7 @@ class CircleRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: <Widget>[
         Circle(color: score > 0 ? const Color(0xff238800) : kGraycolor_3),
         Circle(color: (score >= 30) ? const Color(0xff49E718) : kGraycolor_3),
@@ -30,7 +30,7 @@ class Circle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(3.5),
+      margin: const EdgeInsets.only(right: 2),
       width: 10.0,
       height: 10.0,
       decoration: BoxDecoration(

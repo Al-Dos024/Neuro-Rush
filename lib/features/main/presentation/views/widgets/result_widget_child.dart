@@ -91,11 +91,9 @@ class ResultWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  Flexible(
-                    child: Image.asset(
-                      AssetsData.prvtest,
-                      height: 180,
-                    ),
+                  Image.asset(
+                    AssetsData.prvtest,
+                    width: MediaQuery.of(context).size.width *0.24,
                   ),
                   IconButton(
                     alignment: Alignment.centerRight,
