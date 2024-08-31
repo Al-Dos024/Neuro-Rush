@@ -8,7 +8,25 @@ import 'package:google_fonts/google_fonts.dart';
 class CustomDrawerHeader extends StatelessWidget {
   const CustomDrawerHeader({super.key});
 
-  Future<String?> _fetchUserData(DatabaseReference ref, String key) async {
+  static String? _cachedUserId;
+  static Future<String?>? _userName;
+  static Future<String?>? _userEmail;
+  static Future<String?>? _imageUrl;
+
+  static void _resetCacheIfNeeded() {
+    final currentUserId = FirebaseAuth.instance.currentUser?.uid;
+    if (_cachedUserId != currentUserId) {
+      _cachedUserId = currentUserId;
+      _userName = _fetchUserData("Name");
+      _userEmail = _fetchUserData("Email");
+      _imageUrl = ImageService().fetchImageUrl();
+    }
+  }
+
+  static Future<String?> _fetchUserData(String key) async {
+    final String userId = FirebaseAuth.instance.currentUser!.uid;
+    DatabaseReference ref =
+        FirebaseDatabase.instance.ref("users/$userId").child("Personal Data");
     try {
       DataSnapshot snapshot = await ref.child(key).get();
       if (snapshot.exists) {
@@ -22,9 +40,7 @@ class CustomDrawerHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final String userId = FirebaseAuth.instance.currentUser!.uid;
-    DatabaseReference ref =
-        FirebaseDatabase.instance.ref("users/$userId").child("Personal Data");
+    _resetCacheIfNeeded();
 
     return SizedBox(
       height: 230,
@@ -35,9 +51,8 @@ class CustomDrawerHeader extends StatelessWidget {
         child: Center(
           child: Column(
             children: [
-              // Fetch and display the profile image using the shared service
               FutureBuilder<String?>(
-                future: ImageService().fetchImageUrl(),
+                future: _imageUrl,
                 builder: (context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) {
                     return const CircularProgressIndicator();
@@ -72,9 +87,8 @@ class CustomDrawerHeader extends StatelessWidget {
                   }
                 },
               ),
-              // Fetch and display the user's name
               FutureBuilder<String?>(
-                future: _fetchUserData(ref, "Name"),
+                future: _userName,
                 builder: (context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) {
                     return const CircularProgressIndicator();
@@ -93,9 +107,8 @@ class CustomDrawerHeader extends StatelessWidget {
                   }
                 },
               ),
-              // Fetch and display the user's email
               FutureBuilder<String?>(
-                future: _fetchUserData(ref, "Email"),
+                future: _userEmail,
                 builder: (context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) {
                     return const CircularProgressIndicator();
