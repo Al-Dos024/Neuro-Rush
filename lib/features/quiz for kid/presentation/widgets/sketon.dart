@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
 class Skeleton extends StatelessWidget {
-  const Skeleton({Key? key, this.height, this.width}) : super(key: key);
+  const Skeleton({Key? key, this.height, this.width, this.r}) : super(key: key);
 
-  final double? height, width;
+  final double? height, width, r;
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +15,11 @@ class Skeleton extends StatelessWidget {
         width: width,
         padding: const EdgeInsets.all(10 / 2),
         decoration: BoxDecoration(
-            color: Theme.of(context).primaryColor.withOpacity(0.2),
-            borderRadius: const BorderRadius.all(Radius.circular(10))),
+          color: Theme.of(context).primaryColor.withOpacity(0.2),
+          borderRadius: BorderRadius.all(
+            Radius.circular(r ?? 10),
+          ),
+        ),
       ),
     );
   }

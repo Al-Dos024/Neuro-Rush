@@ -10,6 +10,7 @@ import 'package:adhd/generated/l10n.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../../main.dart';
 
@@ -158,14 +159,21 @@ class SignUpView extends StatelessWidget {
                                   );
                             }
                           },
-                          child: Text(
-                            S.of(context).Register,
-                            style: GoogleFonts.inter(
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
-                              color: kWhitecolor,
-                            ),
-                          ),
+                          child: isLoading
+                              ? const Center(
+                                  child: SpinKitCircle(
+                                    color: kWhitecolor,
+                                    size: 30,
+                                  ),
+                                )
+                              : Text(
+                                  S.of(context).Register,
+                                  style: GoogleFonts.inter(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold,
+                                    color: kWhitecolor,
+                                  ),
+                                ),
                         ),
                       ),
                       Row(

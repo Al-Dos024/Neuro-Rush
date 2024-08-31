@@ -10,8 +10,8 @@ import 'package:adhd/generated/l10n.dart';
 import 'package:adhd/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 import 'widgets/my_elevated_button copy.dart';
 
@@ -76,156 +76,159 @@ class SigninView extends StatelessWidget {
         bool isLoading = state is SignInLoading;
         bool isDarkMode = MyApp.themeNotifier.value == ThemeMode.dark;
 
-        return ModalProgressHUD(
-          inAsyncCall: isLoading,
-          child: Scaffold(
-            backgroundColor: isDarkMode ? kBlackcolor_1 : kWhitecolor,
-            body: Form(
-              key: formKey,
-              child: SingleChildScrollView(
-                child: SizedBox(
-                  height: MediaQuery.sizeOf(context).height,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 20, vertical: 20),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const SizedBox(height: 35),
-                        Text(
-                          S.of(context).sign_you_title,
-                          style: GoogleFonts.inter(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            color: isDarkMode ? kWhitecolor : kBlackcolor,
-                          ),
+        return Scaffold(
+          backgroundColor: isDarkMode ? kBlackcolor_1 : kWhitecolor,
+          body: Form(
+            key: formKey,
+            child: SingleChildScrollView(
+              child: SizedBox(
+                height: MediaQuery.sizeOf(context).height,
+                child: Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const SizedBox(height: 35),
+                      Text(
+                        S.of(context).sign_you_title,
+                        style: GoogleFonts.inter(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: isDarkMode ? kWhitecolor : kBlackcolor,
                         ),
-                        Text(
-                          S.of(context).sign_you_subtitle,
-                          style: GoogleFonts.inter(
+                      ),
+                      Text(
+                        S.of(context).sign_you_subtitle,
+                        style: GoogleFonts.inter(
+                          color: kGraycolor_1,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      CustomLableTextFormField(
+                        lableText: S.of(context).email,
+                        hintText: S.of(context).Enter_Email,
+                        onChanged: (value) => email = value,
+                        inputType: TextInputType.emailAddress,
+                        obscureText: false,
+                        validator: (value) {
+                          if (value!.isEmpty) {
+                            return S.of(context).no_Email;
+                          }
+                          return null;
+                        },
+                      ),
+                      CustomLableTextFormField(
+                        lableText: S.of(context).Password,
+                        hintText: S.of(context).Enter_Password,
+                        inputType: TextInputType.text,
+                        obscureText:
+                            BlocProvider.of<SignInCubit>(context).showPassword,
+                        onChanged: (value) => password = value,
+                        validator: (value) {
+                          if (value!.isEmpty) {
+                            return S.of(context).no_Password;
+                          }
+                          return null;
+                        },
+                        suffixIcon: IconButton(
+                          onPressed: () => BlocProvider.of<SignInCubit>(context)
+                              .togglePasswordVisibility(),
+                          icon: Icon(
+                            BlocProvider.of<SignInCubit>(context).showPassword
+                                ? Icons.visibility_off
+                                : Icons.visibility,
                             color: kGraycolor_1,
-                            fontSize: 14,
-                            fontWeight: FontWeight.w400,
                           ),
                         ),
-                        const SizedBox(height: 20),
-                        CustomLableTextFormField(
-                          lableText: S.of(context).email,
-                          hintText: S.of(context).Enter_Email,
-                          onChanged: (value) => email = value,
-                          inputType: TextInputType.emailAddress,
-                          obscureText: false,
-                          validator: (value) {
-                            if (value!.isEmpty) {
-                              return S.of(context).no_Email;
-                            }
-                            return null;
+                      ),
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: MyTextButton(
+                          onPressed: () {
+                            showSnackBar(
+                              context,
+                              title: S.of(context).next_ver_title,
+                              message: S.of(context).next_ver_subtitle,
+                            );
                           },
+                          child: Text(
+                            S.of(context).Forgot_Password,
+                            style: GoogleFonts.inter(
+                              color: kBluecolor_1,
+                              fontSize: 13,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
                         ),
-                        CustomLableTextFormField(
-                          lableText: S.of(context).Password,
-                          hintText: S.of(context).Enter_Password,
-                          inputType: TextInputType.text,
-                          obscureText: BlocProvider.of<SignInCubit>(context)
-                              .showPassword,
-                          onChanged: (value) => password = value,
-                          validator: (value) {
-                            if (value!.isEmpty) {
-                              return S.of(context).no_Password;
+                      ),
+                      Center(
+                        child: MyElevatedButton(
+                          borderRadius: BorderRadius.circular(15),
+                          color: kBluecolor_1,
+                          height: 60,
+                          width: 290,
+                          onPressed: () {
+                            if (formKey.currentState!.validate()) {
+                              BlocProvider.of<SignInCubit>(context).loginUser(
+                                email: email!,
+                                password: password!,
+                              );
                             }
-                            return null;
                           },
-                          suffixIcon: IconButton(
-                            onPressed: () =>
-                                BlocProvider.of<SignInCubit>(context)
-                                    .togglePasswordVisibility(),
-                            icon: Icon(
-                              BlocProvider.of<SignInCubit>(context).showPassword
-                                  ? Icons.visibility_off
-                                  : Icons.visibility,
+                          child: isLoading
+                              ? const Center(
+                                  child: SpinKitCircle(
+                                    color: kWhitecolor,
+                                    size: 30,
+                                  ),
+                                )
+                              : Text(
+                                  S.of(context).Log_in,
+                                  style: GoogleFonts.inter(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold,
+                                    color: kWhitecolor,
+                                  ),
+                                ),
+                        ),
+                      ),
+                      const ContinueWith(),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            S.of(context).dont_account,
+                            style: GoogleFonts.inter(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
                               color: kGraycolor_1,
                             ),
                           ),
-                        ),
-                        Align(
-                          alignment: Alignment.centerRight,
-                          child: MyTextButton(
+                          MyTextButton(
                             onPressed: () {
-                              showSnackBar(
+                              Navigator.push(
                                 context,
-                                title: S.of(context).next_ver_title,
-                                message: S.of(context).next_ver_subtitle,
+                                MaterialPageRoute(
+                                  builder: (context) => SignUpView(),
+                                ),
                               );
                             },
                             child: Text(
-                              S.of(context).Forgot_Password,
-                              style: GoogleFonts.inter(
-                                color: kBluecolor_1,
-                                fontSize: 13,
-                                fontWeight: FontWeight.w400,
-                              ),
-                            ),
-                          ),
-                        ),
-                        Center(
-                          child: MyElevatedButton(
-                            borderRadius: BorderRadius.circular(15),
-                            color: kBluecolor_1,
-                            height: 60,
-                            width: 290,
-                            onPressed: () {
-                              if (formKey.currentState!.validate()) {
-                                BlocProvider.of<SignInCubit>(context).loginUser(
-                                  email: email!,
-                                  password: password!,
-                                );
-                              }
-                            },
-                            child: Text(
-                              S.of(context).Log_in,
-                              style: GoogleFonts.inter(
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold,
-                                color: kWhitecolor,
-                              ),
-                            ),
-                          ),
-                        ),
-                        const ContinueWith(),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              S.of(context).dont_account,
+                              S.of(context).Register_now,
                               style: GoogleFonts.inter(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w500,
-                                color: kGraycolor_1,
+                                color: kBluecolor_1,
                               ),
                             ),
-                            MyTextButton(
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => SignUpView(),
-                                  ),
-                                );
-                              },
-                              child: Text(
-                                S.of(context).Register_now,
-                                style: GoogleFonts.inter(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w500,
-                                  color: kBluecolor_1,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ),
               ),

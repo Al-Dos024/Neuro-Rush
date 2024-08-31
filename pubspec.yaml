@@ -29,6 +29,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   bloc: ^8.1.4
+  cached_network_image: ^3.4.0
   cloud_firestore: ^5.2.0
   cupertino_icons: ^1.0.6
   device_preview: ^1.2.0
@@ -43,6 +44,7 @@ dependencies:
   flutter_bloc: ^8.1.6
   flutter_localizations:
     sdk: flutter
+  flutter_spinkit: ^5.2.1
   font_awesome_flutter: ^10.7.0
   fraction: ^5.0.2
   google_fonts: ^6.2.1
