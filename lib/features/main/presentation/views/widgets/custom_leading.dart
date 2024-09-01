@@ -1,3 +1,4 @@
+import 'package:adhd/core/utils/assets.dart';
 import 'package:adhd/features/main/data/Image_service.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/sketon.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -44,12 +45,22 @@ class CustomLeading extends StatelessWidget {
                       height: 50,
                       width: 50,
                       fit: BoxFit.cover,
-                      placeholder: (context, url) =>
-                          const Skeleton(height: 50,width: 50,r: 30,),
+                      placeholder: (context, url) => const Skeleton(
+                        height: 50,
+                        width: 50,
+                        r: 30,
+                      ),
                     ),
                   );
                 } else {
-                  return const Text("No image");
+                  return ClipRRect(
+                    borderRadius: const BorderRadius.all(Radius.circular(30)),
+                    child: Image.asset(
+                      AssetsData.imageProfile,
+                      height: 50,
+                      width: 50,
+                    ),
+                  );
                 }
               },
             ),

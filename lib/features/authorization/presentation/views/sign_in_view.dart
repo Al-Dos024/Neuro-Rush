@@ -210,7 +210,7 @@ class SigninView extends StatelessWidget {
                           ),
                           MyTextButton(
                             onPressed: () {
-                              Navigator.push(
+                              Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) => SignUpView(),

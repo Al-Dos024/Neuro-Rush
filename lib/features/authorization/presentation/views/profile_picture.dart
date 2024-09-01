@@ -1,13 +1,16 @@
 import 'dart:io';
 import 'package:adhd/core/utils/show_snackbar.dart';
 import 'package:adhd/features/authorization/presentation/views/widgets/my_elevated_button%20copy.dart';
+import 'package:adhd/features/authorization/presentation/views/widgets/my_text_button.dart';
 import 'package:adhd/features/main/presentation/views/main_view.dart';
 import 'package:adhd/generated/l10n.dart';
+import 'package:adhd/main.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import '../../../../constants.dart';
@@ -72,7 +75,34 @@ class ProfilePicture extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isDarkMode = MyApp.themeNotifier.value == ThemeMode.dark;
     return Scaffold(
+      backgroundColor: isDarkMode ? kBlackcolor_1 : kWhitecolor,
+      appBar: AppBar(
+        backgroundColor: isDarkMode ? kBlackcolor_1 : kWhitecolor,
+        leading: Icon(
+          Icons.arrow_back,
+          color: isDarkMode ? kBlackcolor_1 : kWhitecolor,
+        ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: MyTextButton(
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const MainView(),
+                    ),
+                  );
+                },
+                child: Text(
+                  "Skip",
+                  style: GoogleFonts.kodchasan(fontSize: 15),
+                )),
+          ),
+        ],
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -104,7 +134,28 @@ class ProfilePicture extends StatelessWidget {
                               image,
                               fit: BoxFit.cover,
                             )
-                          : const Icon(Icons.image),
+                          : Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                const Icon(
+                                  Icons.add_a_photo,
+                                  color: kWhitecolor,
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    textAlign: TextAlign.center,
+                                    "Click here\n to select picture ",
+                                    style: GoogleFonts.kodchasan(
+                                      color: kWhitecolor,
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w400,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                     ),
                   );
                 },

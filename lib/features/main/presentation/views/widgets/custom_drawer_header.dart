@@ -1,4 +1,5 @@
 import 'package:adhd/constants.dart';
+import 'package:adhd/core/utils/assets.dart';
 import 'package:adhd/features/main/data/Image_service.dart';
 import 'package:adhd/features/quiz%20for%20kid/presentation/widgets/sketon.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -82,7 +83,17 @@ class CustomDrawerHeader extends StatelessWidget {
                         ),
                       );
                     } else {
-                      return const Text("No image");
+                      return ClipRRect(
+                        borderRadius: const BorderRadius.all(
+                          Radius.circular(30),
+                        ),
+                        child: Image.asset(
+                          AssetsData.imageProfile,
+                          height: 50,
+                          width: 50,
+                          fit: BoxFit.cover,
+                        ),
+                      );
                     }
                   },
                 ),
