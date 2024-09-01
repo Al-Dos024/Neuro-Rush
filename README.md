@@ -61,31 +61,45 @@ Yes , we send the result of both child and adult to firebase using the Email he 
 
 # Main View
 <img width="700" src="https://github.com/user-attachments/assets/7c95dbf2-5c02-42e9-91e7-fd1d7e01ceb1">
-<--------------------- stop here ------------------------>
- 
-<p><br>Here the main part of the app<br>We have 4 button:</p>
+<p>Here's the main interface in the application ,you can see that we revealed the presonal data from realtime database 
+ <br> personal photo , name and email , We will divide this into two main parts:</p>
 
-- The Under 18 questioner for childern which the partet answer it.
-- The Above 18 questioner for Adult .
-- The logout in app bar it should log out of the account and show Alertdialog if you sure you want to leave (2nd screen).
-- the More about ADHD is a video and photo which give you more information about ADHD (3rd screen).
-## Phase One
-<p>The phase one is the same for Child & Adult , you must answer every qustion or won't be able to continue<br></p>
-<img width="250" src="https://github.com/AlDos024/Hand_in_Hand/assets/106039568/e703f274-a50c-4f2b-b597-400921ae21fb">
-<img width="250" src="https://github.com/AlDos024/Hand_in_Hand/assets/106039568/e4bf8e22-7da1-4fb6-bc41-1fe4ffb0163e">
-<img width="250" src="https://github.com/AlDos024/Hand_in_Hand/assets/106039568/6b87030b-c5fb-4715-86c7-56c44274df27">
-<p><br>The qustions has different way to collect : <br></p>
+- Drawer
+- Body of the page
 
-- the 'NO' has 0 point.
-- The 'maybe' has 1 point.
-- The 'always' has 2 point.
-  
-<p>The qustions has different category to collect : <br></p>
+## Drawer
+you can customize your app as you like here using the 2 functions Dark and light mode and Arabic and English language
 
-- The movement collect the points from qustion 1 to 13 , the score must be above or equal 19
-- The Rush collect the points from qustion 14 to 23 , the score must be above or equal 14
-- The attention collect the points from qustion 24 to 36 , the score must be above or equal 19
-<p>if you pass one of them you have pass the phase one successfully and can go to 2nd phase</p>
+<img width="700" src="https://github.com/user-attachments/assets/feabb0c9-9efd-4039-8182-d2af29f87e02">
+
+We will discess the previos kids result with result page
+
+## The body of page 
+here we got into the main parts in the app 
+- Whats's ADHD?
+<p> A page where we discuss what is ADHD and give general information about it </p>
+
+<img width="700" src="https://github.com/user-attachments/assets/75a8aab4-10e2-4dea-9f0b-3e52e757c597">
+
+- Child Test
+<p>this test is based on Conner's Partent Raiting , you can see how it is work </p>
+
+([Conner's Partent Raiting](https://www.youtube.com/watch?v=UqRu2klS50Q&t=63s))).
+
+the pics needs to be here
+
+<p> Firstly we start with whos the child ? male or female and his age , the result is different based on these factors.
+ <br>After we enter the quiz phase we have lots of widget, 
+ <br>starting with stack on appbar shows the current question and how many questions are there
+ <br>the question and answer list are in the firebase firestore and we fetch it based on the language and what test are we in
+ <br>lastly we have next and back button to control the question and move freely between them
+ <br>you got 80 questions needs to be answered and can't skip any part of it
+ <br>the points is simple to calculate never = 0 , often = 1 , sometimes = 2 and always = 3
+ <br>then we take the points of each and start to separate them into 14 category every question is into category
+ <br>after that and with last question we see the age and gender of kid and the dataset come with the result
+</p>
+- Adult Test
+
 
 ## Phase Two Child
 before we get into the phase we need to need the test we use 
