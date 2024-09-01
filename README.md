@@ -9,7 +9,9 @@ ADHD stands for attention deficit hyperactivity disorder. It is a medical condit
 - A person with ADHD has differences in brain development and brain activity that affect attention, the ability to sit still, and self-control.
 <img  src="https://github.com/user-attachments/assets/58111954-7add-45b8-804c-b2ca5b60cc58">
 <p> And that's how we are inspired by the App icon </p>
-<img width = "250"  src="https://github.com/user-attachments/assets/6dfcf1b3-f53a-41b7-a7f5-9c912e8fb2a2">
+
+<img width="700" src="https://github.com/user-attachments/assets/830d7be8-8961-4bdb-ad93-5e5329d8fb66">
+
 
 ## Why We Recatored This App?
 We developed this app to address the growing need for accessible, accurate, and convenient tools to diagnose ADHD. Traditional methods can be time-consuming and stressful, so we designed this app to make the process easier and more approachable for everyone involved , and the past version was full of bugs.
@@ -31,41 +33,36 @@ Our application offers three main features:
   * Realtime Database: To store the result of the data and revel it
 - Cubit to manage the state of data more efficient
 
-<------------- stop here -----------> 
+# onboarding
 
-# The UI screens and each logic in them
-## on boarding
+firstly we start the app with onboarding screen , gives us a brief summary of the app:
 
-firstly we have the onboarding screen , it have 3 pages every page talk about ADHD with little details:
+<img width="700" src="https://github.com/user-attachments/assets/e20e6fd4-4a29-4ca4-9007-7ae9927cc7e8">
 
-<img width="250" src="https://github.com/AlDos024/Hand_in_Hand/assets/106039568/578bfa8b-2120-4e71-8967-2f86bbbf50b6">
-<img width="250" src="https://github.com/AlDos024/Hand_in_Hand/assets/106039568/3cc7857c-88f8-4cdf-a609-18bfacbad772">
-<img width="250" src="https://github.com/AlDos024/Hand_in_Hand/assets/106039568/062f7186-2c3c-40ac-bdf5-e8d58ea653bc">
+
 
 you can move it by 3 wayes:
-- by wave in the screen from left to right
-- by next and skip button
-- by the points in the buttons
-- 
-## Login & Register 
+- Wave in the screen from left to right
+- Next and skip button
+- The points in the buttons , givees smoth animation when scroll
 
-<img width="250" src="https://github.com/AlDos024/Hand_in_Hand/assets/106039568/8358bda6-a051-49f2-ad4f-26d053a54c44">
-<img width="250" src="https://github.com/AlDos024/Hand_in_Hand/assets/106039568/10721751-d9fd-499d-acb3-aa3bc6cb2336">
-<p><br> i used the firebase Authentication to check of email and password that has taken.</p>
-<img src="https://github.com/AlDos024/Hand_in_Hand/assets/106039568/5bead619-40a2-4348-95b7-5e0b5e1e758d">
-<p><br> i have done error hadling what ever he didnt add anything neither he done it wrong by show notification .</p>
-<img width="250" src="https://github.com/AlDos024/Hand_in_Hand/assets/106039568/d5d2c4cc-4211-44c7-9e34-73eb01139c64">
-<img width="250" src="https://github.com/AlDos024/Hand_in_Hand/assets/106039568/c1051354-244c-4176-831d-cc00e06675c3">
+<p>here we have simple condation if the device alredy logged in ? then we move frowerd to mainView <br> if dont? then we move to next page witch is ...</p>
 
-<p><br> if you already login before it directly send you to MainPage screen</p>
-<img src = 'https://github.com/AlDos024/Hand_in_Hand/assets/106039568/1fce4f88-c590-4c24-a655-708ff472029d'>
+# Authentication  
+<img width="700" src="https://github.com/user-attachments/assets/5a8bfcbf-8d12-4295-b95a-a47c03b3e3ff">
 
+<p>as in regular Sign in we need the user to already have an account with email & password, if not ?
+ <br> we move to sign up where we send personal data like Name,age,email and password
+ <br> after that he can upload the photo he want and set it as Avatar picure in Main view
+ </p>
+ 
+## It is necessary to set an account in firebase?
+Yes , we send the result of both child and adult to firebase using the Email he register with .
 
-## Main page 
-
-<img width="250" src="https://github.com/AlDos024/Hand_in_Hand/assets/106039568/8f3f4351-85ae-4089-aadd-01076b73bb2f">
-<img width="250" src="https://github.com/AlDos024/Hand_in_Hand/assets/106039568/e9dde43b-f7ba-44a8-bf0d-7708bd072be1">
-<img width="250" src="https://github.com/AlDos024/Hand_in_Hand/assets/106039568/a55472b7-83a0-4970-9bbf-f985ac820c6f">
+# Main View
+<img width="700" src="https://github.com/user-attachments/assets/7c95dbf2-5c02-42e9-91e7-fd1d7e01ceb1">
+<--------------------- stop here ------------------------>
+ 
 <p><br>Here the main part of the app<br>We have 4 button:</p>
 
 - The Under 18 questioner for childern which the partet answer it.
