@@ -21,6 +21,13 @@ class DefineTheKid extends StatelessWidget {
     return BlocProvider(
       create: (context) => DefineTheKidCubit(),
       child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: isDarkMode ? kBlackcolor_1 : kWhitecolor,
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back_ios , color: !isDarkMode ? kBlackcolor_1 : kWhitecolor,),
+            onPressed: () => Navigator.pop(context),
+          ),
+        ),
         backgroundColor: isDarkMode ? kBlackcolor_1 : kWhitecolor,
         body: Padding(
           padding: const EdgeInsets.all(20.0),
