@@ -4,6 +4,7 @@ import 'package:adhd/features/what-is-ADHD/presentation/views/widgets/adhd_patho
 import 'package:adhd/features/what-is-ADHD/presentation/views/widgets/adhd_reason_section.dart';
 import 'package:adhd/features/what-is-ADHD/presentation/views/widgets/adhd_symptoms_section.dart';
 import 'package:adhd/features/what-is-ADHD/presentation/views/widgets/adhd_video_section.dart';
+import 'package:adhd/features/what-is-ADHD/presentation/views/widgets/read_more.dart';
 import 'package:adhd/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -20,7 +21,7 @@ class WhatIsAdhd extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(
             Icons.arrow_back_ios_new_rounded,
-             color:kWhitecolor,
+            color: kWhitecolor,
           ),
           onPressed: () {
             Navigator.pop(context);
@@ -58,7 +59,11 @@ class WhatIsAdhd extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              AdhdPathophysiologySection()
+              AdhdPathophysiologySection(),
+              SizedBox(
+                height: 10,
+              ),
+              ReadMore()
             ],
           ),
         ),
