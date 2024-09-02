@@ -24,6 +24,7 @@ Our application offers three main features:
 <p>Additionally, users can access past results, allowing them to monitor changes and improvements over time.</p>
 
 ## Main Technolgy we used :
+- MVVM design pattern
 - ValueNotifier for both
   * Flutter localizations (English and Arabic and change between them easily)
   * Light and Dark mode
@@ -102,8 +103,8 @@ here we got into the main parts in the app
 </p>
 
 - Adult Test
-
-pics here 
+  
+<img width="700" src="https://github.com/user-attachments/assets/c704ec1e-2470-4e7a-b514-fd659952b6c1">
 
 here it easier than the child one , its only 18 quistions and break the quistions into 2 category overall & detailed 
 * overall can diagnose the patient from the questions 1 - 6 and it's more of general
@@ -111,6 +112,25 @@ here it easier than the child one , its only 18 quistions and break the quistion
 
 
 # Result
+Here comes the final part in out application , we can break it into 3 pages :
+<img width="700" src="https://github.com/user-attachments/assets/35c32f8a-8724-4942-91cd-7f68d81a5c8d">
+* previous result:
+<p>This page shown in the drawer , The main purpose is to see the previous result of the kid and see if he getting better or not ,
+<br> We can do the same for Adult but it only show 2 category which it easy to remember Unlike child test
+</p>
 
+* Child result:
+pics here
+<p>This page shown after you finish the child test , it collects the points based on gender and age factor ,
+<br>every catagory has its own points so he got high in Opposition but low in Cognitive problems and so on
+</p>
+
+* Adult result:
+pics here
+<p>This page shown after you finish the adult test , it collects the points based on the number of questions ,
+<br> if it from 1-6 then we add it to overall category , the rest added to detailed category
+<br>it only in 3 result low , medium and high
+</p>
+  
 
 
