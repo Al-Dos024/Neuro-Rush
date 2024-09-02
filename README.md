@@ -131,6 +131,8 @@ pics here
 <br> if it from 1-6 then we add it to overall category , the rest added to detailed category
 <br>it only in 3 result low , medium and high
 </p>
-  
 
+<img width="700" src="https://github.com/user-attachments/assets/1764d942-f1ae-4c3e-a4f4-21ec0e570607">
+ 
+That's it ... test and and send your review ... hope you enjoyed reading the repo :)
 
