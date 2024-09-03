@@ -40,6 +40,8 @@ class SignUpCubit extends Cubit<SignUpState> {
         "Email": email,
         "Attempt Number": attemptNum,
         "Adult Attempt Number": adultattemptNum,
+        "Profile Image":
+            "https://firebasestorage.googleapis.com/v0/b/isefproject-f92d3.appspot.com/o/default_profile.jpg?alt=media&token=ad49c2fb-acc6-4c82-a377-b0da22e9228e",
       });
 
       emit(SignUpSuccess());

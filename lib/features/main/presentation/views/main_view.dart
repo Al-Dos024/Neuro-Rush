@@ -6,8 +6,7 @@ import 'widgets/card_view2.dart';
 import 'widgets/card_view3.dart';
 
 class MainView extends StatelessWidget {
-  const MainView({super.key, this.urlImg});
-  final String? urlImg;
+  const MainView({super.key});
 
   @override
   Widget build(BuildContext context) {

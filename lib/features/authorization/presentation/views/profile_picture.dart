@@ -21,6 +21,8 @@ class ProfilePicture extends StatelessWidget {
   final ValueNotifier<File?> _selectedImageNotifier =
       ValueNotifier<File?>(null);
 
+  final String defaultImagePath = 'assets/images/default_profile.png';
+
   Future<void> _pickImage(BuildContext context) async {
     final ImagePicker picker = ImagePicker();
     final XFile? pickedImage =
@@ -54,7 +56,7 @@ class ProfilePicture extends StatelessWidget {
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => MainView(urlImg: downloadUrl),
+          builder: (context) => const MainView(),
         ),
       );
     } catch (e) {
@@ -88,18 +90,19 @@ class ProfilePicture extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(15.0),
             child: MyTextButton(
-                onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const MainView(),
-                    ),
-                  );
-                },
-                child: Text(
-                  "Skip",
-                  style: GoogleFonts.kodchasan(fontSize: 15),
-                )),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const MainView(),
+                  ),
+                );
+              },
+              child: Text(
+                "Skip",
+                style: GoogleFonts.kodchasan(fontSize: 15),
+              ),
+            ),
           ),
         ],
       ),

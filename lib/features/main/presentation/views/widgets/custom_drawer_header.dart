@@ -97,57 +97,71 @@ class CustomDrawerHeader extends StatelessWidget {
                     }
                   },
                 ),
-                FutureBuilder<String?>(
-                  future: _userName,
-                  builder: (context, snapshot) {
-                    if (snapshot.connectionState == ConnectionState.waiting) {
-                      return const Padding(
-                        padding: EdgeInsets.symmetric(vertical: 8),
-                        child: Skeleton(
-                          height: 10,
-                          width: 30,
-                        ),
-                      );
-                    } else if (snapshot.hasError) {
-                      return Text('Error: ${snapshot.error}');
-                    } else if (snapshot.data == null) {
-                      return const Text('No name found');
-                    } else {
-                      return Text(
-                        snapshot.data!,
-                        style: GoogleFonts.inter(
-                          fontWeight: FontWeight.w800,
-                          fontSize: 18,
-                        ),
-                      );
-                    }
-                  },
-                ),
-                FutureBuilder<String?>(
-                  future: _userEmail,
-                  builder: (context, snapshot) {
-                    if (snapshot.connectionState == ConnectionState.waiting) {
-                      return const Padding(
-                        padding: EdgeInsets.symmetric(vertical: 8),
-                        child: Skeleton(
-                          height: 10,
-                          width: 45,
-                        ),
-                      );
-                    } else if (snapshot.hasError) {
-                      return Text('Error: ${snapshot.error}');
-                    } else if (snapshot.data == null) {
-                      return const Text('No email found');
-                    } else {
-                      return Text(
-                        snapshot.data!,
-                        style: GoogleFonts.inter(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w200,
-                        ),
-                      );
-                    }
-                  },
+                const SizedBox(height: 8),
+                SizedBox(
+                  width: 230,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      FutureBuilder<String?>(
+                        future: _userName,
+                        builder: (context, snapshot) {
+                          if (snapshot.connectionState ==
+                              ConnectionState.waiting) {
+                            return const Padding(
+                              padding: EdgeInsets.symmetric(vertical: 8),
+                              child: Skeleton(
+                                height: 10,
+                                width: 80,
+                              ),
+                            );
+                          } else if (snapshot.hasError) {
+                            return Text('Error: ${snapshot.error}');
+                          } else if (snapshot.data == null) {
+                            return const Text('No name found');
+                          } else {
+                            return Text(
+                              snapshot.data!,
+                              style: GoogleFonts.inter(
+                                fontWeight: FontWeight.w800,
+                                fontSize: 18,
+                              ),
+                              overflow: TextOverflow.ellipsis,
+                            );
+                          }
+                        },
+                      ),
+                      const SizedBox(height: 4),
+                      FutureBuilder<String?>(
+                        future: _userEmail,
+                        builder: (context, snapshot) {
+                          if (snapshot.connectionState ==
+                              ConnectionState.waiting) {
+                            return const Padding(
+                              padding: EdgeInsets.symmetric(vertical: 8),
+                              child: Skeleton(
+                                height: 10,
+                                width: 100,
+                              ),
+                            );
+                          } else if (snapshot.hasError) {
+                            return Text('Error: ${snapshot.error}');
+                          } else if (snapshot.data == null) {
+                            return const Text('No email found');
+                          } else {
+                            return Text(
+                              snapshot.data!,
+                              style: GoogleFonts.inter(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w200,
+                              ),
+                              overflow: TextOverflow.ellipsis,
+                            );
+                          }
+                        },
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),

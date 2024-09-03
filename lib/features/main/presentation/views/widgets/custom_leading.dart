@@ -81,7 +81,8 @@ class CustomLeading extends StatelessWidget {
                 builder: (context, AsyncSnapshot<DataSnapshot> snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) {
                     return const Skeleton(
-                      height: 10,
+                      height: 15,
+                      width: 100,
                     );
                   } else if (snapshot.hasError) {
                     return Text('Error: ${snapshot.error}');
@@ -90,11 +91,15 @@ class CustomLeading extends StatelessWidget {
                     return const Text('No name found');
                   } else {
                     String name = snapshot.data!.value.toString();
-                    return Text(
-                      name,
-                      style: GoogleFonts.inter(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w800,
+                    return SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.5,
+                      child: Text(
+                        name,
+                        style: GoogleFonts.inter(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w800,
+                        ),
+                        overflow: TextOverflow.ellipsis,
                       ),
                     );
                   }
